@@ -1,0 +1,40 @@
+from DataframeManager import *
+from length_window import last_event
+
+
+abbreviations = {
+        'years':'Y',
+        'months':'M',
+        'weeks':'W',
+        'days':'D',
+        'hours':'h',
+        'minutes':'m',
+        'seconds':'s',
+        'milliseconds':'ms',
+        'microseconds':'us',
+        'nanoseconds':'ns',
+}
+
+
+def last_time_observer(key, time):
+    all_dfs[key].dataframe = all_dfs[key].dataframe[all_dfs[key].dataframe["INSERTION_TIMESTAMP"] > np.datetime64('now') - time]
+
+
+def last_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0, nanoseconds=0):
+    now = np.datetime64('now')
+    dict = locals()
+    del dict['now']
+    key = 'last_time'
+    time = 0
+    for i in dict.keys():
+        if dict[i]!= 0:
+            time = time + np.timedelta64(int(dict[i]), abbreviations[i])
+            key = key + '_' + str(dict[i]) + abbreviations[i]
+    if key not in all_dfs.keys():
+        all_dfs[key] = DataframeManager()
+        all_dfs[key].dataframe = all_dfs["StockTick"].dataframe[all_dfs["StockTick"].dataframe['INSERTION_TIMESTAMP'] > now - time]
+        all_dfs[key].observers.update({last_time_observer : [key, time]})
+    else:
+        all_dfs[key].add_df(last_event())
+
+    return all_dfs[key].dataframe
