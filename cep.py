@@ -1,6 +1,6 @@
 from random import randrange
 from DataframeManager import *
-from length_window import last_event, last_len, first_len
+from length_window import last_event, last_len, first_len, size
 from time_window import last_time, first_time
 
 
@@ -14,6 +14,7 @@ def avg_price_last_30_minutes():
 def avg_price_last_two_events_observer():
     avg_price = last_len(2)['price'].mean()
     print(all_dfs['last_len_2'].dataframe)
+    print(size(all_dfs['last_len_2']))
     if avg_price > 6:
             print('The average of the last two events is: ' + str(avg_price))
     return False
@@ -22,6 +23,7 @@ def avg_price_last_two_events_observer():
 def test_first_five_events_observer():
     a = first_len(5)
     print(all_dfs['first_len_5'].dataframe)
+    print(size(all_dfs['first_len_5']))
     return False
 
 
