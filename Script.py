@@ -1,7 +1,8 @@
 from random import randrange
+
+import re as regex
 import numpy as np
 import pandas as pd
-
 
 all_dataframes_in_memory = {}
 
