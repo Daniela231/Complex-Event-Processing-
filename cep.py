@@ -39,7 +39,7 @@ all_dfs['StockTick'].observers.update({avg_price_last_two_events_observer : []})
 #all_dfs['StockTick'].observers.update({avg_price_last_30_minutes : []})
 #all_dfs['StockTick'].observers.update({test_first_time_observer : []})
 
-
+#22min for 75000k (23.5.2019)
 for i in range(20):
     #all_dfs['StockTick'].add({'symbol' : 'AAPL', 'price' : float(randrange(1, 10))})
     all_dfs['StockTick'].add({'symbol' : 'AAPL', 'price' : i})
