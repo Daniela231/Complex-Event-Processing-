@@ -6,13 +6,13 @@ from time_window import last_time
 
 def avg_price_last_30_minutes():
     avg_price = last_time(minutes=30)['price'].mean()
-    #print(all_dfs['last_time_30m'].dataframe)
+    print(all_dfs['last_time_30m'].dataframe)
     print('mean in the last 30 minutes: ' + str(avg_price))
 
 
 def avg_price_last_two_events_observer():
     avg_price = last_len(2)['price'].mean()
-    #print(all_dfs['last_len_2'].dataframe)
+    print(all_dfs['last_len_2'].dataframe)
     if avg_price > 6:
             print('The average of the last two events is: ' + str(avg_price))
 
