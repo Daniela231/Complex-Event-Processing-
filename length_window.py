@@ -6,8 +6,9 @@ def last_event():
 
 
 def last_length_observer(key, len):
-    if all_dfs[key].dataframe.shape[0] > len:
+    if all_dfs[key].dataframe.shape[0] >= len:
         all_dfs[key].dataframe = all_dfs[key].dataframe.iloc[1:]
+    return True
 
 
 def last_len(len):
@@ -23,8 +24,7 @@ def last_len(len):
 
 
 def first_length_observer(key, len):
-    if all_dfs[key].dataframe.shape[0] > len:
-        all_dfs[key].dataframe = all_dfs[key].dataframe.iloc[:len]
+    return all_dfs[key].dataframe.shape[0] < len
 
 
 def first_len(len):
