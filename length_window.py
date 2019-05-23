@@ -21,6 +21,7 @@ def last_length_observer(key, len):
 
 def last_len(len):
     key = 'last_len_'+str(len)
+
     if key not in all_dfs.keys():
         all_dfs[key] = DataframeManager()
         all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.tail(len)
@@ -31,12 +32,37 @@ def last_len(len):
     return all_dfs[key].dataframe
 
 
+def length_batch_observer(key, len):
+    if all_dfs[key].variables['count'] % len == 0:
+        all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.tail(len)
+    return False
+
+
+def length_batch(len):
+    key = 'length_batch_'+ str(len)
+
+    if key not in all_dfs.keys():
+        all_dfs[key] = DataframeManager()
+        all_dfs[key].dataframe = pd.DataFrame()
+        all_dfs[key].observers.update({length_batch_observer : [key, len]})
+
+    if 'count' not in all_dfs[key].variables.keys():
+        all_dfs[key].variables['count'] = 1
+    else:
+        all_dfs[key].variables['count'] = all_dfs[key].variables['count'] + 1
+
+    all_dfs[key].add_df()
+    return all_dfs[key].dataframe
+
+
+
 def first_length_observer(key, len):
     return size(all_dfs[key]) < len
 
 
 def first_len(len):
     key = 'first_len_'+str(len)
+
     if key not in all_dfs.keys():
         all_dfs[key] = DataframeManager()
         all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.head(len)

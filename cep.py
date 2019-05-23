@@ -1,7 +1,7 @@
 from random import randrange
 from DataframeManager import *
-from length_window import last_event, last_len, first_len, size
-from time_window import last_time, first_time
+from length_window import *
+from time_window import *
 
 
 def avg_price_last_30_minutes():
@@ -33,13 +33,18 @@ def test_first_time_observer():
     return False
 
 
-all_dfs['StockTick'] = DataframeManager(['symbol', 'price'])
-all_dfs['StockTick'].observers.update({avg_price_last_two_events_observer : []})
+def test_length_batch():
+    a = length_batch(5)
+    print(all_dfs['length_batch_5'].dataframe)
+
+
+all_dfs['StockTick'] = DataframeManager()
+#all_dfs['StockTick'].observers.update({avg_price_last_two_events_observer : []})
 #all_dfs['StockTick'].observers.update({test_first_five_events_observer : []})
 #all_dfs['StockTick'].observers.update({avg_price_last_30_minutes : []})
 #all_dfs['StockTick'].observers.update({test_first_time_observer : []})
+all_dfs['StockTick'].observers.update({test_length_batch : []})
 
 #22min for 75000k (23.5.2019)
 for i in range(20):
-    #all_dfs['StockTick'].add({'symbol' : 'AAPL', 'price' : float(randrange(1, 10))})
-    all_dfs['StockTick'].add({'symbol' : 'AAPL', 'price' : i})
+    all_dfs['StockTick'].add({'index' : i+1, 'symbol' : 'A', 'price' : float(randrange(1, 10))})
