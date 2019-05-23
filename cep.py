@@ -45,6 +45,7 @@ all_dfs['StockTick'] = DataframeManager()
 #all_dfs['StockTick'].observers.update({test_first_time_observer : []})
 all_dfs['StockTick'].observers.update({test_length_batch : []})
 
+
 #22min for 75000k (23.5.2019)
 for i in range(20):
     all_dfs['StockTick'].add({'index' : i+1, 'symbol' : 'A', 'price' : float(randrange(1, 10))})
