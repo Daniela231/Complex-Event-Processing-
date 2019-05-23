@@ -1,5 +1,7 @@
 from DataframeManager import *
 
+def size():
+    return all_dfs["StockTick"].dataframe.size
 
 def last_event():
     return all_dfs["StockTick"].dataframe.tail(1)
