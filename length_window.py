@@ -9,6 +9,10 @@ def last_event():
     return all_dfs["StockTick"].dataframe.tail(1)
 
 
+def first_event():
+    return all_dfs["StockTick"].dataframe.head(1)
+
+
 def last_length_observer(key, len):
     if size(all_dfs[key]) >= len:
         all_dfs[key].dataframe = all_dfs[key].dataframe.iloc[1:]
