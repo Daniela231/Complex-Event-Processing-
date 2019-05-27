@@ -1,6 +1,5 @@
 from DataframeManager import *
 
-
 def size(dfm):
     return dfm.dataframe.shape[0]
 
@@ -11,6 +10,10 @@ def last_event():
 
 def first_event():
     return all_dfs["StockTick"].dataframe.head(1)
+
+
+def first_unique(*param):
+    return all_dfs["StockTick"].dataframe.drop_duplicates(param)
 
 
 def last_length_observer(key, len):
