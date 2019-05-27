@@ -13,7 +13,7 @@ def first_event():
 
 
 def first_unique(*param):
-    return all_dfs["StockTick"].dataframe.drop_duplicates(param)
+    return all_dfs["StockTick"].dataframe.drop_duplicates(subset=param, keep='first', inplace=True)
 
 
 def last_length_observer(key, len):
