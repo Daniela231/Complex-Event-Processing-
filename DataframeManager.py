@@ -7,12 +7,11 @@ all_dfs = {}
 
 class DataframeManager(object):
     def __init__(self, columns_list=[]):
-        self.columns_list = columns_list + ['INSERTION_TIMESTAMP']
-        self.dataframe = pd.DataFrame(data={col_name: [] for col_name in self.columns_list})
         self.dataframe = pd.DataFrame()
         self.observers = {}
+        self.variables = {}
 
-    def add_df(self, row):
+    def add_df(self, row=pd.DataFrame()):
         add = True
         for function, param in self.observers.items():
             add = add and function(*param)

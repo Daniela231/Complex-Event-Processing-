@@ -27,10 +27,12 @@ def last_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, mi
     del dict['now']
     key = 'last_time'
     time = 0
+
     for i in dict.keys():
         if dict[i]!= 0:
             time = time + np.timedelta64(int(dict[i]), abbreviations[i])
             key = key + '_' + str(dict[i]) + abbreviations[i]
+
     if key not in all_dfs.keys():
         all_dfs[key] = DataframeManager()
         all_dfs[key].dataframe = all_dfs["StockTick"].dataframe[all_dfs["StockTick"].dataframe['INSERTION_TIMESTAMP'] > now - time]
@@ -46,13 +48,26 @@ def first_time_observer(time):
 
 
 def first_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0, nanoseconds=0):
+    """
+    :param weeks:
+    :param days:
+    :param hours:
+    :param minutes:
+    :param seconds:
+    :param milliseconds:
+    :param microseconds:
+    :param nanoseconds:
+    :return:
+    """
     dict = locals()
     key = 'first_time'
     time = list(all_dfs['StockTick'].dataframe['INSERTION_TIMESTAMP'])[0]
+
     for i in dict.keys():
         if dict[i]!= 0:
             time = time + np.timedelta64(int(dict[i]), abbreviations[i])
             key = key + '_' + str(dict[i]) + abbreviations[i]
+
     if key not in all_dfs.keys():
         all_dfs[key] = DataframeManager()
         all_dfs[key].dataframe = all_dfs["StockTick"].dataframe[all_dfs["StockTick"].dataframe['INSERTION_TIMESTAMP'] < time]
