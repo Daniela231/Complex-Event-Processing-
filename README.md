@@ -21,6 +21,6 @@ to only contain the events at an exact time or given time period(like 30 minutes
 
 cep.py
 
-This script is our testing script if implementations of length/time_window are working as intended or not
+This script is our testing script if implementations of length/time_window are working as intended or not.
 "Test" code will be added with every bigger implementation of a function. This will serve
 as a kind-of unit-test.
