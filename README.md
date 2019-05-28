@@ -23,4 +23,4 @@ cep.py
 
 This script is our testing script if implementations of length/time_window are working as intended or not.
 "Test" code will be added with every bigger implementation of a function. This will serve
-as a kind-of unit-test.
+as a kind of unit-test.
