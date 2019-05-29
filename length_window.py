@@ -81,7 +81,7 @@ def last_length_observer(key, len):
 
 def last_len(len):
     """
-    function that returns the dtaframe with the last len elements
+    function that returns the dataframe with the last len elements
     :param len: length of dataframe we want to return
     :return: Dataframe of length len
     """
@@ -133,7 +133,7 @@ def length_batch(len):
 
 def first_length_observer(key, len):
     """
-    obeser for the first_length dataframe
+    observer for the first_length dataframe
     :param key: key of the first_length dataframe
     :param len: length of the dataframe
     :return: True if have to add last event, else False
