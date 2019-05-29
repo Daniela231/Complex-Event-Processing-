@@ -36,6 +36,13 @@ def first_unique(*param):
 
 
 def sort_observer(key, size ,criteria):
+    """
+    Observer for the sort dataframe
+    :param key: key for the sort dataframe
+    :param size: length of the dataframe
+    :param criteria: list of tupels (price True) sorting the price column ascending or (price False) sorting descending
+    :return: False because we don't want to add the last event (was already added)
+    """
     all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event()).sort_values(by=[elm[0] for elm in criteria], ascending=[elm[1] for elm in criteria]).head(size)
     return False
 
