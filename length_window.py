@@ -2,18 +2,36 @@ from DataframeManager import *
 
 
 def size(dfm):
+    """
+    This function returns the number of rows
+    :param dfm: Dataframe we want to know numbers of rows of
+    :return: long type value of numbers of rows
+    """
     return dfm.dataframe.shape[0]
 
 
 def last_event():
+    """
+    Returns the last event added to the dataframe
+    :return: last row of dataframe containing the last event added
+    """
     return all_dfs["StockTick"].dataframe.tail(1)
 
 
 def first_event():
+    """
+    Returns the first event of the Dataframe
+    :return: First row of the Dataframe, containing first event
+    """
     return all_dfs["StockTick"].dataframe.head(1)
 
 
 def first_unique(*param):
+    """
+    Retains online the first events having the same expression in the columns of param
+    :param param: defines the columns we want to filter for unique parameters
+    :return: returns the filtered dataframe
+    """
     return all_dfs["StockTick"].dataframe.drop_duplicates(subset=param, keep='first', inplace=True)
 
 
