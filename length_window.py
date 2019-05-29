@@ -21,6 +21,7 @@ def sort(size, criteria):
         all_dfs["StockTick"].dataframe.sort_values(by=criteria, ascending=1)
         count += 1
 
+
 def last_length_observer(key, len):
     if size(all_dfs[key]) >= len:
         all_dfs[key].dataframe = all_dfs[key].dataframe.iloc[1:]
