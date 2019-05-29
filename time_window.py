@@ -23,8 +23,8 @@ def last_time_observer(key, time):
 
 def last_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0, nanoseconds=0):
     now = np.datetime64('now')
-    dict = locals()
     del dict['now']
+    dict = locals()
     key = 'last_time'
     time = 0
 
@@ -35,9 +35,9 @@ def last_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, mi
 
     if key not in all_dfs.keys():
         all_dfs[key] = DataframeManager()
+    else:
         all_dfs[key].dataframe = all_dfs["StockTick"].dataframe[all_dfs["StockTick"].dataframe['INSERTION_TIMESTAMP'] > now - time]
         all_dfs[key].observers.update({last_time_observer : [key, time]})
-    else:
         all_dfs[key].add_df(last_event())
 
     return all_dfs[key].dataframe

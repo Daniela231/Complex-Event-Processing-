@@ -3,7 +3,6 @@ from DataframeManager import *
 def size(dfm):
     return dfm.dataframe.shape[0]
 
-
 def last_event():
     return all_dfs["StockTick"].dataframe.tail(1)
 
@@ -16,10 +15,18 @@ def first_unique(*param):
     return all_dfs["StockTick"].dataframe.drop_duplicates(subset=param, keep='first', inplace=True)
 
 
+def sort(size, criteria):
+    count = 1
+    while count<size:
+        all_dfs["StockTick"].dataframe.sort_values(by=criteria, ascending=1)
+        count += 1
+
+
 def last_length_observer(key, len):
     if size(all_dfs[key]) >= len:
         all_dfs[key].dataframe = all_dfs[key].dataframe.iloc[1:]
     return True
+
 
 
 def last_len(len):

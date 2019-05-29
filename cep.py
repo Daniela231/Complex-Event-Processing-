@@ -39,11 +39,11 @@ def test_length_batch():
 
 
 all_dfs['StockTick'] = DataframeManager()
-#all_dfs['StockTick'].observers.update({avg_price_last_two_events_observer : []})
+all_dfs['StockTick'].observers.update({avg_price_last_two_events_observer : []})
 #all_dfs['StockTick'].observers.update({test_first_five_events_observer : []})
 #all_dfs['StockTick'].observers.update({avg_price_last_30_minutes : []})
 #all_dfs['StockTick'].observers.update({test_first_time_observer : []})
-all_dfs['StockTick'].observers.update({test_length_batch : []})
+#all_dfs['StockTick'].observers.update({test_length_batch : []})
 
 
 #22min for 75000k (23.5.2019)
