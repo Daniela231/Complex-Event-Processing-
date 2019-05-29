@@ -17,11 +17,29 @@ abbreviations = {
 
 
 def last_time_observer(key, time):
+    """
+
+    :param key:
+    :param time:
+    :return:
+    """
     all_dfs[key].dataframe = all_dfs[key].dataframe[all_dfs[key].dataframe['INSERTION_TIMESTAMP'] > np.datetime64('now') - time]
     return True
 
 
 def last_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0, nanoseconds=0):
+    """
+
+    :param weeks:
+    :param days:
+    :param hours:
+    :param minutes:
+    :param seconds:
+    :param milliseconds:
+    :param microseconds:
+    :param nanoseconds:
+    :return:
+    """
     now = np.datetime64('now')
     del dict['now']
     dict = locals()
@@ -44,11 +62,17 @@ def last_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, mi
 
 
 def first_time_observer(time):
+    """
+
+    :param time:
+    :return:
+    """
     return np.datetime64('now') < time
 
 
 def first_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0, nanoseconds=0):
     """
+
     :param weeks:
     :param days:
     :param hours:
