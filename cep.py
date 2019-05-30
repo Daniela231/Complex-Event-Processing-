@@ -12,6 +12,10 @@ l.addHandler(s)
 
 
 def avg_price_last_30_minutes():
+    """
+
+    :return:
+    """
     avg_price = last_time(minutes=30)['price'].mean()
     l.critical(all_dfs['last_time_30m'].dataframe)
     l.critical('mean in the last 30 minutes: ' + str(avg_price))
@@ -19,15 +23,23 @@ def avg_price_last_30_minutes():
 
 
 def avg_price_last_two_events_observer():
+    """
+
+    :return:
+    """
     avg_price = last_len(2)['price'].mean()
     l.critical(all_dfs['last_len_2'].dataframe)
     l.critical(size(all_dfs['last_len_2']))
     if avg_price > 6:
-            print('The average of the last two events is: ' + str(avg_price))
+            l.critical('The average of the last two events is: ' + str(avg_price))
     return False
 
 
 def test_first_five_events_observer():
+    """
+
+    :return:
+    """
     a = first_len(5)
     l.critical(all_dfs['first_len_5'].dataframe)
     l.critical(size(all_dfs['first_len_5']))
@@ -35,6 +47,10 @@ def test_first_five_events_observer():
 
 
 def test_first_time_observer():
+    """
+
+    :return:
+    """
     a = first_time(nanoseconds = 2)
     l.critical(all_dfs['first_time_2ns'].dataframe)
     return False
@@ -50,6 +66,10 @@ def test_length_batch():
 
 
 def test_sort():
+    """
+
+    :return:
+    """
     a = sort(5, [('price', 0), ('index', 1)])
     l.critical(all_dfs['sort_5_price_0_index_1'].dataframe)
 
