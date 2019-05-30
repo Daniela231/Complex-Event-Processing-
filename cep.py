@@ -1,8 +1,14 @@
-import logging
 from random import randrange
 from DataframeManager import *
 from length_window import *
 from time_window import *
+
+import logging
+l=logging.getLogger("test")
+f=logging.FileHandler("test.log", mode='w')
+l.addHandler(f)
+s=logging.StreamHandler()
+l.addHandler(s)
 
 
 def avg_price_last_30_minutes():
@@ -40,12 +46,12 @@ def test_length_batch():
     :return:
     """
     a = length_batch(5)
-    print(all_dfs['length_batch_5'].dataframe)
+    l.critical(all_dfs['length_batch_5'].dataframe)
 
 
 def test_sort():
     a = sort(5, [('price', 0), ('index', 1)])
-    print(all_dfs['sort_5_price_0_index_1'].dataframe)
+    l.critical(all_dfs['sort_5_price_0_index_1'].dataframe)
 
 
 all_dfs['StockTick'] = DataframeManager()
@@ -53,12 +59,13 @@ all_dfs['StockTick'] = DataframeManager()
 #all_dfs['StockTick'].observers.update({test_first_five_events_observer : []})
 #all_dfs['StockTick'].observers.update({avg_price_last_30_minutes : []})
 #all_dfs['StockTick'].observers.update({test_first_time_observer : []})
-#all_dfs['StockTick'].observers.update({test_length_batch : []})
+all_dfs['StockTick'].observers.update({test_length_batch : []})
 #all_dfs['StockTick'].observers.update({test_sort : []})
 
 
 #22min for 75000k (23.5.2019)
 for i in range(20):
     p = float(randrange(1, 10))
+    #p=i
     print(p)
     all_dfs['StockTick'].add({'index' : i+1, 'symbol' : 'A', 'price' : p})
