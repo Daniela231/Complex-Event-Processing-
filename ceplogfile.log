@@ -1,0 +1,15 @@
+   index symbol  price INSERTION_TIMESTAMP
+0      1      A    6.0 2019-05-30 16:27:57
+1
+   index symbol  price INSERTION_TIMESTAMP
+0      1      A    6.0 2019-05-30 16:27:57
+0      2      A    2.0 2019-05-30 16:27:57
+2
+   index symbol  price INSERTION_TIMESTAMP
+0      2      A    2.0 2019-05-30 16:27:57
+0      3      A    7.0 2019-05-30 16:27:57
+2
+   index symbol  price INSERTION_TIMESTAMP
+0      3      A    7.0 2019-05-30 16:27:57
+0      4      A    4.0 2019-05-30 16:27:57
+2
