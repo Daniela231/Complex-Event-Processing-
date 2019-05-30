@@ -1,7 +1,7 @@
 from DataframeManager import *
 from length_window import last_event
 
-
+lastEventTime = np.datetime64('now')
 abbreviations = {
         'years':'Y',
         'months':'M',
@@ -130,5 +130,31 @@ def ext_time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=
             continueBatch = True
         else:
             continueBatch = False
+
+    return all_dfs[key].dataframe
+
+def time_accum_observer(timedelta, time):
+    return timedelta < time
+    return True
+
+
+def time_accum(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0, nanoseconds=0):
+
+    dict = locals()
+    key = 'time_accum'
+    time = 0
+
+    for i in dict.keys():
+        if dict[i]!= 0:
+            time = time + np.timedelta64(int(dict[i]), abbreviations[i])
+            key = key + '_' + str(dict[i]) + abbreviations[i]
+
+    if key not in all_dfs.keys():
+        all_dfs[key] = DataframeManager()
+        all_dfs[key].dataframe = all_dfs["StockTick"].dataframe[all_dfs["StockTick"].dataframe['INSERTION_TIMESTAMP']]
+        all_dfs[key].observers.update({time_accum_observer : [np.timedelta64('now')-lastEventTime, time]})
+    else:
+        all_dfs[key].add_df(last_event())
+        lastEventTime = np.datetime64('now')
 
     return all_dfs[key].dataframe
