@@ -1,3 +1,4 @@
+import logging
 from random import randrange
 from DataframeManager import *
 from length_window import *

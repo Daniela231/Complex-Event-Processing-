@@ -1,3 +1,4 @@
+import logging
 from DataframeManager import *
 from length_window import last_event
 
