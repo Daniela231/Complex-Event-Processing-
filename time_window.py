@@ -77,11 +77,9 @@ def first_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
 
     return all_dfs[key].dataframe
 
-
-
+import threading
 result = None
 result_available = threading.Event()
-
 
 
 def time_batch_observer(time):
@@ -91,9 +89,8 @@ def time_batch_observer(time):
     return np.datetime64('now') < time
 
 
-
 def time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0, nanoseconds=0):
-    while True:
+     while True:
         dict = locals()
         time = list(all_dfs['StockTick'].dataframe['INSERTION_TIMESTAMP'])[0]
 
@@ -106,12 +103,11 @@ def time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
         thread = threading.Thread(target=time_batch_observer)
         thread.start()
         result_available.wait()
-    return True
+     return True
 
 
 def ext_time_batch_observer(lasttime,time):
     return lasttime < time
-
 
 
 def ext_time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0, nanoseconds=0):
