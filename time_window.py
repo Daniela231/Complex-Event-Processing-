@@ -77,14 +77,17 @@ def first_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
 
     return all_dfs[key].dataframe
 
+import threading
 result = None
 result_available = threading.Event()
+
 
 def time_batch_observer(time):
     if(np.datetime64('now') < time):
         result = np.datetime64('now') < time
         result_available.set()
     return np.datetime64('now') < time
+
 
 def time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0, nanoseconds=0):
      while True:
@@ -105,6 +108,7 @@ def time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
 
 def ext_time_batch_observer(lasttime,time):
     return lasttime < time
+
 
 def ext_time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0, nanoseconds=0):
     continueBatch = True
