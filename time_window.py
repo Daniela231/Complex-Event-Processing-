@@ -18,9 +18,9 @@ abbreviations = {
 
 def last_time_observer(key, time):
     """
-    observer for the last_time dataframe
+    Observer for the last_time dataframe
     :param key: key of the last_time dataframe
-    :param time: timespan on the dataframe from system time to system time - time
+    :param time: timespan for the last_time dataframe
     :return: None
     """
     all_dfs[key].dataframe = all_dfs[key].dataframe[all_dfs[key].dataframe['INSERTION_TIMESTAMP'] > np.datetime64('now') - time]
@@ -29,7 +29,7 @@ def last_time_observer(key, time):
 
 def last_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0, nanoseconds=0):
     """
-    Returns the dataframe of all events arriving within a given time after statement start
+    Returns the dataframe looking back a given time into the past from the current system time
     :param weeks: number of weeks into the past
     :param days: number of days into the past
     :param hours: number of hours into the past
@@ -72,7 +72,7 @@ def first_time_observer(key, time):
 
 def first_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0, nanoseconds=0):
     """
-    Returns the dataframe looking back a given time into the past from the current system time
+    Returns the dataframe of all events arriving within a given time after statement start
     :param weeks: number of weeks into the past
     :param days: number of days into the past
     :param hours: number of hours into the past
@@ -148,18 +148,16 @@ def time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
     return True
 
 
-def ext_time_batch_observer(lasttime,time):
+def ext_time_batch_observer(key, lasttime, time):
     """
     observer for the ext_time_batch_observer dataframe
     :param lasttime:
     :param time: timespan on the dataframe
-    :return: True if we want to add last event, else False
+    :return: None
     """
-    return lasttime < time
-
-def ext_time_batch_observer(key, lasttime, time):
     if lasttime < time:
         all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event())
+
 
 def ext_time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0, nanoseconds=0):
     """
@@ -192,24 +190,18 @@ def ext_time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=
         else:
             all_dfs[key].update_df()
 
-
     return all_dfs[key].dataframe
 
 
-def time_accum_observer(timedelta, time):
+def time_accum_observer(key, timedelta, time):
     """
     observer for the time_accum_observer dataframe
     :param timedelta: delta of our given times
     :param time: timespan on the dataframe
-    :return: True if we want to add last event, else False
+    :return: None
     """
-    return timedelta < time
-    return True
-def time_accum_observer(key, timedelta, time):
     if timedelta < time:
         all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event())
-    #return timedelta < time
-    #return True
 
 
 def time_accum(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0, nanoseconds=0):

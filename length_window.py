@@ -3,25 +3,25 @@ from DataframeManager import *
 
 def size(dfm):
     """
-    This function returns the number of rows
-    :param dfm: Dataframe we want to know numbers of rows of
-    :return: long type value of numbers of rows
+    Returns the number of rows in the dataframe of the DataframeManager dfm
+    :param dfm: the DataframeManager we want to know the numbers of rows of its dataframe
+    :return: the number of rows
     """
     return dfm.dataframe.shape[0]
 
 
 def last_event():
     """
-    Returns the last event added to the dataframe
-    :return: last row of dataframe containing the last event added
+    Returns a dataframe consisting of the last event added
+    :return: a dataframe consisting of the last event added
     """
     return all_dfs["StockTick"].dataframe.tail(1)
 
 
 def first_event():
     """
-    Returns the first event of the Dataframe
-    :return: First row of the Dataframe, containing first event
+    Returns a dataframe consisting of the first event added
+    :return: a dataframe consisting of first event
     """
     return all_dfs["StockTick"].dataframe.head(1)
 
@@ -29,7 +29,7 @@ def first_event():
 def first_unique_observer(key, param):
     """
     Observer for the first_unique dataframe
-    :param key: key for the sort dataframe
+    :param key: key for the first_unique dataframe
     :param param: parameters we want to look for first unique datas
     :return: None
     """
@@ -39,7 +39,7 @@ def first_unique_observer(key, param):
 
 def first_unique(*param):
     """
-    Retains online the first events having the same expression in the columns of param
+    Retains only the first events having the same expression in the columns of param
     :param param: defines the columns we want to filter for unique parameters
     :return: returns the filtered dataframe
     """
@@ -62,7 +62,7 @@ def sort_observer(key, size ,criteria):
     Observer for the sort dataframe
     :param key: key for the sort dataframe
     :param size: length of the dataframe
-    :param criteria: list of tupels (price True) sorting the price column ascending or (price False) sorting descending
+    :param criteria: list of tupels (col True) sorting the col column ascending or (col False) sorting descending
     :return: None
     """
     all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event()).sort_values(
@@ -96,7 +96,7 @@ def last_length_observer(key, len):
     """
     Observer for last_length dataframe
     :param key: key for last length dataframe
-    :param len: length
+    :param len: length of the last length dataframe
     :return: None
     """
     if size(all_dfs[key]) >= len:
@@ -106,7 +106,7 @@ def last_length_observer(key, len):
 
 def last_len(len):
     """
-    function that returns the dataframe with the last len elements
+    Returns the dataframe with the last len elements
     :param len: length of dataframe we want to return
     :return: Dataframe of length len
     """
