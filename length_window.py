@@ -142,15 +142,13 @@ def length_batch(len):
     """
     key = ('length_batch', len)
 
-    if key not in all_dfs.keys():
+    try:
+        all_dfs[key].variables['count'] = all_dfs[key].variables['count'] + 1
+    except:
         all_dfs[key] = DataframeManager()
         all_dfs[key].dataframe = pd.DataFrame()
-        all_dfs[key].observers.update({length_batch_observer : [key, len]})
-
-    if 'count' not in all_dfs[key].variables.keys():
+        all_dfs[key].observers.update({length_batch_observer: [key, len]})
         all_dfs[key].variables['count'] = 1
-    else:
-        all_dfs[key].variables['count'] = all_dfs[key].variables['count'] + 1
 
     all_dfs[key].update_df()
     return all_dfs[key].dataframe

@@ -1,296 +1,296 @@
-9.0
+6.0
+length_batch(5) dataframe is empty
+1.0
 length_batch(5) dataframe is empty
 4.0
 length_batch(5) dataframe is empty
+9.0
+length_batch(5) dataframe is empty
 5.0
-length_batch(5) dataframe is empty
-7.0
-length_batch(5) dataframe is empty
+   index symbol  price INSERTION_TIMESTAMP
+0      1      A    6.0 2019-05-31 20:31:17
+0      2      A    1.0 2019-05-31 20:31:17
+0      3      A    4.0 2019-05-31 20:31:17
+0      4      A    9.0 2019-05-31 20:31:17
+0      5      A    5.0 2019-05-31 20:31:17
+The average price of all events in length_batch(5): 5.0
+6.0
+   index symbol  price INSERTION_TIMESTAMP
+0      1      A    6.0 2019-05-31 20:31:17
+0      2      A    1.0 2019-05-31 20:31:17
+0      3      A    4.0 2019-05-31 20:31:17
+0      4      A    9.0 2019-05-31 20:31:17
+0      5      A    5.0 2019-05-31 20:31:17
+The average price of all events in length_batch(5): 5.0
+5.0
+   index symbol  price INSERTION_TIMESTAMP
+0      1      A    6.0 2019-05-31 20:31:17
+0      2      A    1.0 2019-05-31 20:31:17
+0      3      A    4.0 2019-05-31 20:31:17
+0      4      A    9.0 2019-05-31 20:31:17
+0      5      A    5.0 2019-05-31 20:31:17
+The average price of all events in length_batch(5): 5.0
+1.0
+   index symbol  price INSERTION_TIMESTAMP
+0      1      A    6.0 2019-05-31 20:31:17
+0      2      A    1.0 2019-05-31 20:31:17
+0      3      A    4.0 2019-05-31 20:31:17
+0      4      A    9.0 2019-05-31 20:31:17
+0      5      A    5.0 2019-05-31 20:31:17
+The average price of all events in length_batch(5): 5.0
+1.0
+   index symbol  price INSERTION_TIMESTAMP
+0      1      A    6.0 2019-05-31 20:31:17
+0      2      A    1.0 2019-05-31 20:31:17
+0      3      A    4.0 2019-05-31 20:31:17
+0      4      A    9.0 2019-05-31 20:31:17
+0      5      A    5.0 2019-05-31 20:31:17
+The average price of all events in length_batch(5): 5.0
+9.0
+   index symbol  price INSERTION_TIMESTAMP
+0      6      A    6.0 2019-05-31 20:31:17
+0      7      A    5.0 2019-05-31 20:31:17
+0      8      A    1.0 2019-05-31 20:31:17
+0      9      A    1.0 2019-05-31 20:31:17
+0     10      A    9.0 2019-05-31 20:31:17
+The average price of all events in length_batch(5): 4.4
 3.0
    index symbol  price INSERTION_TIMESTAMP
-0      1      A    9.0 2019-05-31 20:00:10
-0      2      A    4.0 2019-05-31 20:00:10
-0      3      A    5.0 2019-05-31 20:00:10
-0      4      A    7.0 2019-05-31 20:00:10
-0      5      A    3.0 2019-05-31 20:00:10
-The average price of all events in length_batch(5): 5.6
-6.0
-   index symbol  price INSERTION_TIMESTAMP
-0      1      A    9.0 2019-05-31 20:00:10
-0      2      A    4.0 2019-05-31 20:00:10
-0      3      A    5.0 2019-05-31 20:00:10
-0      4      A    7.0 2019-05-31 20:00:10
-0      5      A    3.0 2019-05-31 20:00:10
-The average price of all events in length_batch(5): 5.6
-7.0
-   index symbol  price INSERTION_TIMESTAMP
-0      1      A    9.0 2019-05-31 20:00:10
-0      2      A    4.0 2019-05-31 20:00:10
-0      3      A    5.0 2019-05-31 20:00:10
-0      4      A    7.0 2019-05-31 20:00:10
-0      5      A    3.0 2019-05-31 20:00:10
-The average price of all events in length_batch(5): 5.6
-6.0
-   index symbol  price INSERTION_TIMESTAMP
-0      1      A    9.0 2019-05-31 20:00:10
-0      2      A    4.0 2019-05-31 20:00:10
-0      3      A    5.0 2019-05-31 20:00:10
-0      4      A    7.0 2019-05-31 20:00:10
-0      5      A    3.0 2019-05-31 20:00:10
-The average price of all events in length_batch(5): 5.6
-8.0
-   index symbol  price INSERTION_TIMESTAMP
-0      1      A    9.0 2019-05-31 20:00:10
-0      2      A    4.0 2019-05-31 20:00:10
-0      3      A    5.0 2019-05-31 20:00:10
-0      4      A    7.0 2019-05-31 20:00:10
-0      5      A    3.0 2019-05-31 20:00:10
-The average price of all events in length_batch(5): 5.6
-8.0
-   index symbol  price INSERTION_TIMESTAMP
-0      6      A    6.0 2019-05-31 20:00:10
-0      7      A    7.0 2019-05-31 20:00:10
-0      8      A    6.0 2019-05-31 20:00:11
-0      9      A    8.0 2019-05-31 20:00:11
-0     10      A    8.0 2019-05-31 20:00:11
-The average price of all events in length_batch(5): 7.0
+0      6      A    6.0 2019-05-31 20:31:17
+0      7      A    5.0 2019-05-31 20:31:17
+0      8      A    1.0 2019-05-31 20:31:17
+0      9      A    1.0 2019-05-31 20:31:17
+0     10      A    9.0 2019-05-31 20:31:17
+The average price of all events in length_batch(5): 4.4
 3.0
    index symbol  price INSERTION_TIMESTAMP
-0      6      A    6.0 2019-05-31 20:00:10
-0      7      A    7.0 2019-05-31 20:00:10
-0      8      A    6.0 2019-05-31 20:00:11
-0      9      A    8.0 2019-05-31 20:00:11
-0     10      A    8.0 2019-05-31 20:00:11
-The average price of all events in length_batch(5): 7.0
-4.0
-   index symbol  price INSERTION_TIMESTAMP
-0      6      A    6.0 2019-05-31 20:00:10
-0      7      A    7.0 2019-05-31 20:00:10
-0      8      A    6.0 2019-05-31 20:00:11
-0      9      A    8.0 2019-05-31 20:00:11
-0     10      A    8.0 2019-05-31 20:00:11
-The average price of all events in length_batch(5): 7.0
-8.0
-   index symbol  price INSERTION_TIMESTAMP
-0      6      A    6.0 2019-05-31 20:00:10
-0      7      A    7.0 2019-05-31 20:00:10
-0      8      A    6.0 2019-05-31 20:00:11
-0      9      A    8.0 2019-05-31 20:00:11
-0     10      A    8.0 2019-05-31 20:00:11
-The average price of all events in length_batch(5): 7.0
+0      6      A    6.0 2019-05-31 20:31:17
+0      7      A    5.0 2019-05-31 20:31:17
+0      8      A    1.0 2019-05-31 20:31:17
+0      9      A    1.0 2019-05-31 20:31:17
+0     10      A    9.0 2019-05-31 20:31:17
+The average price of all events in length_batch(5): 4.4
 9.0
    index symbol  price INSERTION_TIMESTAMP
-0      6      A    6.0 2019-05-31 20:00:10
-0      7      A    7.0 2019-05-31 20:00:10
-0      8      A    6.0 2019-05-31 20:00:11
-0      9      A    8.0 2019-05-31 20:00:11
-0     10      A    8.0 2019-05-31 20:00:11
-The average price of all events in length_batch(5): 7.0
-9.0
-   index symbol  price INSERTION_TIMESTAMP
-0     11      A    3.0 2019-05-31 20:00:11
-0     12      A    4.0 2019-05-31 20:00:11
-0     13      A    8.0 2019-05-31 20:00:11
-0     14      A    9.0 2019-05-31 20:00:11
-0     15      A    9.0 2019-05-31 20:00:11
-The average price of all events in length_batch(5): 6.6
-8.0
-   index symbol  price INSERTION_TIMESTAMP
-0     11      A    3.0 2019-05-31 20:00:11
-0     12      A    4.0 2019-05-31 20:00:11
-0     13      A    8.0 2019-05-31 20:00:11
-0     14      A    9.0 2019-05-31 20:00:11
-0     15      A    9.0 2019-05-31 20:00:11
-The average price of all events in length_batch(5): 6.6
+0      6      A    6.0 2019-05-31 20:31:17
+0      7      A    5.0 2019-05-31 20:31:17
+0      8      A    1.0 2019-05-31 20:31:17
+0      9      A    1.0 2019-05-31 20:31:17
+0     10      A    9.0 2019-05-31 20:31:17
+The average price of all events in length_batch(5): 4.4
 6.0
    index symbol  price INSERTION_TIMESTAMP
-0     11      A    3.0 2019-05-31 20:00:11
-0     12      A    4.0 2019-05-31 20:00:11
-0     13      A    8.0 2019-05-31 20:00:11
-0     14      A    9.0 2019-05-31 20:00:11
-0     15      A    9.0 2019-05-31 20:00:11
-The average price of all events in length_batch(5): 6.6
-6.0
-   index symbol  price INSERTION_TIMESTAMP
-0     11      A    3.0 2019-05-31 20:00:11
-0     12      A    4.0 2019-05-31 20:00:11
-0     13      A    8.0 2019-05-31 20:00:11
-0     14      A    9.0 2019-05-31 20:00:11
-0     15      A    9.0 2019-05-31 20:00:11
-The average price of all events in length_batch(5): 6.6
-9.0
-   index symbol  price INSERTION_TIMESTAMP
-0     11      A    3.0 2019-05-31 20:00:11
-0     12      A    4.0 2019-05-31 20:00:11
-0     13      A    8.0 2019-05-31 20:00:11
-0     14      A    9.0 2019-05-31 20:00:11
-0     15      A    9.0 2019-05-31 20:00:11
-The average price of all events in length_batch(5): 6.6
-8.0
-   index symbol  price INSERTION_TIMESTAMP
-0     16      A    8.0 2019-05-31 20:00:11
-0     17      A    6.0 2019-05-31 20:00:11
-0     18      A    6.0 2019-05-31 20:00:11
-0     19      A    9.0 2019-05-31 20:00:11
-0     20      A    8.0 2019-05-31 20:00:11
-The average price of all events in length_batch(5): 7.4
-2.0
-   index symbol  price INSERTION_TIMESTAMP
-0     16      A    8.0 2019-05-31 20:00:11
-0     17      A    6.0 2019-05-31 20:00:11
-0     18      A    6.0 2019-05-31 20:00:11
-0     19      A    9.0 2019-05-31 20:00:11
-0     20      A    8.0 2019-05-31 20:00:11
-The average price of all events in length_batch(5): 7.4
+0      6      A    6.0 2019-05-31 20:31:17
+0      7      A    5.0 2019-05-31 20:31:17
+0      8      A    1.0 2019-05-31 20:31:17
+0      9      A    1.0 2019-05-31 20:31:17
+0     10      A    9.0 2019-05-31 20:31:17
+The average price of all events in length_batch(5): 4.4
 4.0
    index symbol  price INSERTION_TIMESTAMP
-0     16      A    8.0 2019-05-31 20:00:11
-0     17      A    6.0 2019-05-31 20:00:11
-0     18      A    6.0 2019-05-31 20:00:11
-0     19      A    9.0 2019-05-31 20:00:11
-0     20      A    8.0 2019-05-31 20:00:11
-The average price of all events in length_batch(5): 7.4
+0     11      A    3.0 2019-05-31 20:31:17
+0     12      A    3.0 2019-05-31 20:31:18
+0     13      A    9.0 2019-05-31 20:31:18
+0     14      A    6.0 2019-05-31 20:31:18
+0     15      A    4.0 2019-05-31 20:31:18
+The average price of all events in length_batch(5): 5.0
 8.0
    index symbol  price INSERTION_TIMESTAMP
-0     16      A    8.0 2019-05-31 20:00:11
-0     17      A    6.0 2019-05-31 20:00:11
-0     18      A    6.0 2019-05-31 20:00:11
-0     19      A    9.0 2019-05-31 20:00:11
-0     20      A    8.0 2019-05-31 20:00:11
-The average price of all events in length_batch(5): 7.4
-8.0
+0     11      A    3.0 2019-05-31 20:31:17
+0     12      A    3.0 2019-05-31 20:31:18
+0     13      A    9.0 2019-05-31 20:31:18
+0     14      A    6.0 2019-05-31 20:31:18
+0     15      A    4.0 2019-05-31 20:31:18
+The average price of all events in length_batch(5): 5.0
+9.0
    index symbol  price INSERTION_TIMESTAMP
-0     16      A    8.0 2019-05-31 20:00:11
-0     17      A    6.0 2019-05-31 20:00:11
-0     18      A    6.0 2019-05-31 20:00:11
-0     19      A    9.0 2019-05-31 20:00:11
-0     20      A    8.0 2019-05-31 20:00:11
-The average price of all events in length_batch(5): 7.4
-6.0
-   index symbol  price INSERTION_TIMESTAMP
-0     21      A    2.0 2019-05-31 20:00:12
-0     22      A    4.0 2019-05-31 20:00:12
-0     23      A    8.0 2019-05-31 20:00:12
-0     24      A    8.0 2019-05-31 20:00:12
-0     25      A    6.0 2019-05-31 20:00:12
-The average price of all events in length_batch(5): 5.6
-4.0
-   index symbol  price INSERTION_TIMESTAMP
-0     21      A    2.0 2019-05-31 20:00:12
-0     22      A    4.0 2019-05-31 20:00:12
-0     23      A    8.0 2019-05-31 20:00:12
-0     24      A    8.0 2019-05-31 20:00:12
-0     25      A    6.0 2019-05-31 20:00:12
-The average price of all events in length_batch(5): 5.6
-6.0
-   index symbol  price INSERTION_TIMESTAMP
-0     21      A    2.0 2019-05-31 20:00:12
-0     22      A    4.0 2019-05-31 20:00:12
-0     23      A    8.0 2019-05-31 20:00:12
-0     24      A    8.0 2019-05-31 20:00:12
-0     25      A    6.0 2019-05-31 20:00:12
-The average price of all events in length_batch(5): 5.6
+0     11      A    3.0 2019-05-31 20:31:17
+0     12      A    3.0 2019-05-31 20:31:18
+0     13      A    9.0 2019-05-31 20:31:18
+0     14      A    6.0 2019-05-31 20:31:18
+0     15      A    4.0 2019-05-31 20:31:18
+The average price of all events in length_batch(5): 5.0
 1.0
    index symbol  price INSERTION_TIMESTAMP
-0     21      A    2.0 2019-05-31 20:00:12
-0     22      A    4.0 2019-05-31 20:00:12
-0     23      A    8.0 2019-05-31 20:00:12
-0     24      A    8.0 2019-05-31 20:00:12
-0     25      A    6.0 2019-05-31 20:00:12
-The average price of all events in length_batch(5): 5.6
-6.0
-   index symbol  price INSERTION_TIMESTAMP
-0     21      A    2.0 2019-05-31 20:00:12
-0     22      A    4.0 2019-05-31 20:00:12
-0     23      A    8.0 2019-05-31 20:00:12
-0     24      A    8.0 2019-05-31 20:00:12
-0     25      A    6.0 2019-05-31 20:00:12
-The average price of all events in length_batch(5): 5.6
+0     11      A    3.0 2019-05-31 20:31:17
+0     12      A    3.0 2019-05-31 20:31:18
+0     13      A    9.0 2019-05-31 20:31:18
+0     14      A    6.0 2019-05-31 20:31:18
+0     15      A    4.0 2019-05-31 20:31:18
+The average price of all events in length_batch(5): 5.0
 5.0
    index symbol  price INSERTION_TIMESTAMP
-0     26      A    4.0 2019-05-31 20:00:12
-0     27      A    6.0 2019-05-31 20:00:12
-0     28      A    1.0 2019-05-31 20:00:12
-0     29      A    6.0 2019-05-31 20:00:12
-0     30      A    5.0 2019-05-31 20:00:12
-The average price of all events in length_batch(5): 4.4
-9.0
-   index symbol  price INSERTION_TIMESTAMP
-0     26      A    4.0 2019-05-31 20:00:12
-0     27      A    6.0 2019-05-31 20:00:12
-0     28      A    1.0 2019-05-31 20:00:12
-0     29      A    6.0 2019-05-31 20:00:12
-0     30      A    5.0 2019-05-31 20:00:12
-The average price of all events in length_batch(5): 4.4
-5.0
-   index symbol  price INSERTION_TIMESTAMP
-0     26      A    4.0 2019-05-31 20:00:12
-0     27      A    6.0 2019-05-31 20:00:12
-0     28      A    1.0 2019-05-31 20:00:12
-0     29      A    6.0 2019-05-31 20:00:12
-0     30      A    5.0 2019-05-31 20:00:12
-The average price of all events in length_batch(5): 4.4
-9.0
-   index symbol  price INSERTION_TIMESTAMP
-0     26      A    4.0 2019-05-31 20:00:12
-0     27      A    6.0 2019-05-31 20:00:12
-0     28      A    1.0 2019-05-31 20:00:12
-0     29      A    6.0 2019-05-31 20:00:12
-0     30      A    5.0 2019-05-31 20:00:12
-The average price of all events in length_batch(5): 4.4
+0     11      A    3.0 2019-05-31 20:31:17
+0     12      A    3.0 2019-05-31 20:31:18
+0     13      A    9.0 2019-05-31 20:31:18
+0     14      A    6.0 2019-05-31 20:31:18
+0     15      A    4.0 2019-05-31 20:31:18
+The average price of all events in length_batch(5): 5.0
 6.0
    index symbol  price INSERTION_TIMESTAMP
-0     26      A    4.0 2019-05-31 20:00:12
-0     27      A    6.0 2019-05-31 20:00:12
-0     28      A    1.0 2019-05-31 20:00:12
-0     29      A    6.0 2019-05-31 20:00:12
-0     30      A    5.0 2019-05-31 20:00:12
-The average price of all events in length_batch(5): 4.4
+0     16      A    8.0 2019-05-31 20:31:18
+0     17      A    9.0 2019-05-31 20:31:18
+0     18      A    1.0 2019-05-31 20:31:18
+0     19      A    5.0 2019-05-31 20:31:18
+0     20      A    6.0 2019-05-31 20:31:18
+The average price of all events in length_batch(5): 5.8
 9.0
    index symbol  price INSERTION_TIMESTAMP
-0     31      A    9.0 2019-05-31 20:00:12
-0     32      A    5.0 2019-05-31 20:00:12
-0     33      A    9.0 2019-05-31 20:00:12
-0     34      A    6.0 2019-05-31 20:00:13
-0     35      A    9.0 2019-05-31 20:00:13
-The average price of all events in length_batch(5): 7.6
-2.0
+0     16      A    8.0 2019-05-31 20:31:18
+0     17      A    9.0 2019-05-31 20:31:18
+0     18      A    1.0 2019-05-31 20:31:18
+0     19      A    5.0 2019-05-31 20:31:18
+0     20      A    6.0 2019-05-31 20:31:18
+The average price of all events in length_batch(5): 5.8
+8.0
    index symbol  price INSERTION_TIMESTAMP
-0     31      A    9.0 2019-05-31 20:00:12
-0     32      A    5.0 2019-05-31 20:00:12
-0     33      A    9.0 2019-05-31 20:00:12
-0     34      A    6.0 2019-05-31 20:00:13
-0     35      A    9.0 2019-05-31 20:00:13
-The average price of all events in length_batch(5): 7.6
-1.0
-   index symbol  price INSERTION_TIMESTAMP
-0     31      A    9.0 2019-05-31 20:00:12
-0     32      A    5.0 2019-05-31 20:00:12
-0     33      A    9.0 2019-05-31 20:00:12
-0     34      A    6.0 2019-05-31 20:00:13
-0     35      A    9.0 2019-05-31 20:00:13
-The average price of all events in length_batch(5): 7.6
-1.0
-   index symbol  price INSERTION_TIMESTAMP
-0     31      A    9.0 2019-05-31 20:00:12
-0     32      A    5.0 2019-05-31 20:00:12
-0     33      A    9.0 2019-05-31 20:00:12
-0     34      A    6.0 2019-05-31 20:00:13
-0     35      A    9.0 2019-05-31 20:00:13
-The average price of all events in length_batch(5): 7.6
-2.0
-   index symbol  price INSERTION_TIMESTAMP
-0     31      A    9.0 2019-05-31 20:00:12
-0     32      A    5.0 2019-05-31 20:00:12
-0     33      A    9.0 2019-05-31 20:00:12
-0     34      A    6.0 2019-05-31 20:00:13
-0     35      A    9.0 2019-05-31 20:00:13
-The average price of all events in length_batch(5): 7.6
+0     16      A    8.0 2019-05-31 20:31:18
+0     17      A    9.0 2019-05-31 20:31:18
+0     18      A    1.0 2019-05-31 20:31:18
+0     19      A    5.0 2019-05-31 20:31:18
+0     20      A    6.0 2019-05-31 20:31:18
+The average price of all events in length_batch(5): 5.8
 9.0
    index symbol  price INSERTION_TIMESTAMP
-0     36      A    2.0 2019-05-31 20:00:13
-0     37      A    1.0 2019-05-31 20:00:13
-0     38      A    1.0 2019-05-31 20:00:13
-0     39      A    2.0 2019-05-31 20:00:13
-0     40      A    9.0 2019-05-31 20:00:13
-The average price of all events in length_batch(5): 3.0
+0     16      A    8.0 2019-05-31 20:31:18
+0     17      A    9.0 2019-05-31 20:31:18
+0     18      A    1.0 2019-05-31 20:31:18
+0     19      A    5.0 2019-05-31 20:31:18
+0     20      A    6.0 2019-05-31 20:31:18
+The average price of all events in length_batch(5): 5.8
+8.0
+   index symbol  price INSERTION_TIMESTAMP
+0     16      A    8.0 2019-05-31 20:31:18
+0     17      A    9.0 2019-05-31 20:31:18
+0     18      A    1.0 2019-05-31 20:31:18
+0     19      A    5.0 2019-05-31 20:31:18
+0     20      A    6.0 2019-05-31 20:31:18
+The average price of all events in length_batch(5): 5.8
+6.0
+   index symbol  price INSERTION_TIMESTAMP
+0     21      A    9.0 2019-05-31 20:31:18
+0     22      A    8.0 2019-05-31 20:31:18
+0     23      A    9.0 2019-05-31 20:31:18
+0     24      A    8.0 2019-05-31 20:31:18
+0     25      A    6.0 2019-05-31 20:31:19
+The average price of all events in length_batch(5): 8.0
+9.0
+   index symbol  price INSERTION_TIMESTAMP
+0     21      A    9.0 2019-05-31 20:31:18
+0     22      A    8.0 2019-05-31 20:31:18
+0     23      A    9.0 2019-05-31 20:31:18
+0     24      A    8.0 2019-05-31 20:31:18
+0     25      A    6.0 2019-05-31 20:31:19
+The average price of all events in length_batch(5): 8.0
+9.0
+   index symbol  price INSERTION_TIMESTAMP
+0     21      A    9.0 2019-05-31 20:31:18
+0     22      A    8.0 2019-05-31 20:31:18
+0     23      A    9.0 2019-05-31 20:31:18
+0     24      A    8.0 2019-05-31 20:31:18
+0     25      A    6.0 2019-05-31 20:31:19
+The average price of all events in length_batch(5): 8.0
+4.0
+   index symbol  price INSERTION_TIMESTAMP
+0     21      A    9.0 2019-05-31 20:31:18
+0     22      A    8.0 2019-05-31 20:31:18
+0     23      A    9.0 2019-05-31 20:31:18
+0     24      A    8.0 2019-05-31 20:31:18
+0     25      A    6.0 2019-05-31 20:31:19
+The average price of all events in length_batch(5): 8.0
+9.0
+   index symbol  price INSERTION_TIMESTAMP
+0     21      A    9.0 2019-05-31 20:31:18
+0     22      A    8.0 2019-05-31 20:31:18
+0     23      A    9.0 2019-05-31 20:31:18
+0     24      A    8.0 2019-05-31 20:31:18
+0     25      A    6.0 2019-05-31 20:31:19
+The average price of all events in length_batch(5): 8.0
+1.0
+   index symbol  price INSERTION_TIMESTAMP
+0     26      A    9.0 2019-05-31 20:31:19
+0     27      A    9.0 2019-05-31 20:31:19
+0     28      A    4.0 2019-05-31 20:31:19
+0     29      A    9.0 2019-05-31 20:31:19
+0     30      A    1.0 2019-05-31 20:31:19
+The average price of all events in length_batch(5): 6.4
+9.0
+   index symbol  price INSERTION_TIMESTAMP
+0     26      A    9.0 2019-05-31 20:31:19
+0     27      A    9.0 2019-05-31 20:31:19
+0     28      A    4.0 2019-05-31 20:31:19
+0     29      A    9.0 2019-05-31 20:31:19
+0     30      A    1.0 2019-05-31 20:31:19
+The average price of all events in length_batch(5): 6.4
+3.0
+   index symbol  price INSERTION_TIMESTAMP
+0     26      A    9.0 2019-05-31 20:31:19
+0     27      A    9.0 2019-05-31 20:31:19
+0     28      A    4.0 2019-05-31 20:31:19
+0     29      A    9.0 2019-05-31 20:31:19
+0     30      A    1.0 2019-05-31 20:31:19
+The average price of all events in length_batch(5): 6.4
+1.0
+   index symbol  price INSERTION_TIMESTAMP
+0     26      A    9.0 2019-05-31 20:31:19
+0     27      A    9.0 2019-05-31 20:31:19
+0     28      A    4.0 2019-05-31 20:31:19
+0     29      A    9.0 2019-05-31 20:31:19
+0     30      A    1.0 2019-05-31 20:31:19
+The average price of all events in length_batch(5): 6.4
+7.0
+   index symbol  price INSERTION_TIMESTAMP
+0     26      A    9.0 2019-05-31 20:31:19
+0     27      A    9.0 2019-05-31 20:31:19
+0     28      A    4.0 2019-05-31 20:31:19
+0     29      A    9.0 2019-05-31 20:31:19
+0     30      A    1.0 2019-05-31 20:31:19
+The average price of all events in length_batch(5): 6.4
+9.0
+   index symbol  price INSERTION_TIMESTAMP
+0     31      A    9.0 2019-05-31 20:31:19
+0     32      A    3.0 2019-05-31 20:31:19
+0     33      A    1.0 2019-05-31 20:31:19
+0     34      A    7.0 2019-05-31 20:31:19
+0     35      A    9.0 2019-05-31 20:31:19
+The average price of all events in length_batch(5): 5.8
+2.0
+   index symbol  price INSERTION_TIMESTAMP
+0     31      A    9.0 2019-05-31 20:31:19
+0     32      A    3.0 2019-05-31 20:31:19
+0     33      A    1.0 2019-05-31 20:31:19
+0     34      A    7.0 2019-05-31 20:31:19
+0     35      A    9.0 2019-05-31 20:31:19
+The average price of all events in length_batch(5): 5.8
+6.0
+   index symbol  price INSERTION_TIMESTAMP
+0     31      A    9.0 2019-05-31 20:31:19
+0     32      A    3.0 2019-05-31 20:31:19
+0     33      A    1.0 2019-05-31 20:31:19
+0     34      A    7.0 2019-05-31 20:31:19
+0     35      A    9.0 2019-05-31 20:31:19
+The average price of all events in length_batch(5): 5.8
+6.0
+   index symbol  price INSERTION_TIMESTAMP
+0     31      A    9.0 2019-05-31 20:31:19
+0     32      A    3.0 2019-05-31 20:31:19
+0     33      A    1.0 2019-05-31 20:31:19
+0     34      A    7.0 2019-05-31 20:31:19
+0     35      A    9.0 2019-05-31 20:31:19
+The average price of all events in length_batch(5): 5.8
+9.0
+   index symbol  price INSERTION_TIMESTAMP
+0     31      A    9.0 2019-05-31 20:31:19
+0     32      A    3.0 2019-05-31 20:31:19
+0     33      A    1.0 2019-05-31 20:31:19
+0     34      A    7.0 2019-05-31 20:31:19
+0     35      A    9.0 2019-05-31 20:31:19
+The average price of all events in length_batch(5): 5.8
+5.0
+   index symbol  price INSERTION_TIMESTAMP
+0     36      A    2.0 2019-05-31 20:31:19
+0     37      A    6.0 2019-05-31 20:31:19
+0     38      A    6.0 2019-05-31 20:31:20
+0     39      A    9.0 2019-05-31 20:31:20
+0     40      A    5.0 2019-05-31 20:31:20
+The average price of all events in length_batch(5): 5.6
