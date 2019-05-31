@@ -82,6 +82,7 @@ all_dfs['StockTick'] = DataframeManager()
 all_dfs['StockTick'].observers.update({test_first_unique : []})
 
 
+
 #22min for 75000k (23.5.2019)
 for i in range(20):
     p = float(randrange(1, 10))
