@@ -1,15 +1,174 @@
    index symbol  price INSERTION_TIMESTAMP
-0      1      A    6.0 2019-05-30 16:27:57
+0      1      A    8.0 2019-05-30 20:13:09
 1
+The average of the last two events is: 8.0
    index symbol  price INSERTION_TIMESTAMP
-0      1      A    6.0 2019-05-30 16:27:57
-0      2      A    2.0 2019-05-30 16:27:57
+0      1      A    8.0 2019-05-30 20:13:09
+0      2      A    8.0 2019-05-30 20:13:09
+2
+The average of the last two events is: 8.0
+   index symbol  price INSERTION_TIMESTAMP
+0      2      A    8.0 2019-05-30 20:13:09
+0      3      A    9.0 2019-05-30 20:13:09
+2
+The average of the last two events is: 8.5
+   index symbol  price INSERTION_TIMESTAMP
+0      3      A    9.0 2019-05-30 20:13:09
+0      4      A    1.0 2019-05-30 20:13:09
 2
    index symbol  price INSERTION_TIMESTAMP
-0      2      A    2.0 2019-05-30 16:27:57
-0      3      A    7.0 2019-05-30 16:27:57
+0      4      A    1.0 2019-05-30 20:13:09
+0      5      A    6.0 2019-05-30 20:13:09
 2
    index symbol  price INSERTION_TIMESTAMP
-0      3      A    7.0 2019-05-30 16:27:57
-0      4      A    4.0 2019-05-30 16:27:57
+0      5      A    6.0 2019-05-30 20:13:09
+0      6      A    6.0 2019-05-30 20:13:09
 2
+   index symbol  price INSERTION_TIMESTAMP
+0      6      A    6.0 2019-05-30 20:13:09
+0      7      A    2.0 2019-05-30 20:13:09
+2
+   index symbol  price INSERTION_TIMESTAMP
+0      7      A    2.0 2019-05-30 20:13:09
+0      8      A    2.0 2019-05-30 20:13:09
+2
+   index symbol  price INSERTION_TIMESTAMP
+0      8      A    2.0 2019-05-30 20:13:09
+0      9      A    3.0 2019-05-30 20:13:09
+2
+   index symbol  price INSERTION_TIMESTAMP
+0      9      A    3.0 2019-05-30 20:13:09
+0     10      A    8.0 2019-05-30 20:13:09
+2
+   index symbol  price INSERTION_TIMESTAMP
+0     10      A    8.0 2019-05-30 20:13:09
+0     11      A    4.0 2019-05-30 20:13:09
+2
+   index symbol  price INSERTION_TIMESTAMP
+0     11      A    4.0 2019-05-30 20:13:09
+0     12      A    5.0 2019-05-30 20:13:09
+2
+   index symbol  price INSERTION_TIMESTAMP
+0     12      A    5.0 2019-05-30 20:13:09
+0     13      A    1.0 2019-05-30 20:13:09
+2
+   index symbol  price INSERTION_TIMESTAMP
+0     13      A    1.0 2019-05-30 20:13:09
+0     14      A    1.0 2019-05-30 20:13:09
+2
+   index symbol  price INSERTION_TIMESTAMP
+0     14      A    1.0 2019-05-30 20:13:09
+0     15      A    7.0 2019-05-30 20:13:09
+2
+   index symbol  price INSERTION_TIMESTAMP
+0     15      A    7.0 2019-05-30 20:13:09
+0     16      A    3.0 2019-05-30 20:13:09
+2
+   index symbol  price INSERTION_TIMESTAMP
+0     16      A    3.0 2019-05-30 20:13:09
+0     17      A    6.0 2019-05-30 20:13:09
+2
+   index symbol  price INSERTION_TIMESTAMP
+0     17      A    6.0 2019-05-30 20:13:09
+0     18      A    9.0 2019-05-30 20:13:09
+2
+The average of the last two events is: 7.5
+   index symbol  price INSERTION_TIMESTAMP
+0     18      A    9.0 2019-05-30 20:13:09
+0     19      A    9.0 2019-05-30 20:13:09
+2
+The average of the last two events is: 9.0
+   index symbol  price INSERTION_TIMESTAMP
+0     19      A    9.0 2019-05-30 20:13:09
+0     20      A    7.0 2019-05-30 20:13:09
+2
+The average of the last two events is: 8.0
+   index symbol  price INSERTION_TIMESTAMP
+0     20      A    7.0 2019-05-30 20:13:09
+0     21      A    7.0 2019-05-30 20:13:09
+2
+The average of the last two events is: 7.0
+   index symbol  price INSERTION_TIMESTAMP
+0     21      A    7.0 2019-05-30 20:13:09
+0     22      A    5.0 2019-05-30 20:13:09
+2
+   index symbol  price INSERTION_TIMESTAMP
+0     22      A    5.0 2019-05-30 20:13:09
+0     23      A    4.0 2019-05-30 20:13:09
+2
+   index symbol  price INSERTION_TIMESTAMP
+0     23      A    4.0 2019-05-30 20:13:09
+0     24      A    8.0 2019-05-30 20:13:09
+2
+   index symbol  price INSERTION_TIMESTAMP
+0     24      A    8.0 2019-05-30 20:13:09
+0     25      A    9.0 2019-05-30 20:13:10
+2
+The average of the last two events is: 8.5
+   index symbol  price INSERTION_TIMESTAMP
+0     25      A    9.0 2019-05-30 20:13:10
+0     26      A    3.0 2019-05-30 20:13:10
+2
+   index symbol  price INSERTION_TIMESTAMP
+0     26      A    3.0 2019-05-30 20:13:10
+0     27      A    9.0 2019-05-30 20:13:10
+2
+   index symbol  price INSERTION_TIMESTAMP
+0     27      A    9.0 2019-05-30 20:13:10
+0     28      A    8.0 2019-05-30 20:13:10
+2
+The average of the last two events is: 8.5
+   index symbol  price INSERTION_TIMESTAMP
+0     28      A    8.0 2019-05-30 20:13:10
+0     29      A    3.0 2019-05-30 20:13:10
+2
+   index symbol  price INSERTION_TIMESTAMP
+0     29      A    3.0 2019-05-30 20:13:10
+0     30      A    9.0 2019-05-30 20:13:10
+2
+   index symbol  price INSERTION_TIMESTAMP
+0     30      A    9.0 2019-05-30 20:13:10
+0     31      A    7.0 2019-05-30 20:13:10
+2
+The average of the last two events is: 8.0
+   index symbol  price INSERTION_TIMESTAMP
+0     31      A    7.0 2019-05-30 20:13:10
+0     32      A    9.0 2019-05-30 20:13:10
+2
+The average of the last two events is: 8.0
+   index symbol  price INSERTION_TIMESTAMP
+0     32      A    9.0 2019-05-30 20:13:10
+0     33      A    6.0 2019-05-30 20:13:10
+2
+The average of the last two events is: 7.5
+   index symbol  price INSERTION_TIMESTAMP
+0     33      A    6.0 2019-05-30 20:13:10
+0     34      A    8.0 2019-05-30 20:13:10
+2
+The average of the last two events is: 7.0
+   index symbol  price INSERTION_TIMESTAMP
+0     34      A    8.0 2019-05-30 20:13:10
+0     35      A    1.0 2019-05-30 20:13:10
+2
+   index symbol  price INSERTION_TIMESTAMP
+0     35      A    1.0 2019-05-30 20:13:10
+0     36      A    7.0 2019-05-30 20:13:10
+2
+   index symbol  price INSERTION_TIMESTAMP
+0     36      A    7.0 2019-05-30 20:13:10
+0     37      A    1.0 2019-05-30 20:13:10
+2
+   index symbol  price INSERTION_TIMESTAMP
+0     37      A    1.0 2019-05-30 20:13:10
+0     38      A    6.0 2019-05-30 20:13:10
+2
+   index symbol  price INSERTION_TIMESTAMP
+0     38      A    6.0 2019-05-30 20:13:10
+0     39      A    8.0 2019-05-30 20:13:10
+2
+The average of the last two events is: 7.0
+   index symbol  price INSERTION_TIMESTAMP
+0     39      A    8.0 2019-05-30 20:13:10
+0     40      A    5.0 2019-05-30 20:13:10
+2
+The average of the last two events is: 6.5

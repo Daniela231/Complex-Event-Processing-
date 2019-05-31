@@ -77,6 +77,7 @@ def first_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
 
     return all_dfs[key].dataframe
 
+
 import threading
 result = None
 result_available = threading.Event()
@@ -136,6 +137,7 @@ def ext_time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=
             continueBatch = False
 
     return all_dfs[key].dataframe
+
 
 def time_accum_observer(timedelta, time):
     return timedelta < time

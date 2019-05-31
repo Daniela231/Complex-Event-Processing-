@@ -31,7 +31,7 @@ def avg_price_last_two_events_observer():
     l.critical(all_dfs['last_len_2'].dataframe)
     l.critical(size(all_dfs['last_len_2']))
     if avg_price > 6:
-            l.critical('The average of the last two events is: ' + str(avg_price))
+        l.critical('The average of the last two events is: ' + str(avg_price))
     return False
 
 
