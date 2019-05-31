@@ -21,7 +21,7 @@ def last_time_observer(key, time):
     observer for the last_time dataframe
     :param key: key of the last_time dataframe
     :param time: timespan on the dataframe from system time to system time - time
-    :return: True as we want to add the last event of the stream to the dataframe
+    :return: None
     """
     all_dfs[key].dataframe = all_dfs[key].dataframe[all_dfs[key].dataframe['INSERTION_TIMESTAMP'] > np.datetime64('now') - time]
     all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event())
@@ -115,7 +115,7 @@ def time_batch_observer(time):
     """
     observer for the time_batch_observer dataframe
     :param time: timespan on the dataframe
-    :return: True if we want to add last event, else False
+    :return: None
     """
     if(np.datetime64('now') < time):
         result = np.datetime64('now') < time
@@ -176,7 +176,7 @@ def ext_time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=
     :param milliseconds: number of milliseconds into the past
     :param microseconds: number of microseconds into the past
     :param nanoseconds: number of nanoseconds into the past
-    :return: wxt_time_batch dataframe
+    :return: ext_time_batch dataframe
     """
 
     while True:

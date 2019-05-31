@@ -27,6 +27,12 @@ def first_event():
 
 
 def first_unique_observer(key, param):
+    """
+    Observer for the first_unique dataframe
+    :param key: key for the sort dataframe
+    :param param: parameters we want to look for first unique datas
+    :return: None
+    """
     all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event())
     all_dfs[key].dataframe.drop_duplicates(subset=set(param), keep='first', inplace=True)
 
@@ -55,7 +61,7 @@ def sort_observer(key, size ,criteria):
     :param key: key for the sort dataframe
     :param size: length of the dataframe
     :param criteria: list of tupels (price True) sorting the price column ascending or (price False) sorting descending
-    :return: False because we don't want to add the last event (was already added)
+    :return: None
     """
     all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event()).sort_values(
         by=[elm[0] for elm in criteria], ascending=[elm[1] for elm in criteria]).head(size)
@@ -89,7 +95,7 @@ def last_length_observer(key, len):
     Observer for last_length dataframe
     :param key: key for last length dataframe
     :param len: length
-    :return: return True because we have to add the last event
+    :return: None
     """
     if size(all_dfs[key]) >= len:
         all_dfs[key].dataframe = all_dfs[key].dataframe.iloc[1:]
@@ -120,7 +126,7 @@ def length_batch_observer(key, len):
     Observer for the length_batch dataframe
     :param key: key of length_batch dataframe
     :param len: length of batch
-    :return: false because we don't want to add the last element because it was already added
+    :return: None
     """
     if all_dfs[key].variables['count'] % len == 0:
         all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.tail(len)
@@ -153,7 +159,7 @@ def first_length_observer(key, len):
     observer for the first_length dataframe
     :param key: key of the first_length dataframe
     :param len: length of the dataframe
-    :return: True if have to add last event, else False
+    :return: None
     """
     if size(all_dfs[key]) < len:
         all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event())
