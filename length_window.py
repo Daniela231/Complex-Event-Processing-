@@ -26,13 +26,27 @@ def first_event():
     return all_dfs["StockTick"].dataframe.head(1)
 
 
+def first_unique_observer(key, param):
+    all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event())
+    all_dfs[key].dataframe.drop_duplicates(subset=set(param), keep='first', inplace=True)
+
+
 def first_unique(*param):
     """
     Retains online the first events having the same expression in the columns of param
     :param param: defines the columns we want to filter for unique parameters
     :return: returns the filtered dataframe
     """
-    return all_dfs["StockTick"].dataframe.drop_duplicates(subset=param, keep='first', inplace=True)
+    key = ('first_unique', param)
+    try:
+        all_dfs[key].update_df()
+    except:
+        all_dfs[key] = DataframeManager()
+        all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.drop_duplicates(
+            subset=set(param), keep='first')
+        all_dfs[key].observers.update({first_unique_observer: [key, param]})
+
+    return all_dfs[key].dataframe
 
 
 def sort_observer(key, size ,criteria):
@@ -43,8 +57,8 @@ def sort_observer(key, size ,criteria):
     :param criteria: list of tupels (price True) sorting the price column ascending or (price False) sorting descending
     :return: False because we don't want to add the last event (was already added)
     """
-    all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event()).sort_values(by=[elm[0] for elm in criteria], ascending=[elm[1] for elm in criteria]).head(size)
-    return False
+    all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event()).sort_values(
+        by=[elm[0] for elm in criteria], ascending=[elm[1] for elm in criteria]).head(size)
 
 
 def sort(size, criteria):
@@ -54,15 +68,18 @@ def sort(size, criteria):
     :param criteria: list of tupels (price True) sorting the price column ascending or (price False) sorting descending
     :return: Sorted dataframe
     """
-    key = 'sort_'+str(size)
+    key = ('sort', size)
     for elm, symbol in criteria:
-        key = key +'_'+str(elm)+'_'+str(symbol)
-    if key not in all_dfs.keys():
+        key = key + (elm, symbol)
+
+    try:
+        all_dfs[key].update_df(last_event())
+    except:
         all_dfs[key] = DataframeManager()
-        all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.sort_values(by=[elm[0] for elm in criteria], ascending=[elm[1] for elm in criteria]).head(size)
+        all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.sort_values(
+            by=[elm[0] for elm in criteria], ascending=[elm[1] for elm in criteria]).head(size)
         all_dfs[key].observers.update({sort_observer : [key, size ,criteria]})
-    else:
-        all_dfs[key].add_df(last_event())
+
 
     return all_dfs[key].dataframe
 
@@ -76,7 +93,7 @@ def last_length_observer(key, len):
     """
     if size(all_dfs[key]) >= len:
         all_dfs[key].dataframe = all_dfs[key].dataframe.iloc[1:]
-    return True
+    all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event())
 
 
 def last_len(len):
@@ -85,14 +102,15 @@ def last_len(len):
     :param len: length of dataframe we want to return
     :return: Dataframe of length len
     """
-    key = 'last_len_'+str(len)
+    key = ('last_len', len)
 
-    if key not in all_dfs.keys():
-        all_dfs[key] = DataframeManager()
-        all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.tail(len)
-        all_dfs[key].observers.update({last_length_observer : [key, len]})
-    else:
-        all_dfs[key].add_df(last_event())
+    try:
+        all_dfs[key].update_df()
+    except:
+        if key not in all_dfs.keys():
+            all_dfs[key] = DataframeManager()
+            all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.tail(len)
+            all_dfs[key].observers.update({last_length_observer : [key, len]})
 
     return all_dfs[key].dataframe
 
@@ -106,7 +124,6 @@ def length_batch_observer(key, len):
     """
     if all_dfs[key].variables['count'] % len == 0:
         all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.tail(len)
-    return False
 
 
 def length_batch(len):
@@ -115,7 +132,7 @@ def length_batch(len):
     :param len: number of rows in our dataframe batch
     :return: dataframe of length len after collecting len elemements
     """
-    key = 'length_batch_'+ str(len)
+    key = ('length_batch', len)
 
     if key not in all_dfs.keys():
         all_dfs[key] = DataframeManager()
@@ -127,7 +144,7 @@ def length_batch(len):
     else:
         all_dfs[key].variables['count'] = all_dfs[key].variables['count'] + 1
 
-    all_dfs[key].add_df()
+    all_dfs[key].update_df()
     return all_dfs[key].dataframe
 
 
@@ -138,7 +155,8 @@ def first_length_observer(key, len):
     :param len: length of the dataframe
     :return: True if have to add last event, else False
     """
-    return size(all_dfs[key]) < len
+    if size(all_dfs[key]) < len:
+        all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event())
 
 
 def first_len(len):
@@ -147,14 +165,14 @@ def first_len(len):
     :param len: length of dataframe
     :return: first_length dataframe
     """
-    key = 'first_len_'+str(len)
+    key = ('first_len', len)
 
-    if key not in all_dfs.keys():
+    try:
+        all_dfs[key].update_df()
+    except:
         all_dfs[key] = DataframeManager()
         all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.head(len)
         all_dfs[key].observers.update({first_length_observer : [key, len]})
-    else:
-        all_dfs[key].add_df(last_event())
 
     return all_dfs[key].dataframe
 
