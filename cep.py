@@ -104,5 +104,5 @@ test(5)
 #22min for 75000k (23.5.2019)
 for i in range(40):
     p = float(randrange(1, 10))
-    l.critical(p)
+    l.critical('new price: ' + str(p))
     all_dfs['StockTick'].add({'index' : i+1, 'symbol' : 'A', 'price' : p})
