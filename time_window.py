@@ -171,8 +171,8 @@ def ext_time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=
     :param nanoseconds: number of nanoseconds into the past
     :return: wxt_time_batch dataframe
     """
-    continueBatch = True
-    while continueBatch:
+
+    while True:
         dict = locals()
         key = 'ext_time'
         time = list(all_dfs['StockTick'].dataframe['INSERTION_TIMESTAMP'])[0]
@@ -189,11 +189,6 @@ def ext_time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=
         else:
             all_dfs[key].add_df(last_event())
 
-        x = input("Continue? (y/n)")
-        if x == "y":
-            continueBatch = True
-        else:
-            continueBatch = False
 
     return all_dfs[key].dataframe
 
