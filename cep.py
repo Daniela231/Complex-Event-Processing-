@@ -55,6 +55,10 @@ def test_first_time_observer():
     l.critical(all_dfs['first_time_2ns'].dataframe)
     return False
 
+def test_time_batch_observer():
+    a = time_batch(nanoseconds=2)
+    l.critical(all_dfs['time_batch_2ns'].dataframe)
+    return False
 
 def test_length_batch():
     """
@@ -63,6 +67,7 @@ def test_length_batch():
     """
     a = length_batch(5)
     l.critical(all_dfs['length_batch_5'].dataframe)
+
 
 
 def test_sort():
