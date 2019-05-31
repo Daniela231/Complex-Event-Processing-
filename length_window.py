@@ -32,7 +32,7 @@ def first_unique(*param):
     :param param: defines the columns we want to filter for unique parameters
     :return: returns the filtered dataframe
     """
-    return all_dfs["StockTick"].dataframe.drop_duplicates(subset=param, keep='first', inplace=True)
+    return all_dfs["StockTick"].dataframe.drop_duplicates(subset=param, keep='first', inplace=False)
 
 
 def sort_observer(key, size ,criteria):
