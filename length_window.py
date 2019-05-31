@@ -43,7 +43,9 @@ def first_unique(*param):
     :param param: defines the columns we want to filter for unique parameters
     :return: returns the filtered dataframe
     """
-    key = ('first_unique', param)
+    key = ('first_unique',)
+    for elm in param:
+        key = key + (elm,)
     try:
         all_dfs[key].update_df()
     except:

@@ -61,14 +61,11 @@ def last_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, mi
     return all_dfs[key].dataframe
 
 
-def first_time_observer(time):
+def first_time_observer(key, time):
     """
     observer for the first_time dataframe
     :param time: timespan on the dataframe
-    :return: True if we want to add last event, else False
     """
-    return np.datetime64('now') < time
-def first_time_observer(key, time):
     if np.datetime64('now') < time:
         all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event())
 
@@ -111,7 +108,6 @@ result_available = threading.Event()
 
 
 def time_batch_observer(key, time):
-def time_batch_observer(time):
     """
     observer for the time_batch_observer dataframe
     :param time: timespan on the dataframe
@@ -136,7 +132,7 @@ def time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
     :param nanoseconds: number of nanoseconds into the past
     :return: time_batch dataframe
     """
-     while True:
+    while True:
         dict = locals()
         time = list(all_dfs['StockTick'].dataframe['INSERTION_TIMESTAMP'])[0]
 
@@ -149,7 +145,7 @@ def time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
         thread = threading.Thread(target=time_batch_observer)
         thread.start()
         result_available.wait()
-     return True
+    return True
 
 
 def ext_time_batch_observer(lasttime,time):
