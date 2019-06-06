@@ -21,6 +21,16 @@ def avg_price_last_1_second():
     l.critical('The average price of all events in the last 1 second: ' + str(avg_price))
 
 
+
+def avg_price_last_1_second_generation_time():
+    """
+    This observer checks the average price of all events added in the last 1 second
+    """
+    avg_price = externally_last_time(col = 'generation_time', seconds=1)['price'].mean()
+    l.critical(all_dfs[('externally_last_time', 'generation_time', 1, 's')].dataframe)
+    l.critical('The average price of all events in the last 1 second regarding generation_time: ' + str(avg_price))
+
+
 def avg_price_last_five_events_observer():
     """
     This observer checks the average price of the last five events added
@@ -90,6 +100,15 @@ def avg_price_first_unique_price_symbol():
     l.critical("The average price of all events in first_unique('price', 'symbol'): " + str(avg_price))
 
 
+def avg_price_last_unique_price_symbol():
+    """
+    This observer checks the average price of the events in last_unique('price', 'symbol') dataframe
+    """
+    avg_price = last_unique('price', 'symbol')['price'].mean()
+    l.critical(all_dfs['last_unique', 'price', 'symbol'].dataframe)
+    l.critical("The average price of all events in last_unique('price', 'symbol'): " + str(avg_price))
+
+
 all_dfs['StockTick'] = DataframeManager()
 
 
@@ -110,12 +129,19 @@ def test(i):
         all_dfs['StockTick'].observers.update({avg_price_first_unique_price_symbol : []})
     elif i == 8:
         all_dfs['StockTick'].observers.update({avg_price_time_length_batch_5_1_min: []})
+    elif i == 9:
+        all_dfs['StockTick'].observers.update({avg_price_last_unique_price_symbol: []})
+    elif i == 10:
+        all_dfs['StockTick'].observers.update({avg_price_last_1_second_generation_time: []})
 
-test(8)
+
+test(10)
 
 
 #22min for 75000k (23.5.2019)
+now = np.datetime64('now')
 for i in range(40):
+    now = np.datetime64('now')
     p = float(randrange(1, 10))
     l.critical('new price: ' + str(p))
-    all_dfs['StockTick'].add({'index' : i+1, 'symbol' : 'A', 'price' : p})
+    all_dfs['StockTick'].add({'index' : i+1, 'symbol' : 'A', 'price' : p, 'generation_time' : now })

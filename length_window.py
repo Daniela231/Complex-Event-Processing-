@@ -25,7 +25,6 @@ def first_event():
     """
     return all_dfs["StockTick"].dataframe.head(1)
 
-
 def first_unique_observer(key, param):
     """
     Observer for the first_unique dataframe
@@ -53,6 +52,37 @@ def first_unique(*param):
         all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.drop_duplicates(
             subset=set(param), keep='first')
         all_dfs[key].observers.update({first_unique_observer: [key, param]})
+
+    return all_dfs[key].dataframe
+
+
+def last_unique_observer(key, param):
+    """
+    Observer for the first_unique dataframe
+    :param key: key for the first_unique dataframe
+    :param param: parameters we want to look for first unique datas
+    :return: None
+    """
+    all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event())
+    all_dfs[key].dataframe.drop_duplicates(subset=set(param), keep='last', inplace=True)
+
+
+def last_unique(*param):
+    """
+    Retains only the first events having the same expression in the columns of param
+    :param param: defines the columns we want to filter for unique parameters
+    :return: returns the filtered dataframe
+    """
+    key = ('last_unique',)
+    for elm in param:
+        key = key + (elm,)
+    try:
+        all_dfs[key].update_df()
+    except:
+        all_dfs[key] = DataframeManager()
+        all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.drop_duplicates(
+            subset=set(param), keep='last')
+        all_dfs[key].observers.update({last_unique_observer: [key, param]})
 
     return all_dfs[key].dataframe
 
