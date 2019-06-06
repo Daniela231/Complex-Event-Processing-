@@ -60,6 +60,18 @@ def avg_price_length_batch_5():
         l.critical('length_batch(5) dataframe is empty')
 
 
+def avg_price_time_length_batch_5_1_min():
+    """
+    This observer checks the average price of the events in the time_length_batch(5, ) dataframe
+    """
+    try:
+        avg_price = time_length_batch(20, seconds=1)['price'].mean()
+        l.critical(all_dfs['time_length_batch', 20, 1, 's'].dataframe)
+        l.critical('The average price of all events in length_batch(5): ' + str(avg_price))
+    except:
+        l.critical('length_batch(5) dataframe is empty')
+
+
 def test_sort():
     """
     This observer checks the average price of the events in the sort dataframe sort(5, [('price', 0), ('index', 1)]) dataframe
@@ -96,9 +108,10 @@ def test(i):
         all_dfs['StockTick'].observers.update({test_sort : []})
     elif i == 7:
         all_dfs['StockTick'].observers.update({avg_price_first_unique_price_symbol : []})
+    elif i == 8:
+        all_dfs['StockTick'].observers.update({avg_price_time_length_batch_5_1_min: []})
 
-
-test(5)
+test(8)
 
 
 #22min for 75000k (23.5.2019)

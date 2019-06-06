@@ -148,6 +148,38 @@ def time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
     return True
 
 
+def time_length_batch_observer(key, len, time):
+    count = all_dfs[key].variables['count']
+    now = np.datetime64('now')
+    if count == len or now - all_dfs[key].variables['last_update_time'] >= time:
+        all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.tail(count)
+        all_dfs[key].variables['count'] = 0
+        all_dfs[key].variables['last_update_time'] = now
+
+
+def time_length_batch(len, weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0, nanoseconds=0):
+    dict = locals()
+    del dict['len']
+    key = ('time_length_batch', len)
+    time = 0
+    for i in dict.keys():
+        if dict[i] != 0:
+            time = time + np.timedelta64(int(dict[i]), abbreviations[i])
+            key = key + (dict[i], abbreviations[i])
+
+    try:
+        all_dfs[key].variables['count'] = all_dfs[key].variables['count'] + 1
+    except:
+        all_dfs[key] = DataframeManager()
+        all_dfs[key].dataframe = pd.DataFrame()
+        all_dfs[key].observers.update({time_length_batch_observer: [key, len, time]})
+        all_dfs[key].variables['count'] = 1
+        all_dfs[key].variables['last_update_time'] = np.datetime64('now')
+
+    all_dfs[key].update_df()
+    return all_dfs[key].dataframe
+
+
 def ext_time_batch_observer(key, lasttime, time):
     """
     observer for the ext_time_batch_observer dataframe
@@ -229,7 +261,7 @@ def time_accum(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
     if key not in all_dfs.keys():
         all_dfs[key] = DataframeManager()
         all_dfs[key].dataframe = all_dfs["StockTick"].dataframe[all_dfs["StockTick"].dataframe['INSERTION_TIMESTAMP']]
-        all_dfs[key].observers.update({time_accum_observer : [key, np.timedelta64('now')-lastEventTime, time]})
+        all_dfs[key].observers.update({time_accum_observer : [key, (np.timedelta64('now') - lastEventTime), time]})
     else:
         all_dfs[key].update_df()
         lastEventTime = np.datetime64('now')
