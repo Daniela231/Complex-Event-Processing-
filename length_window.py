@@ -46,12 +46,12 @@ def first_unique(*param):
     for elm in param:
         key = key + (elm,)
     try:
-        all_dfs[key].update_df()
+        all_dfs[key].update_df(key, param)
     except:
         all_dfs[key] = DataframeManager()
         all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.drop_duplicates(
             subset=set(param), keep='first')
-        all_dfs[key].observers.update({first_unique_observer: [key, param]})
+        all_dfs[key].observers.append(first_unique_observer)
 
     return all_dfs[key].dataframe
 
@@ -77,12 +77,12 @@ def last_unique(*param):
     for elm in param:
         key = key + (elm,)
     try:
-        all_dfs[key].update_df()
+        all_dfs[key].update_df(key, param)
     except:
         all_dfs[key] = DataframeManager()
         all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.drop_duplicates(
             subset=set(param), keep='last')
-        all_dfs[key].observers.update({last_unique_observer: [key, param]})
+        all_dfs[key].observers.append(last_unique_observer)
 
     return all_dfs[key].dataframe
 
@@ -111,12 +111,12 @@ def sort(size, criteria):
         key = key + (elm, symbol)
 
     try:
-        all_dfs[key].update_df(last_event())
+        all_dfs[key].update_df(key, size ,criteria)
     except:
         all_dfs[key] = DataframeManager()
         all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.sort_values(
             by=[elm[0] for elm in criteria], ascending=[elm[1] for elm in criteria]).head(size)
-        all_dfs[key].observers.update({sort_observer : [key, size ,criteria]})
+        all_dfs[key].observers.append(sort_observer)
 
 
     return all_dfs[key].dataframe
@@ -143,12 +143,12 @@ def last_len(len):
     key = ('last_len', len)
 
     try:
-        all_dfs[key].update_df()
+        all_dfs[key].update_df(key, len)
     except:
         if key not in all_dfs.keys():
             all_dfs[key] = DataframeManager()
             all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.tail(len)
-            all_dfs[key].observers.update({last_length_observer : [key, len]})
+            all_dfs[key].observers.append(last_length_observer)
 
     return all_dfs[key].dataframe
 
@@ -177,10 +177,10 @@ def length_batch(len):
     except:
         all_dfs[key] = DataframeManager()
         all_dfs[key].dataframe = pd.DataFrame()
-        all_dfs[key].observers.update({length_batch_observer: [key, len]})
+        all_dfs[key].observers.append(length_batch_observer)
         all_dfs[key].variables['count'] = 1
 
-    all_dfs[key].update_df()
+    all_dfs[key].update_df(key, len)
     return all_dfs[key].dataframe
 
 
@@ -204,11 +204,11 @@ def first_len(len):
     key = ('first_len', len)
 
     try:
-        all_dfs[key].update_df()
+        all_dfs[key].update_df(key, len)
     except:
         all_dfs[key] = DataframeManager()
         all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.head(len)
-        all_dfs[key].observers.update({first_length_observer : [key, len]})
+        all_dfs[key].observers.append(first_length_observer)
 
     return all_dfs[key].dataframe
 

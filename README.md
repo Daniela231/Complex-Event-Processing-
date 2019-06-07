@@ -9,14 +9,12 @@ The DataframeManager script is the main core in handling the Dataframe and addin
 
 length_window.py
 
-The length_window script contains the functions to change the length of the Dataframe
-we want to run our observers on.
+The length_window script contains the functions to get some rows of the dataframe (a window) depending on a given length
 
 
 time_window.py
 
-time_window has the same functionality as length_window but filters the Dataframe 
-to only contain the events at an exact time or given time period(like 30 minutes in the past)
+The length_window script contains the functions to get some rows of the dataframe (a window) depending on a given time
 
 
 cep.py
@@ -26,5 +24,6 @@ This script is our testing script if implementations of length/time_window are w
 as a kind of unit-test.
 
 ceplogfile.log
+
 This file contains the last cep test as a logging tool for an easier type to format to analyse the 
 output for errors/malicious behaviour
