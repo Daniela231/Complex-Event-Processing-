@@ -2,6 +2,7 @@ from random import randrange
 from DataframeManager import *
 from length_window import *
 from time_window import *
+from statistic_views import *
 from datetime import datetime
 
 
