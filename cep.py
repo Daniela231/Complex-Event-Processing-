@@ -136,6 +136,7 @@ def correlation_method_test():
                         "C": [4, 3, 8, 5]})
     l.critical(df1, "\n")
     l.critical(df2)
+    l.critical(prepare_for_correl(df2, ['A', 'B', 'C']))
     l.critical(simple_correl('pearson', df, 2))
     l.critical(correlwith(df1, df2, 'pearson', 0))
     l.critical(correlwith(df1, df2, 'pearson', 1))

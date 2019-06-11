@@ -5,6 +5,21 @@ import pandas as pd
 #def linest():
 
 
+def prepare_for_correl(dataframe, *params):
+    """
+    Prepares dataframes for correlation function by enabling us to filter a given dataframe by the params
+    :param dataframe: dataframe we want to prepare
+    :param params: List of columns we want to keep
+    :return: returns the filtered dataframe
+    """
+    ReturnDataframe=pd.DataFrame
+    for param in params:
+        ReturnDataframe = dataframe.loc[:, param]
+
+    return ReturnDataframe
+
+
+
 def simple_correl(method, dataframe, decimals):
     """
     calculates the correlation inside of a dataframe by the given method for the cólumns
