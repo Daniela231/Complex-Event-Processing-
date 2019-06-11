@@ -14,16 +14,6 @@ s=logging.StreamHandler()
 l.addHandler(s)
 
 
-# Test 3
-def avg_price_last_1_second():
-    """
-    This observer checks the average price of all events added in the last 1 second
-    """
-    avg_price = last_time(seconds=1)['price'].mean()
-    l.critical(all_dfs['last_time', 'seconds', 1].dataframe)
-    l.critical('The average price of all events in the last 1 second: ' + str(avg_price))
-
-
 # Test 1
 def avg_price_last_five_events_observer():
     """
@@ -42,6 +32,16 @@ def avg_price_first_five_events_observer():
     avg_price = first_len(5)['price'].mean()
     l.critical(all_dfs['first_len', 5].dataframe)
     l.critical('The average price of the first five events is: ' + str(avg_price))
+
+
+# Test 3
+def avg_price_last_1_second():
+    """
+    This observer checks the average price of all events added in the last 1 second
+    """
+    avg_price = last_time(seconds=1)['price'].mean()
+    l.critical(all_dfs['last_time', 'seconds', 1].dataframe)
+    l.critical('The average price of all events in the last 1 second: ' + str(avg_price))
 
 
 #Test 4
@@ -67,19 +67,6 @@ def avg_price_length_batch_5():
         l.critical('length_batch(5) dataframe is empty')
 
 
-# Test 8
-def avg_price_time_length_batch_15_1_second():
-    """
-    This observer checks the average price of the events in the time_length_batch(15, seconds=1) dataframe
-    """
-    try:
-        avg_price = time_length_batch(15, seconds=1)['price'].mean()
-        l.critical(all_dfs['time_length_batch', 15, 'seconds', 1].dataframe)
-        l.critical('The average price of all events in time_length_batch(15, seconds=1): ' + str(avg_price))
-    except:
-        l.critical('time_length_batch(15, milliseconds=1) dataframe is empty')
-
-
 # Test 6
 def test_sort():
     """
@@ -100,6 +87,19 @@ def avg_price_first_unique_price_symbol():
     l.critical("The average price of all events in first_unique('price', 'symbol'): " + str(avg_price))
 
 
+# Test 8
+def avg_price_time_length_batch_15_1_second():
+    """
+    This observer checks the average price of the events in the time_length_batch(15, seconds=1) dataframe
+    """
+    try:
+        avg_price = time_length_batch(15, seconds=1)['price'].mean()
+        l.critical(all_dfs['time_length_batch', 15, 'seconds', 1].dataframe)
+        l.critical('The average price of all events in time_length_batch(15, seconds=1): ' + str(avg_price))
+    except:
+        l.critical('time_length_batch(15, milliseconds=1) dataframe is empty')
+
+
 # Test 9
 def avg_price_last_unique_price_symbol():
     """
@@ -118,6 +118,27 @@ def avg_price_last_1_second_externally_time():
     avg_price = externally_last_time(col = 'time', seconds=1)['price'].mean()
     l.critical(all_dfs['externally_last_time', 'time', 'seconds', 1].dataframe)
     l.critical('The average price of all events in the last 1 second regarding externally time: ' + str(avg_price))
+
+
+#Test 11 /given dataframe test
+def correlation_method_test():
+    # Dataframe for simple correlation test
+    df = pd.DataFrame([(.2, .3), (.0, .6), (.6, .0), (.2, .1)], columns=['A', 'B'])
+
+    # Creating the first dataframe
+    df1 = pd.DataFrame({"A": [1, 5, 7, 8],
+                        "B": [5, 8, 4, 3],
+                        "C": [10, 4, 9, 3]})
+
+    # Creating the second dataframe
+    df2 = pd.DataFrame({"A": [5, 3, 6, 4],
+                        "B": [11, 2, 4, 3],
+                        "C": [4, 3, 8, 5]})
+    l.critical(df1, "\n")
+    l.critical(df2)
+    l.critical(simple_correl('pearson', df, 2))
+    l.critical(correlwith(df1, df2, 'pearson', 0))
+    l.critical(correlwith(df1, df2, 'pearson', 1))
 
 
 all_dfs['StockTick'] = DataframeManager()
@@ -144,9 +165,11 @@ def test(i):
         all_dfs['StockTick'].observers.append(avg_price_last_unique_price_symbol)
     elif i == 10:
         all_dfs['StockTick'].observers.append(avg_price_last_1_second_externally_time)
+    elif i == 11:
+        correlation_method_test()
 
 
-test(2)
+test(11)
 
 
 #22min for 75000k (23.5.2019)
