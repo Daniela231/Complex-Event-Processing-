@@ -17,6 +17,7 @@ def first_event():
     """
     return all_dfs["StockTick"].dataframe.head(1)
 
+
 def first_unique_observer(key, param):
     """
     Observer for the first_unique dataframe

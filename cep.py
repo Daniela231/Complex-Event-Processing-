@@ -146,6 +146,7 @@ def correlation_method_test():
 
 all_dfs['StockTick'] = DataframeManager()
 
+
 # Test_12
 def weighted_avg_price_last_five_events_observer():
     """
@@ -163,6 +164,7 @@ def sum_price_current_count_less_or_equal_4():
     sum = expiry_exp('current_count() <= 4')['price'].sum()
     l.critical(all_dfs['expiry_exp', 'current_count() <= 4'].dataframe)
     l.critical('sum price of the last four events is: ' + str(sum))
+
 
 # Test 14  ---test for expiry_exp_batch
 def sum_price_batch_counter_greater_or_equal_4():
