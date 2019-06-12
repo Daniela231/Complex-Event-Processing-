@@ -2,6 +2,7 @@ from random import randrange
 from DataframeManager import *
 from length_window import *
 from time_window import *
+from data_window import *
 from special_derived_value_window import *
 from statistic_views import *
 from datetime import datetime
@@ -155,7 +156,23 @@ def weighted_avg_price_last_five_events_observer():
     l.critical(all_dfs['last_len', 5].dataframe)
     l.critical('The average price of the last five events is: ' + str(avg))
 
-# Test 13
+
+# Test 13  ---test for expiry_exp
+def sum_price_current_count_less_or_equal_4():
+
+    sum = expiry_exp('current_count() <= 4')['price'].sum()
+    l.critical(all_dfs['expiry_exp', 'current_count() <= 4'].dataframe)
+    l.critical('sum price of the last four events is: ' + str(sum))
+
+# Test 14  ---test for expiry_exp_batch
+def sum_price_batch_counter_greater_or_equal_4():
+    try:
+        sum = expiry_exp_batch('batch_counter() >= 4')['price'].sum()
+        l.critical(all_dfs['expiry_exp_batch', 'batch_counter() >= 4'].dataframe)
+        l.critical('sum price of events in expiry_exp_batch("batch_counter() >= 4"): ' + str(sum))
+    except:
+        print('Dataframe is empty')
+
 
 def test(i):
     if i == 1:
@@ -182,9 +199,13 @@ def test(i):
         correlation_method_test()
     elif i == 12:
         all_dfs['StockTick'].observers.append(weighted_avg_price_last_five_events_observer)
+    elif i == 13:
+        all_dfs['StockTick'].observers.append(sum_price_current_count_less_or_equal_4)
+    elif i == 14:
+        all_dfs['StockTick'].observers.append(sum_price_batch_counter_greater_or_equal_4)
 
 
-test(12)
+test(14)
 
 
 #22min for 75000k (23.5.2019)
