@@ -1,8 +1,57 @@
-from DataframeManager import *
 import pandas as pd
+from length_window import *
 
 
-#def linest():
+def linest(dataframe, function, value_expr1, value_expr2):
+    """
+    calculation of regression and intermediate results for 2 columns
+    :param dataframe: dataframe we want the calculation of
+    :param function: what we want to calculate
+    :param value_expr1: first set of data
+    :param value_expr2: second set of data
+    :return: returns the result of the chosen function
+    """
+    new_dataframe= pd.dataframe
+    if function == 'slope':
+        return dataframe[value_expr1].diff()/dataframe[value_expr2].diff()
+    elif function == 'YIntercept':
+        variable =dataframe[value_expr2.head(1)]-((dataframe[value_expr1].diff()/dataframe[value_expr2].diff())*dataframe[value_expr1.head(1)])
+        return variable
+    elif function == 'XAverage':
+        return dataframe.sum(value_expr1)/size(dataframe)
+    elif function == 'XStandardDeviationPop':
+        return dataframe.std(value_expr1)
+    elif function == 'XSum':
+        return dataframe.sum(value_expr1)
+    elif function == 'XVariance':
+        new_dataframe['X'] = dataframe(value_expr1)
+        return new_dataframe.var()
+    elif function == 'YAverage':
+        return dataframe.sum(value_expr2)/size(dataframe)
+    elif function == 'YStandardDeviationPop':
+        return dataframe.std(value_expr2)
+    elif function == 'YSum':
+        return dataframe.sum(value_expr2)
+    elif function == 'YVariance':
+        new_dataframe['Y'] = dataframe(value_expr2)
+        return new_dataframe.var()
+    elif function == 'datapoints':
+        return size(dataframe)
+    elif function == 'n':
+        return size(dataframe)
+    elif function == 'SumX':
+        return dataframe.sum(value_expr1)
+    elif function == 'SumXsq':
+        new_dataframe['X'] = dataframe[value_expr1]**2
+        return new_dataframe.sum('X')
+    elif function == 'SumXY':
+        new_dataframe[XY]=dataframe[value_expr1]+dataframe[value_expr2]
+        return new_dataframe.sum('XY')
+    elif function == 'SumY':
+        return dataframe.sum(value_expr1)
+    elif function == 'SumYsq':
+        new_dataframe['Y'] = dataframe[value_expr2] ** 2
+        return new_dataframe.sum('Y')
 
 
 def prepare_for_correl(dataframe, *params):
@@ -17,7 +66,6 @@ def prepare_for_correl(dataframe, *params):
         ReturnDataframe = dataframe.loc[:, param]
 
     return ReturnDataframe
-
 
 
 def simple_correl(method, dataframe, decimals):
