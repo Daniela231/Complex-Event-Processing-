@@ -2,6 +2,7 @@ from random import randrange
 from DataframeManager import *
 from length_window import *
 from time_window import *
+from special_derived_value_window import *
 from statistic_views import *
 from datetime import datetime
 
@@ -144,6 +145,17 @@ def correlation_method_test():
 
 all_dfs['StockTick'] = DataframeManager()
 
+# Test_12
+def weighted_avg_price_last_five_events_observer():
+    """
+    This observer checks the average price of the last five events added
+    """
+    #avg_price = last_len(5)['price'].mean()
+    avg = weighted_avg(last_len(5), field='price', weight='index')
+    l.critical(all_dfs['last_len', 5].dataframe)
+    l.critical('The average price of the last five events is: ' + str(avg))
+
+# Test 13
 
 def test(i):
     if i == 1:
@@ -168,9 +180,11 @@ def test(i):
         all_dfs['StockTick'].observers.append(avg_price_last_1_second_externally_time)
     elif i == 11:
         correlation_method_test()
+    elif i == 12:
+        all_dfs['StockTick'].observers.append(weighted_avg_price_last_five_events_observer)
 
 
-test(11)
+test(12)
 
 
 #22min for 75000k (23.5.2019)

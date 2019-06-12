@@ -1,13 +1,5 @@
 from DataframeManager import *
-
-
-def size(dfm):
-    """
-    Returns the number of rows in the dataframe of the DataframeManager dfm
-    :param dfm: the DataframeManager we want to know the numbers of rows of its dataframe
-    :return: the number of rows
-    """
-    return dfm.dataframe.shape[0]
+from special_derived_value_window import *
 
 
 def last_event():
