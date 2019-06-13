@@ -6,14 +6,14 @@ class DataframeManager(object):
     def __init__(self, columns_list=[]):
         self.dataframe = pd.DataFrame(columns=columns_list)
         self.observers = []
+        self.observers_with_param = []
         self.variables = {}
 
     def update_df(self, *param):
-        for function in self.observers:
-            try:
-                function(*param)
-            except:
-                function[0](function[1])
+        for elm in self.observers_with_param:
+            elm[0](elm[1:])
+        for observer in self.observers:
+            observer(*param)
 
     def add(self, event_dictionary):
         event_dictionary['INSERTION_TIMESTAMP'] = datetime.now()
