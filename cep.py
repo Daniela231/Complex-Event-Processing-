@@ -282,7 +282,7 @@ test(8)
 
 #45min for 75000k (test(8))
 now = datetime.now()
-for i in range(75000):
+for i in range(40):
     if i % 3 == 0:
         now = datetime.now()
     p = float(randrange(1, 10))
