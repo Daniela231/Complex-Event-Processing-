@@ -65,10 +65,12 @@ def avg_price_last_1_second():
 #Test 4
 def avg_price_first_two_seconds_observer():
     """
-    This observer checks the average price of all events added in the first three seconds
+    This observer checks the average price of all events added in the first two seconds after first_time(seconds=2) is
+    called for the first time
     """
-    avg_price = first_time(seconds = 2)['price'].mean()
-    i4.critical(all_dfs['first_time', 'seconds', 2].dataframe)
+    df = first_time(seconds=2)
+    avg_price = df['price'].mean()
+    i4.critical(df)
     i4.critical('The average price of all events in the first two seconds is: ' + str(avg_price))
 
 
@@ -287,4 +289,4 @@ for i in range(40):
         now = datetime.now()
     p = float(randrange(1, 10))
     l.critical('new price: ' + str(p))
-    all_dfs['StockTick'].add({'index' : i+1, 'symbol' : 'A', 'price' : p, 'time' : now })
+    all_dfs['StockTick'].add({'index' : i, 'symbol' : 'A', 'price' : p, 'time' : now })
