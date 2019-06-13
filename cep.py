@@ -280,7 +280,7 @@ def test(i):
 
 test(8)
 
-#22min for 75000k (23.5.2019)
+#45min for 75000k (test(8))
 now = datetime.now()
 for i in range(75000):
     if i % 3 == 0:
