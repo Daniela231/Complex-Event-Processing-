@@ -1,5 +1,6 @@
 import pandas as pd
 from length_window import *
+from special_derived_value_window import *
 
 
 def linest(dataframe, function, value_expr1, value_expr2):
@@ -11,14 +12,15 @@ def linest(dataframe, function, value_expr1, value_expr2):
     :param value_expr2: second set of data
     :return: returns the result of the chosen function
     """
-    new_dataframe= pd.dataframe
+    new_dataframe= pd.DataFrame()
     if function == 'slope':
         return dataframe[value_expr1].diff()/dataframe[value_expr2].diff()
     elif function == 'YIntercept':
-        variable =dataframe[value_expr2.head(1)]-((dataframe[value_expr1].diff()/dataframe[value_expr2].diff())*dataframe[value_expr1.head(1)])
+        variable =dataframe[value_expr2.tail(1)]-((dataframe[value_expr1].diff()/dataframe[value_expr2].diff())
+                                                  * dataframe[value_expr1.tail(1)])
         return variable
     elif function == 'XAverage':
-        return dataframe.sum(value_expr1)/size(dataframe)
+        return dataframe.sum(value_expr1)/dataframe.shape[0]
     elif function == 'XStandardDeviationPop':
         return dataframe.std(value_expr1)
     elif function == 'XSum':
@@ -27,9 +29,7 @@ def linest(dataframe, function, value_expr1, value_expr2):
         new_dataframe['X'] = dataframe(value_expr1)
         return new_dataframe.var()
     elif function == 'YAverage':
-        return dataframe.sum(value_expr2)/size(dataframe)
-    elif function == 'YStandardDeviationPop':
-        return dataframe.std(value_expr2)
+        return dataframe.sum(value_expr2)/dataframe.shape[0]
     elif function == 'YSum':
         return dataframe.sum(value_expr2)
     elif function == 'YVariance':

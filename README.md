@@ -23,7 +23,22 @@ This script is our testing script if implementations of length/time_window are w
 "Test" code will be added with every bigger implementation of a function. This will serve
 as a kind of unit-test.
 
-ceplogfile.log
 
-This file contains the last cep test as a logging tool for an easier type to format to analyse the 
+statistics_views.py
+
+Contains functions for statistic calculations on a given dataframe
+
+
+special_derived_value.py
+
+Contains the size and weighted avarage function 
+
+
+Logfiles
+
+The ceptest#n.log file contain the output of the n-th test while the cep generator logfile contains
+the output of the eventstream and non sorted tests.
+
+Those files contains the last cep test as a logging tool for an easier type to format to analyse the 
 output for errors/malicious behaviour
+
