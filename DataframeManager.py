@@ -7,7 +7,7 @@ all_dfs = {}
 
 class DataframeManager(object):
     def __init__(self, columns_list=[]):
-        self.dataframe = pd.DataFrame()
+        self.dataframe = pd.DataFrame(columns=columns_list)
         self.observers = []
         self.variables = {}
 

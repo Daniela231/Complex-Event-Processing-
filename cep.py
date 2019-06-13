@@ -278,7 +278,7 @@ def test(i):
         i14.addHandler(s)
         all_dfs['StockTick'].observers.append(sum_price_batch_counter_greater_or_equal_4)
 
-test(8)
+test(4)
 
 #45min for 75000k (test(8))
 now = datetime.now()

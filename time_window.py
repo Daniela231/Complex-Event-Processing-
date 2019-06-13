@@ -2,20 +2,6 @@ from DataframeManager import *
 from length_window import last_event
 from datetime import datetime, timedelta
 
-lastEventTime = datetime.now()
-abbreviations = {
-        'years':'Y',
-        'months':'M',
-        'weeks':'W',
-        'days':'D',
-        'hours':'h',
-        'minutes':'m',
-        'seconds':'s',
-        'milliseconds':'ms',
-        'microseconds':'us',
-        'nanoseconds':'ns',
-}
-
 
 def last_time_observer(key, time):
     """
@@ -108,17 +94,17 @@ def externally_last_time(col, weeks=0, days=0, hours=0, minutes=0, seconds=0, mi
 
 
 
-def first_time_observer(key, time):
+def first_time_observer(key, now):
     """
     observer for the first_time dataframe
     :param key: key of the dataframe
     :param time: time for the first_time dataframe
     """
-    if time < 0:
+    if now - all_dfs[key].variables['statement_start'] < all_dfs[key].variables['time']:
         all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event())
 
 
-def first_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0):
+def first_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0, index=0):
     """
     Returns the dataframe of all events arriving within a given time after statement start
     :param weeks: number of weeks into the past
@@ -137,16 +123,16 @@ def first_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
     for i, val in dict.items():
         if val != 0:
             key = key + (i, val)
-    time = list(all_dfs['StockTick'].dataframe['INSERTION_TIMESTAMP'])[0] \
-           + timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds, milliseconds=milliseconds,
-                       microseconds=microseconds)
 
     try:
-        all_dfs[key].update_df(key, now-time)
+        all_dfs[key].update_df(key, now)
     except:
-        all_dfs[key] = DataframeManager()
-        all_dfs[key].dataframe = all_dfs["StockTick"].dataframe[all_dfs["StockTick"].dataframe['INSERTION_TIMESTAMP'] < time]
+        all_dfs[key] = DataframeManager(columns_list=all_dfs['StockTick'].dataframe.columns)
         all_dfs[key].observers.append(first_time_observer)
+        all_dfs[key].variables['statement_start'] = now
+        all_dfs[key].variables['time'] = timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
+                                                   milliseconds=milliseconds, microseconds=microseconds)
+        print('statement_start for ' + str(key) + ' : ' + str(now))
 
     return all_dfs[key].dataframe
 
@@ -333,7 +319,7 @@ def time_accum(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
         all_dfs[key].dataframe = all_dfs["StockTick"].dataframe[all_dfs["StockTick"].dataframe['INSERTION_TIMESTAMP']]
         all_dfs[key].observers.append(time_accum_observer)
     else:
-        all_dfs[key].update_df(key, (datetime.now() - lastEventTime), time)
+        all_dfs[key].update_df(key, (datetime.now() - last_event()['INSERTION_TIMESTAMP'].iloc[0]), time)
         lastEventTime = datetime.now()
 
     return all_dfs[key].dataframe
