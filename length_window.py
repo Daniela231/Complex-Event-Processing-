@@ -2,12 +2,12 @@ from DataframeManager import *
 from special_derived_value_window import *
 
 
-def last_event():
+def last_event(n=1):
     """
     Returns a dataframe consisting of the last event added
     :return: a dataframe consisting of the last event added
     """
-    return all_dfs["StockTick"].dataframe.tail(1)
+    return all_dfs["StockTick"].dataframe.tail(n)
 
 
 def first_event():

@@ -94,12 +94,13 @@ def externally_last_time(col, weeks=0, days=0, hours=0, minutes=0, seconds=0, mi
 
 
 
-def first_time_observer(key):
+def first_time_observer(list):
     """
     observer for the first_time dataframe
     :param key: key of the dataframe
     :return: None
     """
+    key = list[0]
     last = last_event()
 
     if last['INSERTION_TIMESTAMP'].iloc[0] - all_dfs[key].variables['statement_start'] < all_dfs[key].variables['time']:
@@ -130,7 +131,7 @@ def first_time(id=0, seconds=0, milliseconds=0, microseconds=0, minutes=0, hours
     except:
         now = datetime.now()
         all_dfs[key] = DataframeManager(columns_list=all_dfs['StockTick'].dataframe.columns)
-        all_dfs['StockTick'].observers = [[first_time_observer, key]] + all_dfs['StockTick'].observers
+        all_dfs['StockTick'].observers_with_param.append([first_time_observer, key])
         all_dfs[key].variables['statement_start'] = now
         all_dfs[key].variables['time'] = timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
                                                    milliseconds=milliseconds, microseconds=microseconds)
@@ -156,7 +157,7 @@ def time_batch_observer(key, time):
         all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event())
 
 
-def time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0):
+def time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0, reference_point=None):
     """
     Returns the dataframe buffering events up to a defined time period
     :param weeks: number of weeks into the past
@@ -168,15 +169,14 @@ def time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
     :param microseconds: number of microseconds into the past
     :return: time_batch dataframe
     """
+    if reference_point == None:
+        reference_point = datetime.now()
+    time = reference_point + timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
+                                       milliseconds=milliseconds, microseconds=microseconds)
     while True:
         dict = locals()
-        time = list(all_dfs['StockTick'].dataframe['INSERTION_TIMESTAMP'])[0] \
-               + timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
-                           milliseconds=milliseconds, microseconds=microseconds)
-
         first_time(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
                            milliseconds=milliseconds, microseconds=microseconds)
-
         thread = threading.Thread(target=time_batch_observer)
         thread.start()
         result_available.wait()
