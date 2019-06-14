@@ -48,7 +48,7 @@ def expiry_exp_observer(key, exp):
 def expiry_exp(exp):
     '''
     This function returns the expiry_exp dataframe that applies the given expiry expression and removes events from the
-    data window when the expression returns false.
+    dataframe when the expression returns false.
     :param exp: string to be evaluated to boolean. Built-in properties of the expiry_exp dataframe:
         'current_count': number of events in the dataframe including the currently-arriving event.
         'expired_count': number of events expired during this evaluation.
