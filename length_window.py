@@ -51,9 +51,9 @@ def first_unique(*param):
 
 def last_unique_observer(key, param):
     """
-    Observer for the first_unique dataframe
-    :param key: key for the first_unique dataframe
-    :param param: parameters we want to look for first unique datas
+    Observer for the last_unique dataframe.
+    :param key: key for the last_unique dataframe
+    :param param: names of the columns to be considered
     :return: None
     """
     all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event())
@@ -62,9 +62,10 @@ def last_unique_observer(key, param):
 
 def last_unique(*param):
     """
-    Retains only the first events having the same expression in the columns of param
-    :param param: defines the columns we want to filter for unique parameters
-    :return: returns the filtered dataframe
+    This function returns the last_unique dataframe that includes only the most recent among events having the same
+    values for the columns given as parameters.
+    :param *param: names of the columns to be considered
+    :return: the last_unique dataframe
     """
     key = ('last_unique',)
     for elm in param:

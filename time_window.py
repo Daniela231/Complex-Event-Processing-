@@ -16,7 +16,7 @@ def last_time_observer(key, time):
 
 def last_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0):
     """
-    Returns the dataframe looking back a given time into the past from the current system time
+    Returns the dataframe looking back a given time into the past from the current system time.
     :param weeks: number of weeks into the past
     :param days: number of days into the past
     :param hours: number of hours into the past
@@ -60,7 +60,9 @@ def externally_last_time_observer(key, col, time):
 
 def externally_last_time(col, weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0):
     """
-    Returns the dataframe looking back a given time into the past from the current system time considering the time column 'col'
+    This function returns the dataframe looking back a given time into the past from the current system time based on
+    the time values from the time column 'col'. The key difference between externally_last_time and last_time is that
+    the externally_last_time dataframe is based on the time values from 'col' instead of the insertion timestamp.
     :param col: name of the considered time column
     :param weeks: number of weeks into the past
     :param days: number of days into the past
@@ -183,11 +185,12 @@ def time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
 
 def time_length_batch_observer(key, len, time):
     """
-        Observer for the time_length_batch dataframe
-        :param key: key of the dataframe
-        :param time: time for the dataframe
-        :return: None
-        """
+    Observer for the time_length_batch dataframe
+    :param key: key of the dataframe
+    :param len: maximal length of the batch
+    :param time: maximal timespan for the batch
+    :return: None
+    """
     count = all_dfs[key].variables['count']
     if count == len or all_dfs[key].variables['last_update_time'] < time:
         all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.tail(count)
@@ -197,14 +200,16 @@ def time_length_batch_observer(key, len, time):
 
 def time_length_batch(len, weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0):
     '''
-    Returns the dataframe that batches events and releases them when it has collected 'len' events or the given time interval has passed.
-    :param weeks: number of weeks into the past
-    :param days: number of days into the past
-    :param hours: number of hours into the past
-    :param minutes: number of minutes into the past
-    :param seconds: number of seconds into the past
-    :param milliseconds: number of milliseconds into the past
-    :param microseconds: number of microseconds into the past
+    Returns the dataframe that batches events and releases them when it has collected 'len' events or the given time
+    interval has passed.
+    :param len: maximal length of the batch
+    :param weeks: number of weeks
+    :param days: number of days
+    :param hours: number of hours
+    :param minutes: number of minutes
+    :param seconds: number of seconds
+    :param milliseconds: number of milliseconds
+    :param microseconds: number of microseconds
     :return: time_length_batch dataframe
     '''
     now = datetime.now()
@@ -337,4 +342,5 @@ def time_order(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
     :param microseconds: number of microseconds into the past
     :return: ordered dataframe by timestamp
     """
-    return sort(first_time(id=0, weeks, days, hours, minutes, seconds, milliseconds, microseconds).shape[0], 'INSERTION_TIMESTAMP')
+    return sort(first_time(id=0, weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
+                           milliseconds=milliseconds, microseconds=microseconds).shape[0], 'INSERTION_TIMESTAMP')
