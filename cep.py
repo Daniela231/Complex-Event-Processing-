@@ -7,7 +7,6 @@ from special_derived_value_window import *
 from statistic_views import *
 from datetime import datetime
 from LogManager import *
-from logging import *
 
 #Logger for the new price
 l=logging.getLogger("cepgenerator")

@@ -17,12 +17,9 @@ time_window.py
 The length_window script contains the functions to get some rows of the dataframe (a window) depending on a given time
 
 
-cep.py
+data_window.py
 
-This script is our testing script if implementations of length/time_window are working as intended or not.
-"Test" code will be added with every bigger implementation of a function. This will serve
-as a kind of unit-test.
-
+Contains filter functionsafter expressions(exp) to filter the frame and remove events where the expression returns false
 
 statistics_views.py
 
@@ -33,6 +30,11 @@ special_derived_value.py
 
 Contains the size and weighted avarage function 
 
+cep.py
+
+This script is our testing script if implementations of length/time_window are working as intended or not.
+"Test" code will be added with every bigger implementation of a function. This will serve
+as a kind of unit-test.
 
 Logfiles
 
