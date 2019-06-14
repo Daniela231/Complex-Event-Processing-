@@ -107,13 +107,11 @@ def first_time_observer(list):
         all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event())
 
 
-def first_time(id=0, seconds=0, milliseconds=0, microseconds=0, minutes=0, hours=0, days=0, weeks=0):
+def first_time(statement_start=None, seconds=0, milliseconds=0, microseconds=0, minutes=0, hours=0, days=0, weeks=0):
     """
-    Returns the dataframe of all events arriving within a given time after statement_start. statement_start is the first
-    time the function is called with the same parameters.
-    :param id: id of the dateframe (of type int). It is set by default to 0. If you want to creat multiple first_time
-    dataframes with the same time span but with different values for statement_start, use a unique id for each dataframe.
-    Otherwise, the function will return always the same first_time dataframe.
+    Returns the dataframe of all events arriving within a given time after statement_start.
+    :param statement_start: the start point for the dataframe. statement_start is set by default to the first time the
+    function is called with the same parameters.
     :param seconds: number of seconds
     :param milliseconds: number of milliseconds
     :param microseconds: number of microseconds
@@ -124,12 +122,12 @@ def first_time(id=0, seconds=0, milliseconds=0, microseconds=0, minutes=0, hours
     :return: first_time dataframe
     """
 
-    key = ('first_time', id, seconds, milliseconds, microseconds, minutes, hours, days, weeks)
+    key = ('first_time', statement_start, seconds, milliseconds, microseconds, minutes, hours, days, weeks)
 
     try:
         return all_dfs[key].dataframe
     except:
-        now = datetime.now()
+        now = statement_start or datetime.now()
         all_dfs[key] = DataframeManager(columns_list=all_dfs['StockTick'].dataframe.columns)
         all_dfs['StockTick'].observers_with_param.append([first_time_observer, key])
         all_dfs[key].variables['statement_start'] = now
@@ -328,11 +326,13 @@ def time_accum(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
 
     return all_dfs[key].dataframe
 
-def time_order(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0):
+def time_order(timestamp_expression, weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0):
     """
-    This function orders events that arrive out-of-order,
-    using timestamp-values provided by weeks, days, hours...
-    and by comparing that timestamp value to engine system time.
+    This function returns a dataframe that orders events that arrive out-of-order using timestamp values from the
+    column 'timestamp_expression' and by comparing that timestamp values to engine system time. The other parameters
+    define the time interval that an arriving event should maximally be held in this dataframe. The only difference
+    between this function and externally_last_time is that time_order orders the event by 'timestamp_expression'.
+    :param timestamp_expression: name of the time column
     :param weeks: number of weeks into the past
     :param days: number of dass into the past
     :param hours: number of hours into the past
@@ -340,7 +340,8 @@ def time_order(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
     :param seconds: number of seconds into the past
     :param milliseconds: number of milliseconds into the past
     :param microseconds: number of microseconds into the past
-    :return: ordered dataframe by timestamp
+    :return: externally_last_time dataframe ordered by 'timestamp_expression'
     """
-    return sort(first_time(id=0, weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
-                           milliseconds=milliseconds, microseconds=microseconds).shape[0], 'INSERTION_TIMESTAMP')
+    df = externally_last_time(col=timestamp_expression, weeks=weeks, days=days, hours=hours, minutes=minutes,
+                                seconds=seconds, milliseconds=milliseconds, microseconds=microseconds)
+    return df.sort_values(by=timestamp_expression)
