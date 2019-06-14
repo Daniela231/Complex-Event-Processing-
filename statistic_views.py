@@ -53,6 +53,26 @@ def linest(dataframe, function, value_expr1, value_expr2):
         new_dataframe['Y'] = dataframe[value_expr2] ** 2
         return new_dataframe.sum('Y')
 
+def univariate(dataframe, property, value_expr):
+    """
+    This function calculates univariate statistics on a numeric expression
+    :param dataframe: dataframe of which we want the statistics
+    :param property: univariate statistics derived properties
+    :param value_expr: set of data
+    :return: result of the chosen property
+    """
+    new dataframe = pd.DataFrame()
+    if property == 'datapoints':
+        return dataframe.shape[0]
+    elif property == 'total':
+        return dataframe[value_expr].sum(axis=0)
+    elif property == 'average':
+        return dataframe[value_expr].mean(axis=0)
+    elif property == 'variance':
+        return dataframe[value_expr].var(axis=0)
+    elif property == 'stddev':
+        return dataframe.std(value_expr)
+
 
 def prepare_for_correl(dataframe, *params):
     """

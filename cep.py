@@ -195,6 +195,11 @@ def sum_price_batch_counter_greater_or_equal_4():
     except:
         i14.critical('Dataframe is empty')
 
+# Test 15 ---test for time_batch
+def test_time_batch_observer():
+    a = time_batch(nanoseconds=2)
+    l.critical(all_dfs['time_batch', 'nanoseconds', 2].dataframe)
+    return False
 
 # Test 15  --- second test for expiry_exp
 def sum_price_last_two_seconds_expiry_exp():

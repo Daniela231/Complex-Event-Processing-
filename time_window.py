@@ -1,5 +1,5 @@
 from DataframeManager import *
-from length_window import last_event
+from length_window import last_event, sort
 from datetime import datetime, timedelta
 
 
@@ -324,3 +324,19 @@ def time_accum(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
         lastEventTime = datetime.now()
 
     return all_dfs[key].dataframe
+
+def time_order(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0):
+    """
+    This function orders events that arrive out-of-order,
+    using timestamp-values provided by weeks, days, hours...
+    and by comparing that timestamp value to engine system time.
+    :param weeks: number of weeks into the past
+    :param days: number of dass into the past
+    :param hours: number of hours into the past
+    :param minutes: number of minutes into the past
+    :param seconds: number of seconds into the past
+    :param milliseconds: number of milliseconds into the past
+    :param microseconds: number of microseconds into the past
+    :return: ordered dataframe by timestamp
+    """
+    return sort(first_time(id=0, weeks, days, hours, minutes, seconds, milliseconds, microseconds).shape[0], 'INSERTION_TIMESTAMP')

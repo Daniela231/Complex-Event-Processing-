@@ -79,6 +79,29 @@ def last_unique(*param):
 
     return all_dfs[key].dataframe
 
+def groupwin_observer(key, criteria):
+    """
+
+    :param key:
+    :param criteria:
+    :return:
+    """
+    all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event()).groupby(
+        by=[elm[0] for elm in criteria], sort=False)
+
+def groupwin(criteria):
+    key = ('groupwin',)
+    for elm in criteria:
+        key = key + (elm)
+    try:
+        all_dfs[key].update(key, criteria)
+    except:
+        all_dfs[key].DataframeManager()
+        all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event()).groupby(
+            by=[elm[0] for elm in criteria], sort=False)
+        all_dfs[key].observers.append(groupwin_observer)
+
+    return all_dfs[key].dataframe
 
 def sort_observer(key, size ,criteria):
     """
@@ -113,6 +136,46 @@ def sort(size, criteria):
 
 
     return all_dfs[key].dataframe
+
+
+def rank_observer(key, param, size, criteria):
+    """
+    Observer for the rank dataframe
+    :param key: key for the rank dataframe
+    :param param: parameters we want to look for last unique datas
+    :param size: length of the dataframe
+    :param criteria:list of tupels (col True) sorting the col column ascending or (col False) sorting descending
+    :return: None
+    """
+    all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event()).sort_values(
+        by=[elm[0] for elm in criteria], ascending=[elm[1] for elm in criteria]).head(size)
+    all_dfs[key].dataframe.drop_duplicates(subset=set(param), keep='last', inplace=True)
+
+
+
+def rank(*param, size, criteria):
+    """
+    This function returns only the most recent among events having the same value for the criteria,
+    sorted by sort criteria expressions and keeps only the top events up to the given size.
+    :param param: defines the columns we want to filter for unique parameters
+    :param size: size of dataframe in int
+    :param criteria: list of tupels (price True) sorting the price column ascending or (price False) sorting descending
+    :return: ranked dataframe
+    """
+    key = ('rank', size)
+    for p, elm, symbol in zip(*param, criteria, criteria):
+        key = key + (p, elm, symbol)
+    try:
+        all_dfs[key].update_df(key, param, size, criteria)
+    except:
+        all_dfs[key] = DataframeManager()
+        all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.sort_values(
+            by=[elm[0] for elm in criteria], ascending=[elm[1] for elm in criteria]).head(size)
+        all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.drop_duplicates(
+            subset=set(param), keep='last')
+        all_dfs[key].observers.append(rank_observer)
+
+    return  all_dfs[key].dataframe
 
 
 def last_length_observer(key, len):
