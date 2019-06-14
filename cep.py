@@ -373,7 +373,8 @@ def test(i):
 
 
 
-test(4)
+
+test(20)
 
 #45min for 75000k (test(8))
 now = datetime.now()

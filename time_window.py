@@ -92,8 +92,6 @@ def externally_last_time(col, weeks=0, days=0, hours=0, minutes=0, seconds=0, mi
     return all_dfs[key].dataframe
 
 
-
-
 def first_time_observer(list):
     """
     observer for the first_time dataframe
