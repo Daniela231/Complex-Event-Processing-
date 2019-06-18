@@ -61,7 +61,7 @@ def univariate(dataframe, property, value_expr):
     :param value_expr: set of data
     :return: result of the chosen property
     """
-    new dataframe = pd.DataFrame()
+    dataframe = pd.DataFrame()
     if property == 'datapoints':
         return dataframe.shape[0]
     elif property == 'total':

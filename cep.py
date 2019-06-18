@@ -6,7 +6,7 @@ from data_window import *
 from special_derived_value_window import *
 from statistic_views import *
 from datetime import datetime
-import logging
+from LoggerSetters import *
 
 #Logger for the new price
 l=logging.getLogger("cepgenerator")
@@ -14,6 +14,7 @@ f=logging.FileHandler("cepgenerator.log", mode='w')
 l.addHandler(f)
 s=logging.StreamHandler()
 l.addHandler(s)
+
 
 #Block for creating all different loggers for the tests
 i1 = logging.getLogger("test"+str(1))
@@ -251,130 +252,70 @@ def same_price_expiry_exp_batch():
 
 def test(i):
     if i == 1:
-        f = logging.FileHandler("ceptest"+str(i)+".log", mode='w')
-        i1.addHandler(f)
-        s = logging.StreamHandler()
-        i1.addHandler(s)
+        set_logger_handler(i1, str(i))
         all_dfs['StockTick'].observers.append(avg_price_last_five_events_observer)
     elif i == 2:
-        f = logging.FileHandler("ceptest" + str(i) + ".log", mode='w')
-        i2.addHandler(f)
-        s = logging.StreamHandler()
-        i2.addHandler(s)
+        set_logger_handler(i2, str(i))
         all_dfs['StockTick'].observers.append(avg_price_first_five_events_observer)
     elif i == 3:
-        f = logging.FileHandler("ceptest" + str(i) + ".log", mode='w')
-        i3.addHandler(f)
-        s = logging.StreamHandler()
-        i3.addHandler(s)
+        set_logger_handler(i3, str(i))
         all_dfs['StockTick'].observers.append(avg_price_last_1_second)
     elif i == 4:
-        f = logging.FileHandler("ceptest" + str(i) + ".log", mode='w')
-        i4.addHandler(f)
-        s = logging.StreamHandler()
-        i4.addHandler(s)
+        set_logger_handler(i4, str(i))
         all_dfs['StockTick'].observers.append(avg_price_first_two_seconds_observer)
     elif i == 5:
-        f = logging.FileHandler("ceptest" + str(i) + ".log", mode='w')
-        i5.addHandler(f)
-        s = logging.StreamHandler()
-        i5.addHandler(s)
+        set_logger_handler(i5, str(i))
         all_dfs['StockTick'].observers.append(avg_price_length_batch_5)
     elif i == 6:
-        f = logging.FileHandler("ceptest" + str(i) + ".log", mode='w')
-        i6.addHandler(f)
-        s = logging.StreamHandler()
-        i6.addHandler(s)
+        set_logger_handler(i6, str(i))
         all_dfs['StockTick'].observers.append(test_sort)
     elif i == 7:
-        f = logging.FileHandler("ceptest" + str(i) + ".log", mode='w')
-        i7.addHandler(f)
-        s = logging.StreamHandler()
-        i7.addHandler(s)
+        set_logger_handler(i7, str(i))
         all_dfs['StockTick'].observers.append(avg_price_first_unique_price_symbol)
     elif i == 8:
-        f = logging.FileHandler("ceptest" + str(i) + ".log", mode='w')
-        i8.addHandler(f)
-        s = logging.StreamHandler()
-        i8.addHandler(s)
+        set_logger_handler(i8, str(i))
         all_dfs['StockTick'].observers.append(avg_price_time_length_batch_15_1_second)
     elif i == 9:
-        f = logging.FileHandler("ceptest" + str(i) + ".log", mode='w')
-        i9.addHandler(f)
-        s = logging.StreamHandler()
-        i9.addHandler(s)
+        set_logger_handler(i9, str(i))
         all_dfs['StockTick'].observers.append(avg_price_last_unique_price_symbol)
     elif i == 10:
-        f = logging.FileHandler("ceptest" + str(i) + ".log", mode='w')
-        i10.addHandler(f)
-        s = logging.StreamHandler()
-        i10.addHandler(s)
+        set_logger_handler(i10, str(i))
         all_dfs['StockTick'].observers.append(avg_price_last_1_second_externally_time)
     elif i == 11:
-        f = logging.FileHandler("ceptest" + str(i) + ".log", mode='w')
-        i11.addHandler(f)
-        s = logging.StreamHandler()
-        i11.addHandler(s)
+        set_logger_handler(i11, str(i))
         correlation_method_test()
     elif i == 12:
-        f = logging.FileHandler("ceptest" + str(i) + ".log", mode='w')
-        i12.addHandler(f)
-        s = logging.StreamHandler()
-        i12.addHandler(s)
+        set_logger_handler(i12, str(i))
         all_dfs['StockTick'].observers.append(weighted_avg_price_last_five_events_observer)
     elif i == 13:
-        f = logging.FileHandler("ceptest" + str(i) + ".log", mode='w')
-        i13.addHandler(f)
-        s = logging.StreamHandler()
-        i13.addHandler(s)
+        set_logger_handler(i13, str(i))
         all_dfs['StockTick'].observers.append(sum_price_current_count_less_or_equal_4)
     elif i == 14:
-        f = logging.FileHandler("ceptest" + str(i) + ".log", mode='w')
-        i14.addHandler(f)
-        s = logging.StreamHandler()
-        i14.addHandler(s)
+        set_logger_handler(i14, str(i))
         all_dfs['StockTick'].observers.append(sum_price_batch_counter_greater_or_equal_4)
     elif i == 15:
-        f = logging.FileHandler("ceptest" + str(i) + ".log", mode='w')
-        i15.addHandler(f)
-        s = logging.StreamHandler()
-        i15.addHandler(s)
+        set_logger_handler(i15, str(i))
         all_dfs['StockTick'].observers.append(sum_price_last_two_seconds_expiry_exp)
     elif i == 16:
-        f = logging.FileHandler("ceptest" + str(i) + ".log", mode='w')
-        i16.addHandler(f)
-        s = logging.StreamHandler()
-        i16.addHandler(s)
+        set_logger_handler(i16, str(i))
         all_dfs['StockTick'].observers.append(sum_price_less_20_expiry_exp)
     elif i == 17:
-        f = logging.FileHandler("ceptest" + str(i) + ".log", mode='w')
-        i17.addHandler(f)
-        s = logging.StreamHandler()
-        i17.addHandler(s)
+        set_logger_handler(i17, str(i))
         all_dfs['StockTick'].observers.append(same_price_expiry_exp)
     elif i == 18:
-        f = logging.FileHandler("ceptest" + str(i) + ".log", mode='w')
-        i18.addHandler(f)
-        s = logging.StreamHandler()
-        i18.addHandler(s)
+        set_logger_handler(i18, str(i))
         all_dfs['StockTick'].observers.append(batch_price_9_expiry_exp_batch)
     elif i == 19:
-        f = logging.FileHandler("ceptest" + str(i) + ".log", mode='w')
-        i19.addHandler(f)
-        s = logging.StreamHandler()
-        i19.addHandler(s)
+        set_logger_handler(i19, str(i))
         all_dfs['StockTick'].observers.append(batch_sum_price_greather_100_expiry_exp_batch)
     elif i == 20:
-        f = logging.FileHandler("ceptest" + str(i) + ".log", mode='w')
-        i20.addHandler(f)
-        s = logging.StreamHandler()
-        i20.addHandler(s)
+        set_logger_handler(i20, str(i))
         all_dfs['StockTick'].observers.append(same_price_expiry_exp_batch)
 
 
 
 
-test(20)
+test(18)
 
 #45min for 75000k (test(8))
 now = datetime.now()
