@@ -8,15 +8,11 @@ from statistic_views import *
 from datetime import datetime
 from LoggerSetters import *
 
-#Logger for the new price
-l=logging.getLogger("cepgenerator")
-f=logging.FileHandler("cepgenerator.log", mode='w')
-l.addHandler(f)
-s=logging.StreamHandler()
-l.addHandler(s)
+# Logger for the new price
+l = logging.getLogger("cepgenerator")
+set_logger_handler(l, "generator")
 
-
-#Block for creating all different loggers for the tests
+# Block for creating all the different loggers for the tests
 i1 = logging.getLogger("test"+str(1))
 i2 = logging.getLogger("test"+str(2))
 i3 = logging.getLogger("test"+str(3))
@@ -37,6 +33,7 @@ i17 = logging.getLogger("test"+str(17))
 i18 = logging.getLogger("test"+str(18))
 i19 = logging.getLogger("test"+str(19))
 i20 = logging.getLogger("test"+str(20))
+
 
 # Test 1
 def avg_price_last_five_events_observer():
@@ -148,6 +145,10 @@ def avg_price_last_1_second_externally_time():
 
 #Test 11 /given dataframe test
 def correlation_method_test():
+    """
+    This method tests the correlation functions on the pre defined dataframes to be able to ocunter check if the returned
+    values are the expected values of the calculation
+    """
     # Dataframe for simple correlation test
     df = pd.DataFrame([(.2, .3), (.0, .6), (.6, .0), (.2, .1)], columns=['A', 'B'])
 
@@ -195,11 +196,13 @@ def sum_price_batch_counter_greater_or_equal_4():
     except:
         i14.critical('Dataframe is empty')
 
+
 # Test 15 ---test for time_batch
 def test_time_batch_observer():
     a = time_batch(nanoseconds=2)
     l.critical(all_dfs['time_batch', 'nanoseconds', 2].dataframe)
     return False
+
 
 # Test 15  --- second test for expiry_exp
 def sum_price_last_two_seconds_expiry_exp():
@@ -210,30 +213,36 @@ def sum_price_last_two_seconds_expiry_exp():
 
 # Test 16  ---third test for expiry_exp
 def sum_price_less_20_expiry_exp():
+    """
+
+    """
     sum = expiry_exp('all_dfs[key].dataframe["price"].sum() < 20')['price'].sum()
     i16.critical(all_dfs['expiry_exp', 'all_dfs[key].dataframe["price"].sum() < 20'].dataframe)
     i16.critical('sum price: ' + str(sum))
 
+
 # Test 17  ---4th test for expiry_exp
 def same_price_expiry_exp():
-    '''
+    """
     This example retains the last consecutive events having the same price. When the price value changes, the data window expires all
     events with the old price and retains only the last event.
-    '''
+    """
     i17.critical(expiry_exp('newest_event()["price"].iloc[0] == oldest_event()["price"].iloc[0]'))
+
 
 # Test 18  ---2nd test for expiry_exp_batch
 def batch_price_9_expiry_exp_batch():
-    '''
+    """
     This example accumulates events until an event arrives that has a price of 9
-    '''
+    """
     i18.critical(expiry_exp_batch('newest_event()["price"].iloc[0] == 9'))
+
 
 # Test 19 --- 3rd test for expiry_exp_batch
 def batch_sum_price_greather_100_expiry_exp_batch():
-    '''
+    """
     This example accumulates events until the total price of all events in the dataframe is > 100:
-    '''
+    """
     df = expiry_exp_batch('last_event(batch_counter())["price"].sum() > 100')
     sum = df['price'].sum()
     i19.critical(df)
@@ -242,10 +251,10 @@ def batch_sum_price_greather_100_expiry_exp_batch():
 
 # Test 20 --- 4th test for expiry_exp_batch
 def same_price_expiry_exp_batch():
-    '''
+    """
     This example batches all events that have the same price. When the price changes, the dataframe releases the batch
     of events collected for the old flag value.
-    '''
+    """
     i20.critical(expiry_exp_batch('newest_event()["price"].iloc[0] != triggering_event()["price"].iloc[0]',
                                   include_triggering_event=False))
 

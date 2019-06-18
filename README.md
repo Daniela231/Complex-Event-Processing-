@@ -44,3 +44,7 @@ the output of the eventstream and non sorted tests.
 Those files contains the last cep test as a logging tool for an easier type to format to analyse the 
 output for errors/malicious behaviour
 
+LoggerSetter.py
+
+This file contains the configurations for the logger methods to have a cleaner cep test file and to have
+a better time changing the settings of the loggers if the need for it arises.
