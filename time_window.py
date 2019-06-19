@@ -3,20 +3,10 @@ from length_window import last_event, sort
 from datetime import datetime, timedelta
 
 
-def last_time_observer(key, time):
-    """
-    Observer for the last_time dataframe
-    :param key: key of the last_time dataframe
-    :param time: date for the last_time dataframe
-    :return: None
-    """
-    all_dfs[key].dataframe = all_dfs[key].dataframe[all_dfs[key].dataframe['INSERTION_TIMESTAMP'] > time]
-    all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event())
-
-
 def last_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0):
-    """
-    Returns the dataframe looking back a given time into the past from the current system time.
+    '''
+    Returns the dataframe looking back a given time into the past from the current system time considering the insertion
+    timestamp of the events.
     :param weeks: number of weeks into the past
     :param days: number of days into the past
     :param hours: number of hours into the past
@@ -25,26 +15,9 @@ def last_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, mi
     :param milliseconds: number of milliseconds into the past
     :param microseconds: number of microseconds into the past
     :return: last_time dataframe
-    """
-    now = datetime.now()
-    dict = locals()
-    del dict['now']
-    key = ('last_time',)
-    for i, val in dict.items():
-        if val != 0:
-            key = key + (i, val)
-
-    time = now - timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds, milliseconds=milliseconds,
-                     microseconds=microseconds)
-
-    try:
-        all_dfs[key].update_df(key, time, now)
-    except:
-        all_dfs[key] = DataframeManager()
-        all_dfs[key].dataframe = all_dfs["StockTick"].dataframe[all_dfs["StockTick"].dataframe['INSERTION_TIMESTAMP'] > time]
-        all_dfs[key].observers.append(last_time_observer)
-
-    return all_dfs[key].dataframe
+    '''
+    return externally_last_time(col='INSERTION_TIMESTAMP', weeks=weeks, days=days, hours=hours, minutes=minutes,
+                                seconds=seconds, milliseconds=milliseconds, microseconds=microseconds)
 
 
 def externally_last_time_observer(key, col, time):
@@ -103,15 +76,19 @@ def first_time_observer(list):
     key = list[0]
     last = last_event()
 
-    if last['INSERTION_TIMESTAMP'].iloc[0] - all_dfs[key].variables['statement_start'] < all_dfs[key].variables['time']:
+    if last['INSERTION_TIMESTAMP'].iloc[0] - all_dfs[key].variables['statement_start'] < all_dfs[key].variables['time'] \
+            and last['INSERTION_TIMESTAMP'].iloc[0] >= all_dfs[key].variables['statement_start']:
         all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event())
 
 
-def first_time(statement_start=None, seconds=0, milliseconds=0, microseconds=0, minutes=0, hours=0, days=0, weeks=0):
+def first_time(time=None, seconds=0, milliseconds=0, microseconds=0, minutes=0, hours=0, days=0, weeks=0,
+               statement_start=None):
     """
-    Returns the dataframe of all events arriving within a given time after statement_start.
-    :param statement_start: the start point for the dataframe. statement_start is set by default to the first time the
-    function is called with the same parameters.
+    Returns the dataframe of all events arriving within a given time after statement_start. statement_start is the first
+    time the function is called with the same parameters.
+    :param id: id of the dateframe (of type int). It is set by default to 0. If you want to creat multiple first_time
+    dataframes with the same time span but with different values for statement_start, use a unique id for each dataframe.
+    Otherwise, the function will return always the same first_time dataframe.
     :param seconds: number of seconds
     :param milliseconds: number of milliseconds
     :param microseconds: number of microseconds
@@ -121,20 +98,29 @@ def first_time(statement_start=None, seconds=0, milliseconds=0, microseconds=0, 
     :param minutes: number of minutes
     :return: first_time dataframe
     """
-
-    key = ('first_time', statement_start, seconds, milliseconds, microseconds, minutes, hours, days, weeks)
+    time = time or timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
+                         milliseconds=milliseconds, microseconds=microseconds)
+    key = ('first_time', statement_start, time)
 
     try:
-        return all_dfs[key].dataframe
+        df = all_dfs[key].dataframe
     except:
-        now = statement_start or datetime.now()
+        statement_start = statement_start or datetime.now()
         all_dfs[key] = DataframeManager(columns_list=all_dfs['StockTick'].dataframe.columns)
+
+        for index in reversed(range(len(all_dfs['StockTick'].dataframe.index))):
+            row = all_dfs['StockTick'].dataframe.iloc[[index]]
+            t = row['INSERTION_TIMESTAMP'].iloc[0]
+            if t - statement_start < time and t < statement_start:
+                all_dfs[key].dataframe = all_dfs[key].dataframe.append(row)
+
         all_dfs['StockTick'].observers_with_param.append([first_time_observer, key])
-        all_dfs[key].variables['statement_start'] = now
-        all_dfs[key].variables['time'] = timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
-                                                   milliseconds=milliseconds, microseconds=microseconds)
-        print('statement_start for ' + str(key) + ' : ' + str(now))
-        return all_dfs[key].dataframe
+        all_dfs[key].variables['statement_start'] = statement_start
+        all_dfs[key].variables['time'] = time
+        print('statement_start for ' + str(key) + ' : ' + str(statement_start))
+        df = all_dfs[key].dataframe
+
+    return df
 
 
 import threading
@@ -345,3 +331,13 @@ def time_order(timestamp_expression, weeks=0, days=0, hours=0, minutes=0, second
     df = externally_last_time(col=timestamp_expression, weeks=weeks, days=days, hours=hours, minutes=minutes,
                                 seconds=seconds, milliseconds=milliseconds, microseconds=microseconds)
     return df.sort_values(by=timestamp_expression)
+
+
+def time_to_live(timestamp_expression):
+    '''
+    This function returns the dataframe that retains events until engine time reaches the value returned by the given
+    timestamp expression.
+    :param timestamp_expression: name of the time column
+    :return: time_to_live dataframe
+    '''
+    return time_order(timestamp_expression)
