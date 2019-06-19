@@ -336,7 +336,6 @@ for i in tests:
     process.start()
     threads.append(process)
 
-
 for process in threads:
     process.join()
 
