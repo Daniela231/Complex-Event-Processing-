@@ -12,6 +12,7 @@ from LoggerSetters import *
 l = logging.getLogger("cepgenerator")
 set_logger_handler(l, "generator")
 
+
 # Block for creating all the different loggers for the tests
 i1 = logging.getLogger("test"+str(1))
 i2 = logging.getLogger("test"+str(2))
@@ -143,7 +144,7 @@ def avg_price_last_1_second_externally_time():
     i10.critical('The average price of all events in the last 1 second regarding externally time: ' + str(avg_price))
 
 
-#Test 11 /given dataframe test
+# Test 11 /given dataframe test
 def correlation_method_test():
     """
     This method tests the correlation functions on the pre defined dataframes to be able to ocunter check if the returned
@@ -206,6 +207,9 @@ def test_time_batch_observer():
 
 # Test 15  --- second test for expiry_exp
 def sum_price_last_two_seconds_expiry_exp():
+    """
+
+    """
     sum = expiry_exp('oldest_timestamp() > newest_timestamp() - timedelta(seconds = 2)')['price'].sum()
     i15.critical(all_dfs['expiry_exp', 'oldest_timestamp() > newest_timestamp() - timedelta(seconds = 2)'].dataframe)
     i15.critical('sum price in last 2 seconds: ' + str(sum))
@@ -322,8 +326,7 @@ def test(i):
         all_dfs['StockTick'].observers.append(same_price_expiry_exp_batch)
 
 
-test(18)
-test(20)
+test(1)
 
 
 # 45min for 75000k (test(8))
