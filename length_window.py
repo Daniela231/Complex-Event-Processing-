@@ -267,4 +267,3 @@ def first_len(len):
         all_dfs[key].observers.append(first_length_observer)
 
     return all_dfs[key].dataframe
-

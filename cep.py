@@ -62,8 +62,9 @@ def avg_price_last_1_second():
     """
     This observer checks the average price of all events added in the last 1 second
     """
-    avg_price = last_time(seconds=1)['price'].mean()
-    i3.critical(all_dfs['last_time', 'seconds', 1].dataframe)
+    df = last_time(seconds=1)
+    avg_price = df['price'].mean()
+    i3.critical(df)
     i3.critical('The average price of all events in the last 1 second: ' + str(avg_price))
 
 
