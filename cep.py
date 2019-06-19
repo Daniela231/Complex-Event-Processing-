@@ -7,6 +7,7 @@ from special_derived_value_window import *
 from statistic_views import *
 from datetime import datetime
 from LoggerSetters import *
+from threading import Thread
 
 # Logger for the new price
 l = logging.getLogger("cepgenerator")
@@ -147,7 +148,7 @@ def avg_price_last_1_second_externally_time():
 # Test 11 /given dataframe test
 def correlation_method_test():
     """
-    This method tests the correlation functions on the pre defined dataframes to be able to ocunter check if the returned
+    This method tests the correlation functions on the pre defined dataframes to be able to counter check if the returned
     values are the expected values of the calculation
     """
     # Dataframe for simple correlation test
@@ -162,7 +163,7 @@ def correlation_method_test():
     df2 = pd.DataFrame({"A": [5, 3, 6, 4],
                         "B": [11, 2, 4, 3],
                         "C": [4, 3, 8, 5]})
-    i11.critical(df1, "\n")
+    i11.critical(df1)
     i11.critical(df2)
     i11.critical(prepare_for_correl(df2, ['A', 'B', 'C']))
     i11.critical(simple_correl('pearson', df, 2))
@@ -175,7 +176,7 @@ def weighted_avg_price_last_five_events_observer():
     """
     This observer checks the average price of the last five events added
     """
-    #avg_price = last_len(5)['price'].mean()
+    # avg_price = last_len(5)['price'].mean()
     avg = weighted_avg(last_len(5), field='price', weight='index')
     i12.critical(all_dfs['last_len', 5].dataframe)
     i12.critical('The average price of the last five events is: ' + str(avg))
@@ -326,7 +327,17 @@ def test(i):
         all_dfs['StockTick'].observers.append(same_price_expiry_exp_batch)
 
 
-test(1)
+tests = [1, 11, 8]
+threads = []
+
+for i in tests:
+    process = Thread(target=test, args=[i])
+    process.start()
+    threads.append(process)
+
+
+for process in threads:
+    process.join()
 
 
 # 45min for 75000k (test(8))
