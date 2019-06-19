@@ -322,12 +322,11 @@ def test(i):
         all_dfs['StockTick'].observers.append(same_price_expiry_exp_batch)
 
 
-
-
 test(18)
 test(20)
 
-#45min for 75000k (test(8))
+
+# 45min for 75000k (test(8))
 now = datetime.now()
 for i in range(40):
     if i % 3 == 0:
