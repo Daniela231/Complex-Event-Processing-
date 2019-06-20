@@ -38,11 +38,12 @@ as a kind of unit-test.
 
 Logfiles
 
-The ceptest#n.log file contain the output of the n-th test while the cep generator logfile contains
-the output of the eventstream and non sorted tests.
-
 Those files contains the last cep test as a logging tool for an easier type to format to analyse the 
 output for errors/malicious behaviour
+
+The ceptest#n.log file contain the output of the n-th test while the cep generator logfile contains
+the output of the eventstream, non sorted tests and additional information of functions, that we
+might need for debugging purposes.
 
 LoggerSetter.py
 
