@@ -23,4 +23,4 @@ def weighted_avg(df, field, weight):
     for index, field, weight in df[[field, weight]].itertuples():
         sum = sum + field*weight
         sum_weight = sum_weight + weight
-    return sum / sum_weight
+    return sum / sum_weight if sum_weight != 0 else 0
