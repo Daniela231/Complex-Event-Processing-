@@ -8,6 +8,8 @@ from statistic_views import *
 from datetime import datetime
 from LoggerSetters import *
 from threading import Thread
+import multiprocessing as mp
+
 
 # Logger for the new price
 l = logging.getLogger("cepgenerator")
@@ -331,7 +333,7 @@ def test(i):
 # not working : test 12
 tests = [1,2,3,4,5,6,7,8,9,10,11,13,14,15,16,17,18,19,20]
 threads = []
-
+"""
 for i in tests:
     process = Thread(target=test, args=[i])
     process.start()
@@ -339,7 +341,15 @@ for i in tests:
 
 for process in threads:
     process.join()
+"""
 
+for i in tests:
+    p = mp.Process(target=test(i))
+    threads.append(p)
+    p.start()
+
+for proc in threads:
+    proc.join()
 
 # 45min for 75000k (test(8))
 now = datetime.now()
