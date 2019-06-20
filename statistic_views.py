@@ -45,7 +45,7 @@ def linest(dataframe, function, value_expr1, value_expr2):
         new_dataframe['X'] = dataframe[value_expr1]**2
         return new_dataframe.sum('X')
     elif function == 'SumXY':
-        new_dataframe[XY]=dataframe[value_expr1]+dataframe[value_expr2]
+        new_dataframe['XY'] = dataframe[value_expr1]+dataframe[value_expr2]
         return new_dataframe.sum('XY')
     elif function == 'SumY':
         return dataframe.sum(value_expr1)
