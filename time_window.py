@@ -1,6 +1,9 @@
 from DataframeManager import *
 from length_window import last_event, sort
 from datetime import datetime, timedelta
+import logging
+
+l = logging.getLogger("cepgenerator")
 
 
 def last_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0):
@@ -117,7 +120,7 @@ def first_time(time=None, seconds=0, milliseconds=0, microseconds=0, minutes=0, 
         all_dfs['StockTick'].observers_with_param.append([first_time_observer, key])
         all_dfs[key].variables['statement_start'] = statement_start
         all_dfs[key].variables['time'] = time
-        print('statement_start for ' + str(key) + ' : ' + str(statement_start))
+        l.critical('statement_start for ' + str(key) + ' : ' + str(statement_start))
         df = all_dfs[key].dataframe
 
     return df

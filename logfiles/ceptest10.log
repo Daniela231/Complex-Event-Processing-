@@ -1,146 +1,18 @@
    index symbol  price                       time        INSERTION_TIMESTAMP
-0      0      A    8.0 2019-06-20 17:46:50.097985 2019-06-20 17:46:50.098499
+0      0      A    8.0 2019-06-20 17:56:24.281482 2019-06-20 17:56:24.282039
 The average price of all events in the last 1 second regarding externally time: 8.0
    index symbol  price                       time        INSERTION_TIMESTAMP
-0      0      A    8.0 2019-06-20 17:46:50.097985 2019-06-20 17:46:50.098499
-1      1      A    6.0 2019-06-20 17:46:50.097985 2019-06-20 17:46:50.676660
-The average price of all events in the last 1 second regarding externally time: 7.0
-Empty DataFrame
-Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
-Index: []
-The average price of all events in the last 1 second regarding externally time: nan
-   index symbol  price                       time        INSERTION_TIMESTAMP
-3      3      A    6.0 2019-06-20 17:46:51.568773 2019-06-20 17:46:51.569171
+0      0      A    8.0 2019-06-20 17:56:24.281482 2019-06-20 17:56:24.282039
+1      1      A    4.0 2019-06-20 17:56:24.281482 2019-06-20 17:56:24.753607
 The average price of all events in the last 1 second regarding externally time: 6.0
-   index symbol  price                       time        INSERTION_TIMESTAMP
-3      3      A    6.0 2019-06-20 17:46:51.568773 2019-06-20 17:46:51.569171
-4      4      A    1.0 2019-06-20 17:46:51.568773 2019-06-20 17:46:52.048464
-The average price of all events in the last 1 second regarding externally time: 3.5
 Empty DataFrame
 Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
 Index: []
 The average price of all events in the last 1 second regarding externally time: nan
    index symbol  price                       time        INSERTION_TIMESTAMP
-6      6      A    3.0 2019-06-20 17:46:53.023017 2019-06-20 17:46:53.023230
-The average price of all events in the last 1 second regarding externally time: 3.0
-   index symbol  price                       time        INSERTION_TIMESTAMP
-6      6      A    3.0 2019-06-20 17:46:53.023017 2019-06-20 17:46:53.023230
-7      7      A    5.0 2019-06-20 17:46:53.023017 2019-06-20 17:46:53.512744
-The average price of all events in the last 1 second regarding externally time: 4.0
-Empty DataFrame
-Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
-Index: []
-The average price of all events in the last 1 second regarding externally time: nan
-   index symbol  price                       time        INSERTION_TIMESTAMP
-9      9      A    4.0 2019-06-20 17:46:54.461055 2019-06-20 17:46:54.461266
-The average price of all events in the last 1 second regarding externally time: 4.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-9       9      A    4.0 2019-06-20 17:46:54.461055 2019-06-20 17:46:54.461266
-10     10      A    6.0 2019-06-20 17:46:54.461055 2019-06-20 17:46:54.952803
-The average price of all events in the last 1 second regarding externally time: 5.0
-Empty DataFrame
-Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
-Index: []
-The average price of all events in the last 1 second regarding externally time: nan
-    index symbol  price                       time        INSERTION_TIMESTAMP
-12     12      A    2.0 2019-06-20 17:46:55.906077 2019-06-20 17:46:55.906286
-The average price of all events in the last 1 second regarding externally time: 2.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-12     12      A    2.0 2019-06-20 17:46:55.906077 2019-06-20 17:46:55.906286
-13     13      A    8.0 2019-06-20 17:46:55.906077 2019-06-20 17:46:56.392959
-The average price of all events in the last 1 second regarding externally time: 5.0
-Empty DataFrame
-Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
-Index: []
-The average price of all events in the last 1 second regarding externally time: nan
-    index symbol  price                       time        INSERTION_TIMESTAMP
-15     15      A    4.0 2019-06-20 17:46:57.400120 2019-06-20 17:46:57.400343
-The average price of all events in the last 1 second regarding externally time: 4.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-15     15      A    4.0 2019-06-20 17:46:57.400120 2019-06-20 17:46:57.400343
-16     16      A    3.0 2019-06-20 17:46:57.400120 2019-06-20 17:46:57.920872
-The average price of all events in the last 1 second regarding externally time: 3.5
-Empty DataFrame
-Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
-Index: []
-The average price of all events in the last 1 second regarding externally time: nan
-    index symbol  price                       time        INSERTION_TIMESTAMP
-18     18      A    8.0 2019-06-20 17:46:58.931717 2019-06-20 17:46:58.931919
-The average price of all events in the last 1 second regarding externally time: 8.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-18     18      A    8.0 2019-06-20 17:46:58.931717 2019-06-20 17:46:58.931919
-19     19      A    1.0 2019-06-20 17:46:58.931717 2019-06-20 17:46:59.441331
-The average price of all events in the last 1 second regarding externally time: 4.5
-Empty DataFrame
-Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
-Index: []
-The average price of all events in the last 1 second regarding externally time: nan
-    index symbol  price                       time        INSERTION_TIMESTAMP
-21     21      A    5.0 2019-06-20 17:47:00.487472 2019-06-20 17:47:00.487757
-The average price of all events in the last 1 second regarding externally time: 5.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-21     21      A    5.0 2019-06-20 17:47:00.487472 2019-06-20 17:47:00.487757
-22     22      A    1.0 2019-06-20 17:47:00.487472 2019-06-20 17:47:01.037648
-The average price of all events in the last 1 second regarding externally time: 3.0
-Empty DataFrame
-Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
-Index: []
-The average price of all events in the last 1 second regarding externally time: nan
-    index symbol  price                       time        INSERTION_TIMESTAMP
-24     24      A    9.0 2019-06-20 17:47:02.110754 2019-06-20 17:47:02.110998
+3      3      A    9.0 2019-06-20 17:56:25.550134 2019-06-20 17:56:25.550369
 The average price of all events in the last 1 second regarding externally time: 9.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-24     24      A    9.0 2019-06-20 17:47:02.110754 2019-06-20 17:47:02.110998
-25     25      A    8.0 2019-06-20 17:47:02.110754 2019-06-20 17:47:02.662157
-The average price of all events in the last 1 second regarding externally time: 8.5
-Empty DataFrame
-Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
-Index: []
-The average price of all events in the last 1 second regarding externally time: nan
-    index symbol  price                       time        INSERTION_TIMESTAMP
-27     27      A    4.0 2019-06-20 17:47:03.732057 2019-06-20 17:47:03.732320
-The average price of all events in the last 1 second regarding externally time: 4.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-27     27      A    4.0 2019-06-20 17:47:03.732057 2019-06-20 17:47:03.732320
-28     28      A    6.0 2019-06-20 17:47:03.732057 2019-06-20 17:47:04.276557
+   index symbol  price                       time        INSERTION_TIMESTAMP
+3      3      A    9.0 2019-06-20 17:56:25.550134 2019-06-20 17:56:25.550369
+4      4      A    1.0 2019-06-20 17:56:25.550134 2019-06-20 17:56:26.025545
 The average price of all events in the last 1 second regarding externally time: 5.0
-Empty DataFrame
-Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
-Index: []
-The average price of all events in the last 1 second regarding externally time: nan
-    index symbol  price                       time        INSERTION_TIMESTAMP
-30     30      A    7.0 2019-06-20 17:47:05.345170 2019-06-20 17:47:05.345368
-The average price of all events in the last 1 second regarding externally time: 7.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-30     30      A    7.0 2019-06-20 17:47:05.345170 2019-06-20 17:47:05.345368
-31     31      A    5.0 2019-06-20 17:47:05.345170 2019-06-20 17:47:05.892818
-The average price of all events in the last 1 second regarding externally time: 6.0
-Empty DataFrame
-Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
-Index: []
-The average price of all events in the last 1 second regarding externally time: nan
-    index symbol  price                       time        INSERTION_TIMESTAMP
-33     33      A    7.0 2019-06-20 17:47:06.965769 2019-06-20 17:47:06.965993
-The average price of all events in the last 1 second regarding externally time: 7.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-33     33      A    7.0 2019-06-20 17:47:06.965769 2019-06-20 17:47:06.965993
-34     34      A    5.0 2019-06-20 17:47:06.965769 2019-06-20 17:47:07.505384
-The average price of all events in the last 1 second regarding externally time: 6.0
-Empty DataFrame
-Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
-Index: []
-The average price of all events in the last 1 second regarding externally time: nan
-    index symbol  price                       time        INSERTION_TIMESTAMP
-36     36      A    8.0 2019-06-20 17:47:08.560536 2019-06-20 17:47:08.560815
-The average price of all events in the last 1 second regarding externally time: 8.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-36     36      A    8.0 2019-06-20 17:47:08.560536 2019-06-20 17:47:08.560815
-37     37      A    2.0 2019-06-20 17:47:08.560536 2019-06-20 17:47:09.118753
-The average price of all events in the last 1 second regarding externally time: 5.0
-Empty DataFrame
-Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
-Index: []
-The average price of all events in the last 1 second regarding externally time: nan
-    index symbol  price                       time        INSERTION_TIMESTAMP
-39     39      A    8.0 2019-06-20 17:47:10.213055 2019-06-20 17:47:10.213413
-The average price of all events in the last 1 second regarding externally time: 8.0
