@@ -186,7 +186,7 @@ def df_order_last_time(df, col, start_point=datetime.now(), seconds=0, milliseco
 
 def df_time_to_live(df, col, time=datetime.now()):
     """
-    Returns the dataframe that contains all rows from the dataframe 'df' where the value in the time column 'col' is
+    Returns a pandas dataframe that contains all rows from the dataframe 'df' where the value in the time column 'col' is
     greater than 'time'.
     :param df: pandas dataframe
     :param col: name of the time column
@@ -194,3 +194,41 @@ def df_time_to_live(df, col, time=datetime.now()):
     :return: pandas dataframe
     """
     return df[df[col] > time]
+
+
+def df_last_n_events(df, n=1):
+    '''
+    Returns a pandas dataframe that contains the last 'n' rows from the dataframe 'df' (n is set to 1 by default).
+    :param df: pandas dataframe
+    :param n: number of rows
+    :return: pandas dataframe
+    '''
+    return df.tail(n)
+
+
+def df_first_n_events(df, n=1):
+    '''
+    Returns a pandas dataframe that contains the first 'n' rows from the dataframe 'df' (n is set to 1 by default).
+    :param df: pandas dataframe
+    :param n: number of rows
+    :return: pandas dataframe
+    '''
+    return df.head(n)
+
+
+def df_sort(df, criteria, size=None):
+    """
+    Returns a pandas dataframe that contains the first 'size' elements of the dataframe 'df' after sorting it by the
+    given criteria.
+    :param df: pandas dataframe
+    :param criteria: list of tupels (column_name, boolean). For example, (price, True) means: sort the 'price' column
+    ascending. (price False) means: sort the 'price' column descending.
+    :param size: size of the sort dataframe (number of rows). If it is set to None (by default), the function returns
+    all rows.
+    :return: pandas dataframe dataframe
+    """
+    df = df.sort_values( by=[elm[0] for elm in criteria], ascending=[elm[1] for elm in criteria])
+    if size is None:
+        return df
+    else:
+        return df.head(size)

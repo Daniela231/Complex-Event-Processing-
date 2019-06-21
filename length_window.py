@@ -4,18 +4,18 @@ from special_derived_value_window import *
 
 def last_event(n=1):
     """
-    Returns a dataframe consisting of the last event added
+    Returns a dataframe consisting of the last n event added (n is set to 1 by default)
     :return: a dataframe consisting of the last event added
     """
     return all_dfs["StockTick"].dataframe.tail(n)
 
 
-def first_event():
+def first_event(n=1):
     """
-    Returns a dataframe consisting of the first event added
+    Returns a dataframe consisting of the first n event added (n is set to 1 by default)
     :return: a dataframe consisting of first event
     """
-    return all_dfs["StockTick"].dataframe.head(1)
+    return all_dfs["StockTick"].dataframe.head(n)
 
 
 def first_unique_observer(key, param):
