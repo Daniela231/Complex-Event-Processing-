@@ -1,36 +1,36 @@
-'''
+"""
 This file provides some functions that are generalizations of some functions from the other files. Functions from this
 file can also be applied to dataframes where it is possible to delete rows (not only to 'StockTick'). Moreover, if time
 values should be compared in any of the functions in this file, the parameter 'col' defines which time column should be
 considered (it does not have to be the 'INSERTION_TIMESTAMP' column). Consequently, these functions are less efficient,
 but more general. All functions in this file need a pandas dataframe as parameter and their names begin with 'df_'.
-'''
+"""
 
 from datetime import datetime, timedelta
 import pandas as pd
 
 
 def df_last_length(df, col, len):
-    '''
+    """
     Returns a pandas dataframe that contains the last 'len' rows from the pandas dataframe 'df' after sorting it by the
     values of the column 'col'.
     :param df: pandas dataframe
     :param col: name of the column that should be considered
     :param len: length of dataframe that should be returned
     :return: pandas dataframe
-    '''
+    """
     return df.sort_values(by=col).tail(len)
 
 
 def df_first_length(df, col, len):
-    '''
+    """
     Returns a pandas dataframe that contains the first 'len' rows from the pandas dataframe 'df' after sorting it by the
     values of the column 'col'.
     :param df: pandas dataframe
     :param col: name of the column that should be considered
     :param len: length of dataframe that should be returned
     :return: pandas dataframe
-    '''
+    """
     return df.sort_values(by=col).head(len)
 
 
@@ -174,12 +174,12 @@ def df_order_last_time(df, col, start_point=datetime.now(), seconds=0, milliseco
 
 
 def df_time_to_live(df, col, time=datetime.now()):
-    '''
+    """
     Returns the dataframe that contains all rows from the dataframe 'df' where the value in the time column 'col' is
     greater than 'time'.
     :param df: pandas dataframe
     :param col: name of the time column
     :param time: start point of time (it is set by default to the current system time)
     :return: pandas dataframe
-    '''
+    """
     return df[df[col] > time]

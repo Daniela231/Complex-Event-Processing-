@@ -1,5 +1,3 @@
-import pandas as pd
-from length_window import *
 from special_derived_value_window import *
 
 
