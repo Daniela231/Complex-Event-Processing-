@@ -268,7 +268,7 @@ def same_price_expiry_exp_batch():
 
 def test(i):
     if i == 1:
-        set_logger_handler(i1, str(i))
+        set_logger_rotating_handler(i1, str(i))
         all_dfs['StockTick'].observers.append(avg_price_last_five_events_observer)
     elif i == 2:
         set_logger_handler(i2, str(i))
@@ -330,7 +330,7 @@ def test(i):
 
 
 # not working : test 12
-tests = [12]
+tests = [1]
 threads = []
 
 for i in tests:
@@ -343,7 +343,7 @@ for proc in threads:
 
 # 45min for 75000k (test(8))
 now = datetime.now()
-for i in range(40):
+for i in range(10000):
     if i % 3 == 0:
         now = datetime.now()
     p = float(randrange(1, 10))

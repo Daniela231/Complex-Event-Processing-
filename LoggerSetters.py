@@ -1,5 +1,5 @@
 import logging
-import logging.handlers
+from logging import handlers
 
 
 def set_logger_handler(logger, filename):
@@ -9,10 +9,8 @@ def set_logger_handler(logger, filename):
     logger.addHandler(s)
 
 
-"""
-def set_logger_rotatinghandler(logger, filename):
-    x = logging.BaseRotatingHandler("ceptest" + str(filename) + ".log", mode='w')
+def set_logger_rotating_handler(logger, filename):
+    x = logging.handlers.RotatingFileHandler("logfiles/"+"ceptest" + str(filename) + ".log", mode='w', maxBytes=10)
     logger.addHandler(x)
     s = logging.StreamHandler()
     logger.addHandler(s)
-"""
