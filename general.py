@@ -221,7 +221,7 @@ def df_sort(df, criteria, size=None):
     Returns a pandas dataframe that contains the first 'size' elements of the dataframe 'df' after sorting it by the
     given criteria.
     :param df: pandas dataframe
-    :param criteria: list of tupels (column_name, boolean). For example, (price, True) means: sort the 'price' column
+    :param criteria: list of tuples (column_name, boolean). For example, (price, True) means: sort the 'price' column
     ascending. (price False) means: sort the 'price' column descending.
     :param size: size of the sort dataframe (number of rows). If it is set to None (by default), the function returns
     all rows.

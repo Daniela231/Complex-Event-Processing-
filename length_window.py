@@ -120,7 +120,7 @@ def sort(size, criteria):
     """
     This function always returns the first size sorted elements of our dataframe sorted by the given criteria
     :param size: size of dataframe in int
-    :param criteria: list of tupels (price True) sorting the price column ascending or (price False) sorting descending
+    :param criteria: list of tuples (price True) sorting the price column ascending or (price False) sorting descending
     :return: Sorted dataframe
     """
     key = ('sort', size)
