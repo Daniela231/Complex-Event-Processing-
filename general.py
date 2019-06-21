@@ -2,8 +2,8 @@
 This file provides some functions that are generalizations of some functions from the other files. Functions from this
 file can also be applied to dataframes where it is possible to delete rows (not only to 'StockTick'). Moreover, if time
 values should be compared in any of the functions in this file, the parameter 'col' defines which time column should be
-considered (it does not have to be the 'INSERTION_TIMESTAMP' column). Consequently, these functions are less efficient,
-but more general. All functions in this file need a pandas dataframe as parameter and their names begin with 'df_'.
+considered (it does not have to be the 'INSERTION_TIMESTAMP' column). Therefore, these functions are less efficient but
+more general. All functions in this file need a pandas dataframe as a parameter and their names begin with 'df_'.
 """
 
 from datetime import datetime, timedelta
@@ -101,6 +101,17 @@ def df_last_unique(df, *columns):
     :return: pandas dataframe
     """
     return df.drop_duplicates(subset=set(columns), keep='last')
+
+
+def df_first_unique(df, *columns):
+    """
+    Returns a pandas dataframe that includes only the first among events having the same values for the columns given as
+    parameters (considering the events from the given pandas dataframe 'df').
+    :param df: pandas dataframe
+    :param columns: names of the columns to be considered
+    :return: pandas dataframe
+    """
+    return df.drop_duplicates(subset=set(columns), keep='first')
 
 
 def df_order_first_time(df, col, start_point=datetime.now(), seconds=0, milliseconds=0, microseconds=0, minutes=0,
