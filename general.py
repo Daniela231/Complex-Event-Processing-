@@ -1,0 +1,185 @@
+'''
+This file provides some functions that are generalizations of some functions from the other files. Functions from this
+file can also be applied to dataframes where it is possible to delete rows (not only to 'StockTick'). Moreover, if time
+values should be compared in any of the functions in this file, the parameter 'col' defines which time column should be
+considered (it does not have to be the 'INSERTION_TIMESTAMP' column). Consequently, these functions are less efficient,
+but more general. All functions in this file need a pandas dataframe as parameter and their names begin with 'df_'.
+'''
+
+from datetime import datetime, timedelta
+import pandas as pd
+
+
+def df_last_length(df, col, len):
+    '''
+    Returns a pandas dataframe that contains the last 'len' rows from the pandas dataframe 'df' after sorting it by the
+    values of the column 'col'.
+    :param df: pandas dataframe
+    :param col: name of the column that should be considered
+    :param len: length of dataframe that should be returned
+    :return: pandas dataframe
+    '''
+    return df.sort_values(by=col).tail(len)
+
+
+def df_first_length(df, col, len):
+    '''
+    Returns a pandas dataframe that contains the first 'len' rows from the pandas dataframe 'df' after sorting it by the
+    values of the column 'col'.
+    :param df: pandas dataframe
+    :param col: name of the column that should be considered
+    :param len: length of dataframe that should be returned
+    :return: pandas dataframe
+    '''
+    return df.sort_values(by=col).head(len)
+
+
+def df_first_time(df, col, start_point=datetime.now(), seconds=0, milliseconds=0, microseconds=0, minutes=0, hours=0,
+                  days=0, weeks=0):
+    """
+    Returns a pandas dataframe that contains all rows from given dataframe 'df' where the value in the time column 'col'
+    is within the given time span after start_point.
+    :param df: pandas dataframe
+    :param col: name of the time column
+    :param start_point: start point of time (it is set by default to the current system time)
+    :param seconds: number of seconds
+    :param milliseconds: number of milliseconds
+    :param microseconds: number of microseconds
+    :param minutes: number of minutes
+    :param hours: number of hours
+    :param days: number of days
+    :param weeks: number of weeks
+    :return: pandas dataframe
+    """
+    time = start_point + timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
+                             milliseconds=milliseconds, microseconds=microseconds)
+    res = pd.DataFrame()
+
+    for index, row in df.iterrows():
+        val = row[col]
+        if val < time and val >= start_point:
+            res = res.append(row)
+
+    return res
+
+
+def df_last_time(df, col, start_point=datetime.now(), seconds=0, milliseconds=0, microseconds=0, minutes=0, hours=0,
+                 days=0, weeks=0):
+    """
+    Returns a pandas dataframe that contains all rows from given dataframe 'df' where the value in the time column 'col'
+    is within the given time span looking back into the past from the start_point.
+    :param df: pandas dataframe
+    :param col: name of the time column
+    :param start_point: start point of time (it is set by default to the current system time)
+    :param seconds: number of seconds
+    :param milliseconds: number of milliseconds
+    :param microseconds: number of microseconds
+    :param minutes: number of minutes
+    :param hours: number of hours
+    :param days: number of days
+    :param weeks: number of weeks
+    :return: pandas dataframe
+    """
+    time = start_point - timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
+                                       milliseconds=milliseconds, microseconds=microseconds)
+    res = pd.DataFrame()
+
+    for index, row in df.iterrows():
+        val = row[col]
+        if val <= start_point and val > time:
+            res = res.append(row)
+
+    return res
+
+
+def df_last_unique(df, *columns):
+    """
+    Returns a pandas dataframe that includes only the most recent among events having the same values for the columns
+    given as parameters (considering the events from the given pandas dataframe 'df').
+    :param df: pandas dataframe
+    :param columns: names of the columns to be considered
+    :return: pandas dataframe
+    """
+    return df.drop_duplicates(subset=set(columns), keep='last')
+
+
+def df_order_first_time(df, col, start_point=datetime.now(), seconds=0, milliseconds=0, microseconds=0, minutes=0,
+                        hours=0, days=0, weeks=0):
+    """
+    Returns a pandas dataframe that contains all rows from given dataframe 'df' where the value in the time column 'col'
+    is within the given time span after start_point. The rows of the returned dataframe are ordered by the values of the
+    time column 'col'.
+    :param df: pandas dataframe
+    :param col: name of the time column
+    :param start_point: start point of time (it is set by default to the current system time)
+    :param seconds: number of seconds
+    :param milliseconds: number of milliseconds
+    :param microseconds: number of microseconds
+    :param minutes: number of minutes
+    :param hours: number of hours
+    :param days: number of days
+    :param weeks: number of weeks
+    :return: pandas dataframe
+    """
+    time = start_point + timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
+                             milliseconds=milliseconds, microseconds=microseconds)
+    res = pd.DataFrame()
+    df = df.sort_values(by=col, ascending=False)
+
+    for index, row in df.iterrows():
+        val = row[col]
+        if val >= time:
+            continue
+        elif val >= start_point:
+            res = res.append(row)
+        else:
+            break
+
+    return res.iloc[::-1]
+
+
+def df_order_last_time(df, col, start_point=datetime.now(), seconds=0, milliseconds=0, microseconds=0, minutes=0,
+                 hours=0, days=0, weeks=0):
+    """
+    Returns a pandas dataframe that contains all rows from given dataframe 'df' where the value in the time column 'col'
+    is within the given time span looking back into the past from the start_point. The rows of the returned dataframe
+    are ordered by the values of the time column 'col'.
+    :param df: pandas dataframe
+    :param col: name of the time column
+    :param start_point: start point of time (it is set by default to the current system time)
+    :param seconds: number of seconds
+    :param milliseconds: number of milliseconds
+    :param microseconds: number of microseconds
+    :param minutes: number of minutes
+    :param hours: number of hours
+    :param days: number of days
+    :param weeks: number of weeks
+    :return: pandas dataframe
+    """
+    time = start_point - timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
+                                       milliseconds=milliseconds, microseconds=microseconds)
+    res = pd.DataFrame()
+    df = df.sort_values(by=col, ascending=False)
+
+    for index, row in df.iterrows():
+        val = row[col]
+        if val > start_point:
+            continue
+        elif val > time:
+            res = res.append(row)
+        else:
+            break
+
+    return res.iloc[::-1]
+
+
+def df_time_to_live(df, col, time=datetime.now()):
+    '''
+    Returns the dataframe that contains all rows from the dataframe 'df' where the value in the time column 'col' is
+    greater than 'time'.
+    :param df: pandas dataframe
+    :param col: name of the time column
+    :param time: start point of time (it is set by default to the current system time)
+    :return: pandas dataframe
+    '''
+    return df[df[col] > time]

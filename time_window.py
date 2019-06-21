@@ -84,21 +84,20 @@ def first_time_observer(list):
         all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event())
 
 
-def first_time(time=None, seconds=0, milliseconds=0, microseconds=0, minutes=0, hours=0, days=0, weeks=0,
-               statement_start=None):
+def first_time(statement_start=None, time=None, seconds=0, milliseconds=0, microseconds=0, minutes=0, hours=0, days=0,
+               weeks=0):
     """
-    Returns the dataframe of all events arriving within a given time after statement_start. statement_start is the first
-    time the function is called with the same parameters.
-    :param id: id of the dateframe (of type int). It is set by default to 0. If you want to creat multiple first_time
-    dataframes with the same time span but with different values for statement_start, use a unique id for each dataframe.
-    Otherwise, the function will return always the same first_time dataframe.
+    Returns the dataframe of all events arriving within a given time after statement_start.
+    :param statement_start: start point of time. If statement_start is set to None (by default), the first time the
+    function is called with the same parameters will be considered as the statement_start.
+    :param time: time value. If it is set to None, time will be calculated from the next parameters.
     :param seconds: number of seconds
     :param milliseconds: number of milliseconds
     :param microseconds: number of microseconds
-    :param weeks: number of weeks
-    :param days: number of days
-    :param hours: number of hours
     :param minutes: number of minutes
+    :param hours: number of hours
+    :param days: number of days
+    :param weeks: number of weeks
     :return: first_time dataframe
     """
     time = time or timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
@@ -315,6 +314,7 @@ def time_accum(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
 
     return all_dfs[key].dataframe
 
+
 def time_order(timestamp_expression, weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0):
     """
     This function returns a dataframe that orders events that arrive out-of-order using timestamp values from the
@@ -336,11 +336,11 @@ def time_order(timestamp_expression, weeks=0, days=0, hours=0, minutes=0, second
     return df.sort_values(by=timestamp_expression)
 
 
-def time_to_live(timestamp_expression):
+def time_to_live(col):
     '''
-    This function returns the dataframe that retains events until engine time reaches the value returned by the given
-    timestamp expression.
-    :param timestamp_expression: name of the time column
+    This function returns the dataframe that retains each event until engine time reaches the time value stored in the
+    column 'col'
+    :param col: name of the time column
     :return: time_to_live dataframe
     '''
-    return time_order(timestamp_expression)
+    return time_order(timestamp_expression=col)
