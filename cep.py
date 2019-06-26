@@ -155,7 +155,7 @@ def avg_price_last_unique_price_symbol():
 # Test 10
 def avg_price_last_1_second_externally_time():
     """
-    This observer checks the average price of all events in the last 1 second regarding externally time
+    This observer checks the average price of all events in the last 1 second considering the time column 'time'
     """
     avg_price = externally_last_time(col = 'time', seconds=1)['price'].mean()
     i10.critical(all_dfs['externally_last_time', 'time', 'seconds', 1].dataframe)
@@ -191,7 +191,7 @@ def correlation_method_test():
 # Test_12
 def weighted_avg_price_last_five_events_observer():
     """
-    This observer checks the average price of the last five events added
+    This observer checks the weighted average price of the last five events added (with 'index' as weight)
     """
     # avg_price = last_len(5)['price'].mean()
     avg = weighted_avg(last_len(5), field='price', weight='index')
@@ -201,6 +201,9 @@ def weighted_avg_price_last_five_events_observer():
 
 # Test 13  --- first test for expiry_exp [current_count]
 def sum_price_current_count_less_or_equal_4():
+    '''
+    This observer checks the sum price of the last four events
+    '''
     sum = expiry_exp('current_count() <= 4')['price'].sum()
     i13.critical(all_dfs['expiry_exp', 'current_count() <= 4'].dataframe)
     i13.critical('sum price of the last four events is: ' + str(sum))
@@ -208,6 +211,9 @@ def sum_price_current_count_less_or_equal_4():
 
 # Test 14  ---first test for expiry_exp_batch [batch_counter]
 def sum_price_batch_counter_greater_or_equal_4():
+    '''
+    This observer checks the sum price of events in expiry_exp_batch("batch_counter() >= 4")
+    '''
     try:
         sum = expiry_exp_batch('batch_counter() >= 4')['price'].sum()
         i14.critical(all_dfs['expiry_exp_batch', 'batch_counter() >= 4'].dataframe)
@@ -218,16 +224,16 @@ def sum_price_batch_counter_greater_or_equal_4():
 
 # Test 15 ---test for time_batch
 def test_time_batch_observer():
-    a = time_batch(nanoseconds=2)
-    l.critical(all_dfs['time_batch', 'nanoseconds', 2].dataframe)
+    a = time_batch(milliseconds=2)
+    l.critical(all_dfs['time_batch', 'milliseconds', 2].dataframe)
     return False
 
 
 # Test 15  --- second test for expiry_exp
 def sum_price_last_two_seconds_expiry_exp():
-    """
-
-    """
+    '''
+    This observer checks the sum price in last 2 seconds
+    '''
     sum = expiry_exp('oldest_timestamp() > newest_timestamp() - timedelta(seconds = 2)')['price'].sum()
     i15.critical(all_dfs['expiry_exp', 'oldest_timestamp() > newest_timestamp() - timedelta(seconds = 2)'].dataframe)
     i15.critical('sum price in last 2 seconds: ' + str(sum))
@@ -235,9 +241,9 @@ def sum_price_last_two_seconds_expiry_exp():
 
 # Test 16  ---third test for expiry_exp
 def sum_price_less_20_expiry_exp():
-    """
-
-    """
+    '''
+    This observer checks the sum price in expiry_exp('all_dfs[key].dataframe["price"].sum() < 20')
+    '''
     sum = expiry_exp('all_dfs[key].dataframe["price"].sum() < 20')['price'].sum()
     i16.critical(all_dfs['expiry_exp', 'all_dfs[key].dataframe["price"].sum() < 20'].dataframe)
     i16.critical('sum price: ' + str(sum))
@@ -246,8 +252,8 @@ def sum_price_less_20_expiry_exp():
 # Test 17  ---4th test for expiry_exp
 def same_price_expiry_exp():
     """
-    This example retains the last consecutive events having the same price. When the price value changes, the data window expires all
-    events with the old price and retains only the last event.
+    This example retains the last consecutive events having the same price. When the price value changes, the data
+    window expires all events with the old price and retains only the last event.
     """
     i17.critical(expiry_exp('newest_event()["price"].iloc[0] == oldest_event()["price"].iloc[0]'))
 
@@ -283,8 +289,7 @@ def same_price_expiry_exp_batch():
 # Test 21 --- test for time_to_live
 def test_for_time_to_live():
     '''
-    Test for time_to_live
-    :return:
+    This observer tests the function time_to_time
     '''
     i21.critical(time_to_live(col='time'))
 
