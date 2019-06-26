@@ -19,7 +19,7 @@ def df_last_length(df, col, len):
     :param len: length of dataframe that should be returned
     :return: pandas dataframe
     """
-    return df.sort_values(by=col).tail(len)
+    return df.sort_values(by=col, kind='mergesort').tail(len)
 
 
 def df_first_length(df, col, len):
@@ -31,7 +31,7 @@ def df_first_length(df, col, len):
     :param len: length of dataframe that should be returned
     :return: pandas dataframe
     """
-    return df.sort_values(by=col).head(len)
+    return df.sort_values(by=col, kind='mergesort').head(len)
 
 
 def df_first_time(df, col, start_point=datetime.now(), seconds=0, milliseconds=0, microseconds=0, minutes=0, hours=0,
@@ -221,13 +221,13 @@ def df_sort(df, criteria, size=None):
     Returns a pandas dataframe that contains the first 'size' elements of the dataframe 'df' after sorting it by the
     given criteria.
     :param df: pandas dataframe
-    :param criteria: list of tuples (column_name, boolean). For example, (price, True) means: sort the 'price' column
-    ascending. (price, False) means: sort the 'price' column descending.
+    :param criteria: list of tuples (column_name, boolean). For example, ('price', True) means: sort the 'price' column
+    ascending. ('price', False) means: sort the 'price' column descending.
     :param size: size of the sort dataframe (number of rows). If it is set to None (by default), the function returns
     all rows.
     :return: pandas dataframe dataframe
     """
-    df = df.sort_values( by=[elm[0] for elm in criteria], ascending=[elm[1] for elm in criteria])
+    df = df.sort_values(by=[elm[0] for elm in criteria], ascending=[elm[1] for elm in criteria], kind='mergesort')
     if size is None:
         return df
     else:

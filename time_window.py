@@ -333,7 +333,7 @@ def time_order(timestamp_expression, weeks=0, days=0, hours=0, minutes=0, second
     """
     df = externally_last_time(col=timestamp_expression, weeks=weeks, days=days, hours=hours, minutes=minutes,
                                 seconds=seconds, milliseconds=milliseconds, microseconds=microseconds)
-    return df.sort_values(by=timestamp_expression)
+    return df.sort_values(by=timestamp_expression, kind='mergesort')
 
 
 def time_to_live(col):

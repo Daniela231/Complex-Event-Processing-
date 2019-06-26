@@ -1,10 +1,11 @@
-from random import randrange
+from random import randrange, shuffle
 from DataframeManager import *
 from length_window import *
 from time_window import *
 from data_window import *
 from special_derived_value_window import *
 from statistic_views import *
+from general import *
 from datetime import datetime
 from LoggerSetters import *
 import multiprocessing as mp
@@ -36,6 +37,20 @@ i17 = logging.getLogger("test"+str(17))
 i18 = logging.getLogger("test"+str(18))
 i19 = logging.getLogger("test"+str(19))
 i20 = logging.getLogger("test"+str(20))
+i21 = logging.getLogger("test"+str(21))
+i22 = logging.getLogger("test"+str(22))
+i23 = logging.getLogger("test"+str(23))
+i24 = logging.getLogger("test"+str(24))
+i25 = logging.getLogger("test"+str(25))
+i26 = logging.getLogger("test"+str(26))
+i27 = logging.getLogger("test"+str(27))
+i28 = logging.getLogger("test"+str(28))
+i29 = logging.getLogger("test"+str(29))
+i30 = logging.getLogger("test"+str(30))
+i31 = logging.getLogger("test"+str(31))
+i32 = logging.getLogger("test"+str(32))
+i33 = logging.getLogger("test"+str(33))
+
 
 
 # Test 1
@@ -265,6 +280,158 @@ def same_price_expiry_exp_batch():
     i20.critical(expiry_exp_batch('newest_event()["price"].iloc[0] != triggering_event()["price"].iloc[0]',
                                   include_triggering_event=False))
 
+# Test 21 --- test for time_to_live
+def test_for_time_to_live():
+    '''
+    Test for time_to_live
+    :return:
+    '''
+    i21.critical(time_to_live(col='time'))
+
+
+# Tests for general.py [Tests 22 - 33]
+n=20
+now = datetime.now()
+time=[]
+for i in range(n):
+    time.append(now-timedelta(seconds=20-i))
+shuffle(time)
+df_for_general_tests = pd.DataFrame({
+    'index':range(n),
+    'price': np.random.choice(range(1,10), n, replace=True),
+    'symbol' :  np.random.choice(['A', 'B'], n, replace=True),
+    'time':time
+})
+
+# Test 22
+def test_general_df_last_length():
+    '''
+    Test for general.df_last_length
+    :return: None
+    '''
+    i22.critical(df_for_general_tests)
+    i22.critical(df_last_length(df_for_general_tests, col='symbol', len=5))
+
+
+# Test 23
+def test_general_df_first_length():
+    '''
+    Test for general.df_first_length
+    :return: None
+    '''
+    i23.critical(df_for_general_tests)
+    i23.critical(df_first_length(df_for_general_tests, col='symbol', len=5))
+
+
+# Test 24
+def test_general_df_last_time():
+    '''
+    Test for general.df_last_time
+    :return: None
+    '''
+    i24.critical(df_for_general_tests)
+    now = datetime.now()
+    i24.critical('now: '+str(now))
+    i24.critical(df_last_time(df_for_general_tests, col='time', start_point=now, seconds=5))
+
+
+# Test 25
+def test_general_df_first_time():
+    '''
+    Test for general.df_first_time
+    :return: None
+    '''
+    i25.critical(df_for_general_tests)
+    start = datetime.now() - timedelta(seconds=10)
+    i25.critical('now: '+str(start))
+    i25.critical(df_first_time(df_for_general_tests, col='time', start_point=start, seconds=5))
+
+
+# Test 26
+def test_general_df_last_unique():
+    '''
+    Test for general.df_last_unique
+    :return: None
+    '''
+    i26.critical(df_for_general_tests)
+    i26.critical(df_last_unique(df_for_general_tests, 'price', 'symbol'))
+
+
+# Test 27
+def test_general_df_first_unique():
+    '''
+    Test for general.df_first_unique
+    :return: None
+    '''
+    i27.critical(df_for_general_tests)
+    i27.critical(df_first_unique(df_for_general_tests, 'price', 'symbol'))
+
+
+# Test 28
+def test_general_df_order_last_time():
+    '''
+    Test for general.df_order_last_time
+    :return: None
+    '''
+    i28.critical(df_for_general_tests)
+    now = datetime.now()
+    i28.critical('now: '+str(now))
+    i28.critical(df_order_last_time(df_for_general_tests, col='time', start_point=now, seconds=5))
+
+
+# Test 29
+def test_general_df_order_first_time():
+    '''
+    Test for general.df_order_first_time
+    :return: None
+    '''
+    i29.critical(df_for_general_tests)
+    start = datetime.now() - timedelta(seconds=10)
+    i29.critical('now: '+str(start))
+    i29.critical(df_order_first_time(df_for_general_tests, col='time', start_point=start, seconds=5))
+
+
+# Test 30
+def test_general_df_last_n_events():
+    '''
+    Test for general.df_last_n_events
+    :return: None
+    '''
+    i30.critical(df_for_general_tests)
+    i30.critical(df_last_n_events(df_for_general_tests, 5))
+
+
+# Test 31
+def test_general_df_first_n_events():
+    '''
+    Test for general.df_first_n_events
+    :return: None
+    '''
+    i31.critical(df_for_general_tests)
+    i31.critical(df_first_n_events(df_for_general_tests, 5))
+
+
+# Test 32
+def test_general_df_sort():
+    '''
+    Test for general.df_sort
+    :return:
+    '''
+    i32.critical(df_for_general_tests)
+    i32.critical(df_sort(df_for_general_tests, criteria=[('symbol', False), ('price', True)], size=15))
+
+
+# Test 33
+def test_general_df_time_to_live():
+    '''
+    Test for general.df_time_to_live
+    :return:
+    '''
+    t = datetime.now() - timedelta(seconds=10)
+    i33.critical(df_for_general_tests)
+    i33.critical('start time: '+str(t))
+    i33.critical(df_time_to_live(df_for_general_tests, col='time', time=t))
+
 
 def test(i):
     if i == 1:
@@ -327,10 +494,48 @@ def test(i):
     elif i == 20:
         set_logger_handler(i20, str(i))
         all_dfs['StockTick'].observers.append(same_price_expiry_exp_batch)
+    elif i == 21:
+        set_logger_handler(i21, str(i))
+        all_dfs['StockTick'].observers.append(test_for_time_to_live)
+    elif i == 22:
+        set_logger_handler(i22, str(i))
+        test_general_df_last_length()
+    elif i == 23:
+        set_logger_handler(i23, str(i))
+        test_general_df_first_length()
+    elif i == 24:
+        set_logger_handler(i24, str(i))
+        test_general_df_last_time()
+    elif i == 25:
+        set_logger_handler(i25, str(i))
+        test_general_df_first_time()
+    elif i == 26:
+        set_logger_handler(i26, str(i))
+        test_general_df_last_unique()
+    elif i == 27:
+        set_logger_handler(i27, str(i))
+        test_general_df_first_unique()
+    elif i == 28:
+        set_logger_handler(i28, str(i))
+        test_general_df_order_last_time()
+    elif i == 29:
+        set_logger_handler(i29, str(i))
+        test_general_df_order_first_time()
+    elif i == 30:
+        set_logger_handler(i30, str(i))
+        test_general_df_last_n_events()
+    elif i == 31:
+        set_logger_handler(i31, str(i))
+        test_general_df_first_n_events()
+    elif i == 32:
+        set_logger_handler(i32, str(i))
+        test_general_df_sort()
+    elif i == 33:
+        set_logger_handler(i33, str(i))
+        test_general_df_time_to_live()
 
 
-# not working : test 12
-tests = [1]
+tests = [33]
 threads = []
 
 for i in tests:
@@ -341,11 +546,11 @@ for i in tests:
 for proc in threads:
     proc.join()
 
+
 # 45min for 75000k (test(8))
-now = datetime.now()
-for i in range(10000):
-    if i % 3 == 0:
-        now = datetime.now()
+n = 40
+for i in range(n):
+    time = datetime.now() + timedelta(seconds=1)
     p = float(randrange(1, 10))
     l.critical('new price: ' + str(p))
-    all_dfs['StockTick'].add({'index' : i, 'symbol' : 'A', 'price' : p, 'time' : now })
+    all_dfs['StockTick'].add({'index' : i, 'symbol' : 'A', 'price' : p, 'time' : time })
