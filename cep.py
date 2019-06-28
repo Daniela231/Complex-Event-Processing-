@@ -90,7 +90,7 @@ def avg_price_first_two_seconds_observer():
     df = first_time(seconds=2)
     avg_price = df['price'].mean()
     i4.critical(df)
-    i4.critical('The average price of all events in the first two seconds is: ' + str(avg_price))
+    i4.critical('The average price of all events in the first two seconds after statement_start is: ' + str(avg_price))
 
 
 # Test 5
@@ -294,7 +294,7 @@ def test_for_time_to_live():
 
 
 # Tests for general.py [Tests 22 - 33]
-n = 20
+n = 100
 now = datetime.now()
 time = []
 for i in range(n):
@@ -540,7 +540,7 @@ def test(i):
         test_general_df_time_to_live()
 
 
-tests = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33]
+tests = [4]
 threads = []
 
 for i in tests:

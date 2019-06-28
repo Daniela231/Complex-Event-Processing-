@@ -114,7 +114,7 @@ def first_time(statement_start=None, time=None, seconds=0, milliseconds=0, micro
         for index in reversed(range(len(all_dfs['StockTick'].dataframe.index))):
             row = all_dfs['StockTick'].dataframe.iloc[[index]]
             t = row['INSERTION_TIMESTAMP'].iloc[0]
-            if t - statement_start < time and t < statement_start:
+            if t - statement_start < time and t > statement_start:
                 all_dfs[key].dataframe = all_dfs[key].dataframe.append(row)
 
         all_dfs['StockTick'].observers_with_param.append([first_time_observer, key])
