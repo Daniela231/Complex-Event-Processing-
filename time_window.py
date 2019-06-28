@@ -120,7 +120,7 @@ def first_time(statement_start=None, time=None, seconds=0, milliseconds=0, micro
         all_dfs['StockTick'].observers_with_param.append([first_time_observer, key])
         all_dfs[key].variables['statement_start'] = statement_start
         all_dfs[key].variables['time'] = time
-        l.critical('statement_start for ' + str(key) + ' : ' + str(statement_start))
+        main_logger.critical('statement_start for ' + str(key) + ' : ' + str(statement_start))
         df = all_dfs[key].dataframe
 
     return df
