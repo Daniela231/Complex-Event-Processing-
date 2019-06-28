@@ -307,7 +307,7 @@ def test_for_time_to_live():
 
 
 # Tests for general.py [Tests 22 - 33]
-n = 100
+n = 20
 now = datetime.now()
 time = []
 for i in range(n):
@@ -361,7 +361,7 @@ def test_general_df_first_time():
     """
     i25.critical(df_for_general_tests)
     start = datetime.now() - timedelta(seconds=10)
-    i25.critical('now: ' + str(start))
+    i25.critical('start: ' + str(start))
     i25.critical(df_first_time(df_for_general_tests, col='time', start_point=start, seconds=5))
 
 
@@ -445,10 +445,10 @@ def test_general_df_time_to_live():
     Test for general.df_time_to_live
     :return:
     """
-    t = datetime.now() - timedelta(seconds=10)
+    start_time = datetime.now() - timedelta(seconds=10)
     i33.critical(df_for_general_tests)
-    i33.critical('start time: ' + str(t))
-    i33.critical(df_time_to_live(df_for_general_tests, col='time', time=t))
+    i33.critical('start time: ' + str(start_time))
+    i33.critical(df_time_to_live(df_for_general_tests, col='time', time=start_time))
 
 
 def test(i):
@@ -553,7 +553,7 @@ def test(i):
         test_general_df_time_to_live()
 
 
-tests = [21]
+tests = []
 threads = []
 
 for i in tests:
@@ -564,10 +564,14 @@ for i in tests:
 for proc in threads:
     proc.join()
 
-# 45min for 75000k (test(8))
-n = 100
-for i in range(n):
-    time = datetime.now() + timedelta(seconds=1)
-    p = float(randrange(1, 10))
-    main_logger.critical('new price: ' + str(p))
-    all_dfs['StockTick'].add({'index': i, 'symbol': 'A', 'price': p, 'time': time})
+n = 75000
+
+for t in tests:
+    if t>21 and t<34:
+        continue
+    for i in range(n):
+        time = datetime.now() + timedelta(seconds=1)
+        p = float(randrange(1, 10))
+        main_logger.critical('new price: ' + str(p))
+        all_dfs['StockTick'].add({'index': i, 'symbol': 'A', 'price': p, 'time': time})
+    break
