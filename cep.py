@@ -98,13 +98,9 @@ def avg_price_length_batch_5():
     """
     This observer checks the average price of the events in the length_batch(5) dataframe
     """
-    try:
-        avg_price = length_batch(5)['price'].mean()
-        i5.critical(all_dfs['length_batch', 5].dataframe)
-        i5.critical('The average price of all events in length_batch(5): ' + str(avg_price))
-    except:
-        i5.critical('length_batch(5) dataframe is empty')
-
+    avg_price = length_batch(5)['price'].mean()
+    i5.critical(all_dfs['length_batch', 5].dataframe)
+    i5.critical('The average price of all events in length_batch(5): ' + str(avg_price))
 
 # Test 6
 def test_sort():
@@ -132,12 +128,9 @@ def avg_price_time_length_batch_15_1_second():
     """
     This observer checks the average price of the events in the time_length_batch(15, seconds=1) dataframe
     """
-    try:
-        avg_price = time_length_batch(15, seconds=1)['price'].mean()
-        i8.critical(all_dfs['time_length_batch', 15, 'seconds', 1].dataframe)
-        i8.critical('The average price of all events in time_length_batch(15, seconds=1): ' + str(avg_price))
-    except:
-        i8.critical('time_length_batch(15, milliseconds=1) dataframe is empty')
+    avg_price = time_length_batch(15, seconds=1)['price'].mean()
+    i8.critical(all_dfs['time_length_batch', 15, 'seconds', 1].dataframe)
+    i8.critical('The average price of all events in time_length_batch(15, seconds=1): ' + str(avg_price))
 
 
 # Test 9
@@ -153,11 +146,13 @@ def avg_price_last_unique_price_symbol():
 # Test 10
 def avg_price_last_1_second_externally_time():
     """
-    This observer checks the average price of all events in the last 1 second considering the time column 'time'
+    This observer checks the average price of all events where the value of the time column "time" is greater than
+    (current system time - 1 second).
     """
+    i10.critical('now: '+str(datetime.now()))
     avg_price = externally_last_time(col='time', seconds=1)['price'].mean()
     i10.critical(all_dfs['externally_last_time', 'time', 'seconds', 1].dataframe)
-    i10.critical('The average price of all events in the last 1 second regarding externally time: ' + str(avg_price))
+    i10.critical('The average price of all events where the value of the time column "time" is > (now - 1 sec): ' + str(avg_price))
 
 
 # Test 11 /given dataframe test
@@ -191,7 +186,6 @@ def weighted_avg_price_last_five_events_observer():
     """
     This observer checks the weighted average price of the last five events added (with 'index' as weight)
     """
-    # avg_price = last_len(5)['price'].mean()
     avg = weighted_avg(last_len(5), field='price', weight='index')
     i12.critical(all_dfs['last_len', 5].dataframe)
     i12.critical('The average price of the last five events is: ' + str(avg))
@@ -200,27 +194,27 @@ def weighted_avg_price_last_five_events_observer():
 # Test 13  --- first test for expiry_exp [current_count]
 def sum_price_current_count_less_or_equal_4():
     """
-    This observer checks the sum price of the last four events
+    This observer checks the sum price of the last four events added.
     """
-    sum = expiry_exp('current_count() <= 4')['price'].sum()
-    i13.critical(all_dfs['expiry_exp', 'current_count() <= 4'].dataframe)
+    df = expiry_exp('current_count() <= 4')
+    sum = df['price'].sum()
+    i13.critical(df)
     i13.critical('sum price of the last four events is: ' + str(sum))
 
 
 # Test 14  ---first test for expiry_exp_batch [batch_counter]
 def sum_price_batch_counter_greater_or_equal_4():
     """
-    This observer checks the sum price of events in expiry_exp_batch("batch_counter() >= 4")
+    This observer checks the sum price of events in the dataframe that accumulates events until ‘batch_counter’ is
+    greater or equal to 4.
     """
-    try:
-        sum = expiry_exp_batch('batch_counter() >= 4')['price'].sum()
-        i14.critical(all_dfs['expiry_exp_batch', 'batch_counter() >= 4'].dataframe)
-        i14.critical('sum price of events in expiry_exp_batch("batch_counter() >= 4"): ' + str(sum))
-    except:
-        i14.critical('Dataframe is empty')
+    df = expiry_exp_batch('batch_counter() >= 4')
+    sum = df['price'].sum()
+    i14.critical(df)
+    i14.critical('sum price of events in expiry_exp_batch("batch_counter() >= 4"): ' + str(sum))
 
 
-# Test 15 ---test for time_batch
+# test for time_batch
 def test_time_batch_observer():
     a = time_batch(milliseconds=2)
     main_logger.critical(all_dfs['time_batch', 'milliseconds', 2].dataframe)
@@ -232,42 +226,54 @@ def sum_price_last_two_seconds_expiry_exp():
     """
     This observer checks the sum price in last 2 seconds
     """
-    sum = expiry_exp('oldest_timestamp() > newest_timestamp() - timedelta(seconds = 2)')['price'].sum()
-    i15.critical(all_dfs['expiry_exp', 'oldest_timestamp() > newest_timestamp() - timedelta(seconds = 2)'].dataframe)
+    df = expiry_exp('oldest_timestamp() > newest_timestamp() - timedelta(seconds = 2)')
+    sum = df['price'].sum()
+    i15.critical(df)
     i15.critical('sum price in last 2 seconds: ' + str(sum))
 
 
 # Test 16  ---third test for expiry_exp
 def sum_price_less_20_expiry_exp():
     """
-    This observer checks the sum price in expiry_exp('all_dfs[key].dataframe["price"].sum() < 20')
+    This observer checks the sum price in the dataframe that removes the oldest events (from the same dataframe) when a
+    new event is added until the total price of all events is less than 20.
     """
-    sum = expiry_exp('all_dfs[key].dataframe["price"].sum() < 20')['price'].sum()
-    i16.critical(all_dfs['expiry_exp', 'all_dfs[key].dataframe["price"].sum() < 20'].dataframe)
+    df = expiry_exp('all_dfs[key].dataframe["price"].sum() < 20')
+    sum = df['price'].sum()
+    i16.critical(df)
     i16.critical('sum price: ' + str(sum))
 
 
 # Test 17  ---4th test for expiry_exp
 def same_price_expiry_exp():
     """
-    This example retains the last consecutive events having the same price. When the price value changes, the data
-    window expires all events with the old price and retains only the last event.
+    This observer checks the sum price in the dataframe that retains the last consecutive events having the same price.
+    When the price value changes, the dataframe expires all events with the old price and retains only the last event.
     """
-    i17.critical(expiry_exp('newest_event()["price"].iloc[0] == oldest_event()["price"].iloc[0]'))
+    df = expiry_exp('newest_event()["price"].iloc[0] == oldest_event()["price"].iloc[0]')
+    sum = df['price'].sum()
+    i17.critical(df)
+    i17.critical('sum price: ' + str(sum))
 
 
 # Test 18  ---2nd test for expiry_exp_batch
 def batch_price_9_expiry_exp_batch():
     """
-    This example accumulates events until an event arrives that has a price of 9
+    This observer checks the sum price of events in the dataframe that accumulates events until an event arrives that
+    has a price of 9.
+
     """
-    i18.critical(expiry_exp_batch('newest_event()["price"].iloc[0] == 9'))
+    df = expiry_exp_batch('newest_event()["price"].iloc[0] == 9')
+    sum = df['price'].sum()
+    i18.critical(df)
+    i18.critical('sum price: ' + str(sum))
 
 
 # Test 19 --- 3rd test for expiry_exp_batch
-def batch_sum_price_greather_100_expiry_exp_batch():
+def batch_sum_price_greater_100_expiry_exp_batch():
     """
-    This example accumulates events until the total price of all events in the dataframe is > 100:
+    This observer checks the sum price of events in the dataframe that  accumulates events until the total price of all
+    events in the dataframe is greater than 100.
     """
     df = expiry_exp_batch('last_event(batch_counter())["price"].sum() > 100')
     sum = df['price'].sum()
@@ -278,12 +284,14 @@ def batch_sum_price_greather_100_expiry_exp_batch():
 # Test 20 --- 4th test for expiry_exp_batch
 def same_price_expiry_exp_batch():
     """
-    This example batches all events that have the same price. When the price changes, the dataframe releases the batch
-    of events collected for the old flag value.
+    This observer checks the sum price of events in the dataframe that  batches all events that have the same price.
+    When the price changes, the dataframe releases the batch of events collected for the old flag value.
     """
-    i20.critical(expiry_exp_batch('newest_event()["price"].iloc[0] != triggering_event()["price"].iloc[0]',
-                                  include_triggering_event=False))
-
+    df = expiry_exp_batch('newest_event()["price"].iloc[0] != triggering_event()["price"].iloc[0]',
+                                  include_triggering_event=False)
+    sum = df['price'].sum()
+    i20.critical(df)
+    i20.critical('sum price: ' + str(sum))
 
 # Test 21 --- test for time_to_live
 def test_for_time_to_live():
@@ -495,7 +503,7 @@ def test(i):
         all_dfs['StockTick'].observers.append(batch_price_9_expiry_exp_batch)
     elif i == 19:
         set_logger_handler(i19, str(i))
-        all_dfs['StockTick'].observers.append(batch_sum_price_greather_100_expiry_exp_batch)
+        all_dfs['StockTick'].observers.append(batch_sum_price_greater_100_expiry_exp_batch)
     elif i == 20:
         set_logger_handler(i20, str(i))
         all_dfs['StockTick'].observers.append(same_price_expiry_exp_batch)
@@ -540,7 +548,7 @@ def test(i):
         test_general_df_time_to_live()
 
 
-tests = [4]
+tests = [17]
 threads = []
 
 for i in tests:

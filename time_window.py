@@ -215,8 +215,7 @@ def time_length_batch(len, weeks=0, days=0, hours=0, minutes=0, seconds=0, milli
     try:
         all_dfs[key].variables['count'] = all_dfs[key].variables['count'] + 1
     except:
-        all_dfs[key] = DataframeManager()
-        all_dfs[key].dataframe = pd.DataFrame()
+        all_dfs[key] = DataframeManager(columns_list=all_dfs["StockTick"].dataframe.columns)
         all_dfs[key].observers.append(time_length_batch_observer)
         all_dfs[key].variables['count'] = 1
         all_dfs[key].variables['last_update_time'] = now

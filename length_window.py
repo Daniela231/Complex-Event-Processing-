@@ -232,7 +232,7 @@ def length_batch(len):
     try:
         all_dfs[key].variables['count'] = all_dfs[key].variables['count'] + 1
     except:
-        all_dfs[key] = DataframeManager()
+        all_dfs[key] = DataframeManager(columns_list=all_dfs["StockTick"].dataframe.columns)
         all_dfs[key].observers.append(length_batch_observer)
         all_dfs[key].variables['count'] = 1
 

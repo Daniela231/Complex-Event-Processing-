@@ -1,395 +1,1208 @@
-time_length_batch(15, milliseconds=1) dataframe is empty
-time_length_batch(15, milliseconds=1) dataframe is empty
-time_length_batch(15, milliseconds=1) dataframe is empty
-   index symbol  price                       time        INSERTION_TIMESTAMP
-0      0      A    7.0 2019-06-28 12:59:05.113746 2019-06-28 12:59:04.114349
-1      1      A    8.0 2019-06-28 12:59:05.676012 2019-06-28 12:59:04.676210
-2      2      A    3.0 2019-06-28 12:59:06.158482 2019-06-28 12:59:05.158682
-3      3      A    7.0 2019-06-28 12:59:06.644763 2019-06-28 12:59:05.644967
-The average price of all events in time_length_batch(15, seconds=1): 6.25
-   index symbol  price                       time        INSERTION_TIMESTAMP
-0      0      A    7.0 2019-06-28 12:59:05.113746 2019-06-28 12:59:04.114349
-1      1      A    8.0 2019-06-28 12:59:05.676012 2019-06-28 12:59:04.676210
-2      2      A    3.0 2019-06-28 12:59:06.158482 2019-06-28 12:59:05.158682
-3      3      A    7.0 2019-06-28 12:59:06.644763 2019-06-28 12:59:05.644967
-The average price of all events in time_length_batch(15, seconds=1): 6.25
-   index symbol  price                       time        INSERTION_TIMESTAMP
-4      4      A    6.0 2019-06-28 12:59:07.165388 2019-06-28 12:59:06.165587
-5      5      A    5.0 2019-06-28 12:59:07.726624 2019-06-28 12:59:06.726823
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-   index symbol  price                       time        INSERTION_TIMESTAMP
-4      4      A    6.0 2019-06-28 12:59:07.165388 2019-06-28 12:59:06.165587
-5      5      A    5.0 2019-06-28 12:59:07.726624 2019-06-28 12:59:06.726823
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-   index symbol  price                       time        INSERTION_TIMESTAMP
-6      6      A    3.0 2019-06-28 12:59:08.273904 2019-06-28 12:59:07.274200
-7      7      A    8.0 2019-06-28 12:59:08.835896 2019-06-28 12:59:07.836096
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-   index symbol  price                       time        INSERTION_TIMESTAMP
-6      6      A    3.0 2019-06-28 12:59:08.273904 2019-06-28 12:59:07.274200
-7      7      A    8.0 2019-06-28 12:59:08.835896 2019-06-28 12:59:07.836096
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-   index symbol  price                       time        INSERTION_TIMESTAMP
-8      8      A    1.0 2019-06-28 12:59:09.392643 2019-06-28 12:59:08.392842
-9      9      A    9.0 2019-06-28 12:59:09.983085 2019-06-28 12:59:08.983319
-The average price of all events in time_length_batch(15, seconds=1): 5.0
-   index symbol  price                       time        INSERTION_TIMESTAMP
-8      8      A    1.0 2019-06-28 12:59:09.392643 2019-06-28 12:59:08.392842
-9      9      A    9.0 2019-06-28 12:59:09.983085 2019-06-28 12:59:08.983319
-The average price of all events in time_length_batch(15, seconds=1): 5.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-10     10      A    6.0 2019-06-28 12:59:10.579571 2019-06-28 12:59:09.579768
-11     11      A    9.0 2019-06-28 12:59:11.148643 2019-06-28 12:59:10.148941
-The average price of all events in time_length_batch(15, seconds=1): 7.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-10     10      A    6.0 2019-06-28 12:59:10.579571 2019-06-28 12:59:09.579768
-11     11      A    9.0 2019-06-28 12:59:11.148643 2019-06-28 12:59:10.148941
-The average price of all events in time_length_batch(15, seconds=1): 7.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-12     12      A    7.0 2019-06-28 12:59:11.723079 2019-06-28 12:59:10.723299
-13     13      A    9.0 2019-06-28 12:59:12.292562 2019-06-28 12:59:11.292759
-The average price of all events in time_length_batch(15, seconds=1): 8.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-12     12      A    7.0 2019-06-28 12:59:11.723079 2019-06-28 12:59:10.723299
-13     13      A    9.0 2019-06-28 12:59:12.292562 2019-06-28 12:59:11.292759
-The average price of all events in time_length_batch(15, seconds=1): 8.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-14     14      A    9.0 2019-06-28 12:59:12.868972 2019-06-28 12:59:11.869174
-15     15      A    9.0 2019-06-28 12:59:13.439508 2019-06-28 12:59:12.439707
-The average price of all events in time_length_batch(15, seconds=1): 9.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-14     14      A    9.0 2019-06-28 12:59:12.868972 2019-06-28 12:59:11.869174
-15     15      A    9.0 2019-06-28 12:59:13.439508 2019-06-28 12:59:12.439707
-The average price of all events in time_length_batch(15, seconds=1): 9.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-16     16      A    6.0 2019-06-28 12:59:14.143760 2019-06-28 12:59:13.143984
-17     17      A    5.0 2019-06-28 12:59:14.747720 2019-06-28 12:59:13.747923
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-16     16      A    6.0 2019-06-28 12:59:14.143760 2019-06-28 12:59:13.143984
-17     17      A    5.0 2019-06-28 12:59:14.747720 2019-06-28 12:59:13.747923
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-18     18      A    6.0 2019-06-28 12:59:15.343459 2019-06-28 12:59:14.343737
-19     19      A    9.0 2019-06-28 12:59:15.954084 2019-06-28 12:59:14.954286
-The average price of all events in time_length_batch(15, seconds=1): 7.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-18     18      A    6.0 2019-06-28 12:59:15.343459 2019-06-28 12:59:14.343737
-19     19      A    9.0 2019-06-28 12:59:15.954084 2019-06-28 12:59:14.954286
-The average price of all events in time_length_batch(15, seconds=1): 7.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-20     20      A    8.0 2019-06-28 12:59:16.568009 2019-06-28 12:59:15.568259
-21     21      A    5.0 2019-06-28 12:59:17.166726 2019-06-28 12:59:16.166927
-The average price of all events in time_length_batch(15, seconds=1): 6.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-20     20      A    8.0 2019-06-28 12:59:16.568009 2019-06-28 12:59:15.568259
-21     21      A    5.0 2019-06-28 12:59:17.166726 2019-06-28 12:59:16.166927
-The average price of all events in time_length_batch(15, seconds=1): 6.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-22     22      A    9.0 2019-06-28 12:59:17.833523 2019-06-28 12:59:16.833728
-23     23      A    1.0 2019-06-28 12:59:18.454133 2019-06-28 12:59:17.454347
-The average price of all events in time_length_batch(15, seconds=1): 5.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-22     22      A    9.0 2019-06-28 12:59:17.833523 2019-06-28 12:59:16.833728
-23     23      A    1.0 2019-06-28 12:59:18.454133 2019-06-28 12:59:17.454347
-The average price of all events in time_length_batch(15, seconds=1): 5.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-24     24      A    2.0 2019-06-28 12:59:19.054729 2019-06-28 12:59:18.055010
-25     25      A    8.0 2019-06-28 12:59:19.656877 2019-06-28 12:59:18.657151
-The average price of all events in time_length_batch(15, seconds=1): 5.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-24     24      A    2.0 2019-06-28 12:59:19.054729 2019-06-28 12:59:18.055010
-25     25      A    8.0 2019-06-28 12:59:19.656877 2019-06-28 12:59:18.657151
-The average price of all events in time_length_batch(15, seconds=1): 5.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-26     26      A    5.0 2019-06-28 12:59:20.260435 2019-06-28 12:59:19.260719
-27     27      A    6.0 2019-06-28 12:59:20.858824 2019-06-28 12:59:19.859027
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-26     26      A    5.0 2019-06-28 12:59:20.260435 2019-06-28 12:59:19.260719
-27     27      A    6.0 2019-06-28 12:59:20.858824 2019-06-28 12:59:19.859027
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-28     28      A    6.0 2019-06-28 12:59:21.461660 2019-06-28 12:59:20.461872
-29     29      A    4.0 2019-06-28 12:59:22.053382 2019-06-28 12:59:21.053657
-The average price of all events in time_length_batch(15, seconds=1): 5.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-28     28      A    6.0 2019-06-28 12:59:21.461660 2019-06-28 12:59:20.461872
-29     29      A    4.0 2019-06-28 12:59:22.053382 2019-06-28 12:59:21.053657
-The average price of all events in time_length_batch(15, seconds=1): 5.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-30     30      A    1.0 2019-06-28 12:59:22.656134 2019-06-28 12:59:21.656337
-31     31      A    2.0 2019-06-28 12:59:23.252772 2019-06-28 12:59:22.252971
-The average price of all events in time_length_batch(15, seconds=1): 1.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-30     30      A    1.0 2019-06-28 12:59:22.656134 2019-06-28 12:59:21.656337
-31     31      A    2.0 2019-06-28 12:59:23.252772 2019-06-28 12:59:22.252971
-The average price of all events in time_length_batch(15, seconds=1): 1.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-32     32      A    7.0 2019-06-28 12:59:23.861999 2019-06-28 12:59:22.862199
-33     33      A    4.0 2019-06-28 12:59:24.459965 2019-06-28 12:59:23.460162
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-32     32      A    7.0 2019-06-28 12:59:23.861999 2019-06-28 12:59:22.862199
-33     33      A    4.0 2019-06-28 12:59:24.459965 2019-06-28 12:59:23.460162
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-34     34      A    9.0 2019-06-28 12:59:25.055945 2019-06-28 12:59:24.056147
-35     35      A    1.0 2019-06-28 12:59:25.662873 2019-06-28 12:59:24.663198
-The average price of all events in time_length_batch(15, seconds=1): 5.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-34     34      A    9.0 2019-06-28 12:59:25.055945 2019-06-28 12:59:24.056147
-35     35      A    1.0 2019-06-28 12:59:25.662873 2019-06-28 12:59:24.663198
-The average price of all events in time_length_batch(15, seconds=1): 5.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-36     36      A    8.0 2019-06-28 12:59:26.263229 2019-06-28 12:59:25.263427
-37     37      A    3.0 2019-06-28 12:59:26.861933 2019-06-28 12:59:25.862146
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-36     36      A    8.0 2019-06-28 12:59:26.263229 2019-06-28 12:59:25.263427
-37     37      A    3.0 2019-06-28 12:59:26.861933 2019-06-28 12:59:25.862146
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-38     38      A    5.0 2019-06-28 12:59:27.476606 2019-06-28 12:59:26.478002
-39     39      A    1.0 2019-06-28 12:59:28.165746 2019-06-28 12:59:27.166074
-The average price of all events in time_length_batch(15, seconds=1): 3.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-38     38      A    5.0 2019-06-28 12:59:27.476606 2019-06-28 12:59:26.478002
-39     39      A    1.0 2019-06-28 12:59:28.165746 2019-06-28 12:59:27.166074
-The average price of all events in time_length_batch(15, seconds=1): 3.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-40     40      A    8.0 2019-06-28 12:59:28.790548 2019-06-28 12:59:27.790824
-41     41      A    5.0 2019-06-28 12:59:29.401933 2019-06-28 12:59:28.402217
-The average price of all events in time_length_batch(15, seconds=1): 6.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-40     40      A    8.0 2019-06-28 12:59:28.790548 2019-06-28 12:59:27.790824
-41     41      A    5.0 2019-06-28 12:59:29.401933 2019-06-28 12:59:28.402217
-The average price of all events in time_length_batch(15, seconds=1): 6.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-42     42      A    4.0 2019-06-28 12:59:30.012981 2019-06-28 12:59:29.013265
-43     43      A    9.0 2019-06-28 12:59:30.620225 2019-06-28 12:59:29.620421
-The average price of all events in time_length_batch(15, seconds=1): 6.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-42     42      A    4.0 2019-06-28 12:59:30.012981 2019-06-28 12:59:29.013265
-43     43      A    9.0 2019-06-28 12:59:30.620225 2019-06-28 12:59:29.620421
-The average price of all events in time_length_batch(15, seconds=1): 6.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-44     44      A    5.0 2019-06-28 12:59:31.234858 2019-06-28 12:59:30.235056
-45     45      A    8.0 2019-06-28 12:59:31.839610 2019-06-28 12:59:30.839809
-The average price of all events in time_length_batch(15, seconds=1): 6.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-44     44      A    5.0 2019-06-28 12:59:31.234858 2019-06-28 12:59:30.235056
-45     45      A    8.0 2019-06-28 12:59:31.839610 2019-06-28 12:59:30.839809
-The average price of all events in time_length_batch(15, seconds=1): 6.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-46     46      A    8.0 2019-06-28 12:59:32.445968 2019-06-28 12:59:31.446164
-47     47      A    5.0 2019-06-28 12:59:33.049637 2019-06-28 12:59:32.049836
-The average price of all events in time_length_batch(15, seconds=1): 6.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-46     46      A    8.0 2019-06-28 12:59:32.445968 2019-06-28 12:59:31.446164
-47     47      A    5.0 2019-06-28 12:59:33.049637 2019-06-28 12:59:32.049836
-The average price of all events in time_length_batch(15, seconds=1): 6.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-48     48      A    6.0 2019-06-28 12:59:33.657166 2019-06-28 12:59:32.657366
-49     49      A    6.0 2019-06-28 12:59:34.271029 2019-06-28 12:59:33.271325
-The average price of all events in time_length_batch(15, seconds=1): 6.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-48     48      A    6.0 2019-06-28 12:59:33.657166 2019-06-28 12:59:32.657366
-49     49      A    6.0 2019-06-28 12:59:34.271029 2019-06-28 12:59:33.271325
-The average price of all events in time_length_batch(15, seconds=1): 6.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-50     50      A    6.0 2019-06-28 12:59:34.882127 2019-06-28 12:59:33.882328
-51     51      A    9.0 2019-06-28 12:59:35.491730 2019-06-28 12:59:34.491932
-The average price of all events in time_length_batch(15, seconds=1): 7.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-50     50      A    6.0 2019-06-28 12:59:34.882127 2019-06-28 12:59:33.882328
-51     51      A    9.0 2019-06-28 12:59:35.491730 2019-06-28 12:59:34.491932
-The average price of all events in time_length_batch(15, seconds=1): 7.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-52     52      A    7.0 2019-06-28 12:59:36.102131 2019-06-28 12:59:35.102331
-53     53      A    8.0 2019-06-28 12:59:36.701880 2019-06-28 12:59:35.702077
-The average price of all events in time_length_batch(15, seconds=1): 7.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-52     52      A    7.0 2019-06-28 12:59:36.102131 2019-06-28 12:59:35.102331
-53     53      A    8.0 2019-06-28 12:59:36.701880 2019-06-28 12:59:35.702077
-The average price of all events in time_length_batch(15, seconds=1): 7.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-54     54      A    9.0 2019-06-28 12:59:37.303576 2019-06-28 12:59:36.303826
-55     55      A    2.0 2019-06-28 12:59:37.908585 2019-06-28 12:59:36.908792
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-54     54      A    9.0 2019-06-28 12:59:37.303576 2019-06-28 12:59:36.303826
-55     55      A    2.0 2019-06-28 12:59:37.908585 2019-06-28 12:59:36.908792
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-56     56      A    7.0 2019-06-28 12:59:38.511121 2019-06-28 12:59:37.511395
-57     57      A    9.0 2019-06-28 12:59:39.111670 2019-06-28 12:59:38.111869
-The average price of all events in time_length_batch(15, seconds=1): 8.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-56     56      A    7.0 2019-06-28 12:59:38.511121 2019-06-28 12:59:37.511395
-57     57      A    9.0 2019-06-28 12:59:39.111670 2019-06-28 12:59:38.111869
-The average price of all events in time_length_batch(15, seconds=1): 8.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-58     58      A    8.0 2019-06-28 12:59:39.723567 2019-06-28 12:59:38.723768
-59     59      A    1.0 2019-06-28 12:59:40.333797 2019-06-28 12:59:39.333995
-The average price of all events in time_length_batch(15, seconds=1): 4.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-58     58      A    8.0 2019-06-28 12:59:39.723567 2019-06-28 12:59:38.723768
-59     59      A    1.0 2019-06-28 12:59:40.333797 2019-06-28 12:59:39.333995
-The average price of all events in time_length_batch(15, seconds=1): 4.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-60     60      A    6.0 2019-06-28 12:59:40.934697 2019-06-28 12:59:39.934981
-61     61      A    1.0 2019-06-28 12:59:41.540106 2019-06-28 12:59:40.540357
-The average price of all events in time_length_batch(15, seconds=1): 3.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-60     60      A    6.0 2019-06-28 12:59:40.934697 2019-06-28 12:59:39.934981
-61     61      A    1.0 2019-06-28 12:59:41.540106 2019-06-28 12:59:40.540357
-The average price of all events in time_length_batch(15, seconds=1): 3.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-62     62      A    8.0 2019-06-28 12:59:42.145017 2019-06-28 12:59:41.145300
-63     63      A    3.0 2019-06-28 12:59:42.747578 2019-06-28 12:59:41.747855
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-62     62      A    8.0 2019-06-28 12:59:42.145017 2019-06-28 12:59:41.145300
-63     63      A    3.0 2019-06-28 12:59:42.747578 2019-06-28 12:59:41.747855
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-64     64      A    9.0 2019-06-28 12:59:43.346709 2019-06-28 12:59:42.346910
-65     65      A    6.0 2019-06-28 12:59:43.949651 2019-06-28 12:59:42.949931
-The average price of all events in time_length_batch(15, seconds=1): 7.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-64     64      A    9.0 2019-06-28 12:59:43.346709 2019-06-28 12:59:42.346910
-65     65      A    6.0 2019-06-28 12:59:43.949651 2019-06-28 12:59:42.949931
-The average price of all events in time_length_batch(15, seconds=1): 7.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-66     66      A    8.0 2019-06-28 12:59:44.549453 2019-06-28 12:59:43.549653
-67     67      A    3.0 2019-06-28 12:59:45.149819 2019-06-28 12:59:44.150021
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-66     66      A    8.0 2019-06-28 12:59:44.549453 2019-06-28 12:59:43.549653
-67     67      A    3.0 2019-06-28 12:59:45.149819 2019-06-28 12:59:44.150021
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-68     68      A    6.0 2019-06-28 12:59:45.752173 2019-06-28 12:59:44.752447
-69     69      A    7.0 2019-06-28 12:59:46.357385 2019-06-28 12:59:45.357663
-The average price of all events in time_length_batch(15, seconds=1): 6.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-68     68      A    6.0 2019-06-28 12:59:45.752173 2019-06-28 12:59:44.752447
-69     69      A    7.0 2019-06-28 12:59:46.357385 2019-06-28 12:59:45.357663
-The average price of all events in time_length_batch(15, seconds=1): 6.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-70     70      A    5.0 2019-06-28 12:59:46.960013 2019-06-28 12:59:45.960217
-71     71      A    2.0 2019-06-28 12:59:47.564778 2019-06-28 12:59:46.564984
-The average price of all events in time_length_batch(15, seconds=1): 3.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-70     70      A    5.0 2019-06-28 12:59:46.960013 2019-06-28 12:59:45.960217
-71     71      A    2.0 2019-06-28 12:59:47.564778 2019-06-28 12:59:46.564984
-The average price of all events in time_length_batch(15, seconds=1): 3.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-72     72      A    3.0 2019-06-28 12:59:48.165683 2019-06-28 12:59:47.165883
-73     73      A    9.0 2019-06-28 12:59:48.769749 2019-06-28 12:59:47.769965
-The average price of all events in time_length_batch(15, seconds=1): 6.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-72     72      A    3.0 2019-06-28 12:59:48.165683 2019-06-28 12:59:47.165883
-73     73      A    9.0 2019-06-28 12:59:48.769749 2019-06-28 12:59:47.769965
-The average price of all events in time_length_batch(15, seconds=1): 6.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-74     74      A    1.0 2019-06-28 12:59:49.461426 2019-06-28 12:59:48.461638
-75     75      A    4.0 2019-06-28 12:59:50.092511 2019-06-28 12:59:49.092728
-The average price of all events in time_length_batch(15, seconds=1): 2.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-74     74      A    1.0 2019-06-28 12:59:49.461426 2019-06-28 12:59:48.461638
-75     75      A    4.0 2019-06-28 12:59:50.092511 2019-06-28 12:59:49.092728
-The average price of all events in time_length_batch(15, seconds=1): 2.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-76     76      A    6.0 2019-06-28 12:59:50.695681 2019-06-28 12:59:49.695991
-77     77      A    7.0 2019-06-28 12:59:51.298963 2019-06-28 12:59:50.299282
-The average price of all events in time_length_batch(15, seconds=1): 6.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-76     76      A    6.0 2019-06-28 12:59:50.695681 2019-06-28 12:59:49.695991
-77     77      A    7.0 2019-06-28 12:59:51.298963 2019-06-28 12:59:50.299282
-The average price of all events in time_length_batch(15, seconds=1): 6.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-78     78      A    3.0 2019-06-28 12:59:51.914825 2019-06-28 12:59:50.915028
-79     79      A    9.0 2019-06-28 12:59:52.522581 2019-06-28 12:59:51.522862
-The average price of all events in time_length_batch(15, seconds=1): 6.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-78     78      A    3.0 2019-06-28 12:59:51.914825 2019-06-28 12:59:50.915028
-79     79      A    9.0 2019-06-28 12:59:52.522581 2019-06-28 12:59:51.522862
-The average price of all events in time_length_batch(15, seconds=1): 6.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-80     80      A    9.0 2019-06-28 12:59:53.129344 2019-06-28 12:59:52.129545
-81     81      A    8.0 2019-06-28 12:59:53.728280 2019-06-28 12:59:52.728555
-The average price of all events in time_length_batch(15, seconds=1): 8.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-80     80      A    9.0 2019-06-28 12:59:53.129344 2019-06-28 12:59:52.129545
-81     81      A    8.0 2019-06-28 12:59:53.728280 2019-06-28 12:59:52.728555
-The average price of all events in time_length_batch(15, seconds=1): 8.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-82     82      A    9.0 2019-06-28 12:59:54.339702 2019-06-28 12:59:53.340098
-83     83      A    8.0 2019-06-28 12:59:54.944993 2019-06-28 12:59:53.945202
-The average price of all events in time_length_batch(15, seconds=1): 8.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-82     82      A    9.0 2019-06-28 12:59:54.339702 2019-06-28 12:59:53.340098
-83     83      A    8.0 2019-06-28 12:59:54.944993 2019-06-28 12:59:53.945202
-The average price of all events in time_length_batch(15, seconds=1): 8.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-84     84      A    1.0 2019-06-28 12:59:55.546469 2019-06-28 12:59:54.546673
-85     85      A    6.0 2019-06-28 12:59:56.148370 2019-06-28 12:59:55.148571
-The average price of all events in time_length_batch(15, seconds=1): 3.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-84     84      A    1.0 2019-06-28 12:59:55.546469 2019-06-28 12:59:54.546673
-85     85      A    6.0 2019-06-28 12:59:56.148370 2019-06-28 12:59:55.148571
-The average price of all events in time_length_batch(15, seconds=1): 3.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-86     86      A    3.0 2019-06-28 12:59:56.745578 2019-06-28 12:59:55.745880
-87     87      A    8.0 2019-06-28 12:59:57.352013 2019-06-28 12:59:56.352213
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-86     86      A    3.0 2019-06-28 12:59:56.745578 2019-06-28 12:59:55.745880
-87     87      A    8.0 2019-06-28 12:59:57.352013 2019-06-28 12:59:56.352213
-The average price of all events in time_length_batch(15, seconds=1): 5.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-88     88      A    1.0 2019-06-28 12:59:57.964575 2019-06-28 12:59:56.964847
-89     89      A    5.0 2019-06-28 12:59:58.568033 2019-06-28 12:59:57.568361
-The average price of all events in time_length_batch(15, seconds=1): 3.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-88     88      A    1.0 2019-06-28 12:59:57.964575 2019-06-28 12:59:56.964847
-89     89      A    5.0 2019-06-28 12:59:58.568033 2019-06-28 12:59:57.568361
-The average price of all events in time_length_batch(15, seconds=1): 3.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-90     90      A    2.0 2019-06-28 12:59:59.167911 2019-06-28 12:59:58.168202
-91     91      A    7.0 2019-06-28 12:59:59.773163 2019-06-28 12:59:58.773449
-The average price of all events in time_length_batch(15, seconds=1): 4.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-90     90      A    2.0 2019-06-28 12:59:59.167911 2019-06-28 12:59:58.168202
-91     91      A    7.0 2019-06-28 12:59:59.773163 2019-06-28 12:59:58.773449
-The average price of all events in time_length_batch(15, seconds=1): 4.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-92     92      A    8.0 2019-06-28 13:00:00.403312 2019-06-28 12:59:59.403665
-93     93      A    9.0 2019-06-28 13:00:01.002072 2019-06-28 13:00:00.002277
-The average price of all events in time_length_batch(15, seconds=1): 8.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-92     92      A    8.0 2019-06-28 13:00:00.403312 2019-06-28 12:59:59.403665
-93     93      A    9.0 2019-06-28 13:00:01.002072 2019-06-28 13:00:00.002277
-The average price of all events in time_length_batch(15, seconds=1): 8.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-94     94      A    6.0 2019-06-28 13:00:01.609068 2019-06-28 13:00:00.609269
-95     95      A    1.0 2019-06-28 13:00:02.211205 2019-06-28 13:00:01.211478
-The average price of all events in time_length_batch(15, seconds=1): 3.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-94     94      A    6.0 2019-06-28 13:00:01.609068 2019-06-28 13:00:00.609269
-95     95      A    1.0 2019-06-28 13:00:02.211205 2019-06-28 13:00:01.211478
-The average price of all events in time_length_batch(15, seconds=1): 3.5
-    index symbol  price                       time        INSERTION_TIMESTAMP
-96     96      A    7.0 2019-06-28 13:00:02.813363 2019-06-28 13:00:01.813571
-97     97      A    9.0 2019-06-28 13:00:03.420647 2019-06-28 13:00:02.420851
-The average price of all events in time_length_batch(15, seconds=1): 8.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-96     96      A    7.0 2019-06-28 13:00:02.813363 2019-06-28 13:00:01.813571
-97     97      A    9.0 2019-06-28 13:00:03.420647 2019-06-28 13:00:02.420851
-The average price of all events in time_length_batch(15, seconds=1): 8.0
-    index symbol  price                       time        INSERTION_TIMESTAMP
-98     98      A    3.0 2019-06-28 13:00:04.040442 2019-06-28 13:00:03.040643
-99     99      A    3.0 2019-06-28 13:00:04.641386 2019-06-28 13:00:03.641586
-The average price of all events in time_length_batch(15, seconds=1): 3.0
+Empty DataFrame
+Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
+Index: []
+The average price of all events in time_length_batch(15, seconds=1): nan
+Empty DataFrame
+Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
+Index: []
+The average price of all events in time_length_batch(15, seconds=1): nan
+Empty DataFrame
+Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
+Index: []
+The average price of all events in time_length_batch(15, seconds=1): nan
+Empty DataFrame
+Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
+Index: []
+The average price of all events in time_length_batch(15, seconds=1): nan
+Empty DataFrame
+Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
+Index: []
+The average price of all events in time_length_batch(15, seconds=1): nan
+Empty DataFrame
+Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
+Index: []
+The average price of all events in time_length_batch(15, seconds=1): nan
+Empty DataFrame
+Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
+Index: []
+The average price of all events in time_length_batch(15, seconds=1): nan
+Empty DataFrame
+Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
+Index: []
+The average price of all events in time_length_batch(15, seconds=1): nan
+Empty DataFrame
+Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
+Index: []
+The average price of all events in time_length_batch(15, seconds=1): nan
+Empty DataFrame
+Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
+Index: []
+The average price of all events in time_length_batch(15, seconds=1): nan
+Empty DataFrame
+Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
+Index: []
+The average price of all events in time_length_batch(15, seconds=1): nan
+Empty DataFrame
+Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
+Index: []
+The average price of all events in time_length_batch(15, seconds=1): nan
+Empty DataFrame
+Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
+Index: []
+The average price of all events in time_length_batch(15, seconds=1): nan
+Empty DataFrame
+Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
+Index: []
+The average price of all events in time_length_batch(15, seconds=1): nan
+    index symbol  price                       time        INSERTION_TIMESTAMP
+0       0      A    9.0 2019-06-28 15:37:07.975235 2019-06-28 15:37:06.976236
+1       1      A    8.0 2019-06-28 15:37:08.016124 2019-06-28 15:37:07.016374
+2       2      A    7.0 2019-06-28 15:37:08.030428 2019-06-28 15:37:07.030677
+3       3      A    4.0 2019-06-28 15:37:08.044433 2019-06-28 15:37:07.044682
+4       4      A    5.0 2019-06-28 15:37:08.058396 2019-06-28 15:37:07.058644
+5       5      A    6.0 2019-06-28 15:37:08.072347 2019-06-28 15:37:07.072592
+6       6      A    6.0 2019-06-28 15:37:08.086372 2019-06-28 15:37:07.086624
+7       7      A    5.0 2019-06-28 15:37:08.100432 2019-06-28 15:37:07.100681
+8       8      A    6.0 2019-06-28 15:37:08.114405 2019-06-28 15:37:07.114653
+9       9      A    1.0 2019-06-28 15:37:08.129038 2019-06-28 15:37:07.129289
+10     10      A    3.0 2019-06-28 15:37:08.143046 2019-06-28 15:37:07.143293
+11     11      A    4.0 2019-06-28 15:37:08.157074 2019-06-28 15:37:07.157323
+12     12      A    4.0 2019-06-28 15:37:08.171000 2019-06-28 15:37:07.171247
+13     13      A    3.0 2019-06-28 15:37:08.186221 2019-06-28 15:37:07.186492
+14     14      A    6.0 2019-06-28 15:37:08.201943 2019-06-28 15:37:07.202204
+The average price of all events in time_length_batch(15, seconds=1): 5.133333333333334
+    index symbol  price                       time        INSERTION_TIMESTAMP
+0       0      A    9.0 2019-06-28 15:37:07.975235 2019-06-28 15:37:06.976236
+1       1      A    8.0 2019-06-28 15:37:08.016124 2019-06-28 15:37:07.016374
+2       2      A    7.0 2019-06-28 15:37:08.030428 2019-06-28 15:37:07.030677
+3       3      A    4.0 2019-06-28 15:37:08.044433 2019-06-28 15:37:07.044682
+4       4      A    5.0 2019-06-28 15:37:08.058396 2019-06-28 15:37:07.058644
+5       5      A    6.0 2019-06-28 15:37:08.072347 2019-06-28 15:37:07.072592
+6       6      A    6.0 2019-06-28 15:37:08.086372 2019-06-28 15:37:07.086624
+7       7      A    5.0 2019-06-28 15:37:08.100432 2019-06-28 15:37:07.100681
+8       8      A    6.0 2019-06-28 15:37:08.114405 2019-06-28 15:37:07.114653
+9       9      A    1.0 2019-06-28 15:37:08.129038 2019-06-28 15:37:07.129289
+10     10      A    3.0 2019-06-28 15:37:08.143046 2019-06-28 15:37:07.143293
+11     11      A    4.0 2019-06-28 15:37:08.157074 2019-06-28 15:37:07.157323
+12     12      A    4.0 2019-06-28 15:37:08.171000 2019-06-28 15:37:07.171247
+13     13      A    3.0 2019-06-28 15:37:08.186221 2019-06-28 15:37:07.186492
+14     14      A    6.0 2019-06-28 15:37:08.201943 2019-06-28 15:37:07.202204
+The average price of all events in time_length_batch(15, seconds=1): 5.133333333333334
+    index symbol  price                       time        INSERTION_TIMESTAMP
+0       0      A    9.0 2019-06-28 15:37:07.975235 2019-06-28 15:37:06.976236
+1       1      A    8.0 2019-06-28 15:37:08.016124 2019-06-28 15:37:07.016374
+2       2      A    7.0 2019-06-28 15:37:08.030428 2019-06-28 15:37:07.030677
+3       3      A    4.0 2019-06-28 15:37:08.044433 2019-06-28 15:37:07.044682
+4       4      A    5.0 2019-06-28 15:37:08.058396 2019-06-28 15:37:07.058644
+5       5      A    6.0 2019-06-28 15:37:08.072347 2019-06-28 15:37:07.072592
+6       6      A    6.0 2019-06-28 15:37:08.086372 2019-06-28 15:37:07.086624
+7       7      A    5.0 2019-06-28 15:37:08.100432 2019-06-28 15:37:07.100681
+8       8      A    6.0 2019-06-28 15:37:08.114405 2019-06-28 15:37:07.114653
+9       9      A    1.0 2019-06-28 15:37:08.129038 2019-06-28 15:37:07.129289
+10     10      A    3.0 2019-06-28 15:37:08.143046 2019-06-28 15:37:07.143293
+11     11      A    4.0 2019-06-28 15:37:08.157074 2019-06-28 15:37:07.157323
+12     12      A    4.0 2019-06-28 15:37:08.171000 2019-06-28 15:37:07.171247
+13     13      A    3.0 2019-06-28 15:37:08.186221 2019-06-28 15:37:07.186492
+14     14      A    6.0 2019-06-28 15:37:08.201943 2019-06-28 15:37:07.202204
+The average price of all events in time_length_batch(15, seconds=1): 5.133333333333334
+    index symbol  price                       time        INSERTION_TIMESTAMP
+0       0      A    9.0 2019-06-28 15:37:07.975235 2019-06-28 15:37:06.976236
+1       1      A    8.0 2019-06-28 15:37:08.016124 2019-06-28 15:37:07.016374
+2       2      A    7.0 2019-06-28 15:37:08.030428 2019-06-28 15:37:07.030677
+3       3      A    4.0 2019-06-28 15:37:08.044433 2019-06-28 15:37:07.044682
+4       4      A    5.0 2019-06-28 15:37:08.058396 2019-06-28 15:37:07.058644
+5       5      A    6.0 2019-06-28 15:37:08.072347 2019-06-28 15:37:07.072592
+6       6      A    6.0 2019-06-28 15:37:08.086372 2019-06-28 15:37:07.086624
+7       7      A    5.0 2019-06-28 15:37:08.100432 2019-06-28 15:37:07.100681
+8       8      A    6.0 2019-06-28 15:37:08.114405 2019-06-28 15:37:07.114653
+9       9      A    1.0 2019-06-28 15:37:08.129038 2019-06-28 15:37:07.129289
+10     10      A    3.0 2019-06-28 15:37:08.143046 2019-06-28 15:37:07.143293
+11     11      A    4.0 2019-06-28 15:37:08.157074 2019-06-28 15:37:07.157323
+12     12      A    4.0 2019-06-28 15:37:08.171000 2019-06-28 15:37:07.171247
+13     13      A    3.0 2019-06-28 15:37:08.186221 2019-06-28 15:37:07.186492
+14     14      A    6.0 2019-06-28 15:37:08.201943 2019-06-28 15:37:07.202204
+The average price of all events in time_length_batch(15, seconds=1): 5.133333333333334
+    index symbol  price                       time        INSERTION_TIMESTAMP
+0       0      A    9.0 2019-06-28 15:37:07.975235 2019-06-28 15:37:06.976236
+1       1      A    8.0 2019-06-28 15:37:08.016124 2019-06-28 15:37:07.016374
+2       2      A    7.0 2019-06-28 15:37:08.030428 2019-06-28 15:37:07.030677
+3       3      A    4.0 2019-06-28 15:37:08.044433 2019-06-28 15:37:07.044682
+4       4      A    5.0 2019-06-28 15:37:08.058396 2019-06-28 15:37:07.058644
+5       5      A    6.0 2019-06-28 15:37:08.072347 2019-06-28 15:37:07.072592
+6       6      A    6.0 2019-06-28 15:37:08.086372 2019-06-28 15:37:07.086624
+7       7      A    5.0 2019-06-28 15:37:08.100432 2019-06-28 15:37:07.100681
+8       8      A    6.0 2019-06-28 15:37:08.114405 2019-06-28 15:37:07.114653
+9       9      A    1.0 2019-06-28 15:37:08.129038 2019-06-28 15:37:07.129289
+10     10      A    3.0 2019-06-28 15:37:08.143046 2019-06-28 15:37:07.143293
+11     11      A    4.0 2019-06-28 15:37:08.157074 2019-06-28 15:37:07.157323
+12     12      A    4.0 2019-06-28 15:37:08.171000 2019-06-28 15:37:07.171247
+13     13      A    3.0 2019-06-28 15:37:08.186221 2019-06-28 15:37:07.186492
+14     14      A    6.0 2019-06-28 15:37:08.201943 2019-06-28 15:37:07.202204
+The average price of all events in time_length_batch(15, seconds=1): 5.133333333333334
+    index symbol  price                       time        INSERTION_TIMESTAMP
+0       0      A    9.0 2019-06-28 15:37:07.975235 2019-06-28 15:37:06.976236
+1       1      A    8.0 2019-06-28 15:37:08.016124 2019-06-28 15:37:07.016374
+2       2      A    7.0 2019-06-28 15:37:08.030428 2019-06-28 15:37:07.030677
+3       3      A    4.0 2019-06-28 15:37:08.044433 2019-06-28 15:37:07.044682
+4       4      A    5.0 2019-06-28 15:37:08.058396 2019-06-28 15:37:07.058644
+5       5      A    6.0 2019-06-28 15:37:08.072347 2019-06-28 15:37:07.072592
+6       6      A    6.0 2019-06-28 15:37:08.086372 2019-06-28 15:37:07.086624
+7       7      A    5.0 2019-06-28 15:37:08.100432 2019-06-28 15:37:07.100681
+8       8      A    6.0 2019-06-28 15:37:08.114405 2019-06-28 15:37:07.114653
+9       9      A    1.0 2019-06-28 15:37:08.129038 2019-06-28 15:37:07.129289
+10     10      A    3.0 2019-06-28 15:37:08.143046 2019-06-28 15:37:07.143293
+11     11      A    4.0 2019-06-28 15:37:08.157074 2019-06-28 15:37:07.157323
+12     12      A    4.0 2019-06-28 15:37:08.171000 2019-06-28 15:37:07.171247
+13     13      A    3.0 2019-06-28 15:37:08.186221 2019-06-28 15:37:07.186492
+14     14      A    6.0 2019-06-28 15:37:08.201943 2019-06-28 15:37:07.202204
+The average price of all events in time_length_batch(15, seconds=1): 5.133333333333334
+    index symbol  price                       time        INSERTION_TIMESTAMP
+0       0      A    9.0 2019-06-28 15:37:07.975235 2019-06-28 15:37:06.976236
+1       1      A    8.0 2019-06-28 15:37:08.016124 2019-06-28 15:37:07.016374
+2       2      A    7.0 2019-06-28 15:37:08.030428 2019-06-28 15:37:07.030677
+3       3      A    4.0 2019-06-28 15:37:08.044433 2019-06-28 15:37:07.044682
+4       4      A    5.0 2019-06-28 15:37:08.058396 2019-06-28 15:37:07.058644
+5       5      A    6.0 2019-06-28 15:37:08.072347 2019-06-28 15:37:07.072592
+6       6      A    6.0 2019-06-28 15:37:08.086372 2019-06-28 15:37:07.086624
+7       7      A    5.0 2019-06-28 15:37:08.100432 2019-06-28 15:37:07.100681
+8       8      A    6.0 2019-06-28 15:37:08.114405 2019-06-28 15:37:07.114653
+9       9      A    1.0 2019-06-28 15:37:08.129038 2019-06-28 15:37:07.129289
+10     10      A    3.0 2019-06-28 15:37:08.143046 2019-06-28 15:37:07.143293
+11     11      A    4.0 2019-06-28 15:37:08.157074 2019-06-28 15:37:07.157323
+12     12      A    4.0 2019-06-28 15:37:08.171000 2019-06-28 15:37:07.171247
+13     13      A    3.0 2019-06-28 15:37:08.186221 2019-06-28 15:37:07.186492
+14     14      A    6.0 2019-06-28 15:37:08.201943 2019-06-28 15:37:07.202204
+The average price of all events in time_length_batch(15, seconds=1): 5.133333333333334
+    index symbol  price                       time        INSERTION_TIMESTAMP
+0       0      A    9.0 2019-06-28 15:37:07.975235 2019-06-28 15:37:06.976236
+1       1      A    8.0 2019-06-28 15:37:08.016124 2019-06-28 15:37:07.016374
+2       2      A    7.0 2019-06-28 15:37:08.030428 2019-06-28 15:37:07.030677
+3       3      A    4.0 2019-06-28 15:37:08.044433 2019-06-28 15:37:07.044682
+4       4      A    5.0 2019-06-28 15:37:08.058396 2019-06-28 15:37:07.058644
+5       5      A    6.0 2019-06-28 15:37:08.072347 2019-06-28 15:37:07.072592
+6       6      A    6.0 2019-06-28 15:37:08.086372 2019-06-28 15:37:07.086624
+7       7      A    5.0 2019-06-28 15:37:08.100432 2019-06-28 15:37:07.100681
+8       8      A    6.0 2019-06-28 15:37:08.114405 2019-06-28 15:37:07.114653
+9       9      A    1.0 2019-06-28 15:37:08.129038 2019-06-28 15:37:07.129289
+10     10      A    3.0 2019-06-28 15:37:08.143046 2019-06-28 15:37:07.143293
+11     11      A    4.0 2019-06-28 15:37:08.157074 2019-06-28 15:37:07.157323
+12     12      A    4.0 2019-06-28 15:37:08.171000 2019-06-28 15:37:07.171247
+13     13      A    3.0 2019-06-28 15:37:08.186221 2019-06-28 15:37:07.186492
+14     14      A    6.0 2019-06-28 15:37:08.201943 2019-06-28 15:37:07.202204
+The average price of all events in time_length_batch(15, seconds=1): 5.133333333333334
+    index symbol  price                       time        INSERTION_TIMESTAMP
+0       0      A    9.0 2019-06-28 15:37:07.975235 2019-06-28 15:37:06.976236
+1       1      A    8.0 2019-06-28 15:37:08.016124 2019-06-28 15:37:07.016374
+2       2      A    7.0 2019-06-28 15:37:08.030428 2019-06-28 15:37:07.030677
+3       3      A    4.0 2019-06-28 15:37:08.044433 2019-06-28 15:37:07.044682
+4       4      A    5.0 2019-06-28 15:37:08.058396 2019-06-28 15:37:07.058644
+5       5      A    6.0 2019-06-28 15:37:08.072347 2019-06-28 15:37:07.072592
+6       6      A    6.0 2019-06-28 15:37:08.086372 2019-06-28 15:37:07.086624
+7       7      A    5.0 2019-06-28 15:37:08.100432 2019-06-28 15:37:07.100681
+8       8      A    6.0 2019-06-28 15:37:08.114405 2019-06-28 15:37:07.114653
+9       9      A    1.0 2019-06-28 15:37:08.129038 2019-06-28 15:37:07.129289
+10     10      A    3.0 2019-06-28 15:37:08.143046 2019-06-28 15:37:07.143293
+11     11      A    4.0 2019-06-28 15:37:08.157074 2019-06-28 15:37:07.157323
+12     12      A    4.0 2019-06-28 15:37:08.171000 2019-06-28 15:37:07.171247
+13     13      A    3.0 2019-06-28 15:37:08.186221 2019-06-28 15:37:07.186492
+14     14      A    6.0 2019-06-28 15:37:08.201943 2019-06-28 15:37:07.202204
+The average price of all events in time_length_batch(15, seconds=1): 5.133333333333334
+    index symbol  price                       time        INSERTION_TIMESTAMP
+0       0      A    9.0 2019-06-28 15:37:07.975235 2019-06-28 15:37:06.976236
+1       1      A    8.0 2019-06-28 15:37:08.016124 2019-06-28 15:37:07.016374
+2       2      A    7.0 2019-06-28 15:37:08.030428 2019-06-28 15:37:07.030677
+3       3      A    4.0 2019-06-28 15:37:08.044433 2019-06-28 15:37:07.044682
+4       4      A    5.0 2019-06-28 15:37:08.058396 2019-06-28 15:37:07.058644
+5       5      A    6.0 2019-06-28 15:37:08.072347 2019-06-28 15:37:07.072592
+6       6      A    6.0 2019-06-28 15:37:08.086372 2019-06-28 15:37:07.086624
+7       7      A    5.0 2019-06-28 15:37:08.100432 2019-06-28 15:37:07.100681
+8       8      A    6.0 2019-06-28 15:37:08.114405 2019-06-28 15:37:07.114653
+9       9      A    1.0 2019-06-28 15:37:08.129038 2019-06-28 15:37:07.129289
+10     10      A    3.0 2019-06-28 15:37:08.143046 2019-06-28 15:37:07.143293
+11     11      A    4.0 2019-06-28 15:37:08.157074 2019-06-28 15:37:07.157323
+12     12      A    4.0 2019-06-28 15:37:08.171000 2019-06-28 15:37:07.171247
+13     13      A    3.0 2019-06-28 15:37:08.186221 2019-06-28 15:37:07.186492
+14     14      A    6.0 2019-06-28 15:37:08.201943 2019-06-28 15:37:07.202204
+The average price of all events in time_length_batch(15, seconds=1): 5.133333333333334
+    index symbol  price                       time        INSERTION_TIMESTAMP
+0       0      A    9.0 2019-06-28 15:37:07.975235 2019-06-28 15:37:06.976236
+1       1      A    8.0 2019-06-28 15:37:08.016124 2019-06-28 15:37:07.016374
+2       2      A    7.0 2019-06-28 15:37:08.030428 2019-06-28 15:37:07.030677
+3       3      A    4.0 2019-06-28 15:37:08.044433 2019-06-28 15:37:07.044682
+4       4      A    5.0 2019-06-28 15:37:08.058396 2019-06-28 15:37:07.058644
+5       5      A    6.0 2019-06-28 15:37:08.072347 2019-06-28 15:37:07.072592
+6       6      A    6.0 2019-06-28 15:37:08.086372 2019-06-28 15:37:07.086624
+7       7      A    5.0 2019-06-28 15:37:08.100432 2019-06-28 15:37:07.100681
+8       8      A    6.0 2019-06-28 15:37:08.114405 2019-06-28 15:37:07.114653
+9       9      A    1.0 2019-06-28 15:37:08.129038 2019-06-28 15:37:07.129289
+10     10      A    3.0 2019-06-28 15:37:08.143046 2019-06-28 15:37:07.143293
+11     11      A    4.0 2019-06-28 15:37:08.157074 2019-06-28 15:37:07.157323
+12     12      A    4.0 2019-06-28 15:37:08.171000 2019-06-28 15:37:07.171247
+13     13      A    3.0 2019-06-28 15:37:08.186221 2019-06-28 15:37:07.186492
+14     14      A    6.0 2019-06-28 15:37:08.201943 2019-06-28 15:37:07.202204
+The average price of all events in time_length_batch(15, seconds=1): 5.133333333333334
+    index symbol  price                       time        INSERTION_TIMESTAMP
+15     15      A    6.0 2019-06-28 15:37:08.310276 2019-06-28 15:37:07.310534
+16     16      A    7.0 2019-06-28 15:37:08.402081 2019-06-28 15:37:07.402340
+17     17      A    8.0 2019-06-28 15:37:08.503403 2019-06-28 15:37:07.503689
+18     18      A    8.0 2019-06-28 15:37:08.592429 2019-06-28 15:37:07.592686
+19     19      A    5.0 2019-06-28 15:37:08.692787 2019-06-28 15:37:07.693046
+20     20      A    4.0 2019-06-28 15:37:08.786707 2019-06-28 15:37:07.786964
+21     21      A    8.0 2019-06-28 15:37:08.877318 2019-06-28 15:37:07.877578
+22     22      A    1.0 2019-06-28 15:37:08.979835 2019-06-28 15:37:07.980119
+23     23      A    7.0 2019-06-28 15:37:09.071092 2019-06-28 15:37:08.071348
+24     24      A    1.0 2019-06-28 15:37:09.161441 2019-06-28 15:37:08.161700
+25     25      A    6.0 2019-06-28 15:37:09.263861 2019-06-28 15:37:08.264121
+The average price of all events in time_length_batch(15, seconds=1): 5.545454545454546
+    index symbol  price                       time        INSERTION_TIMESTAMP
+15     15      A    6.0 2019-06-28 15:37:08.310276 2019-06-28 15:37:07.310534
+16     16      A    7.0 2019-06-28 15:37:08.402081 2019-06-28 15:37:07.402340
+17     17      A    8.0 2019-06-28 15:37:08.503403 2019-06-28 15:37:07.503689
+18     18      A    8.0 2019-06-28 15:37:08.592429 2019-06-28 15:37:07.592686
+19     19      A    5.0 2019-06-28 15:37:08.692787 2019-06-28 15:37:07.693046
+20     20      A    4.0 2019-06-28 15:37:08.786707 2019-06-28 15:37:07.786964
+21     21      A    8.0 2019-06-28 15:37:08.877318 2019-06-28 15:37:07.877578
+22     22      A    1.0 2019-06-28 15:37:08.979835 2019-06-28 15:37:07.980119
+23     23      A    7.0 2019-06-28 15:37:09.071092 2019-06-28 15:37:08.071348
+24     24      A    1.0 2019-06-28 15:37:09.161441 2019-06-28 15:37:08.161700
+25     25      A    6.0 2019-06-28 15:37:09.263861 2019-06-28 15:37:08.264121
+The average price of all events in time_length_batch(15, seconds=1): 5.545454545454546
+    index symbol  price                       time        INSERTION_TIMESTAMP
+15     15      A    6.0 2019-06-28 15:37:08.310276 2019-06-28 15:37:07.310534
+16     16      A    7.0 2019-06-28 15:37:08.402081 2019-06-28 15:37:07.402340
+17     17      A    8.0 2019-06-28 15:37:08.503403 2019-06-28 15:37:07.503689
+18     18      A    8.0 2019-06-28 15:37:08.592429 2019-06-28 15:37:07.592686
+19     19      A    5.0 2019-06-28 15:37:08.692787 2019-06-28 15:37:07.693046
+20     20      A    4.0 2019-06-28 15:37:08.786707 2019-06-28 15:37:07.786964
+21     21      A    8.0 2019-06-28 15:37:08.877318 2019-06-28 15:37:07.877578
+22     22      A    1.0 2019-06-28 15:37:08.979835 2019-06-28 15:37:07.980119
+23     23      A    7.0 2019-06-28 15:37:09.071092 2019-06-28 15:37:08.071348
+24     24      A    1.0 2019-06-28 15:37:09.161441 2019-06-28 15:37:08.161700
+25     25      A    6.0 2019-06-28 15:37:09.263861 2019-06-28 15:37:08.264121
+The average price of all events in time_length_batch(15, seconds=1): 5.545454545454546
+    index symbol  price                       time        INSERTION_TIMESTAMP
+15     15      A    6.0 2019-06-28 15:37:08.310276 2019-06-28 15:37:07.310534
+16     16      A    7.0 2019-06-28 15:37:08.402081 2019-06-28 15:37:07.402340
+17     17      A    8.0 2019-06-28 15:37:08.503403 2019-06-28 15:37:07.503689
+18     18      A    8.0 2019-06-28 15:37:08.592429 2019-06-28 15:37:07.592686
+19     19      A    5.0 2019-06-28 15:37:08.692787 2019-06-28 15:37:07.693046
+20     20      A    4.0 2019-06-28 15:37:08.786707 2019-06-28 15:37:07.786964
+21     21      A    8.0 2019-06-28 15:37:08.877318 2019-06-28 15:37:07.877578
+22     22      A    1.0 2019-06-28 15:37:08.979835 2019-06-28 15:37:07.980119
+23     23      A    7.0 2019-06-28 15:37:09.071092 2019-06-28 15:37:08.071348
+24     24      A    1.0 2019-06-28 15:37:09.161441 2019-06-28 15:37:08.161700
+25     25      A    6.0 2019-06-28 15:37:09.263861 2019-06-28 15:37:08.264121
+The average price of all events in time_length_batch(15, seconds=1): 5.545454545454546
+    index symbol  price                       time        INSERTION_TIMESTAMP
+15     15      A    6.0 2019-06-28 15:37:08.310276 2019-06-28 15:37:07.310534
+16     16      A    7.0 2019-06-28 15:37:08.402081 2019-06-28 15:37:07.402340
+17     17      A    8.0 2019-06-28 15:37:08.503403 2019-06-28 15:37:07.503689
+18     18      A    8.0 2019-06-28 15:37:08.592429 2019-06-28 15:37:07.592686
+19     19      A    5.0 2019-06-28 15:37:08.692787 2019-06-28 15:37:07.693046
+20     20      A    4.0 2019-06-28 15:37:08.786707 2019-06-28 15:37:07.786964
+21     21      A    8.0 2019-06-28 15:37:08.877318 2019-06-28 15:37:07.877578
+22     22      A    1.0 2019-06-28 15:37:08.979835 2019-06-28 15:37:07.980119
+23     23      A    7.0 2019-06-28 15:37:09.071092 2019-06-28 15:37:08.071348
+24     24      A    1.0 2019-06-28 15:37:09.161441 2019-06-28 15:37:08.161700
+25     25      A    6.0 2019-06-28 15:37:09.263861 2019-06-28 15:37:08.264121
+The average price of all events in time_length_batch(15, seconds=1): 5.545454545454546
+    index symbol  price                       time        INSERTION_TIMESTAMP
+15     15      A    6.0 2019-06-28 15:37:08.310276 2019-06-28 15:37:07.310534
+16     16      A    7.0 2019-06-28 15:37:08.402081 2019-06-28 15:37:07.402340
+17     17      A    8.0 2019-06-28 15:37:08.503403 2019-06-28 15:37:07.503689
+18     18      A    8.0 2019-06-28 15:37:08.592429 2019-06-28 15:37:07.592686
+19     19      A    5.0 2019-06-28 15:37:08.692787 2019-06-28 15:37:07.693046
+20     20      A    4.0 2019-06-28 15:37:08.786707 2019-06-28 15:37:07.786964
+21     21      A    8.0 2019-06-28 15:37:08.877318 2019-06-28 15:37:07.877578
+22     22      A    1.0 2019-06-28 15:37:08.979835 2019-06-28 15:37:07.980119
+23     23      A    7.0 2019-06-28 15:37:09.071092 2019-06-28 15:37:08.071348
+24     24      A    1.0 2019-06-28 15:37:09.161441 2019-06-28 15:37:08.161700
+25     25      A    6.0 2019-06-28 15:37:09.263861 2019-06-28 15:37:08.264121
+The average price of all events in time_length_batch(15, seconds=1): 5.545454545454546
+    index symbol  price                       time        INSERTION_TIMESTAMP
+15     15      A    6.0 2019-06-28 15:37:08.310276 2019-06-28 15:37:07.310534
+16     16      A    7.0 2019-06-28 15:37:08.402081 2019-06-28 15:37:07.402340
+17     17      A    8.0 2019-06-28 15:37:08.503403 2019-06-28 15:37:07.503689
+18     18      A    8.0 2019-06-28 15:37:08.592429 2019-06-28 15:37:07.592686
+19     19      A    5.0 2019-06-28 15:37:08.692787 2019-06-28 15:37:07.693046
+20     20      A    4.0 2019-06-28 15:37:08.786707 2019-06-28 15:37:07.786964
+21     21      A    8.0 2019-06-28 15:37:08.877318 2019-06-28 15:37:07.877578
+22     22      A    1.0 2019-06-28 15:37:08.979835 2019-06-28 15:37:07.980119
+23     23      A    7.0 2019-06-28 15:37:09.071092 2019-06-28 15:37:08.071348
+24     24      A    1.0 2019-06-28 15:37:09.161441 2019-06-28 15:37:08.161700
+25     25      A    6.0 2019-06-28 15:37:09.263861 2019-06-28 15:37:08.264121
+The average price of all events in time_length_batch(15, seconds=1): 5.545454545454546
+    index symbol  price                       time        INSERTION_TIMESTAMP
+15     15      A    6.0 2019-06-28 15:37:08.310276 2019-06-28 15:37:07.310534
+16     16      A    7.0 2019-06-28 15:37:08.402081 2019-06-28 15:37:07.402340
+17     17      A    8.0 2019-06-28 15:37:08.503403 2019-06-28 15:37:07.503689
+18     18      A    8.0 2019-06-28 15:37:08.592429 2019-06-28 15:37:07.592686
+19     19      A    5.0 2019-06-28 15:37:08.692787 2019-06-28 15:37:07.693046
+20     20      A    4.0 2019-06-28 15:37:08.786707 2019-06-28 15:37:07.786964
+21     21      A    8.0 2019-06-28 15:37:08.877318 2019-06-28 15:37:07.877578
+22     22      A    1.0 2019-06-28 15:37:08.979835 2019-06-28 15:37:07.980119
+23     23      A    7.0 2019-06-28 15:37:09.071092 2019-06-28 15:37:08.071348
+24     24      A    1.0 2019-06-28 15:37:09.161441 2019-06-28 15:37:08.161700
+25     25      A    6.0 2019-06-28 15:37:09.263861 2019-06-28 15:37:08.264121
+The average price of all events in time_length_batch(15, seconds=1): 5.545454545454546
+    index symbol  price                       time        INSERTION_TIMESTAMP
+15     15      A    6.0 2019-06-28 15:37:08.310276 2019-06-28 15:37:07.310534
+16     16      A    7.0 2019-06-28 15:37:08.402081 2019-06-28 15:37:07.402340
+17     17      A    8.0 2019-06-28 15:37:08.503403 2019-06-28 15:37:07.503689
+18     18      A    8.0 2019-06-28 15:37:08.592429 2019-06-28 15:37:07.592686
+19     19      A    5.0 2019-06-28 15:37:08.692787 2019-06-28 15:37:07.693046
+20     20      A    4.0 2019-06-28 15:37:08.786707 2019-06-28 15:37:07.786964
+21     21      A    8.0 2019-06-28 15:37:08.877318 2019-06-28 15:37:07.877578
+22     22      A    1.0 2019-06-28 15:37:08.979835 2019-06-28 15:37:07.980119
+23     23      A    7.0 2019-06-28 15:37:09.071092 2019-06-28 15:37:08.071348
+24     24      A    1.0 2019-06-28 15:37:09.161441 2019-06-28 15:37:08.161700
+25     25      A    6.0 2019-06-28 15:37:09.263861 2019-06-28 15:37:08.264121
+The average price of all events in time_length_batch(15, seconds=1): 5.545454545454546
+    index symbol  price                       time        INSERTION_TIMESTAMP
+15     15      A    6.0 2019-06-28 15:37:08.310276 2019-06-28 15:37:07.310534
+16     16      A    7.0 2019-06-28 15:37:08.402081 2019-06-28 15:37:07.402340
+17     17      A    8.0 2019-06-28 15:37:08.503403 2019-06-28 15:37:07.503689
+18     18      A    8.0 2019-06-28 15:37:08.592429 2019-06-28 15:37:07.592686
+19     19      A    5.0 2019-06-28 15:37:08.692787 2019-06-28 15:37:07.693046
+20     20      A    4.0 2019-06-28 15:37:08.786707 2019-06-28 15:37:07.786964
+21     21      A    8.0 2019-06-28 15:37:08.877318 2019-06-28 15:37:07.877578
+22     22      A    1.0 2019-06-28 15:37:08.979835 2019-06-28 15:37:07.980119
+23     23      A    7.0 2019-06-28 15:37:09.071092 2019-06-28 15:37:08.071348
+24     24      A    1.0 2019-06-28 15:37:09.161441 2019-06-28 15:37:08.161700
+25     25      A    6.0 2019-06-28 15:37:09.263861 2019-06-28 15:37:08.264121
+The average price of all events in time_length_batch(15, seconds=1): 5.545454545454546
+    index symbol  price                       time        INSERTION_TIMESTAMP
+15     15      A    6.0 2019-06-28 15:37:08.310276 2019-06-28 15:37:07.310534
+16     16      A    7.0 2019-06-28 15:37:08.402081 2019-06-28 15:37:07.402340
+17     17      A    8.0 2019-06-28 15:37:08.503403 2019-06-28 15:37:07.503689
+18     18      A    8.0 2019-06-28 15:37:08.592429 2019-06-28 15:37:07.592686
+19     19      A    5.0 2019-06-28 15:37:08.692787 2019-06-28 15:37:07.693046
+20     20      A    4.0 2019-06-28 15:37:08.786707 2019-06-28 15:37:07.786964
+21     21      A    8.0 2019-06-28 15:37:08.877318 2019-06-28 15:37:07.877578
+22     22      A    1.0 2019-06-28 15:37:08.979835 2019-06-28 15:37:07.980119
+23     23      A    7.0 2019-06-28 15:37:09.071092 2019-06-28 15:37:08.071348
+24     24      A    1.0 2019-06-28 15:37:09.161441 2019-06-28 15:37:08.161700
+25     25      A    6.0 2019-06-28 15:37:09.263861 2019-06-28 15:37:08.264121
+The average price of all events in time_length_batch(15, seconds=1): 5.545454545454546
+    index symbol  price                       time        INSERTION_TIMESTAMP
+26     26      A    6.0 2019-06-28 15:37:09.357238 2019-06-28 15:37:08.357494
+27     27      A    7.0 2019-06-28 15:37:09.443584 2019-06-28 15:37:08.443863
+28     28      A    3.0 2019-06-28 15:37:09.538010 2019-06-28 15:37:08.538276
+29     29      A    6.0 2019-06-28 15:37:09.628261 2019-06-28 15:37:08.628525
+30     30      A    6.0 2019-06-28 15:37:09.715627 2019-06-28 15:37:08.715921
+31     31      A    4.0 2019-06-28 15:37:09.810777 2019-06-28 15:37:08.811037
+32     32      A    4.0 2019-06-28 15:37:09.900051 2019-06-28 15:37:08.900315
+33     33      A    8.0 2019-06-28 15:37:09.992425 2019-06-28 15:37:08.992687
+34     34      A    1.0 2019-06-28 15:37:10.089902 2019-06-28 15:37:09.090157
+35     35      A    4.0 2019-06-28 15:37:10.179898 2019-06-28 15:37:09.180155
+36     36      A    4.0 2019-06-28 15:37:10.270614 2019-06-28 15:37:09.270884
+The average price of all events in time_length_batch(15, seconds=1): 4.818181818181818
+    index symbol  price                       time        INSERTION_TIMESTAMP
+26     26      A    6.0 2019-06-28 15:37:09.357238 2019-06-28 15:37:08.357494
+27     27      A    7.0 2019-06-28 15:37:09.443584 2019-06-28 15:37:08.443863
+28     28      A    3.0 2019-06-28 15:37:09.538010 2019-06-28 15:37:08.538276
+29     29      A    6.0 2019-06-28 15:37:09.628261 2019-06-28 15:37:08.628525
+30     30      A    6.0 2019-06-28 15:37:09.715627 2019-06-28 15:37:08.715921
+31     31      A    4.0 2019-06-28 15:37:09.810777 2019-06-28 15:37:08.811037
+32     32      A    4.0 2019-06-28 15:37:09.900051 2019-06-28 15:37:08.900315
+33     33      A    8.0 2019-06-28 15:37:09.992425 2019-06-28 15:37:08.992687
+34     34      A    1.0 2019-06-28 15:37:10.089902 2019-06-28 15:37:09.090157
+35     35      A    4.0 2019-06-28 15:37:10.179898 2019-06-28 15:37:09.180155
+36     36      A    4.0 2019-06-28 15:37:10.270614 2019-06-28 15:37:09.270884
+The average price of all events in time_length_batch(15, seconds=1): 4.818181818181818
+    index symbol  price                       time        INSERTION_TIMESTAMP
+26     26      A    6.0 2019-06-28 15:37:09.357238 2019-06-28 15:37:08.357494
+27     27      A    7.0 2019-06-28 15:37:09.443584 2019-06-28 15:37:08.443863
+28     28      A    3.0 2019-06-28 15:37:09.538010 2019-06-28 15:37:08.538276
+29     29      A    6.0 2019-06-28 15:37:09.628261 2019-06-28 15:37:08.628525
+30     30      A    6.0 2019-06-28 15:37:09.715627 2019-06-28 15:37:08.715921
+31     31      A    4.0 2019-06-28 15:37:09.810777 2019-06-28 15:37:08.811037
+32     32      A    4.0 2019-06-28 15:37:09.900051 2019-06-28 15:37:08.900315
+33     33      A    8.0 2019-06-28 15:37:09.992425 2019-06-28 15:37:08.992687
+34     34      A    1.0 2019-06-28 15:37:10.089902 2019-06-28 15:37:09.090157
+35     35      A    4.0 2019-06-28 15:37:10.179898 2019-06-28 15:37:09.180155
+36     36      A    4.0 2019-06-28 15:37:10.270614 2019-06-28 15:37:09.270884
+The average price of all events in time_length_batch(15, seconds=1): 4.818181818181818
+    index symbol  price                       time        INSERTION_TIMESTAMP
+26     26      A    6.0 2019-06-28 15:37:09.357238 2019-06-28 15:37:08.357494
+27     27      A    7.0 2019-06-28 15:37:09.443584 2019-06-28 15:37:08.443863
+28     28      A    3.0 2019-06-28 15:37:09.538010 2019-06-28 15:37:08.538276
+29     29      A    6.0 2019-06-28 15:37:09.628261 2019-06-28 15:37:08.628525
+30     30      A    6.0 2019-06-28 15:37:09.715627 2019-06-28 15:37:08.715921
+31     31      A    4.0 2019-06-28 15:37:09.810777 2019-06-28 15:37:08.811037
+32     32      A    4.0 2019-06-28 15:37:09.900051 2019-06-28 15:37:08.900315
+33     33      A    8.0 2019-06-28 15:37:09.992425 2019-06-28 15:37:08.992687
+34     34      A    1.0 2019-06-28 15:37:10.089902 2019-06-28 15:37:09.090157
+35     35      A    4.0 2019-06-28 15:37:10.179898 2019-06-28 15:37:09.180155
+36     36      A    4.0 2019-06-28 15:37:10.270614 2019-06-28 15:37:09.270884
+The average price of all events in time_length_batch(15, seconds=1): 4.818181818181818
+    index symbol  price                       time        INSERTION_TIMESTAMP
+26     26      A    6.0 2019-06-28 15:37:09.357238 2019-06-28 15:37:08.357494
+27     27      A    7.0 2019-06-28 15:37:09.443584 2019-06-28 15:37:08.443863
+28     28      A    3.0 2019-06-28 15:37:09.538010 2019-06-28 15:37:08.538276
+29     29      A    6.0 2019-06-28 15:37:09.628261 2019-06-28 15:37:08.628525
+30     30      A    6.0 2019-06-28 15:37:09.715627 2019-06-28 15:37:08.715921
+31     31      A    4.0 2019-06-28 15:37:09.810777 2019-06-28 15:37:08.811037
+32     32      A    4.0 2019-06-28 15:37:09.900051 2019-06-28 15:37:08.900315
+33     33      A    8.0 2019-06-28 15:37:09.992425 2019-06-28 15:37:08.992687
+34     34      A    1.0 2019-06-28 15:37:10.089902 2019-06-28 15:37:09.090157
+35     35      A    4.0 2019-06-28 15:37:10.179898 2019-06-28 15:37:09.180155
+36     36      A    4.0 2019-06-28 15:37:10.270614 2019-06-28 15:37:09.270884
+The average price of all events in time_length_batch(15, seconds=1): 4.818181818181818
+    index symbol  price                       time        INSERTION_TIMESTAMP
+26     26      A    6.0 2019-06-28 15:37:09.357238 2019-06-28 15:37:08.357494
+27     27      A    7.0 2019-06-28 15:37:09.443584 2019-06-28 15:37:08.443863
+28     28      A    3.0 2019-06-28 15:37:09.538010 2019-06-28 15:37:08.538276
+29     29      A    6.0 2019-06-28 15:37:09.628261 2019-06-28 15:37:08.628525
+30     30      A    6.0 2019-06-28 15:37:09.715627 2019-06-28 15:37:08.715921
+31     31      A    4.0 2019-06-28 15:37:09.810777 2019-06-28 15:37:08.811037
+32     32      A    4.0 2019-06-28 15:37:09.900051 2019-06-28 15:37:08.900315
+33     33      A    8.0 2019-06-28 15:37:09.992425 2019-06-28 15:37:08.992687
+34     34      A    1.0 2019-06-28 15:37:10.089902 2019-06-28 15:37:09.090157
+35     35      A    4.0 2019-06-28 15:37:10.179898 2019-06-28 15:37:09.180155
+36     36      A    4.0 2019-06-28 15:37:10.270614 2019-06-28 15:37:09.270884
+The average price of all events in time_length_batch(15, seconds=1): 4.818181818181818
+    index symbol  price                       time        INSERTION_TIMESTAMP
+26     26      A    6.0 2019-06-28 15:37:09.357238 2019-06-28 15:37:08.357494
+27     27      A    7.0 2019-06-28 15:37:09.443584 2019-06-28 15:37:08.443863
+28     28      A    3.0 2019-06-28 15:37:09.538010 2019-06-28 15:37:08.538276
+29     29      A    6.0 2019-06-28 15:37:09.628261 2019-06-28 15:37:08.628525
+30     30      A    6.0 2019-06-28 15:37:09.715627 2019-06-28 15:37:08.715921
+31     31      A    4.0 2019-06-28 15:37:09.810777 2019-06-28 15:37:08.811037
+32     32      A    4.0 2019-06-28 15:37:09.900051 2019-06-28 15:37:08.900315
+33     33      A    8.0 2019-06-28 15:37:09.992425 2019-06-28 15:37:08.992687
+34     34      A    1.0 2019-06-28 15:37:10.089902 2019-06-28 15:37:09.090157
+35     35      A    4.0 2019-06-28 15:37:10.179898 2019-06-28 15:37:09.180155
+36     36      A    4.0 2019-06-28 15:37:10.270614 2019-06-28 15:37:09.270884
+The average price of all events in time_length_batch(15, seconds=1): 4.818181818181818
+    index symbol  price                       time        INSERTION_TIMESTAMP
+26     26      A    6.0 2019-06-28 15:37:09.357238 2019-06-28 15:37:08.357494
+27     27      A    7.0 2019-06-28 15:37:09.443584 2019-06-28 15:37:08.443863
+28     28      A    3.0 2019-06-28 15:37:09.538010 2019-06-28 15:37:08.538276
+29     29      A    6.0 2019-06-28 15:37:09.628261 2019-06-28 15:37:08.628525
+30     30      A    6.0 2019-06-28 15:37:09.715627 2019-06-28 15:37:08.715921
+31     31      A    4.0 2019-06-28 15:37:09.810777 2019-06-28 15:37:08.811037
+32     32      A    4.0 2019-06-28 15:37:09.900051 2019-06-28 15:37:08.900315
+33     33      A    8.0 2019-06-28 15:37:09.992425 2019-06-28 15:37:08.992687
+34     34      A    1.0 2019-06-28 15:37:10.089902 2019-06-28 15:37:09.090157
+35     35      A    4.0 2019-06-28 15:37:10.179898 2019-06-28 15:37:09.180155
+36     36      A    4.0 2019-06-28 15:37:10.270614 2019-06-28 15:37:09.270884
+The average price of all events in time_length_batch(15, seconds=1): 4.818181818181818
+    index symbol  price                       time        INSERTION_TIMESTAMP
+26     26      A    6.0 2019-06-28 15:37:09.357238 2019-06-28 15:37:08.357494
+27     27      A    7.0 2019-06-28 15:37:09.443584 2019-06-28 15:37:08.443863
+28     28      A    3.0 2019-06-28 15:37:09.538010 2019-06-28 15:37:08.538276
+29     29      A    6.0 2019-06-28 15:37:09.628261 2019-06-28 15:37:08.628525
+30     30      A    6.0 2019-06-28 15:37:09.715627 2019-06-28 15:37:08.715921
+31     31      A    4.0 2019-06-28 15:37:09.810777 2019-06-28 15:37:08.811037
+32     32      A    4.0 2019-06-28 15:37:09.900051 2019-06-28 15:37:08.900315
+33     33      A    8.0 2019-06-28 15:37:09.992425 2019-06-28 15:37:08.992687
+34     34      A    1.0 2019-06-28 15:37:10.089902 2019-06-28 15:37:09.090157
+35     35      A    4.0 2019-06-28 15:37:10.179898 2019-06-28 15:37:09.180155
+36     36      A    4.0 2019-06-28 15:37:10.270614 2019-06-28 15:37:09.270884
+The average price of all events in time_length_batch(15, seconds=1): 4.818181818181818
+    index symbol  price                       time        INSERTION_TIMESTAMP
+26     26      A    6.0 2019-06-28 15:37:09.357238 2019-06-28 15:37:08.357494
+27     27      A    7.0 2019-06-28 15:37:09.443584 2019-06-28 15:37:08.443863
+28     28      A    3.0 2019-06-28 15:37:09.538010 2019-06-28 15:37:08.538276
+29     29      A    6.0 2019-06-28 15:37:09.628261 2019-06-28 15:37:08.628525
+30     30      A    6.0 2019-06-28 15:37:09.715627 2019-06-28 15:37:08.715921
+31     31      A    4.0 2019-06-28 15:37:09.810777 2019-06-28 15:37:08.811037
+32     32      A    4.0 2019-06-28 15:37:09.900051 2019-06-28 15:37:08.900315
+33     33      A    8.0 2019-06-28 15:37:09.992425 2019-06-28 15:37:08.992687
+34     34      A    1.0 2019-06-28 15:37:10.089902 2019-06-28 15:37:09.090157
+35     35      A    4.0 2019-06-28 15:37:10.179898 2019-06-28 15:37:09.180155
+36     36      A    4.0 2019-06-28 15:37:10.270614 2019-06-28 15:37:09.270884
+The average price of all events in time_length_batch(15, seconds=1): 4.818181818181818
+    index symbol  price                       time        INSERTION_TIMESTAMP
+26     26      A    6.0 2019-06-28 15:37:09.357238 2019-06-28 15:37:08.357494
+27     27      A    7.0 2019-06-28 15:37:09.443584 2019-06-28 15:37:08.443863
+28     28      A    3.0 2019-06-28 15:37:09.538010 2019-06-28 15:37:08.538276
+29     29      A    6.0 2019-06-28 15:37:09.628261 2019-06-28 15:37:08.628525
+30     30      A    6.0 2019-06-28 15:37:09.715627 2019-06-28 15:37:08.715921
+31     31      A    4.0 2019-06-28 15:37:09.810777 2019-06-28 15:37:08.811037
+32     32      A    4.0 2019-06-28 15:37:09.900051 2019-06-28 15:37:08.900315
+33     33      A    8.0 2019-06-28 15:37:09.992425 2019-06-28 15:37:08.992687
+34     34      A    1.0 2019-06-28 15:37:10.089902 2019-06-28 15:37:09.090157
+35     35      A    4.0 2019-06-28 15:37:10.179898 2019-06-28 15:37:09.180155
+36     36      A    4.0 2019-06-28 15:37:10.270614 2019-06-28 15:37:09.270884
+The average price of all events in time_length_batch(15, seconds=1): 4.818181818181818
+    index symbol  price                       time        INSERTION_TIMESTAMP
+37     37      A    8.0 2019-06-28 15:37:10.378650 2019-06-28 15:37:09.378920
+38     38      A    9.0 2019-06-28 15:37:10.473379 2019-06-28 15:37:09.473637
+39     39      A    9.0 2019-06-28 15:37:10.559274 2019-06-28 15:37:09.559527
+40     40      A    5.0 2019-06-28 15:37:10.655906 2019-06-28 15:37:09.656186
+41     41      A    2.0 2019-06-28 15:37:10.745122 2019-06-28 15:37:09.745377
+42     42      A    3.0 2019-06-28 15:37:10.836078 2019-06-28 15:37:09.836334
+43     43      A    6.0 2019-06-28 15:37:10.930283 2019-06-28 15:37:09.930550
+44     44      A    7.0 2019-06-28 15:37:11.024441 2019-06-28 15:37:10.024701
+45     45      A    3.0 2019-06-28 15:37:11.112372 2019-06-28 15:37:10.112637
+46     46      A    8.0 2019-06-28 15:37:11.209437 2019-06-28 15:37:10.209694
+47     47      A    2.0 2019-06-28 15:37:11.300843 2019-06-28 15:37:10.301098
+The average price of all events in time_length_batch(15, seconds=1): 5.636363636363637
+    index symbol  price                       time        INSERTION_TIMESTAMP
+37     37      A    8.0 2019-06-28 15:37:10.378650 2019-06-28 15:37:09.378920
+38     38      A    9.0 2019-06-28 15:37:10.473379 2019-06-28 15:37:09.473637
+39     39      A    9.0 2019-06-28 15:37:10.559274 2019-06-28 15:37:09.559527
+40     40      A    5.0 2019-06-28 15:37:10.655906 2019-06-28 15:37:09.656186
+41     41      A    2.0 2019-06-28 15:37:10.745122 2019-06-28 15:37:09.745377
+42     42      A    3.0 2019-06-28 15:37:10.836078 2019-06-28 15:37:09.836334
+43     43      A    6.0 2019-06-28 15:37:10.930283 2019-06-28 15:37:09.930550
+44     44      A    7.0 2019-06-28 15:37:11.024441 2019-06-28 15:37:10.024701
+45     45      A    3.0 2019-06-28 15:37:11.112372 2019-06-28 15:37:10.112637
+46     46      A    8.0 2019-06-28 15:37:11.209437 2019-06-28 15:37:10.209694
+47     47      A    2.0 2019-06-28 15:37:11.300843 2019-06-28 15:37:10.301098
+The average price of all events in time_length_batch(15, seconds=1): 5.636363636363637
+    index symbol  price                       time        INSERTION_TIMESTAMP
+37     37      A    8.0 2019-06-28 15:37:10.378650 2019-06-28 15:37:09.378920
+38     38      A    9.0 2019-06-28 15:37:10.473379 2019-06-28 15:37:09.473637
+39     39      A    9.0 2019-06-28 15:37:10.559274 2019-06-28 15:37:09.559527
+40     40      A    5.0 2019-06-28 15:37:10.655906 2019-06-28 15:37:09.656186
+41     41      A    2.0 2019-06-28 15:37:10.745122 2019-06-28 15:37:09.745377
+42     42      A    3.0 2019-06-28 15:37:10.836078 2019-06-28 15:37:09.836334
+43     43      A    6.0 2019-06-28 15:37:10.930283 2019-06-28 15:37:09.930550
+44     44      A    7.0 2019-06-28 15:37:11.024441 2019-06-28 15:37:10.024701
+45     45      A    3.0 2019-06-28 15:37:11.112372 2019-06-28 15:37:10.112637
+46     46      A    8.0 2019-06-28 15:37:11.209437 2019-06-28 15:37:10.209694
+47     47      A    2.0 2019-06-28 15:37:11.300843 2019-06-28 15:37:10.301098
+The average price of all events in time_length_batch(15, seconds=1): 5.636363636363637
+    index symbol  price                       time        INSERTION_TIMESTAMP
+37     37      A    8.0 2019-06-28 15:37:10.378650 2019-06-28 15:37:09.378920
+38     38      A    9.0 2019-06-28 15:37:10.473379 2019-06-28 15:37:09.473637
+39     39      A    9.0 2019-06-28 15:37:10.559274 2019-06-28 15:37:09.559527
+40     40      A    5.0 2019-06-28 15:37:10.655906 2019-06-28 15:37:09.656186
+41     41      A    2.0 2019-06-28 15:37:10.745122 2019-06-28 15:37:09.745377
+42     42      A    3.0 2019-06-28 15:37:10.836078 2019-06-28 15:37:09.836334
+43     43      A    6.0 2019-06-28 15:37:10.930283 2019-06-28 15:37:09.930550
+44     44      A    7.0 2019-06-28 15:37:11.024441 2019-06-28 15:37:10.024701
+45     45      A    3.0 2019-06-28 15:37:11.112372 2019-06-28 15:37:10.112637
+46     46      A    8.0 2019-06-28 15:37:11.209437 2019-06-28 15:37:10.209694
+47     47      A    2.0 2019-06-28 15:37:11.300843 2019-06-28 15:37:10.301098
+The average price of all events in time_length_batch(15, seconds=1): 5.636363636363637
+    index symbol  price                       time        INSERTION_TIMESTAMP
+37     37      A    8.0 2019-06-28 15:37:10.378650 2019-06-28 15:37:09.378920
+38     38      A    9.0 2019-06-28 15:37:10.473379 2019-06-28 15:37:09.473637
+39     39      A    9.0 2019-06-28 15:37:10.559274 2019-06-28 15:37:09.559527
+40     40      A    5.0 2019-06-28 15:37:10.655906 2019-06-28 15:37:09.656186
+41     41      A    2.0 2019-06-28 15:37:10.745122 2019-06-28 15:37:09.745377
+42     42      A    3.0 2019-06-28 15:37:10.836078 2019-06-28 15:37:09.836334
+43     43      A    6.0 2019-06-28 15:37:10.930283 2019-06-28 15:37:09.930550
+44     44      A    7.0 2019-06-28 15:37:11.024441 2019-06-28 15:37:10.024701
+45     45      A    3.0 2019-06-28 15:37:11.112372 2019-06-28 15:37:10.112637
+46     46      A    8.0 2019-06-28 15:37:11.209437 2019-06-28 15:37:10.209694
+47     47      A    2.0 2019-06-28 15:37:11.300843 2019-06-28 15:37:10.301098
+The average price of all events in time_length_batch(15, seconds=1): 5.636363636363637
+    index symbol  price                       time        INSERTION_TIMESTAMP
+37     37      A    8.0 2019-06-28 15:37:10.378650 2019-06-28 15:37:09.378920
+38     38      A    9.0 2019-06-28 15:37:10.473379 2019-06-28 15:37:09.473637
+39     39      A    9.0 2019-06-28 15:37:10.559274 2019-06-28 15:37:09.559527
+40     40      A    5.0 2019-06-28 15:37:10.655906 2019-06-28 15:37:09.656186
+41     41      A    2.0 2019-06-28 15:37:10.745122 2019-06-28 15:37:09.745377
+42     42      A    3.0 2019-06-28 15:37:10.836078 2019-06-28 15:37:09.836334
+43     43      A    6.0 2019-06-28 15:37:10.930283 2019-06-28 15:37:09.930550
+44     44      A    7.0 2019-06-28 15:37:11.024441 2019-06-28 15:37:10.024701
+45     45      A    3.0 2019-06-28 15:37:11.112372 2019-06-28 15:37:10.112637
+46     46      A    8.0 2019-06-28 15:37:11.209437 2019-06-28 15:37:10.209694
+47     47      A    2.0 2019-06-28 15:37:11.300843 2019-06-28 15:37:10.301098
+The average price of all events in time_length_batch(15, seconds=1): 5.636363636363637
+    index symbol  price                       time        INSERTION_TIMESTAMP
+37     37      A    8.0 2019-06-28 15:37:10.378650 2019-06-28 15:37:09.378920
+38     38      A    9.0 2019-06-28 15:37:10.473379 2019-06-28 15:37:09.473637
+39     39      A    9.0 2019-06-28 15:37:10.559274 2019-06-28 15:37:09.559527
+40     40      A    5.0 2019-06-28 15:37:10.655906 2019-06-28 15:37:09.656186
+41     41      A    2.0 2019-06-28 15:37:10.745122 2019-06-28 15:37:09.745377
+42     42      A    3.0 2019-06-28 15:37:10.836078 2019-06-28 15:37:09.836334
+43     43      A    6.0 2019-06-28 15:37:10.930283 2019-06-28 15:37:09.930550
+44     44      A    7.0 2019-06-28 15:37:11.024441 2019-06-28 15:37:10.024701
+45     45      A    3.0 2019-06-28 15:37:11.112372 2019-06-28 15:37:10.112637
+46     46      A    8.0 2019-06-28 15:37:11.209437 2019-06-28 15:37:10.209694
+47     47      A    2.0 2019-06-28 15:37:11.300843 2019-06-28 15:37:10.301098
+The average price of all events in time_length_batch(15, seconds=1): 5.636363636363637
+    index symbol  price                       time        INSERTION_TIMESTAMP
+37     37      A    8.0 2019-06-28 15:37:10.378650 2019-06-28 15:37:09.378920
+38     38      A    9.0 2019-06-28 15:37:10.473379 2019-06-28 15:37:09.473637
+39     39      A    9.0 2019-06-28 15:37:10.559274 2019-06-28 15:37:09.559527
+40     40      A    5.0 2019-06-28 15:37:10.655906 2019-06-28 15:37:09.656186
+41     41      A    2.0 2019-06-28 15:37:10.745122 2019-06-28 15:37:09.745377
+42     42      A    3.0 2019-06-28 15:37:10.836078 2019-06-28 15:37:09.836334
+43     43      A    6.0 2019-06-28 15:37:10.930283 2019-06-28 15:37:09.930550
+44     44      A    7.0 2019-06-28 15:37:11.024441 2019-06-28 15:37:10.024701
+45     45      A    3.0 2019-06-28 15:37:11.112372 2019-06-28 15:37:10.112637
+46     46      A    8.0 2019-06-28 15:37:11.209437 2019-06-28 15:37:10.209694
+47     47      A    2.0 2019-06-28 15:37:11.300843 2019-06-28 15:37:10.301098
+The average price of all events in time_length_batch(15, seconds=1): 5.636363636363637
+    index symbol  price                       time        INSERTION_TIMESTAMP
+37     37      A    8.0 2019-06-28 15:37:10.378650 2019-06-28 15:37:09.378920
+38     38      A    9.0 2019-06-28 15:37:10.473379 2019-06-28 15:37:09.473637
+39     39      A    9.0 2019-06-28 15:37:10.559274 2019-06-28 15:37:09.559527
+40     40      A    5.0 2019-06-28 15:37:10.655906 2019-06-28 15:37:09.656186
+41     41      A    2.0 2019-06-28 15:37:10.745122 2019-06-28 15:37:09.745377
+42     42      A    3.0 2019-06-28 15:37:10.836078 2019-06-28 15:37:09.836334
+43     43      A    6.0 2019-06-28 15:37:10.930283 2019-06-28 15:37:09.930550
+44     44      A    7.0 2019-06-28 15:37:11.024441 2019-06-28 15:37:10.024701
+45     45      A    3.0 2019-06-28 15:37:11.112372 2019-06-28 15:37:10.112637
+46     46      A    8.0 2019-06-28 15:37:11.209437 2019-06-28 15:37:10.209694
+47     47      A    2.0 2019-06-28 15:37:11.300843 2019-06-28 15:37:10.301098
+The average price of all events in time_length_batch(15, seconds=1): 5.636363636363637
+    index symbol  price                       time        INSERTION_TIMESTAMP
+37     37      A    8.0 2019-06-28 15:37:10.378650 2019-06-28 15:37:09.378920
+38     38      A    9.0 2019-06-28 15:37:10.473379 2019-06-28 15:37:09.473637
+39     39      A    9.0 2019-06-28 15:37:10.559274 2019-06-28 15:37:09.559527
+40     40      A    5.0 2019-06-28 15:37:10.655906 2019-06-28 15:37:09.656186
+41     41      A    2.0 2019-06-28 15:37:10.745122 2019-06-28 15:37:09.745377
+42     42      A    3.0 2019-06-28 15:37:10.836078 2019-06-28 15:37:09.836334
+43     43      A    6.0 2019-06-28 15:37:10.930283 2019-06-28 15:37:09.930550
+44     44      A    7.0 2019-06-28 15:37:11.024441 2019-06-28 15:37:10.024701
+45     45      A    3.0 2019-06-28 15:37:11.112372 2019-06-28 15:37:10.112637
+46     46      A    8.0 2019-06-28 15:37:11.209437 2019-06-28 15:37:10.209694
+47     47      A    2.0 2019-06-28 15:37:11.300843 2019-06-28 15:37:10.301098
+The average price of all events in time_length_batch(15, seconds=1): 5.636363636363637
+    index symbol  price                       time        INSERTION_TIMESTAMP
+37     37      A    8.0 2019-06-28 15:37:10.378650 2019-06-28 15:37:09.378920
+38     38      A    9.0 2019-06-28 15:37:10.473379 2019-06-28 15:37:09.473637
+39     39      A    9.0 2019-06-28 15:37:10.559274 2019-06-28 15:37:09.559527
+40     40      A    5.0 2019-06-28 15:37:10.655906 2019-06-28 15:37:09.656186
+41     41      A    2.0 2019-06-28 15:37:10.745122 2019-06-28 15:37:09.745377
+42     42      A    3.0 2019-06-28 15:37:10.836078 2019-06-28 15:37:09.836334
+43     43      A    6.0 2019-06-28 15:37:10.930283 2019-06-28 15:37:09.930550
+44     44      A    7.0 2019-06-28 15:37:11.024441 2019-06-28 15:37:10.024701
+45     45      A    3.0 2019-06-28 15:37:11.112372 2019-06-28 15:37:10.112637
+46     46      A    8.0 2019-06-28 15:37:11.209437 2019-06-28 15:37:10.209694
+47     47      A    2.0 2019-06-28 15:37:11.300843 2019-06-28 15:37:10.301098
+The average price of all events in time_length_batch(15, seconds=1): 5.636363636363637
+    index symbol  price                       time        INSERTION_TIMESTAMP
+48     48      A    8.0 2019-06-28 15:37:11.390880 2019-06-28 15:37:10.391138
+49     49      A    9.0 2019-06-28 15:37:11.490622 2019-06-28 15:37:10.490905
+50     50      A    6.0 2019-06-28 15:37:11.583462 2019-06-28 15:37:10.583746
+51     51      A    8.0 2019-06-28 15:37:11.676039 2019-06-28 15:37:10.676298
+52     52      A    3.0 2019-06-28 15:37:11.775928 2019-06-28 15:37:10.776249
+53     53      A    9.0 2019-06-28 15:37:11.869250 2019-06-28 15:37:10.869508
+54     54      A    5.0 2019-06-28 15:37:11.956883 2019-06-28 15:37:10.957141
+55     55      A    8.0 2019-06-28 15:37:12.053911 2019-06-28 15:37:11.054178
+56     56      A    5.0 2019-06-28 15:37:12.144294 2019-06-28 15:37:11.144575
+57     57      A    8.0 2019-06-28 15:37:12.235164 2019-06-28 15:37:11.235421
+58     58      A    9.0 2019-06-28 15:37:12.341210 2019-06-28 15:37:11.341478
+The average price of all events in time_length_batch(15, seconds=1): 7.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+48     48      A    8.0 2019-06-28 15:37:11.390880 2019-06-28 15:37:10.391138
+49     49      A    9.0 2019-06-28 15:37:11.490622 2019-06-28 15:37:10.490905
+50     50      A    6.0 2019-06-28 15:37:11.583462 2019-06-28 15:37:10.583746
+51     51      A    8.0 2019-06-28 15:37:11.676039 2019-06-28 15:37:10.676298
+52     52      A    3.0 2019-06-28 15:37:11.775928 2019-06-28 15:37:10.776249
+53     53      A    9.0 2019-06-28 15:37:11.869250 2019-06-28 15:37:10.869508
+54     54      A    5.0 2019-06-28 15:37:11.956883 2019-06-28 15:37:10.957141
+55     55      A    8.0 2019-06-28 15:37:12.053911 2019-06-28 15:37:11.054178
+56     56      A    5.0 2019-06-28 15:37:12.144294 2019-06-28 15:37:11.144575
+57     57      A    8.0 2019-06-28 15:37:12.235164 2019-06-28 15:37:11.235421
+58     58      A    9.0 2019-06-28 15:37:12.341210 2019-06-28 15:37:11.341478
+The average price of all events in time_length_batch(15, seconds=1): 7.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+48     48      A    8.0 2019-06-28 15:37:11.390880 2019-06-28 15:37:10.391138
+49     49      A    9.0 2019-06-28 15:37:11.490622 2019-06-28 15:37:10.490905
+50     50      A    6.0 2019-06-28 15:37:11.583462 2019-06-28 15:37:10.583746
+51     51      A    8.0 2019-06-28 15:37:11.676039 2019-06-28 15:37:10.676298
+52     52      A    3.0 2019-06-28 15:37:11.775928 2019-06-28 15:37:10.776249
+53     53      A    9.0 2019-06-28 15:37:11.869250 2019-06-28 15:37:10.869508
+54     54      A    5.0 2019-06-28 15:37:11.956883 2019-06-28 15:37:10.957141
+55     55      A    8.0 2019-06-28 15:37:12.053911 2019-06-28 15:37:11.054178
+56     56      A    5.0 2019-06-28 15:37:12.144294 2019-06-28 15:37:11.144575
+57     57      A    8.0 2019-06-28 15:37:12.235164 2019-06-28 15:37:11.235421
+58     58      A    9.0 2019-06-28 15:37:12.341210 2019-06-28 15:37:11.341478
+The average price of all events in time_length_batch(15, seconds=1): 7.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+48     48      A    8.0 2019-06-28 15:37:11.390880 2019-06-28 15:37:10.391138
+49     49      A    9.0 2019-06-28 15:37:11.490622 2019-06-28 15:37:10.490905
+50     50      A    6.0 2019-06-28 15:37:11.583462 2019-06-28 15:37:10.583746
+51     51      A    8.0 2019-06-28 15:37:11.676039 2019-06-28 15:37:10.676298
+52     52      A    3.0 2019-06-28 15:37:11.775928 2019-06-28 15:37:10.776249
+53     53      A    9.0 2019-06-28 15:37:11.869250 2019-06-28 15:37:10.869508
+54     54      A    5.0 2019-06-28 15:37:11.956883 2019-06-28 15:37:10.957141
+55     55      A    8.0 2019-06-28 15:37:12.053911 2019-06-28 15:37:11.054178
+56     56      A    5.0 2019-06-28 15:37:12.144294 2019-06-28 15:37:11.144575
+57     57      A    8.0 2019-06-28 15:37:12.235164 2019-06-28 15:37:11.235421
+58     58      A    9.0 2019-06-28 15:37:12.341210 2019-06-28 15:37:11.341478
+The average price of all events in time_length_batch(15, seconds=1): 7.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+48     48      A    8.0 2019-06-28 15:37:11.390880 2019-06-28 15:37:10.391138
+49     49      A    9.0 2019-06-28 15:37:11.490622 2019-06-28 15:37:10.490905
+50     50      A    6.0 2019-06-28 15:37:11.583462 2019-06-28 15:37:10.583746
+51     51      A    8.0 2019-06-28 15:37:11.676039 2019-06-28 15:37:10.676298
+52     52      A    3.0 2019-06-28 15:37:11.775928 2019-06-28 15:37:10.776249
+53     53      A    9.0 2019-06-28 15:37:11.869250 2019-06-28 15:37:10.869508
+54     54      A    5.0 2019-06-28 15:37:11.956883 2019-06-28 15:37:10.957141
+55     55      A    8.0 2019-06-28 15:37:12.053911 2019-06-28 15:37:11.054178
+56     56      A    5.0 2019-06-28 15:37:12.144294 2019-06-28 15:37:11.144575
+57     57      A    8.0 2019-06-28 15:37:12.235164 2019-06-28 15:37:11.235421
+58     58      A    9.0 2019-06-28 15:37:12.341210 2019-06-28 15:37:11.341478
+The average price of all events in time_length_batch(15, seconds=1): 7.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+48     48      A    8.0 2019-06-28 15:37:11.390880 2019-06-28 15:37:10.391138
+49     49      A    9.0 2019-06-28 15:37:11.490622 2019-06-28 15:37:10.490905
+50     50      A    6.0 2019-06-28 15:37:11.583462 2019-06-28 15:37:10.583746
+51     51      A    8.0 2019-06-28 15:37:11.676039 2019-06-28 15:37:10.676298
+52     52      A    3.0 2019-06-28 15:37:11.775928 2019-06-28 15:37:10.776249
+53     53      A    9.0 2019-06-28 15:37:11.869250 2019-06-28 15:37:10.869508
+54     54      A    5.0 2019-06-28 15:37:11.956883 2019-06-28 15:37:10.957141
+55     55      A    8.0 2019-06-28 15:37:12.053911 2019-06-28 15:37:11.054178
+56     56      A    5.0 2019-06-28 15:37:12.144294 2019-06-28 15:37:11.144575
+57     57      A    8.0 2019-06-28 15:37:12.235164 2019-06-28 15:37:11.235421
+58     58      A    9.0 2019-06-28 15:37:12.341210 2019-06-28 15:37:11.341478
+The average price of all events in time_length_batch(15, seconds=1): 7.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+48     48      A    8.0 2019-06-28 15:37:11.390880 2019-06-28 15:37:10.391138
+49     49      A    9.0 2019-06-28 15:37:11.490622 2019-06-28 15:37:10.490905
+50     50      A    6.0 2019-06-28 15:37:11.583462 2019-06-28 15:37:10.583746
+51     51      A    8.0 2019-06-28 15:37:11.676039 2019-06-28 15:37:10.676298
+52     52      A    3.0 2019-06-28 15:37:11.775928 2019-06-28 15:37:10.776249
+53     53      A    9.0 2019-06-28 15:37:11.869250 2019-06-28 15:37:10.869508
+54     54      A    5.0 2019-06-28 15:37:11.956883 2019-06-28 15:37:10.957141
+55     55      A    8.0 2019-06-28 15:37:12.053911 2019-06-28 15:37:11.054178
+56     56      A    5.0 2019-06-28 15:37:12.144294 2019-06-28 15:37:11.144575
+57     57      A    8.0 2019-06-28 15:37:12.235164 2019-06-28 15:37:11.235421
+58     58      A    9.0 2019-06-28 15:37:12.341210 2019-06-28 15:37:11.341478
+The average price of all events in time_length_batch(15, seconds=1): 7.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+48     48      A    8.0 2019-06-28 15:37:11.390880 2019-06-28 15:37:10.391138
+49     49      A    9.0 2019-06-28 15:37:11.490622 2019-06-28 15:37:10.490905
+50     50      A    6.0 2019-06-28 15:37:11.583462 2019-06-28 15:37:10.583746
+51     51      A    8.0 2019-06-28 15:37:11.676039 2019-06-28 15:37:10.676298
+52     52      A    3.0 2019-06-28 15:37:11.775928 2019-06-28 15:37:10.776249
+53     53      A    9.0 2019-06-28 15:37:11.869250 2019-06-28 15:37:10.869508
+54     54      A    5.0 2019-06-28 15:37:11.956883 2019-06-28 15:37:10.957141
+55     55      A    8.0 2019-06-28 15:37:12.053911 2019-06-28 15:37:11.054178
+56     56      A    5.0 2019-06-28 15:37:12.144294 2019-06-28 15:37:11.144575
+57     57      A    8.0 2019-06-28 15:37:12.235164 2019-06-28 15:37:11.235421
+58     58      A    9.0 2019-06-28 15:37:12.341210 2019-06-28 15:37:11.341478
+The average price of all events in time_length_batch(15, seconds=1): 7.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+48     48      A    8.0 2019-06-28 15:37:11.390880 2019-06-28 15:37:10.391138
+49     49      A    9.0 2019-06-28 15:37:11.490622 2019-06-28 15:37:10.490905
+50     50      A    6.0 2019-06-28 15:37:11.583462 2019-06-28 15:37:10.583746
+51     51      A    8.0 2019-06-28 15:37:11.676039 2019-06-28 15:37:10.676298
+52     52      A    3.0 2019-06-28 15:37:11.775928 2019-06-28 15:37:10.776249
+53     53      A    9.0 2019-06-28 15:37:11.869250 2019-06-28 15:37:10.869508
+54     54      A    5.0 2019-06-28 15:37:11.956883 2019-06-28 15:37:10.957141
+55     55      A    8.0 2019-06-28 15:37:12.053911 2019-06-28 15:37:11.054178
+56     56      A    5.0 2019-06-28 15:37:12.144294 2019-06-28 15:37:11.144575
+57     57      A    8.0 2019-06-28 15:37:12.235164 2019-06-28 15:37:11.235421
+58     58      A    9.0 2019-06-28 15:37:12.341210 2019-06-28 15:37:11.341478
+The average price of all events in time_length_batch(15, seconds=1): 7.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+48     48      A    8.0 2019-06-28 15:37:11.390880 2019-06-28 15:37:10.391138
+49     49      A    9.0 2019-06-28 15:37:11.490622 2019-06-28 15:37:10.490905
+50     50      A    6.0 2019-06-28 15:37:11.583462 2019-06-28 15:37:10.583746
+51     51      A    8.0 2019-06-28 15:37:11.676039 2019-06-28 15:37:10.676298
+52     52      A    3.0 2019-06-28 15:37:11.775928 2019-06-28 15:37:10.776249
+53     53      A    9.0 2019-06-28 15:37:11.869250 2019-06-28 15:37:10.869508
+54     54      A    5.0 2019-06-28 15:37:11.956883 2019-06-28 15:37:10.957141
+55     55      A    8.0 2019-06-28 15:37:12.053911 2019-06-28 15:37:11.054178
+56     56      A    5.0 2019-06-28 15:37:12.144294 2019-06-28 15:37:11.144575
+57     57      A    8.0 2019-06-28 15:37:12.235164 2019-06-28 15:37:11.235421
+58     58      A    9.0 2019-06-28 15:37:12.341210 2019-06-28 15:37:11.341478
+The average price of all events in time_length_batch(15, seconds=1): 7.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+48     48      A    8.0 2019-06-28 15:37:11.390880 2019-06-28 15:37:10.391138
+49     49      A    9.0 2019-06-28 15:37:11.490622 2019-06-28 15:37:10.490905
+50     50      A    6.0 2019-06-28 15:37:11.583462 2019-06-28 15:37:10.583746
+51     51      A    8.0 2019-06-28 15:37:11.676039 2019-06-28 15:37:10.676298
+52     52      A    3.0 2019-06-28 15:37:11.775928 2019-06-28 15:37:10.776249
+53     53      A    9.0 2019-06-28 15:37:11.869250 2019-06-28 15:37:10.869508
+54     54      A    5.0 2019-06-28 15:37:11.956883 2019-06-28 15:37:10.957141
+55     55      A    8.0 2019-06-28 15:37:12.053911 2019-06-28 15:37:11.054178
+56     56      A    5.0 2019-06-28 15:37:12.144294 2019-06-28 15:37:11.144575
+57     57      A    8.0 2019-06-28 15:37:12.235164 2019-06-28 15:37:11.235421
+58     58      A    9.0 2019-06-28 15:37:12.341210 2019-06-28 15:37:11.341478
+The average price of all events in time_length_batch(15, seconds=1): 7.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+59     59      A    3.0 2019-06-28 15:37:12.431890 2019-06-28 15:37:11.432153
+60     60      A    1.0 2019-06-28 15:37:12.522477 2019-06-28 15:37:11.522739
+61     61      A    9.0 2019-06-28 15:37:12.621449 2019-06-28 15:37:11.621729
+62     62      A    5.0 2019-06-28 15:37:12.714432 2019-06-28 15:37:11.714688
+63     63      A    8.0 2019-06-28 15:37:12.804220 2019-06-28 15:37:11.804478
+64     64      A    1.0 2019-06-28 15:37:12.900611 2019-06-28 15:37:11.900883
+65     65      A    6.0 2019-06-28 15:37:12.995866 2019-06-28 15:37:11.996130
+66     66      A    7.0 2019-06-28 15:37:13.085120 2019-06-28 15:37:12.085379
+67     67      A    8.0 2019-06-28 15:37:13.179930 2019-06-28 15:37:12.180186
+68     68      A    2.0 2019-06-28 15:37:13.268945 2019-06-28 15:37:12.269220
+69     69      A    7.0 2019-06-28 15:37:13.357922 2019-06-28 15:37:12.358183
+The average price of all events in time_length_batch(15, seconds=1): 5.181818181818182
+    index symbol  price                       time        INSERTION_TIMESTAMP
+59     59      A    3.0 2019-06-28 15:37:12.431890 2019-06-28 15:37:11.432153
+60     60      A    1.0 2019-06-28 15:37:12.522477 2019-06-28 15:37:11.522739
+61     61      A    9.0 2019-06-28 15:37:12.621449 2019-06-28 15:37:11.621729
+62     62      A    5.0 2019-06-28 15:37:12.714432 2019-06-28 15:37:11.714688
+63     63      A    8.0 2019-06-28 15:37:12.804220 2019-06-28 15:37:11.804478
+64     64      A    1.0 2019-06-28 15:37:12.900611 2019-06-28 15:37:11.900883
+65     65      A    6.0 2019-06-28 15:37:12.995866 2019-06-28 15:37:11.996130
+66     66      A    7.0 2019-06-28 15:37:13.085120 2019-06-28 15:37:12.085379
+67     67      A    8.0 2019-06-28 15:37:13.179930 2019-06-28 15:37:12.180186
+68     68      A    2.0 2019-06-28 15:37:13.268945 2019-06-28 15:37:12.269220
+69     69      A    7.0 2019-06-28 15:37:13.357922 2019-06-28 15:37:12.358183
+The average price of all events in time_length_batch(15, seconds=1): 5.181818181818182
+    index symbol  price                       time        INSERTION_TIMESTAMP
+59     59      A    3.0 2019-06-28 15:37:12.431890 2019-06-28 15:37:11.432153
+60     60      A    1.0 2019-06-28 15:37:12.522477 2019-06-28 15:37:11.522739
+61     61      A    9.0 2019-06-28 15:37:12.621449 2019-06-28 15:37:11.621729
+62     62      A    5.0 2019-06-28 15:37:12.714432 2019-06-28 15:37:11.714688
+63     63      A    8.0 2019-06-28 15:37:12.804220 2019-06-28 15:37:11.804478
+64     64      A    1.0 2019-06-28 15:37:12.900611 2019-06-28 15:37:11.900883
+65     65      A    6.0 2019-06-28 15:37:12.995866 2019-06-28 15:37:11.996130
+66     66      A    7.0 2019-06-28 15:37:13.085120 2019-06-28 15:37:12.085379
+67     67      A    8.0 2019-06-28 15:37:13.179930 2019-06-28 15:37:12.180186
+68     68      A    2.0 2019-06-28 15:37:13.268945 2019-06-28 15:37:12.269220
+69     69      A    7.0 2019-06-28 15:37:13.357922 2019-06-28 15:37:12.358183
+The average price of all events in time_length_batch(15, seconds=1): 5.181818181818182
+    index symbol  price                       time        INSERTION_TIMESTAMP
+59     59      A    3.0 2019-06-28 15:37:12.431890 2019-06-28 15:37:11.432153
+60     60      A    1.0 2019-06-28 15:37:12.522477 2019-06-28 15:37:11.522739
+61     61      A    9.0 2019-06-28 15:37:12.621449 2019-06-28 15:37:11.621729
+62     62      A    5.0 2019-06-28 15:37:12.714432 2019-06-28 15:37:11.714688
+63     63      A    8.0 2019-06-28 15:37:12.804220 2019-06-28 15:37:11.804478
+64     64      A    1.0 2019-06-28 15:37:12.900611 2019-06-28 15:37:11.900883
+65     65      A    6.0 2019-06-28 15:37:12.995866 2019-06-28 15:37:11.996130
+66     66      A    7.0 2019-06-28 15:37:13.085120 2019-06-28 15:37:12.085379
+67     67      A    8.0 2019-06-28 15:37:13.179930 2019-06-28 15:37:12.180186
+68     68      A    2.0 2019-06-28 15:37:13.268945 2019-06-28 15:37:12.269220
+69     69      A    7.0 2019-06-28 15:37:13.357922 2019-06-28 15:37:12.358183
+The average price of all events in time_length_batch(15, seconds=1): 5.181818181818182
+    index symbol  price                       time        INSERTION_TIMESTAMP
+59     59      A    3.0 2019-06-28 15:37:12.431890 2019-06-28 15:37:11.432153
+60     60      A    1.0 2019-06-28 15:37:12.522477 2019-06-28 15:37:11.522739
+61     61      A    9.0 2019-06-28 15:37:12.621449 2019-06-28 15:37:11.621729
+62     62      A    5.0 2019-06-28 15:37:12.714432 2019-06-28 15:37:11.714688
+63     63      A    8.0 2019-06-28 15:37:12.804220 2019-06-28 15:37:11.804478
+64     64      A    1.0 2019-06-28 15:37:12.900611 2019-06-28 15:37:11.900883
+65     65      A    6.0 2019-06-28 15:37:12.995866 2019-06-28 15:37:11.996130
+66     66      A    7.0 2019-06-28 15:37:13.085120 2019-06-28 15:37:12.085379
+67     67      A    8.0 2019-06-28 15:37:13.179930 2019-06-28 15:37:12.180186
+68     68      A    2.0 2019-06-28 15:37:13.268945 2019-06-28 15:37:12.269220
+69     69      A    7.0 2019-06-28 15:37:13.357922 2019-06-28 15:37:12.358183
+The average price of all events in time_length_batch(15, seconds=1): 5.181818181818182
+    index symbol  price                       time        INSERTION_TIMESTAMP
+59     59      A    3.0 2019-06-28 15:37:12.431890 2019-06-28 15:37:11.432153
+60     60      A    1.0 2019-06-28 15:37:12.522477 2019-06-28 15:37:11.522739
+61     61      A    9.0 2019-06-28 15:37:12.621449 2019-06-28 15:37:11.621729
+62     62      A    5.0 2019-06-28 15:37:12.714432 2019-06-28 15:37:11.714688
+63     63      A    8.0 2019-06-28 15:37:12.804220 2019-06-28 15:37:11.804478
+64     64      A    1.0 2019-06-28 15:37:12.900611 2019-06-28 15:37:11.900883
+65     65      A    6.0 2019-06-28 15:37:12.995866 2019-06-28 15:37:11.996130
+66     66      A    7.0 2019-06-28 15:37:13.085120 2019-06-28 15:37:12.085379
+67     67      A    8.0 2019-06-28 15:37:13.179930 2019-06-28 15:37:12.180186
+68     68      A    2.0 2019-06-28 15:37:13.268945 2019-06-28 15:37:12.269220
+69     69      A    7.0 2019-06-28 15:37:13.357922 2019-06-28 15:37:12.358183
+The average price of all events in time_length_batch(15, seconds=1): 5.181818181818182
+    index symbol  price                       time        INSERTION_TIMESTAMP
+59     59      A    3.0 2019-06-28 15:37:12.431890 2019-06-28 15:37:11.432153
+60     60      A    1.0 2019-06-28 15:37:12.522477 2019-06-28 15:37:11.522739
+61     61      A    9.0 2019-06-28 15:37:12.621449 2019-06-28 15:37:11.621729
+62     62      A    5.0 2019-06-28 15:37:12.714432 2019-06-28 15:37:11.714688
+63     63      A    8.0 2019-06-28 15:37:12.804220 2019-06-28 15:37:11.804478
+64     64      A    1.0 2019-06-28 15:37:12.900611 2019-06-28 15:37:11.900883
+65     65      A    6.0 2019-06-28 15:37:12.995866 2019-06-28 15:37:11.996130
+66     66      A    7.0 2019-06-28 15:37:13.085120 2019-06-28 15:37:12.085379
+67     67      A    8.0 2019-06-28 15:37:13.179930 2019-06-28 15:37:12.180186
+68     68      A    2.0 2019-06-28 15:37:13.268945 2019-06-28 15:37:12.269220
+69     69      A    7.0 2019-06-28 15:37:13.357922 2019-06-28 15:37:12.358183
+The average price of all events in time_length_batch(15, seconds=1): 5.181818181818182
+    index symbol  price                       time        INSERTION_TIMESTAMP
+59     59      A    3.0 2019-06-28 15:37:12.431890 2019-06-28 15:37:11.432153
+60     60      A    1.0 2019-06-28 15:37:12.522477 2019-06-28 15:37:11.522739
+61     61      A    9.0 2019-06-28 15:37:12.621449 2019-06-28 15:37:11.621729
+62     62      A    5.0 2019-06-28 15:37:12.714432 2019-06-28 15:37:11.714688
+63     63      A    8.0 2019-06-28 15:37:12.804220 2019-06-28 15:37:11.804478
+64     64      A    1.0 2019-06-28 15:37:12.900611 2019-06-28 15:37:11.900883
+65     65      A    6.0 2019-06-28 15:37:12.995866 2019-06-28 15:37:11.996130
+66     66      A    7.0 2019-06-28 15:37:13.085120 2019-06-28 15:37:12.085379
+67     67      A    8.0 2019-06-28 15:37:13.179930 2019-06-28 15:37:12.180186
+68     68      A    2.0 2019-06-28 15:37:13.268945 2019-06-28 15:37:12.269220
+69     69      A    7.0 2019-06-28 15:37:13.357922 2019-06-28 15:37:12.358183
+The average price of all events in time_length_batch(15, seconds=1): 5.181818181818182
+    index symbol  price                       time        INSERTION_TIMESTAMP
+59     59      A    3.0 2019-06-28 15:37:12.431890 2019-06-28 15:37:11.432153
+60     60      A    1.0 2019-06-28 15:37:12.522477 2019-06-28 15:37:11.522739
+61     61      A    9.0 2019-06-28 15:37:12.621449 2019-06-28 15:37:11.621729
+62     62      A    5.0 2019-06-28 15:37:12.714432 2019-06-28 15:37:11.714688
+63     63      A    8.0 2019-06-28 15:37:12.804220 2019-06-28 15:37:11.804478
+64     64      A    1.0 2019-06-28 15:37:12.900611 2019-06-28 15:37:11.900883
+65     65      A    6.0 2019-06-28 15:37:12.995866 2019-06-28 15:37:11.996130
+66     66      A    7.0 2019-06-28 15:37:13.085120 2019-06-28 15:37:12.085379
+67     67      A    8.0 2019-06-28 15:37:13.179930 2019-06-28 15:37:12.180186
+68     68      A    2.0 2019-06-28 15:37:13.268945 2019-06-28 15:37:12.269220
+69     69      A    7.0 2019-06-28 15:37:13.357922 2019-06-28 15:37:12.358183
+The average price of all events in time_length_batch(15, seconds=1): 5.181818181818182
+    index symbol  price                       time        INSERTION_TIMESTAMP
+59     59      A    3.0 2019-06-28 15:37:12.431890 2019-06-28 15:37:11.432153
+60     60      A    1.0 2019-06-28 15:37:12.522477 2019-06-28 15:37:11.522739
+61     61      A    9.0 2019-06-28 15:37:12.621449 2019-06-28 15:37:11.621729
+62     62      A    5.0 2019-06-28 15:37:12.714432 2019-06-28 15:37:11.714688
+63     63      A    8.0 2019-06-28 15:37:12.804220 2019-06-28 15:37:11.804478
+64     64      A    1.0 2019-06-28 15:37:12.900611 2019-06-28 15:37:11.900883
+65     65      A    6.0 2019-06-28 15:37:12.995866 2019-06-28 15:37:11.996130
+66     66      A    7.0 2019-06-28 15:37:13.085120 2019-06-28 15:37:12.085379
+67     67      A    8.0 2019-06-28 15:37:13.179930 2019-06-28 15:37:12.180186
+68     68      A    2.0 2019-06-28 15:37:13.268945 2019-06-28 15:37:12.269220
+69     69      A    7.0 2019-06-28 15:37:13.357922 2019-06-28 15:37:12.358183
+The average price of all events in time_length_batch(15, seconds=1): 5.181818181818182
+    index symbol  price                       time        INSERTION_TIMESTAMP
+59     59      A    3.0 2019-06-28 15:37:12.431890 2019-06-28 15:37:11.432153
+60     60      A    1.0 2019-06-28 15:37:12.522477 2019-06-28 15:37:11.522739
+61     61      A    9.0 2019-06-28 15:37:12.621449 2019-06-28 15:37:11.621729
+62     62      A    5.0 2019-06-28 15:37:12.714432 2019-06-28 15:37:11.714688
+63     63      A    8.0 2019-06-28 15:37:12.804220 2019-06-28 15:37:11.804478
+64     64      A    1.0 2019-06-28 15:37:12.900611 2019-06-28 15:37:11.900883
+65     65      A    6.0 2019-06-28 15:37:12.995866 2019-06-28 15:37:11.996130
+66     66      A    7.0 2019-06-28 15:37:13.085120 2019-06-28 15:37:12.085379
+67     67      A    8.0 2019-06-28 15:37:13.179930 2019-06-28 15:37:12.180186
+68     68      A    2.0 2019-06-28 15:37:13.268945 2019-06-28 15:37:12.269220
+69     69      A    7.0 2019-06-28 15:37:13.357922 2019-06-28 15:37:12.358183
+The average price of all events in time_length_batch(15, seconds=1): 5.181818181818182
+    index symbol  price                       time        INSERTION_TIMESTAMP
+70     70      A    4.0 2019-06-28 15:37:13.455493 2019-06-28 15:37:12.455818
+71     71      A    5.0 2019-06-28 15:37:13.545146 2019-06-28 15:37:12.545405
+72     72      A    7.0 2019-06-28 15:37:13.633658 2019-06-28 15:37:12.633916
+73     73      A    5.0 2019-06-28 15:37:13.730767 2019-06-28 15:37:12.731034
+74     74      A    6.0 2019-06-28 15:37:13.824267 2019-06-28 15:37:12.824528
+75     75      A    5.0 2019-06-28 15:37:13.911522 2019-06-28 15:37:12.911802
+76     76      A    8.0 2019-06-28 15:37:14.007037 2019-06-28 15:37:13.007312
+77     77      A    4.0 2019-06-28 15:37:14.096891 2019-06-28 15:37:13.097147
+78     78      A    3.0 2019-06-28 15:37:14.185391 2019-06-28 15:37:13.185656
+79     79      A    1.0 2019-06-28 15:37:14.283968 2019-06-28 15:37:13.284265
+80     80      A    8.0 2019-06-28 15:37:14.382187 2019-06-28 15:37:13.382491
+The average price of all events in time_length_batch(15, seconds=1): 5.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+70     70      A    4.0 2019-06-28 15:37:13.455493 2019-06-28 15:37:12.455818
+71     71      A    5.0 2019-06-28 15:37:13.545146 2019-06-28 15:37:12.545405
+72     72      A    7.0 2019-06-28 15:37:13.633658 2019-06-28 15:37:12.633916
+73     73      A    5.0 2019-06-28 15:37:13.730767 2019-06-28 15:37:12.731034
+74     74      A    6.0 2019-06-28 15:37:13.824267 2019-06-28 15:37:12.824528
+75     75      A    5.0 2019-06-28 15:37:13.911522 2019-06-28 15:37:12.911802
+76     76      A    8.0 2019-06-28 15:37:14.007037 2019-06-28 15:37:13.007312
+77     77      A    4.0 2019-06-28 15:37:14.096891 2019-06-28 15:37:13.097147
+78     78      A    3.0 2019-06-28 15:37:14.185391 2019-06-28 15:37:13.185656
+79     79      A    1.0 2019-06-28 15:37:14.283968 2019-06-28 15:37:13.284265
+80     80      A    8.0 2019-06-28 15:37:14.382187 2019-06-28 15:37:13.382491
+The average price of all events in time_length_batch(15, seconds=1): 5.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+70     70      A    4.0 2019-06-28 15:37:13.455493 2019-06-28 15:37:12.455818
+71     71      A    5.0 2019-06-28 15:37:13.545146 2019-06-28 15:37:12.545405
+72     72      A    7.0 2019-06-28 15:37:13.633658 2019-06-28 15:37:12.633916
+73     73      A    5.0 2019-06-28 15:37:13.730767 2019-06-28 15:37:12.731034
+74     74      A    6.0 2019-06-28 15:37:13.824267 2019-06-28 15:37:12.824528
+75     75      A    5.0 2019-06-28 15:37:13.911522 2019-06-28 15:37:12.911802
+76     76      A    8.0 2019-06-28 15:37:14.007037 2019-06-28 15:37:13.007312
+77     77      A    4.0 2019-06-28 15:37:14.096891 2019-06-28 15:37:13.097147
+78     78      A    3.0 2019-06-28 15:37:14.185391 2019-06-28 15:37:13.185656
+79     79      A    1.0 2019-06-28 15:37:14.283968 2019-06-28 15:37:13.284265
+80     80      A    8.0 2019-06-28 15:37:14.382187 2019-06-28 15:37:13.382491
+The average price of all events in time_length_batch(15, seconds=1): 5.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+70     70      A    4.0 2019-06-28 15:37:13.455493 2019-06-28 15:37:12.455818
+71     71      A    5.0 2019-06-28 15:37:13.545146 2019-06-28 15:37:12.545405
+72     72      A    7.0 2019-06-28 15:37:13.633658 2019-06-28 15:37:12.633916
+73     73      A    5.0 2019-06-28 15:37:13.730767 2019-06-28 15:37:12.731034
+74     74      A    6.0 2019-06-28 15:37:13.824267 2019-06-28 15:37:12.824528
+75     75      A    5.0 2019-06-28 15:37:13.911522 2019-06-28 15:37:12.911802
+76     76      A    8.0 2019-06-28 15:37:14.007037 2019-06-28 15:37:13.007312
+77     77      A    4.0 2019-06-28 15:37:14.096891 2019-06-28 15:37:13.097147
+78     78      A    3.0 2019-06-28 15:37:14.185391 2019-06-28 15:37:13.185656
+79     79      A    1.0 2019-06-28 15:37:14.283968 2019-06-28 15:37:13.284265
+80     80      A    8.0 2019-06-28 15:37:14.382187 2019-06-28 15:37:13.382491
+The average price of all events in time_length_batch(15, seconds=1): 5.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+70     70      A    4.0 2019-06-28 15:37:13.455493 2019-06-28 15:37:12.455818
+71     71      A    5.0 2019-06-28 15:37:13.545146 2019-06-28 15:37:12.545405
+72     72      A    7.0 2019-06-28 15:37:13.633658 2019-06-28 15:37:12.633916
+73     73      A    5.0 2019-06-28 15:37:13.730767 2019-06-28 15:37:12.731034
+74     74      A    6.0 2019-06-28 15:37:13.824267 2019-06-28 15:37:12.824528
+75     75      A    5.0 2019-06-28 15:37:13.911522 2019-06-28 15:37:12.911802
+76     76      A    8.0 2019-06-28 15:37:14.007037 2019-06-28 15:37:13.007312
+77     77      A    4.0 2019-06-28 15:37:14.096891 2019-06-28 15:37:13.097147
+78     78      A    3.0 2019-06-28 15:37:14.185391 2019-06-28 15:37:13.185656
+79     79      A    1.0 2019-06-28 15:37:14.283968 2019-06-28 15:37:13.284265
+80     80      A    8.0 2019-06-28 15:37:14.382187 2019-06-28 15:37:13.382491
+The average price of all events in time_length_batch(15, seconds=1): 5.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+70     70      A    4.0 2019-06-28 15:37:13.455493 2019-06-28 15:37:12.455818
+71     71      A    5.0 2019-06-28 15:37:13.545146 2019-06-28 15:37:12.545405
+72     72      A    7.0 2019-06-28 15:37:13.633658 2019-06-28 15:37:12.633916
+73     73      A    5.0 2019-06-28 15:37:13.730767 2019-06-28 15:37:12.731034
+74     74      A    6.0 2019-06-28 15:37:13.824267 2019-06-28 15:37:12.824528
+75     75      A    5.0 2019-06-28 15:37:13.911522 2019-06-28 15:37:12.911802
+76     76      A    8.0 2019-06-28 15:37:14.007037 2019-06-28 15:37:13.007312
+77     77      A    4.0 2019-06-28 15:37:14.096891 2019-06-28 15:37:13.097147
+78     78      A    3.0 2019-06-28 15:37:14.185391 2019-06-28 15:37:13.185656
+79     79      A    1.0 2019-06-28 15:37:14.283968 2019-06-28 15:37:13.284265
+80     80      A    8.0 2019-06-28 15:37:14.382187 2019-06-28 15:37:13.382491
+The average price of all events in time_length_batch(15, seconds=1): 5.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+70     70      A    4.0 2019-06-28 15:37:13.455493 2019-06-28 15:37:12.455818
+71     71      A    5.0 2019-06-28 15:37:13.545146 2019-06-28 15:37:12.545405
+72     72      A    7.0 2019-06-28 15:37:13.633658 2019-06-28 15:37:12.633916
+73     73      A    5.0 2019-06-28 15:37:13.730767 2019-06-28 15:37:12.731034
+74     74      A    6.0 2019-06-28 15:37:13.824267 2019-06-28 15:37:12.824528
+75     75      A    5.0 2019-06-28 15:37:13.911522 2019-06-28 15:37:12.911802
+76     76      A    8.0 2019-06-28 15:37:14.007037 2019-06-28 15:37:13.007312
+77     77      A    4.0 2019-06-28 15:37:14.096891 2019-06-28 15:37:13.097147
+78     78      A    3.0 2019-06-28 15:37:14.185391 2019-06-28 15:37:13.185656
+79     79      A    1.0 2019-06-28 15:37:14.283968 2019-06-28 15:37:13.284265
+80     80      A    8.0 2019-06-28 15:37:14.382187 2019-06-28 15:37:13.382491
+The average price of all events in time_length_batch(15, seconds=1): 5.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+70     70      A    4.0 2019-06-28 15:37:13.455493 2019-06-28 15:37:12.455818
+71     71      A    5.0 2019-06-28 15:37:13.545146 2019-06-28 15:37:12.545405
+72     72      A    7.0 2019-06-28 15:37:13.633658 2019-06-28 15:37:12.633916
+73     73      A    5.0 2019-06-28 15:37:13.730767 2019-06-28 15:37:12.731034
+74     74      A    6.0 2019-06-28 15:37:13.824267 2019-06-28 15:37:12.824528
+75     75      A    5.0 2019-06-28 15:37:13.911522 2019-06-28 15:37:12.911802
+76     76      A    8.0 2019-06-28 15:37:14.007037 2019-06-28 15:37:13.007312
+77     77      A    4.0 2019-06-28 15:37:14.096891 2019-06-28 15:37:13.097147
+78     78      A    3.0 2019-06-28 15:37:14.185391 2019-06-28 15:37:13.185656
+79     79      A    1.0 2019-06-28 15:37:14.283968 2019-06-28 15:37:13.284265
+80     80      A    8.0 2019-06-28 15:37:14.382187 2019-06-28 15:37:13.382491
+The average price of all events in time_length_batch(15, seconds=1): 5.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+70     70      A    4.0 2019-06-28 15:37:13.455493 2019-06-28 15:37:12.455818
+71     71      A    5.0 2019-06-28 15:37:13.545146 2019-06-28 15:37:12.545405
+72     72      A    7.0 2019-06-28 15:37:13.633658 2019-06-28 15:37:12.633916
+73     73      A    5.0 2019-06-28 15:37:13.730767 2019-06-28 15:37:12.731034
+74     74      A    6.0 2019-06-28 15:37:13.824267 2019-06-28 15:37:12.824528
+75     75      A    5.0 2019-06-28 15:37:13.911522 2019-06-28 15:37:12.911802
+76     76      A    8.0 2019-06-28 15:37:14.007037 2019-06-28 15:37:13.007312
+77     77      A    4.0 2019-06-28 15:37:14.096891 2019-06-28 15:37:13.097147
+78     78      A    3.0 2019-06-28 15:37:14.185391 2019-06-28 15:37:13.185656
+79     79      A    1.0 2019-06-28 15:37:14.283968 2019-06-28 15:37:13.284265
+80     80      A    8.0 2019-06-28 15:37:14.382187 2019-06-28 15:37:13.382491
+The average price of all events in time_length_batch(15, seconds=1): 5.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+70     70      A    4.0 2019-06-28 15:37:13.455493 2019-06-28 15:37:12.455818
+71     71      A    5.0 2019-06-28 15:37:13.545146 2019-06-28 15:37:12.545405
+72     72      A    7.0 2019-06-28 15:37:13.633658 2019-06-28 15:37:12.633916
+73     73      A    5.0 2019-06-28 15:37:13.730767 2019-06-28 15:37:12.731034
+74     74      A    6.0 2019-06-28 15:37:13.824267 2019-06-28 15:37:12.824528
+75     75      A    5.0 2019-06-28 15:37:13.911522 2019-06-28 15:37:12.911802
+76     76      A    8.0 2019-06-28 15:37:14.007037 2019-06-28 15:37:13.007312
+77     77      A    4.0 2019-06-28 15:37:14.096891 2019-06-28 15:37:13.097147
+78     78      A    3.0 2019-06-28 15:37:14.185391 2019-06-28 15:37:13.185656
+79     79      A    1.0 2019-06-28 15:37:14.283968 2019-06-28 15:37:13.284265
+80     80      A    8.0 2019-06-28 15:37:14.382187 2019-06-28 15:37:13.382491
+The average price of all events in time_length_batch(15, seconds=1): 5.090909090909091
+    index symbol  price                       time        INSERTION_TIMESTAMP
+81     81      A    7.0 2019-06-28 15:37:14.487220 2019-06-28 15:37:13.487538
+82     82      A    2.0 2019-06-28 15:37:14.589697 2019-06-28 15:37:13.589970
+83     83      A    9.0 2019-06-28 15:37:14.696575 2019-06-28 15:37:13.696852
+84     84      A    9.0 2019-06-28 15:37:14.805474 2019-06-28 15:37:13.805768
+85     85      A    9.0 2019-06-28 15:37:14.910143 2019-06-28 15:37:13.910404
+86     86      A    8.0 2019-06-28 15:37:15.018438 2019-06-28 15:37:14.018713
+87     87      A    1.0 2019-06-28 15:37:15.119183 2019-06-28 15:37:14.119443
+88     88      A    6.0 2019-06-28 15:37:15.211102 2019-06-28 15:37:14.211370
+89     89      A    8.0 2019-06-28 15:37:15.312433 2019-06-28 15:37:14.312695
+90     90      A    5.0 2019-06-28 15:37:15.400959 2019-06-28 15:37:14.401221
+The average price of all events in time_length_batch(15, seconds=1): 6.4
+    index symbol  price                       time        INSERTION_TIMESTAMP
+81     81      A    7.0 2019-06-28 15:37:14.487220 2019-06-28 15:37:13.487538
+82     82      A    2.0 2019-06-28 15:37:14.589697 2019-06-28 15:37:13.589970
+83     83      A    9.0 2019-06-28 15:37:14.696575 2019-06-28 15:37:13.696852
+84     84      A    9.0 2019-06-28 15:37:14.805474 2019-06-28 15:37:13.805768
+85     85      A    9.0 2019-06-28 15:37:14.910143 2019-06-28 15:37:13.910404
+86     86      A    8.0 2019-06-28 15:37:15.018438 2019-06-28 15:37:14.018713
+87     87      A    1.0 2019-06-28 15:37:15.119183 2019-06-28 15:37:14.119443
+88     88      A    6.0 2019-06-28 15:37:15.211102 2019-06-28 15:37:14.211370
+89     89      A    8.0 2019-06-28 15:37:15.312433 2019-06-28 15:37:14.312695
+90     90      A    5.0 2019-06-28 15:37:15.400959 2019-06-28 15:37:14.401221
+The average price of all events in time_length_batch(15, seconds=1): 6.4
+    index symbol  price                       time        INSERTION_TIMESTAMP
+81     81      A    7.0 2019-06-28 15:37:14.487220 2019-06-28 15:37:13.487538
+82     82      A    2.0 2019-06-28 15:37:14.589697 2019-06-28 15:37:13.589970
+83     83      A    9.0 2019-06-28 15:37:14.696575 2019-06-28 15:37:13.696852
+84     84      A    9.0 2019-06-28 15:37:14.805474 2019-06-28 15:37:13.805768
+85     85      A    9.0 2019-06-28 15:37:14.910143 2019-06-28 15:37:13.910404
+86     86      A    8.0 2019-06-28 15:37:15.018438 2019-06-28 15:37:14.018713
+87     87      A    1.0 2019-06-28 15:37:15.119183 2019-06-28 15:37:14.119443
+88     88      A    6.0 2019-06-28 15:37:15.211102 2019-06-28 15:37:14.211370
+89     89      A    8.0 2019-06-28 15:37:15.312433 2019-06-28 15:37:14.312695
+90     90      A    5.0 2019-06-28 15:37:15.400959 2019-06-28 15:37:14.401221
+The average price of all events in time_length_batch(15, seconds=1): 6.4
+    index symbol  price                       time        INSERTION_TIMESTAMP
+81     81      A    7.0 2019-06-28 15:37:14.487220 2019-06-28 15:37:13.487538
+82     82      A    2.0 2019-06-28 15:37:14.589697 2019-06-28 15:37:13.589970
+83     83      A    9.0 2019-06-28 15:37:14.696575 2019-06-28 15:37:13.696852
+84     84      A    9.0 2019-06-28 15:37:14.805474 2019-06-28 15:37:13.805768
+85     85      A    9.0 2019-06-28 15:37:14.910143 2019-06-28 15:37:13.910404
+86     86      A    8.0 2019-06-28 15:37:15.018438 2019-06-28 15:37:14.018713
+87     87      A    1.0 2019-06-28 15:37:15.119183 2019-06-28 15:37:14.119443
+88     88      A    6.0 2019-06-28 15:37:15.211102 2019-06-28 15:37:14.211370
+89     89      A    8.0 2019-06-28 15:37:15.312433 2019-06-28 15:37:14.312695
+90     90      A    5.0 2019-06-28 15:37:15.400959 2019-06-28 15:37:14.401221
+The average price of all events in time_length_batch(15, seconds=1): 6.4
+    index symbol  price                       time        INSERTION_TIMESTAMP
+81     81      A    7.0 2019-06-28 15:37:14.487220 2019-06-28 15:37:13.487538
+82     82      A    2.0 2019-06-28 15:37:14.589697 2019-06-28 15:37:13.589970
+83     83      A    9.0 2019-06-28 15:37:14.696575 2019-06-28 15:37:13.696852
+84     84      A    9.0 2019-06-28 15:37:14.805474 2019-06-28 15:37:13.805768
+85     85      A    9.0 2019-06-28 15:37:14.910143 2019-06-28 15:37:13.910404
+86     86      A    8.0 2019-06-28 15:37:15.018438 2019-06-28 15:37:14.018713
+87     87      A    1.0 2019-06-28 15:37:15.119183 2019-06-28 15:37:14.119443
+88     88      A    6.0 2019-06-28 15:37:15.211102 2019-06-28 15:37:14.211370
+89     89      A    8.0 2019-06-28 15:37:15.312433 2019-06-28 15:37:14.312695
+90     90      A    5.0 2019-06-28 15:37:15.400959 2019-06-28 15:37:14.401221
+The average price of all events in time_length_batch(15, seconds=1): 6.4
+    index symbol  price                       time        INSERTION_TIMESTAMP
+81     81      A    7.0 2019-06-28 15:37:14.487220 2019-06-28 15:37:13.487538
+82     82      A    2.0 2019-06-28 15:37:14.589697 2019-06-28 15:37:13.589970
+83     83      A    9.0 2019-06-28 15:37:14.696575 2019-06-28 15:37:13.696852
+84     84      A    9.0 2019-06-28 15:37:14.805474 2019-06-28 15:37:13.805768
+85     85      A    9.0 2019-06-28 15:37:14.910143 2019-06-28 15:37:13.910404
+86     86      A    8.0 2019-06-28 15:37:15.018438 2019-06-28 15:37:14.018713
+87     87      A    1.0 2019-06-28 15:37:15.119183 2019-06-28 15:37:14.119443
+88     88      A    6.0 2019-06-28 15:37:15.211102 2019-06-28 15:37:14.211370
+89     89      A    8.0 2019-06-28 15:37:15.312433 2019-06-28 15:37:14.312695
+90     90      A    5.0 2019-06-28 15:37:15.400959 2019-06-28 15:37:14.401221
+The average price of all events in time_length_batch(15, seconds=1): 6.4
+    index symbol  price                       time        INSERTION_TIMESTAMP
+81     81      A    7.0 2019-06-28 15:37:14.487220 2019-06-28 15:37:13.487538
+82     82      A    2.0 2019-06-28 15:37:14.589697 2019-06-28 15:37:13.589970
+83     83      A    9.0 2019-06-28 15:37:14.696575 2019-06-28 15:37:13.696852
+84     84      A    9.0 2019-06-28 15:37:14.805474 2019-06-28 15:37:13.805768
+85     85      A    9.0 2019-06-28 15:37:14.910143 2019-06-28 15:37:13.910404
+86     86      A    8.0 2019-06-28 15:37:15.018438 2019-06-28 15:37:14.018713
+87     87      A    1.0 2019-06-28 15:37:15.119183 2019-06-28 15:37:14.119443
+88     88      A    6.0 2019-06-28 15:37:15.211102 2019-06-28 15:37:14.211370
+89     89      A    8.0 2019-06-28 15:37:15.312433 2019-06-28 15:37:14.312695
+90     90      A    5.0 2019-06-28 15:37:15.400959 2019-06-28 15:37:14.401221
+The average price of all events in time_length_batch(15, seconds=1): 6.4
+    index symbol  price                       time        INSERTION_TIMESTAMP
+81     81      A    7.0 2019-06-28 15:37:14.487220 2019-06-28 15:37:13.487538
+82     82      A    2.0 2019-06-28 15:37:14.589697 2019-06-28 15:37:13.589970
+83     83      A    9.0 2019-06-28 15:37:14.696575 2019-06-28 15:37:13.696852
+84     84      A    9.0 2019-06-28 15:37:14.805474 2019-06-28 15:37:13.805768
+85     85      A    9.0 2019-06-28 15:37:14.910143 2019-06-28 15:37:13.910404
+86     86      A    8.0 2019-06-28 15:37:15.018438 2019-06-28 15:37:14.018713
+87     87      A    1.0 2019-06-28 15:37:15.119183 2019-06-28 15:37:14.119443
+88     88      A    6.0 2019-06-28 15:37:15.211102 2019-06-28 15:37:14.211370
+89     89      A    8.0 2019-06-28 15:37:15.312433 2019-06-28 15:37:14.312695
+90     90      A    5.0 2019-06-28 15:37:15.400959 2019-06-28 15:37:14.401221
+The average price of all events in time_length_batch(15, seconds=1): 6.4
+    index symbol  price                       time        INSERTION_TIMESTAMP
+81     81      A    7.0 2019-06-28 15:37:14.487220 2019-06-28 15:37:13.487538
+82     82      A    2.0 2019-06-28 15:37:14.589697 2019-06-28 15:37:13.589970
+83     83      A    9.0 2019-06-28 15:37:14.696575 2019-06-28 15:37:13.696852
+84     84      A    9.0 2019-06-28 15:37:14.805474 2019-06-28 15:37:13.805768
+85     85      A    9.0 2019-06-28 15:37:14.910143 2019-06-28 15:37:13.910404
+86     86      A    8.0 2019-06-28 15:37:15.018438 2019-06-28 15:37:14.018713
+87     87      A    1.0 2019-06-28 15:37:15.119183 2019-06-28 15:37:14.119443
+88     88      A    6.0 2019-06-28 15:37:15.211102 2019-06-28 15:37:14.211370
+89     89      A    8.0 2019-06-28 15:37:15.312433 2019-06-28 15:37:14.312695
+90     90      A    5.0 2019-06-28 15:37:15.400959 2019-06-28 15:37:14.401221
+The average price of all events in time_length_batch(15, seconds=1): 6.4
+    index symbol  price                       time        INSERTION_TIMESTAMP
+81     81      A    7.0 2019-06-28 15:37:14.487220 2019-06-28 15:37:13.487538
+82     82      A    2.0 2019-06-28 15:37:14.589697 2019-06-28 15:37:13.589970
+83     83      A    9.0 2019-06-28 15:37:14.696575 2019-06-28 15:37:13.696852
+84     84      A    9.0 2019-06-28 15:37:14.805474 2019-06-28 15:37:13.805768
+85     85      A    9.0 2019-06-28 15:37:14.910143 2019-06-28 15:37:13.910404
+86     86      A    8.0 2019-06-28 15:37:15.018438 2019-06-28 15:37:14.018713
+87     87      A    1.0 2019-06-28 15:37:15.119183 2019-06-28 15:37:14.119443
+88     88      A    6.0 2019-06-28 15:37:15.211102 2019-06-28 15:37:14.211370
+89     89      A    8.0 2019-06-28 15:37:15.312433 2019-06-28 15:37:14.312695
+90     90      A    5.0 2019-06-28 15:37:15.400959 2019-06-28 15:37:14.401221
+The average price of all events in time_length_batch(15, seconds=1): 6.4
