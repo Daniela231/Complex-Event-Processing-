@@ -10,11 +10,11 @@ def linest(dataframe, function, value_expr1, value_expr2):
     :param value_expr2: second set of data
     :return: returns the result of the chosen function
     """
-    new_dataframe= pd.DataFrame()
+    new_dataframe = pd.DataFrame()
     if function == 'slope':
         return dataframe[value_expr1].diff()/dataframe[value_expr2].diff()
     elif function == 'YIntercept':
-        variable =dataframe[value_expr2.tail(1)]-((dataframe[value_expr1].diff()/dataframe[value_expr2].diff())
+        variable = dataframe[value_expr2.tail(1)]-((dataframe[value_expr1].diff()/dataframe[value_expr2].diff())
                                                   * dataframe[value_expr1.tail(1)])
         return variable
     elif function == 'XAverage':
@@ -51,6 +51,7 @@ def linest(dataframe, function, value_expr1, value_expr2):
         new_dataframe['Y'] = dataframe[value_expr2] ** 2
         return new_dataframe.sum('Y')
 
+
 def univariate(dataframe, property, value_expr):
     """
     This function calculates univariate statistics on a numeric expression
@@ -79,16 +80,16 @@ def prepare_for_correl(dataframe, *params):
     :param params: List of columns we want to keep
     :return: returns the filtered dataframe
     """
-    ReturnDataframe=pd.DataFrame
+    returnDataframe = pd.DataFrame
     for param in params:
-        ReturnDataframe = dataframe.loc[:, param]
+        returnDataframe = dataframe.loc[:, param]
 
-    return ReturnDataframe
+    return returnDataframe
 
 
 def simple_correl(method, dataframe, decimals):
     """
-    calculates the correlation inside of a dataframe by the given method for the cólumns
+    calculates the correlation inside of a dataframe by the given method for the columns
     :param method: correlation method (pearson, kendall or spearman)
     :param dataframe: dataframe for the correlation
     :param decimals: number of decimals

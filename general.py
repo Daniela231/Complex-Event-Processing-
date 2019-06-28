@@ -52,12 +52,12 @@ def df_first_time(df, col, start_point=datetime.now(), seconds=0, milliseconds=0
     :return: pandas dataframe
     """
     time = start_point + timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
-                             milliseconds=milliseconds, microseconds=microseconds)
+                                   milliseconds=milliseconds, microseconds=microseconds)
     res = pd.DataFrame()
 
     for index, row in df.iterrows():
         val = row[col]
-        if val < time and val >= start_point:
+        if time > val >= start_point:
             res = res.append(row)
 
     return res
@@ -81,12 +81,12 @@ def df_last_time(df, col, start_point=datetime.now(), seconds=0, milliseconds=0,
     :return: pandas dataframe
     """
     time = start_point - timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
-                                       milliseconds=milliseconds, microseconds=microseconds)
+                                   milliseconds=milliseconds, microseconds=microseconds)
     res = pd.DataFrame()
 
     for index, row in df.iterrows():
         val = row[col]
-        if val <= start_point and val > time:
+        if start_point >= val > time:
             res = res.append(row)
 
     return res
@@ -133,7 +133,7 @@ def df_order_first_time(df, col, start_point=datetime.now(), seconds=0, millisec
     :return: pandas dataframe
     """
     time = start_point + timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
-                             milliseconds=milliseconds, microseconds=microseconds)
+                                   milliseconds=milliseconds, microseconds=microseconds)
     res = pd.DataFrame()
     df = df.sort_values(by=col, ascending=False)
 
@@ -150,7 +150,7 @@ def df_order_first_time(df, col, start_point=datetime.now(), seconds=0, millisec
 
 
 def df_order_last_time(df, col, start_point=datetime.now(), seconds=0, milliseconds=0, microseconds=0, minutes=0,
-                 hours=0, days=0, weeks=0):
+                       hours=0, days=0, weeks=0):
     """
     Returns a pandas dataframe that contains all rows from given dataframe 'df' where the value in the time column 'col'
     is within the given time span looking back into the past from the start_point. The rows of the returned dataframe
@@ -168,7 +168,7 @@ def df_order_last_time(df, col, start_point=datetime.now(), seconds=0, milliseco
     :return: pandas dataframe
     """
     time = start_point - timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
-                                       milliseconds=milliseconds, microseconds=microseconds)
+                                   milliseconds=milliseconds, microseconds=microseconds)
     res = pd.DataFrame()
     df = df.sort_values(by=col, ascending=False)
 
@@ -197,22 +197,22 @@ def df_time_to_live(df, col, time=datetime.now()):
 
 
 def df_last_n_events(df, n=1):
-    '''
+    """
     Returns a pandas dataframe that contains the last 'n' rows from the dataframe 'df' (n is set to 1 by default).
     :param df: pandas dataframe
     :param n: number of rows
     :return: pandas dataframe
-    '''
+    """
     return df.tail(n)
 
 
 def df_first_n_events(df, n=1):
-    '''
+    """
     Returns a pandas dataframe that contains the first 'n' rows from the dataframe 'df' (n is set to 1 by default).
     :param df: pandas dataframe
     :param n: number of rows
     :return: pandas dataframe
-    '''
+    """
     return df.head(n)
 
 

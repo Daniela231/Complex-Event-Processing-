@@ -3,11 +3,11 @@ from length_window import last_event, sort
 from datetime import datetime, timedelta
 import logging
 
-l = logging.getLogger("cepgenerator")
+main_logger = logging.getLogger("cepgenerator")
 
 
 def last_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0):
-    '''
+    """
     Returns the dataframe looking back a given time into the past from the current system time considering the insertion
     timestamp of the events.
     :param weeks: number of weeks into the past
@@ -18,7 +18,7 @@ def last_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, mi
     :param milliseconds: number of milliseconds into the past
     :param microseconds: number of microseconds into the past
     :return: last_time dataframe
-    '''
+    """
     return externally_last_time(col='INSERTION_TIMESTAMP', weeks=weeks, days=days, hours=hours, minutes=minutes,
                                 seconds=seconds, milliseconds=milliseconds, microseconds=microseconds)
 
@@ -26,6 +26,7 @@ def last_time(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, mi
 def externally_last_time_observer(key, col, time):
     """
     Observer for the externally_last_time dataframe
+    :param col:
     :param key: key of the externally_last_time dataframe
     :param time: time for the externally_last_time dataframe
     :return: None
@@ -57,8 +58,8 @@ def externally_last_time(col, weeks=0, days=0, hours=0, minutes=0, seconds=0, mi
     for i, val in dict.items():
         if val != 0:
             key = key + (i, val)
-    time = now - timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds, milliseconds=milliseconds,
-                     microseconds=microseconds)
+    time = now - timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
+                           milliseconds=milliseconds, microseconds=microseconds)
 
     try:
         all_dfs[key].update_df(key, col, time)
@@ -73,13 +74,13 @@ def externally_last_time(col, weeks=0, days=0, hours=0, minutes=0, seconds=0, mi
 def first_time_observer(list):
     """
     observer for the first_time dataframe
-    :param key: key of the dataframe
+    :param list:
     :return: None
     """
     key = list[0]
     last = last_event()
 
-    if last['INSERTION_TIMESTAMP'].iloc[0] - all_dfs[key].variables['statement_start'] < all_dfs[key].variables['time'] \
+    if last['INSERTION_TIMESTAMP'].iloc[0] - all_dfs[key].variables['statement_start'] < all_dfs[key].variables['time']\
             and last['INSERTION_TIMESTAMP'].iloc[0] >= all_dfs[key].variables['statement_start']:
         all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event())
 
@@ -101,7 +102,7 @@ def first_time(statement_start=None, time=None, seconds=0, milliseconds=0, micro
     :return: first_time dataframe
     """
     time = time or timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
-                         milliseconds=milliseconds, microseconds=microseconds)
+                             milliseconds=milliseconds, microseconds=microseconds)
     key = ('first_time', statement_start, time)
 
     try:
@@ -119,7 +120,7 @@ def first_time(statement_start=None, time=None, seconds=0, milliseconds=0, micro
         all_dfs['StockTick'].observers_with_param.append([first_time_observer, key])
         all_dfs[key].variables['statement_start'] = statement_start
         all_dfs[key].variables['time'] = time
-        l.critical('statement_start for ' + str(key) + ' : ' + str(statement_start))
+        main_logger.critical('statement_start for ' + str(key) + ' : ' + str(statement_start))
         df = all_dfs[key].dataframe
 
     return df
@@ -146,6 +147,7 @@ def time_batch_observer(key, time):
 def time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0, reference_point=None):
     """
     Returns the dataframe buffering events up to a defined time period
+    :param reference_point:
     :param weeks: number of weeks into the past
     :param days: number of days into the past
     :param hours: number of hours into the past
@@ -155,14 +157,14 @@ def time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, m
     :param microseconds: number of microseconds into the past
     :return: time_batch dataframe
     """
-    if reference_point == None:
+    if reference_point is None:
         reference_point = datetime.now()
     time = reference_point + timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
                                        milliseconds=milliseconds, microseconds=microseconds)
     while True:
         dict = locals()
         first_time(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
-                           milliseconds=milliseconds, microseconds=microseconds)
+                   milliseconds=milliseconds, microseconds=microseconds)
         thread = threading.Thread(target=time_batch_observer)
         thread.start()
         result_available.wait()
@@ -174,7 +176,7 @@ def time_length_batch_observer(key, len, time):
     Observer for the time_length_batch dataframe
     :param key: key of the dataframe
     :param len: maximal length of the batch
-    :param time: maximal timespan for the batch
+    :param time: maximal time span for the batch
     :return: None
     """
     count = all_dfs[key].variables['count']
@@ -185,7 +187,7 @@ def time_length_batch_observer(key, len, time):
 
 
 def time_length_batch(len, weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, microseconds=0):
-    '''
+    """
     Returns the dataframe that batches events and releases them when it has collected 'len' events or the given time
     interval has passed.
     :param len: maximal length of the batch
@@ -197,7 +199,7 @@ def time_length_batch(len, weeks=0, days=0, hours=0, minutes=0, seconds=0, milli
     :param milliseconds: number of milliseconds
     :param microseconds: number of microseconds
     :return: time_length_batch dataframe
-    '''
+    """
     now = datetime.now()
     dict = locals()
     del dict['len']
@@ -228,7 +230,7 @@ def ext_time_batch_observer(key, lasttime, time):
     observer for the ext_time_batch_observer dataframe
     :param key: key of the dataframe
     :param lasttime:
-    :param time: timespan on the dataframe
+    :param time: time span on the dataframe
     :return: None
     """
     if lasttime < time:
@@ -252,8 +254,8 @@ def ext_time_batch(weeks=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=
         dict = locals()
         key = ('ext_time',)
         time = list(all_dfs['StockTick'].dataframe['INSERTION_TIMESTAMP'])[0] \
-               + timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
-                           milliseconds=milliseconds, microseconds=microseconds)
+                     + timedelta(weeks=weeks, days=days, hours=hours, minutes=minutes, seconds=seconds,
+                                milliseconds=milliseconds, microseconds=microseconds)
         for i, val in dict.items():
             if val != 0:
                 key = key + (i, val)
@@ -323,7 +325,7 @@ def time_order(timestamp_expression, weeks=0, days=0, hours=0, minutes=0, second
     between this function and externally_last_time is that time_order orders the event by 'timestamp_expression'.
     :param timestamp_expression: name of the time column
     :param weeks: number of weeks into the past
-    :param days: number of dass into the past
+    :param days: number of days into the past
     :param hours: number of hours into the past
     :param minutes: number of minutes into the past
     :param seconds: number of seconds into the past
@@ -332,15 +334,15 @@ def time_order(timestamp_expression, weeks=0, days=0, hours=0, minutes=0, second
     :return: externally_last_time dataframe ordered by 'timestamp_expression'
     """
     df = externally_last_time(col=timestamp_expression, weeks=weeks, days=days, hours=hours, minutes=minutes,
-                                seconds=seconds, milliseconds=milliseconds, microseconds=microseconds)
+                              seconds=seconds, milliseconds=milliseconds, microseconds=microseconds)
     return df.sort_values(by=timestamp_expression, kind='mergesort')
 
 
 def time_to_live(col):
-    '''
+    """
     This function returns the dataframe that retains each event until engine time reaches the time value stored in the
     column 'col'
     :param col: name of the time column
     :return: time_to_live dataframe
-    '''
+    """
     return time_order(timestamp_expression=col)

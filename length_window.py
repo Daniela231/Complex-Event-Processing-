@@ -64,7 +64,6 @@ def last_unique(*param):
     """
     This function returns the last_unique dataframe that includes only the most recent among events having the same
     values for the columns given as parameters.
-    :param *param: names of the columns to be considered
     :return: the last_unique dataframe
     """
     key = ('last_unique',)
@@ -80,9 +79,9 @@ def last_unique(*param):
 
     return all_dfs[key].dataframe
 
+
 def groupwin_observer(key, criteria):
     """
-
     :param key:
     :param criteria:
     :return:
@@ -90,10 +89,11 @@ def groupwin_observer(key, criteria):
     all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event()).groupby(
         by=[elm[0] for elm in criteria], sort=False)
 
+
 def groupwin(criteria):
     key = ('groupwin',)
     for elm in criteria:
-        key = key + (elm)
+        key = key + elm
     try:
         all_dfs[key].update(key, criteria)
     except:
@@ -104,7 +104,8 @@ def groupwin(criteria):
 
     return all_dfs[key].dataframe
 
-def sort_observer(key, size ,criteria):
+
+def sort_observer(key, size, criteria):
     """
     Observer for the sort dataframe
     :param key: key for the sort dataframe
@@ -128,7 +129,7 @@ def sort(size, criteria):
         key = key + (elm, symbol)
 
     try:
-        all_dfs[key].update_df(key, size ,criteria)
+        all_dfs[key].update_df(key, size, criteria)
     except:
         all_dfs[key] = DataframeManager()
         all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.sort_values(
@@ -153,7 +154,6 @@ def rank_observer(key, param, size, criteria):
     all_dfs[key].dataframe.drop_duplicates(subset=set(param), keep='last', inplace=True)
 
 
-
 def rank(*param, size, criteria):
     """
     This function returns only the most recent among events having the same value for the criteria,
@@ -176,7 +176,7 @@ def rank(*param, size, criteria):
             subset=set(param), keep='last')
         all_dfs[key].observers.append(rank_observer)
 
-    return  all_dfs[key].dataframe
+    return all_dfs[key].dataframe
 
 
 def last_length_observer(key, len):

@@ -12,12 +12,12 @@ def keep_all():
 
 
 def expiry_exp_observer(key, exp):
-    '''
+    """
     Observer for the expiry_exp dataframe.
     :param key: key of the expiry_exp dataframe
     :param exp: expiry expression for the expiry_exp dataframe
     :return: None
-    '''
+    """
     def current_count():
         return all_dfs[key].variables['current_count']
 
@@ -46,7 +46,7 @@ def expiry_exp_observer(key, exp):
 
 
 def expiry_exp(exp):
-    '''
+    """
     This function returns the expiry_exp dataframe that applies the given expiry expression and removes events from the
     dataframe when the expression returns false.
     :param exp: string to be evaluated to boolean. Built-in properties of the expiry_exp dataframe:
@@ -57,12 +57,12 @@ def expiry_exp(exp):
         'oldest_event':	currently-evaluated event itself.
         'oldest_timestamp':	insertion timestamp of the currently-evaluated event.
     :return: expiry_exp dataframe
-    '''
+    """
     key = ('expiry_exp', exp)
     last = last_event()
 
     try:
-        all_dfs[key].variables['current_count'] =  all_dfs[key].variables['current_count'] + 1
+        all_dfs[key].variables['current_count'] = all_dfs[key].variables['current_count'] + 1
     except:
         all_dfs[key] = DataframeManager()
         all_dfs[key].dataframe = pd.DataFrame()
@@ -81,12 +81,12 @@ def expiry_exp(exp):
 
 
 def expiry_exp_batch_observer(key, exp):
-    '''
+    """
     Observer for the expiry_exp_batch dataframe.
     :param key: key of the expiry_exp_batch dataframe
     :param exp: expiry expression for the expiry_exp_batch dataframe
     :return: None
-    '''
+    """
     def batch_counter():
         return all_dfs[key].variables['batch_counter']
 
@@ -114,7 +114,7 @@ def expiry_exp_batch_observer(key, exp):
 
 
 def expiry_exp_batch(exp, include_triggering_event=True):
-    '''
+    """
     This function returns the expiry_exp_batch dataframe that buffers events and releases them when a given expiry
     expression returns true.
     :param exp: string to be evaluated to boolean. Built-in properties of the expiry_exp_batch dataframe:
@@ -127,18 +127,18 @@ def expiry_exp_batch(exp, include_triggering_event=True):
     :param include_triggering_event: boolean that defines whether to include the event that triggers the batch in the
     current batch (true, the default) or in the next batch (false).
     :return: expiry_exp_batch dataframe
-    '''
+    """
     key = ('expiry_exp_batch', exp, include_triggering_event)
     last = last_event()
 
     try:
-        all_dfs[key].variables['batch_counter'] =  all_dfs[key].variables['batch_counter'] + 1
+        all_dfs[key].variables['batch_counter'] = all_dfs[key].variables['batch_counter'] + 1
     except:
         columns = all_dfs['StockTick'].dataframe.columns
         all_dfs[key] = DataframeManager(columns_list=columns)
         all_dfs[key].observers.append(expiry_exp_batch_observer)
         all_dfs[key].variables['batch_counter'] = 1
-        all_dfs[key].variables['triggering_event'] = pd.DataFrame({col:[np.nan] for col in columns})
+        all_dfs[key].variables['triggering_event'] = pd.DataFrame({col: [np.nan] for col in columns})
 
     all_dfs[key].variables['newest_event'] = last
     all_dfs[key].variables['newest_timestamp'] = last['INSERTION_TIMESTAMP'].iloc[0]
