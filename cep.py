@@ -295,7 +295,7 @@ def test_for_time_to_live():
 
 
 # Tests for general.py [Tests 22 - 33]
-n=20
+n=100
 now = datetime.now()
 time=[]
 for i in range(n):
@@ -553,7 +553,7 @@ for proc in threads:
 
 
 # 45min for 75000k (test(8))
-n = 40
+n = 100
 for i in range(n):
     time = datetime.now() + timedelta(seconds=1)
     p = float(randrange(1, 10))
