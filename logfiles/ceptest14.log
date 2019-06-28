@@ -1,100 +1,594 @@
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
-Dataframe is empty
+Empty DataFrame
+Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
+Index: []
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 0
+Empty DataFrame
+Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
+Index: []
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 0
+Empty DataFrame
+Columns: [index, symbol, price, time, INSERTION_TIMESTAMP]
+Index: []
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 0
+   index symbol  price                       time        INSERTION_TIMESTAMP
+0      0      A    9.0 2019-06-28 16:50:02.368701 2019-06-28 16:50:01.369595
+1      1      A    9.0 2019-06-28 16:50:02.419149 2019-06-28 16:50:01.419419
+2      2      A    5.0 2019-06-28 16:50:02.436129 2019-06-28 16:50:01.436388
+3      3      A    8.0 2019-06-28 16:50:02.452903 2019-06-28 16:50:01.453167
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 31.0
+   index symbol  price                       time        INSERTION_TIMESTAMP
+0      0      A    9.0 2019-06-28 16:50:02.368701 2019-06-28 16:50:01.369595
+1      1      A    9.0 2019-06-28 16:50:02.419149 2019-06-28 16:50:01.419419
+2      2      A    5.0 2019-06-28 16:50:02.436129 2019-06-28 16:50:01.436388
+3      3      A    8.0 2019-06-28 16:50:02.452903 2019-06-28 16:50:01.453167
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 31.0
+   index symbol  price                       time        INSERTION_TIMESTAMP
+0      0      A    9.0 2019-06-28 16:50:02.368701 2019-06-28 16:50:01.369595
+1      1      A    9.0 2019-06-28 16:50:02.419149 2019-06-28 16:50:01.419419
+2      2      A    5.0 2019-06-28 16:50:02.436129 2019-06-28 16:50:01.436388
+3      3      A    8.0 2019-06-28 16:50:02.452903 2019-06-28 16:50:01.453167
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 31.0
+   index symbol  price                       time        INSERTION_TIMESTAMP
+0      0      A    9.0 2019-06-28 16:50:02.368701 2019-06-28 16:50:01.369595
+1      1      A    9.0 2019-06-28 16:50:02.419149 2019-06-28 16:50:01.419419
+2      2      A    5.0 2019-06-28 16:50:02.436129 2019-06-28 16:50:01.436388
+3      3      A    8.0 2019-06-28 16:50:02.452903 2019-06-28 16:50:01.453167
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 31.0
+   index symbol  price                       time        INSERTION_TIMESTAMP
+4      4      A    7.0 2019-06-28 16:50:02.553631 2019-06-28 16:50:01.553906
+5      5      A    6.0 2019-06-28 16:50:02.660684 2019-06-28 16:50:01.661057
+6      6      A    9.0 2019-06-28 16:50:02.763307 2019-06-28 16:50:01.763571
+7      7      A    1.0 2019-06-28 16:50:02.859089 2019-06-28 16:50:01.859355
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 23.0
+   index symbol  price                       time        INSERTION_TIMESTAMP
+4      4      A    7.0 2019-06-28 16:50:02.553631 2019-06-28 16:50:01.553906
+5      5      A    6.0 2019-06-28 16:50:02.660684 2019-06-28 16:50:01.661057
+6      6      A    9.0 2019-06-28 16:50:02.763307 2019-06-28 16:50:01.763571
+7      7      A    1.0 2019-06-28 16:50:02.859089 2019-06-28 16:50:01.859355
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 23.0
+   index symbol  price                       time        INSERTION_TIMESTAMP
+4      4      A    7.0 2019-06-28 16:50:02.553631 2019-06-28 16:50:01.553906
+5      5      A    6.0 2019-06-28 16:50:02.660684 2019-06-28 16:50:01.661057
+6      6      A    9.0 2019-06-28 16:50:02.763307 2019-06-28 16:50:01.763571
+7      7      A    1.0 2019-06-28 16:50:02.859089 2019-06-28 16:50:01.859355
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 23.0
+   index symbol  price                       time        INSERTION_TIMESTAMP
+4      4      A    7.0 2019-06-28 16:50:02.553631 2019-06-28 16:50:01.553906
+5      5      A    6.0 2019-06-28 16:50:02.660684 2019-06-28 16:50:01.661057
+6      6      A    9.0 2019-06-28 16:50:02.763307 2019-06-28 16:50:01.763571
+7      7      A    1.0 2019-06-28 16:50:02.859089 2019-06-28 16:50:01.859355
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 23.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+8       8      A    4.0 2019-06-28 16:50:02.955273 2019-06-28 16:50:01.955540
+9       9      A    2.0 2019-06-28 16:50:03.054463 2019-06-28 16:50:02.054730
+10     10      A    8.0 2019-06-28 16:50:03.155158 2019-06-28 16:50:02.155442
+11     11      A    2.0 2019-06-28 16:50:03.272295 2019-06-28 16:50:02.272560
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 16.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+8       8      A    4.0 2019-06-28 16:50:02.955273 2019-06-28 16:50:01.955540
+9       9      A    2.0 2019-06-28 16:50:03.054463 2019-06-28 16:50:02.054730
+10     10      A    8.0 2019-06-28 16:50:03.155158 2019-06-28 16:50:02.155442
+11     11      A    2.0 2019-06-28 16:50:03.272295 2019-06-28 16:50:02.272560
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 16.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+8       8      A    4.0 2019-06-28 16:50:02.955273 2019-06-28 16:50:01.955540
+9       9      A    2.0 2019-06-28 16:50:03.054463 2019-06-28 16:50:02.054730
+10     10      A    8.0 2019-06-28 16:50:03.155158 2019-06-28 16:50:02.155442
+11     11      A    2.0 2019-06-28 16:50:03.272295 2019-06-28 16:50:02.272560
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 16.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+8       8      A    4.0 2019-06-28 16:50:02.955273 2019-06-28 16:50:01.955540
+9       9      A    2.0 2019-06-28 16:50:03.054463 2019-06-28 16:50:02.054730
+10     10      A    8.0 2019-06-28 16:50:03.155158 2019-06-28 16:50:02.155442
+11     11      A    2.0 2019-06-28 16:50:03.272295 2019-06-28 16:50:02.272560
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 16.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+12     12      A    4.0 2019-06-28 16:50:03.392849 2019-06-28 16:50:02.393144
+13     13      A    8.0 2019-06-28 16:50:03.492725 2019-06-28 16:50:02.492992
+14     14      A    1.0 2019-06-28 16:50:03.589481 2019-06-28 16:50:02.589753
+15     15      A    1.0 2019-06-28 16:50:03.687498 2019-06-28 16:50:02.687803
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 14.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+12     12      A    4.0 2019-06-28 16:50:03.392849 2019-06-28 16:50:02.393144
+13     13      A    8.0 2019-06-28 16:50:03.492725 2019-06-28 16:50:02.492992
+14     14      A    1.0 2019-06-28 16:50:03.589481 2019-06-28 16:50:02.589753
+15     15      A    1.0 2019-06-28 16:50:03.687498 2019-06-28 16:50:02.687803
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 14.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+12     12      A    4.0 2019-06-28 16:50:03.392849 2019-06-28 16:50:02.393144
+13     13      A    8.0 2019-06-28 16:50:03.492725 2019-06-28 16:50:02.492992
+14     14      A    1.0 2019-06-28 16:50:03.589481 2019-06-28 16:50:02.589753
+15     15      A    1.0 2019-06-28 16:50:03.687498 2019-06-28 16:50:02.687803
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 14.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+12     12      A    4.0 2019-06-28 16:50:03.392849 2019-06-28 16:50:02.393144
+13     13      A    8.0 2019-06-28 16:50:03.492725 2019-06-28 16:50:02.492992
+14     14      A    1.0 2019-06-28 16:50:03.589481 2019-06-28 16:50:02.589753
+15     15      A    1.0 2019-06-28 16:50:03.687498 2019-06-28 16:50:02.687803
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 14.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+16     16      A    8.0 2019-06-28 16:50:03.787774 2019-06-28 16:50:02.788040
+17     17      A    3.0 2019-06-28 16:50:03.902854 2019-06-28 16:50:02.903152
+18     18      A    3.0 2019-06-28 16:50:04.021470 2019-06-28 16:50:03.021752
+19     19      A    7.0 2019-06-28 16:50:04.126672 2019-06-28 16:50:03.126966
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 21.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+16     16      A    8.0 2019-06-28 16:50:03.787774 2019-06-28 16:50:02.788040
+17     17      A    3.0 2019-06-28 16:50:03.902854 2019-06-28 16:50:02.903152
+18     18      A    3.0 2019-06-28 16:50:04.021470 2019-06-28 16:50:03.021752
+19     19      A    7.0 2019-06-28 16:50:04.126672 2019-06-28 16:50:03.126966
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 21.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+16     16      A    8.0 2019-06-28 16:50:03.787774 2019-06-28 16:50:02.788040
+17     17      A    3.0 2019-06-28 16:50:03.902854 2019-06-28 16:50:02.903152
+18     18      A    3.0 2019-06-28 16:50:04.021470 2019-06-28 16:50:03.021752
+19     19      A    7.0 2019-06-28 16:50:04.126672 2019-06-28 16:50:03.126966
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 21.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+16     16      A    8.0 2019-06-28 16:50:03.787774 2019-06-28 16:50:02.788040
+17     17      A    3.0 2019-06-28 16:50:03.902854 2019-06-28 16:50:02.903152
+18     18      A    3.0 2019-06-28 16:50:04.021470 2019-06-28 16:50:03.021752
+19     19      A    7.0 2019-06-28 16:50:04.126672 2019-06-28 16:50:03.126966
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 21.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+20     20      A    8.0 2019-06-28 16:50:04.237177 2019-06-28 16:50:03.237447
+21     21      A    5.0 2019-06-28 16:50:04.343634 2019-06-28 16:50:03.343941
+22     22      A    1.0 2019-06-28 16:50:04.447349 2019-06-28 16:50:03.447622
+23     23      A    3.0 2019-06-28 16:50:04.538252 2019-06-28 16:50:03.538521
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 17.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+20     20      A    8.0 2019-06-28 16:50:04.237177 2019-06-28 16:50:03.237447
+21     21      A    5.0 2019-06-28 16:50:04.343634 2019-06-28 16:50:03.343941
+22     22      A    1.0 2019-06-28 16:50:04.447349 2019-06-28 16:50:03.447622
+23     23      A    3.0 2019-06-28 16:50:04.538252 2019-06-28 16:50:03.538521
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 17.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+20     20      A    8.0 2019-06-28 16:50:04.237177 2019-06-28 16:50:03.237447
+21     21      A    5.0 2019-06-28 16:50:04.343634 2019-06-28 16:50:03.343941
+22     22      A    1.0 2019-06-28 16:50:04.447349 2019-06-28 16:50:03.447622
+23     23      A    3.0 2019-06-28 16:50:04.538252 2019-06-28 16:50:03.538521
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 17.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+20     20      A    8.0 2019-06-28 16:50:04.237177 2019-06-28 16:50:03.237447
+21     21      A    5.0 2019-06-28 16:50:04.343634 2019-06-28 16:50:03.343941
+22     22      A    1.0 2019-06-28 16:50:04.447349 2019-06-28 16:50:03.447622
+23     23      A    3.0 2019-06-28 16:50:04.538252 2019-06-28 16:50:03.538521
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 17.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+24     24      A    3.0 2019-06-28 16:50:04.648054 2019-06-28 16:50:03.648328
+25     25      A    4.0 2019-06-28 16:50:04.753578 2019-06-28 16:50:03.753844
+26     26      A    1.0 2019-06-28 16:50:04.853250 2019-06-28 16:50:03.853522
+27     27      A    2.0 2019-06-28 16:50:04.963894 2019-06-28 16:50:03.964183
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 10.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+24     24      A    3.0 2019-06-28 16:50:04.648054 2019-06-28 16:50:03.648328
+25     25      A    4.0 2019-06-28 16:50:04.753578 2019-06-28 16:50:03.753844
+26     26      A    1.0 2019-06-28 16:50:04.853250 2019-06-28 16:50:03.853522
+27     27      A    2.0 2019-06-28 16:50:04.963894 2019-06-28 16:50:03.964183
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 10.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+24     24      A    3.0 2019-06-28 16:50:04.648054 2019-06-28 16:50:03.648328
+25     25      A    4.0 2019-06-28 16:50:04.753578 2019-06-28 16:50:03.753844
+26     26      A    1.0 2019-06-28 16:50:04.853250 2019-06-28 16:50:03.853522
+27     27      A    2.0 2019-06-28 16:50:04.963894 2019-06-28 16:50:03.964183
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 10.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+24     24      A    3.0 2019-06-28 16:50:04.648054 2019-06-28 16:50:03.648328
+25     25      A    4.0 2019-06-28 16:50:04.753578 2019-06-28 16:50:03.753844
+26     26      A    1.0 2019-06-28 16:50:04.853250 2019-06-28 16:50:03.853522
+27     27      A    2.0 2019-06-28 16:50:04.963894 2019-06-28 16:50:03.964183
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 10.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+28     28      A    5.0 2019-06-28 16:50:05.086366 2019-06-28 16:50:04.086733
+29     29      A    4.0 2019-06-28 16:50:05.197120 2019-06-28 16:50:04.197430
+30     30      A    8.0 2019-06-28 16:50:05.308390 2019-06-28 16:50:04.308694
+31     31      A    9.0 2019-06-28 16:50:05.412401 2019-06-28 16:50:04.412689
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 26.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+28     28      A    5.0 2019-06-28 16:50:05.086366 2019-06-28 16:50:04.086733
+29     29      A    4.0 2019-06-28 16:50:05.197120 2019-06-28 16:50:04.197430
+30     30      A    8.0 2019-06-28 16:50:05.308390 2019-06-28 16:50:04.308694
+31     31      A    9.0 2019-06-28 16:50:05.412401 2019-06-28 16:50:04.412689
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 26.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+28     28      A    5.0 2019-06-28 16:50:05.086366 2019-06-28 16:50:04.086733
+29     29      A    4.0 2019-06-28 16:50:05.197120 2019-06-28 16:50:04.197430
+30     30      A    8.0 2019-06-28 16:50:05.308390 2019-06-28 16:50:04.308694
+31     31      A    9.0 2019-06-28 16:50:05.412401 2019-06-28 16:50:04.412689
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 26.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+28     28      A    5.0 2019-06-28 16:50:05.086366 2019-06-28 16:50:04.086733
+29     29      A    4.0 2019-06-28 16:50:05.197120 2019-06-28 16:50:04.197430
+30     30      A    8.0 2019-06-28 16:50:05.308390 2019-06-28 16:50:04.308694
+31     31      A    9.0 2019-06-28 16:50:05.412401 2019-06-28 16:50:04.412689
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 26.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+32     32      A    6.0 2019-06-28 16:50:05.524757 2019-06-28 16:50:04.525038
+33     33      A    2.0 2019-06-28 16:50:05.621371 2019-06-28 16:50:04.621663
+34     34      A    5.0 2019-06-28 16:50:05.721329 2019-06-28 16:50:04.721610
+35     35      A    7.0 2019-06-28 16:50:05.811398 2019-06-28 16:50:04.811742
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 20.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+32     32      A    6.0 2019-06-28 16:50:05.524757 2019-06-28 16:50:04.525038
+33     33      A    2.0 2019-06-28 16:50:05.621371 2019-06-28 16:50:04.621663
+34     34      A    5.0 2019-06-28 16:50:05.721329 2019-06-28 16:50:04.721610
+35     35      A    7.0 2019-06-28 16:50:05.811398 2019-06-28 16:50:04.811742
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 20.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+32     32      A    6.0 2019-06-28 16:50:05.524757 2019-06-28 16:50:04.525038
+33     33      A    2.0 2019-06-28 16:50:05.621371 2019-06-28 16:50:04.621663
+34     34      A    5.0 2019-06-28 16:50:05.721329 2019-06-28 16:50:04.721610
+35     35      A    7.0 2019-06-28 16:50:05.811398 2019-06-28 16:50:04.811742
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 20.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+32     32      A    6.0 2019-06-28 16:50:05.524757 2019-06-28 16:50:04.525038
+33     33      A    2.0 2019-06-28 16:50:05.621371 2019-06-28 16:50:04.621663
+34     34      A    5.0 2019-06-28 16:50:05.721329 2019-06-28 16:50:04.721610
+35     35      A    7.0 2019-06-28 16:50:05.811398 2019-06-28 16:50:04.811742
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 20.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+36     36      A    5.0 2019-06-28 16:50:05.912558 2019-06-28 16:50:04.912827
+37     37      A    6.0 2019-06-28 16:50:06.018446 2019-06-28 16:50:05.018735
+38     38      A    1.0 2019-06-28 16:50:06.131290 2019-06-28 16:50:05.131561
+39     39      A    4.0 2019-06-28 16:50:06.239332 2019-06-28 16:50:05.239605
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 16.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+36     36      A    5.0 2019-06-28 16:50:05.912558 2019-06-28 16:50:04.912827
+37     37      A    6.0 2019-06-28 16:50:06.018446 2019-06-28 16:50:05.018735
+38     38      A    1.0 2019-06-28 16:50:06.131290 2019-06-28 16:50:05.131561
+39     39      A    4.0 2019-06-28 16:50:06.239332 2019-06-28 16:50:05.239605
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 16.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+36     36      A    5.0 2019-06-28 16:50:05.912558 2019-06-28 16:50:04.912827
+37     37      A    6.0 2019-06-28 16:50:06.018446 2019-06-28 16:50:05.018735
+38     38      A    1.0 2019-06-28 16:50:06.131290 2019-06-28 16:50:05.131561
+39     39      A    4.0 2019-06-28 16:50:06.239332 2019-06-28 16:50:05.239605
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 16.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+36     36      A    5.0 2019-06-28 16:50:05.912558 2019-06-28 16:50:04.912827
+37     37      A    6.0 2019-06-28 16:50:06.018446 2019-06-28 16:50:05.018735
+38     38      A    1.0 2019-06-28 16:50:06.131290 2019-06-28 16:50:05.131561
+39     39      A    4.0 2019-06-28 16:50:06.239332 2019-06-28 16:50:05.239605
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 16.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+40     40      A    9.0 2019-06-28 16:50:06.348086 2019-06-28 16:50:05.348364
+41     41      A    1.0 2019-06-28 16:50:06.449847 2019-06-28 16:50:05.450129
+42     42      A    4.0 2019-06-28 16:50:06.553863 2019-06-28 16:50:05.554125
+43     43      A    9.0 2019-06-28 16:50:06.641736 2019-06-28 16:50:05.642014
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 23.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+40     40      A    9.0 2019-06-28 16:50:06.348086 2019-06-28 16:50:05.348364
+41     41      A    1.0 2019-06-28 16:50:06.449847 2019-06-28 16:50:05.450129
+42     42      A    4.0 2019-06-28 16:50:06.553863 2019-06-28 16:50:05.554125
+43     43      A    9.0 2019-06-28 16:50:06.641736 2019-06-28 16:50:05.642014
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 23.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+40     40      A    9.0 2019-06-28 16:50:06.348086 2019-06-28 16:50:05.348364
+41     41      A    1.0 2019-06-28 16:50:06.449847 2019-06-28 16:50:05.450129
+42     42      A    4.0 2019-06-28 16:50:06.553863 2019-06-28 16:50:05.554125
+43     43      A    9.0 2019-06-28 16:50:06.641736 2019-06-28 16:50:05.642014
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 23.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+40     40      A    9.0 2019-06-28 16:50:06.348086 2019-06-28 16:50:05.348364
+41     41      A    1.0 2019-06-28 16:50:06.449847 2019-06-28 16:50:05.450129
+42     42      A    4.0 2019-06-28 16:50:06.553863 2019-06-28 16:50:05.554125
+43     43      A    9.0 2019-06-28 16:50:06.641736 2019-06-28 16:50:05.642014
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 23.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+44     44      A    8.0 2019-06-28 16:50:06.743238 2019-06-28 16:50:05.743528
+45     45      A    6.0 2019-06-28 16:50:06.853415 2019-06-28 16:50:05.853719
+46     46      A    6.0 2019-06-28 16:50:06.967817 2019-06-28 16:50:05.968171
+47     47      A    6.0 2019-06-28 16:50:07.101601 2019-06-28 16:50:06.101905
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 26.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+44     44      A    8.0 2019-06-28 16:50:06.743238 2019-06-28 16:50:05.743528
+45     45      A    6.0 2019-06-28 16:50:06.853415 2019-06-28 16:50:05.853719
+46     46      A    6.0 2019-06-28 16:50:06.967817 2019-06-28 16:50:05.968171
+47     47      A    6.0 2019-06-28 16:50:07.101601 2019-06-28 16:50:06.101905
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 26.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+44     44      A    8.0 2019-06-28 16:50:06.743238 2019-06-28 16:50:05.743528
+45     45      A    6.0 2019-06-28 16:50:06.853415 2019-06-28 16:50:05.853719
+46     46      A    6.0 2019-06-28 16:50:06.967817 2019-06-28 16:50:05.968171
+47     47      A    6.0 2019-06-28 16:50:07.101601 2019-06-28 16:50:06.101905
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 26.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+44     44      A    8.0 2019-06-28 16:50:06.743238 2019-06-28 16:50:05.743528
+45     45      A    6.0 2019-06-28 16:50:06.853415 2019-06-28 16:50:05.853719
+46     46      A    6.0 2019-06-28 16:50:06.967817 2019-06-28 16:50:05.968171
+47     47      A    6.0 2019-06-28 16:50:07.101601 2019-06-28 16:50:06.101905
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 26.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+48     48      A    7.0 2019-06-28 16:50:07.222935 2019-06-28 16:50:06.223289
+49     49      A    7.0 2019-06-28 16:50:07.342606 2019-06-28 16:50:06.342904
+50     50      A    1.0 2019-06-28 16:50:07.459326 2019-06-28 16:50:06.459682
+51     51      A    6.0 2019-06-28 16:50:07.574012 2019-06-28 16:50:06.574317
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 21.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+48     48      A    7.0 2019-06-28 16:50:07.222935 2019-06-28 16:50:06.223289
+49     49      A    7.0 2019-06-28 16:50:07.342606 2019-06-28 16:50:06.342904
+50     50      A    1.0 2019-06-28 16:50:07.459326 2019-06-28 16:50:06.459682
+51     51      A    6.0 2019-06-28 16:50:07.574012 2019-06-28 16:50:06.574317
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 21.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+48     48      A    7.0 2019-06-28 16:50:07.222935 2019-06-28 16:50:06.223289
+49     49      A    7.0 2019-06-28 16:50:07.342606 2019-06-28 16:50:06.342904
+50     50      A    1.0 2019-06-28 16:50:07.459326 2019-06-28 16:50:06.459682
+51     51      A    6.0 2019-06-28 16:50:07.574012 2019-06-28 16:50:06.574317
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 21.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+48     48      A    7.0 2019-06-28 16:50:07.222935 2019-06-28 16:50:06.223289
+49     49      A    7.0 2019-06-28 16:50:07.342606 2019-06-28 16:50:06.342904
+50     50      A    1.0 2019-06-28 16:50:07.459326 2019-06-28 16:50:06.459682
+51     51      A    6.0 2019-06-28 16:50:07.574012 2019-06-28 16:50:06.574317
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 21.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+52     52      A    6.0 2019-06-28 16:50:07.710479 2019-06-28 16:50:06.711072
+53     53      A    6.0 2019-06-28 16:50:07.836468 2019-06-28 16:50:06.836764
+54     54      A    2.0 2019-06-28 16:50:07.958705 2019-06-28 16:50:06.959005
+55     55      A    3.0 2019-06-28 16:50:08.079290 2019-06-28 16:50:07.079577
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 17.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+52     52      A    6.0 2019-06-28 16:50:07.710479 2019-06-28 16:50:06.711072
+53     53      A    6.0 2019-06-28 16:50:07.836468 2019-06-28 16:50:06.836764
+54     54      A    2.0 2019-06-28 16:50:07.958705 2019-06-28 16:50:06.959005
+55     55      A    3.0 2019-06-28 16:50:08.079290 2019-06-28 16:50:07.079577
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 17.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+52     52      A    6.0 2019-06-28 16:50:07.710479 2019-06-28 16:50:06.711072
+53     53      A    6.0 2019-06-28 16:50:07.836468 2019-06-28 16:50:06.836764
+54     54      A    2.0 2019-06-28 16:50:07.958705 2019-06-28 16:50:06.959005
+55     55      A    3.0 2019-06-28 16:50:08.079290 2019-06-28 16:50:07.079577
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 17.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+52     52      A    6.0 2019-06-28 16:50:07.710479 2019-06-28 16:50:06.711072
+53     53      A    6.0 2019-06-28 16:50:07.836468 2019-06-28 16:50:06.836764
+54     54      A    2.0 2019-06-28 16:50:07.958705 2019-06-28 16:50:06.959005
+55     55      A    3.0 2019-06-28 16:50:08.079290 2019-06-28 16:50:07.079577
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 17.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+56     56      A    3.0 2019-06-28 16:50:08.189413 2019-06-28 16:50:07.189729
+57     57      A    7.0 2019-06-28 16:50:08.296942 2019-06-28 16:50:07.297217
+58     58      A    6.0 2019-06-28 16:50:08.393155 2019-06-28 16:50:07.393442
+59     59      A    2.0 2019-06-28 16:50:08.489779 2019-06-28 16:50:07.490039
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 18.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+56     56      A    3.0 2019-06-28 16:50:08.189413 2019-06-28 16:50:07.189729
+57     57      A    7.0 2019-06-28 16:50:08.296942 2019-06-28 16:50:07.297217
+58     58      A    6.0 2019-06-28 16:50:08.393155 2019-06-28 16:50:07.393442
+59     59      A    2.0 2019-06-28 16:50:08.489779 2019-06-28 16:50:07.490039
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 18.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+56     56      A    3.0 2019-06-28 16:50:08.189413 2019-06-28 16:50:07.189729
+57     57      A    7.0 2019-06-28 16:50:08.296942 2019-06-28 16:50:07.297217
+58     58      A    6.0 2019-06-28 16:50:08.393155 2019-06-28 16:50:07.393442
+59     59      A    2.0 2019-06-28 16:50:08.489779 2019-06-28 16:50:07.490039
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 18.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+56     56      A    3.0 2019-06-28 16:50:08.189413 2019-06-28 16:50:07.189729
+57     57      A    7.0 2019-06-28 16:50:08.296942 2019-06-28 16:50:07.297217
+58     58      A    6.0 2019-06-28 16:50:08.393155 2019-06-28 16:50:07.393442
+59     59      A    2.0 2019-06-28 16:50:08.489779 2019-06-28 16:50:07.490039
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 18.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+60     60      A    3.0 2019-06-28 16:50:08.573353 2019-06-28 16:50:07.573620
+61     61      A    8.0 2019-06-28 16:50:08.665897 2019-06-28 16:50:07.666204
+62     62      A    9.0 2019-06-28 16:50:08.754048 2019-06-28 16:50:07.754312
+63     63      A    3.0 2019-06-28 16:50:08.849682 2019-06-28 16:50:07.850176
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 23.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+60     60      A    3.0 2019-06-28 16:50:08.573353 2019-06-28 16:50:07.573620
+61     61      A    8.0 2019-06-28 16:50:08.665897 2019-06-28 16:50:07.666204
+62     62      A    9.0 2019-06-28 16:50:08.754048 2019-06-28 16:50:07.754312
+63     63      A    3.0 2019-06-28 16:50:08.849682 2019-06-28 16:50:07.850176
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 23.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+60     60      A    3.0 2019-06-28 16:50:08.573353 2019-06-28 16:50:07.573620
+61     61      A    8.0 2019-06-28 16:50:08.665897 2019-06-28 16:50:07.666204
+62     62      A    9.0 2019-06-28 16:50:08.754048 2019-06-28 16:50:07.754312
+63     63      A    3.0 2019-06-28 16:50:08.849682 2019-06-28 16:50:07.850176
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 23.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+60     60      A    3.0 2019-06-28 16:50:08.573353 2019-06-28 16:50:07.573620
+61     61      A    8.0 2019-06-28 16:50:08.665897 2019-06-28 16:50:07.666204
+62     62      A    9.0 2019-06-28 16:50:08.754048 2019-06-28 16:50:07.754312
+63     63      A    3.0 2019-06-28 16:50:08.849682 2019-06-28 16:50:07.850176
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 23.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+64     64      A    8.0 2019-06-28 16:50:08.947949 2019-06-28 16:50:07.948237
+65     65      A    3.0 2019-06-28 16:50:09.043382 2019-06-28 16:50:08.043692
+66     66      A    4.0 2019-06-28 16:50:09.134505 2019-06-28 16:50:08.134789
+67     67      A    3.0 2019-06-28 16:50:09.236445 2019-06-28 16:50:08.236751
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 18.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+64     64      A    8.0 2019-06-28 16:50:08.947949 2019-06-28 16:50:07.948237
+65     65      A    3.0 2019-06-28 16:50:09.043382 2019-06-28 16:50:08.043692
+66     66      A    4.0 2019-06-28 16:50:09.134505 2019-06-28 16:50:08.134789
+67     67      A    3.0 2019-06-28 16:50:09.236445 2019-06-28 16:50:08.236751
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 18.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+64     64      A    8.0 2019-06-28 16:50:08.947949 2019-06-28 16:50:07.948237
+65     65      A    3.0 2019-06-28 16:50:09.043382 2019-06-28 16:50:08.043692
+66     66      A    4.0 2019-06-28 16:50:09.134505 2019-06-28 16:50:08.134789
+67     67      A    3.0 2019-06-28 16:50:09.236445 2019-06-28 16:50:08.236751
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 18.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+64     64      A    8.0 2019-06-28 16:50:08.947949 2019-06-28 16:50:07.948237
+65     65      A    3.0 2019-06-28 16:50:09.043382 2019-06-28 16:50:08.043692
+66     66      A    4.0 2019-06-28 16:50:09.134505 2019-06-28 16:50:08.134789
+67     67      A    3.0 2019-06-28 16:50:09.236445 2019-06-28 16:50:08.236751
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 18.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+68     68      A    7.0 2019-06-28 16:50:09.324945 2019-06-28 16:50:08.325209
+69     69      A    6.0 2019-06-28 16:50:09.409904 2019-06-28 16:50:08.410167
+70     70      A    1.0 2019-06-28 16:50:09.500041 2019-06-28 16:50:08.500315
+71     71      A    5.0 2019-06-28 16:50:09.587422 2019-06-28 16:50:08.587707
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 19.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+68     68      A    7.0 2019-06-28 16:50:09.324945 2019-06-28 16:50:08.325209
+69     69      A    6.0 2019-06-28 16:50:09.409904 2019-06-28 16:50:08.410167
+70     70      A    1.0 2019-06-28 16:50:09.500041 2019-06-28 16:50:08.500315
+71     71      A    5.0 2019-06-28 16:50:09.587422 2019-06-28 16:50:08.587707
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 19.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+68     68      A    7.0 2019-06-28 16:50:09.324945 2019-06-28 16:50:08.325209
+69     69      A    6.0 2019-06-28 16:50:09.409904 2019-06-28 16:50:08.410167
+70     70      A    1.0 2019-06-28 16:50:09.500041 2019-06-28 16:50:08.500315
+71     71      A    5.0 2019-06-28 16:50:09.587422 2019-06-28 16:50:08.587707
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 19.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+68     68      A    7.0 2019-06-28 16:50:09.324945 2019-06-28 16:50:08.325209
+69     69      A    6.0 2019-06-28 16:50:09.409904 2019-06-28 16:50:08.410167
+70     70      A    1.0 2019-06-28 16:50:09.500041 2019-06-28 16:50:08.500315
+71     71      A    5.0 2019-06-28 16:50:09.587422 2019-06-28 16:50:08.587707
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 19.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+72     72      A    3.0 2019-06-28 16:50:09.671092 2019-06-28 16:50:08.671356
+73     73      A    1.0 2019-06-28 16:50:09.758619 2019-06-28 16:50:08.758892
+74     74      A    1.0 2019-06-28 16:50:09.846138 2019-06-28 16:50:08.846402
+75     75      A    9.0 2019-06-28 16:50:09.928990 2019-06-28 16:50:08.929252
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 14.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+72     72      A    3.0 2019-06-28 16:50:09.671092 2019-06-28 16:50:08.671356
+73     73      A    1.0 2019-06-28 16:50:09.758619 2019-06-28 16:50:08.758892
+74     74      A    1.0 2019-06-28 16:50:09.846138 2019-06-28 16:50:08.846402
+75     75      A    9.0 2019-06-28 16:50:09.928990 2019-06-28 16:50:08.929252
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 14.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+72     72      A    3.0 2019-06-28 16:50:09.671092 2019-06-28 16:50:08.671356
+73     73      A    1.0 2019-06-28 16:50:09.758619 2019-06-28 16:50:08.758892
+74     74      A    1.0 2019-06-28 16:50:09.846138 2019-06-28 16:50:08.846402
+75     75      A    9.0 2019-06-28 16:50:09.928990 2019-06-28 16:50:08.929252
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 14.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+72     72      A    3.0 2019-06-28 16:50:09.671092 2019-06-28 16:50:08.671356
+73     73      A    1.0 2019-06-28 16:50:09.758619 2019-06-28 16:50:08.758892
+74     74      A    1.0 2019-06-28 16:50:09.846138 2019-06-28 16:50:08.846402
+75     75      A    9.0 2019-06-28 16:50:09.928990 2019-06-28 16:50:08.929252
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 14.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+76     76      A    4.0 2019-06-28 16:50:10.024837 2019-06-28 16:50:09.025100
+77     77      A    9.0 2019-06-28 16:50:10.113479 2019-06-28 16:50:09.113757
+78     78      A    3.0 2019-06-28 16:50:10.203873 2019-06-28 16:50:09.204147
+79     79      A    4.0 2019-06-28 16:50:10.299261 2019-06-28 16:50:09.299533
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 20.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+76     76      A    4.0 2019-06-28 16:50:10.024837 2019-06-28 16:50:09.025100
+77     77      A    9.0 2019-06-28 16:50:10.113479 2019-06-28 16:50:09.113757
+78     78      A    3.0 2019-06-28 16:50:10.203873 2019-06-28 16:50:09.204147
+79     79      A    4.0 2019-06-28 16:50:10.299261 2019-06-28 16:50:09.299533
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 20.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+76     76      A    4.0 2019-06-28 16:50:10.024837 2019-06-28 16:50:09.025100
+77     77      A    9.0 2019-06-28 16:50:10.113479 2019-06-28 16:50:09.113757
+78     78      A    3.0 2019-06-28 16:50:10.203873 2019-06-28 16:50:09.204147
+79     79      A    4.0 2019-06-28 16:50:10.299261 2019-06-28 16:50:09.299533
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 20.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+76     76      A    4.0 2019-06-28 16:50:10.024837 2019-06-28 16:50:09.025100
+77     77      A    9.0 2019-06-28 16:50:10.113479 2019-06-28 16:50:09.113757
+78     78      A    3.0 2019-06-28 16:50:10.203873 2019-06-28 16:50:09.204147
+79     79      A    4.0 2019-06-28 16:50:10.299261 2019-06-28 16:50:09.299533
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 20.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+80     80      A    2.0 2019-06-28 16:50:10.391444 2019-06-28 16:50:09.391765
+81     81      A    5.0 2019-06-28 16:50:10.484028 2019-06-28 16:50:09.484290
+82     82      A    2.0 2019-06-28 16:50:10.574990 2019-06-28 16:50:09.575255
+83     83      A    6.0 2019-06-28 16:50:10.665420 2019-06-28 16:50:09.665679
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 15.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+80     80      A    2.0 2019-06-28 16:50:10.391444 2019-06-28 16:50:09.391765
+81     81      A    5.0 2019-06-28 16:50:10.484028 2019-06-28 16:50:09.484290
+82     82      A    2.0 2019-06-28 16:50:10.574990 2019-06-28 16:50:09.575255
+83     83      A    6.0 2019-06-28 16:50:10.665420 2019-06-28 16:50:09.665679
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 15.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+80     80      A    2.0 2019-06-28 16:50:10.391444 2019-06-28 16:50:09.391765
+81     81      A    5.0 2019-06-28 16:50:10.484028 2019-06-28 16:50:09.484290
+82     82      A    2.0 2019-06-28 16:50:10.574990 2019-06-28 16:50:09.575255
+83     83      A    6.0 2019-06-28 16:50:10.665420 2019-06-28 16:50:09.665679
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 15.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+80     80      A    2.0 2019-06-28 16:50:10.391444 2019-06-28 16:50:09.391765
+81     81      A    5.0 2019-06-28 16:50:10.484028 2019-06-28 16:50:09.484290
+82     82      A    2.0 2019-06-28 16:50:10.574990 2019-06-28 16:50:09.575255
+83     83      A    6.0 2019-06-28 16:50:10.665420 2019-06-28 16:50:09.665679
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 15.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+84     84      A    8.0 2019-06-28 16:50:10.752172 2019-06-28 16:50:09.752443
+85     85      A    3.0 2019-06-28 16:50:10.837892 2019-06-28 16:50:09.838155
+86     86      A    5.0 2019-06-28 16:50:10.920773 2019-06-28 16:50:09.921045
+87     87      A    9.0 2019-06-28 16:50:11.016203 2019-06-28 16:50:10.016520
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 25.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+84     84      A    8.0 2019-06-28 16:50:10.752172 2019-06-28 16:50:09.752443
+85     85      A    3.0 2019-06-28 16:50:10.837892 2019-06-28 16:50:09.838155
+86     86      A    5.0 2019-06-28 16:50:10.920773 2019-06-28 16:50:09.921045
+87     87      A    9.0 2019-06-28 16:50:11.016203 2019-06-28 16:50:10.016520
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 25.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+84     84      A    8.0 2019-06-28 16:50:10.752172 2019-06-28 16:50:09.752443
+85     85      A    3.0 2019-06-28 16:50:10.837892 2019-06-28 16:50:09.838155
+86     86      A    5.0 2019-06-28 16:50:10.920773 2019-06-28 16:50:09.921045
+87     87      A    9.0 2019-06-28 16:50:11.016203 2019-06-28 16:50:10.016520
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 25.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+84     84      A    8.0 2019-06-28 16:50:10.752172 2019-06-28 16:50:09.752443
+85     85      A    3.0 2019-06-28 16:50:10.837892 2019-06-28 16:50:09.838155
+86     86      A    5.0 2019-06-28 16:50:10.920773 2019-06-28 16:50:09.921045
+87     87      A    9.0 2019-06-28 16:50:11.016203 2019-06-28 16:50:10.016520
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 25.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+88     88      A    3.0 2019-06-28 16:50:11.122434 2019-06-28 16:50:10.122708
+89     89      A    3.0 2019-06-28 16:50:11.219316 2019-06-28 16:50:10.219586
+90     90      A    8.0 2019-06-28 16:50:11.309518 2019-06-28 16:50:10.309785
+91     91      A    9.0 2019-06-28 16:50:11.393080 2019-06-28 16:50:10.393340
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 23.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+88     88      A    3.0 2019-06-28 16:50:11.122434 2019-06-28 16:50:10.122708
+89     89      A    3.0 2019-06-28 16:50:11.219316 2019-06-28 16:50:10.219586
+90     90      A    8.0 2019-06-28 16:50:11.309518 2019-06-28 16:50:10.309785
+91     91      A    9.0 2019-06-28 16:50:11.393080 2019-06-28 16:50:10.393340
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 23.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+88     88      A    3.0 2019-06-28 16:50:11.122434 2019-06-28 16:50:10.122708
+89     89      A    3.0 2019-06-28 16:50:11.219316 2019-06-28 16:50:10.219586
+90     90      A    8.0 2019-06-28 16:50:11.309518 2019-06-28 16:50:10.309785
+91     91      A    9.0 2019-06-28 16:50:11.393080 2019-06-28 16:50:10.393340
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 23.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+88     88      A    3.0 2019-06-28 16:50:11.122434 2019-06-28 16:50:10.122708
+89     89      A    3.0 2019-06-28 16:50:11.219316 2019-06-28 16:50:10.219586
+90     90      A    8.0 2019-06-28 16:50:11.309518 2019-06-28 16:50:10.309785
+91     91      A    9.0 2019-06-28 16:50:11.393080 2019-06-28 16:50:10.393340
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 23.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+92     92      A    3.0 2019-06-28 16:50:11.478399 2019-06-28 16:50:10.478663
+93     93      A    6.0 2019-06-28 16:50:11.560444 2019-06-28 16:50:10.560712
+94     94      A    4.0 2019-06-28 16:50:11.643583 2019-06-28 16:50:10.643889
+95     95      A    5.0 2019-06-28 16:50:11.724806 2019-06-28 16:50:10.725069
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 18.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+92     92      A    3.0 2019-06-28 16:50:11.478399 2019-06-28 16:50:10.478663
+93     93      A    6.0 2019-06-28 16:50:11.560444 2019-06-28 16:50:10.560712
+94     94      A    4.0 2019-06-28 16:50:11.643583 2019-06-28 16:50:10.643889
+95     95      A    5.0 2019-06-28 16:50:11.724806 2019-06-28 16:50:10.725069
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 18.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+92     92      A    3.0 2019-06-28 16:50:11.478399 2019-06-28 16:50:10.478663
+93     93      A    6.0 2019-06-28 16:50:11.560444 2019-06-28 16:50:10.560712
+94     94      A    4.0 2019-06-28 16:50:11.643583 2019-06-28 16:50:10.643889
+95     95      A    5.0 2019-06-28 16:50:11.724806 2019-06-28 16:50:10.725069
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 18.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+92     92      A    3.0 2019-06-28 16:50:11.478399 2019-06-28 16:50:10.478663
+93     93      A    6.0 2019-06-28 16:50:11.560444 2019-06-28 16:50:10.560712
+94     94      A    4.0 2019-06-28 16:50:11.643583 2019-06-28 16:50:10.643889
+95     95      A    5.0 2019-06-28 16:50:11.724806 2019-06-28 16:50:10.725069
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 18.0
+    index symbol  price                       time        INSERTION_TIMESTAMP
+96     96      A    4.0 2019-06-28 16:50:11.809123 2019-06-28 16:50:10.809460
+97     97      A    5.0 2019-06-28 16:50:11.893809 2019-06-28 16:50:10.894077
+98     98      A    2.0 2019-06-28 16:50:11.977559 2019-06-28 16:50:10.977821
+99     99      A    8.0 2019-06-28 16:50:12.060090 2019-06-28 16:50:11.060359
+sum price of events in expiry_exp_batch("batch_counter() >= 4"): 19.0

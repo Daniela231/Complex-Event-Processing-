@@ -296,9 +296,14 @@ def same_price_expiry_exp_batch():
 # Test 21 --- test for time_to_live
 def test_for_time_to_live():
     """
-    This observer tests the function time_to_time
+    This observer checks the sum price of events in the dataframe that contains all events where the value of the time
+    column 'time' is greater than the current system time.
     """
-    i21.critical(time_to_live(col='time'))
+    i21.critical('now: '+str(datetime.now()))
+    df = time_to_live(col='time')
+    sum = df['price'].sum()
+    i21.critical(df)
+    i21.critical('sum price: ' + str(sum))
 
 
 # Tests for general.py [Tests 22 - 33]
@@ -548,7 +553,7 @@ def test(i):
         test_general_df_time_to_live()
 
 
-tests = [17]
+tests = [21]
 threads = []
 
 for i in tests:
