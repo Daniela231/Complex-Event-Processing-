@@ -114,7 +114,7 @@ def sort_observer(key, size, criteria):
     :return: None
     """
     all_dfs[key].dataframe = all_dfs[key].dataframe.append(last_event()).sort_values(
-        by=[elm[0] for elm in criteria], ascending=[elm[1] for elm in criteria]).head(size)
+        by=[elm[0] for elm in criteria], ascending=[elm[1] for elm in criteria], kind='mergesort').head(size)
 
 
 def sort(size, criteria):
@@ -133,7 +133,7 @@ def sort(size, criteria):
     except:
         all_dfs[key] = DataframeManager()
         all_dfs[key].dataframe = all_dfs["StockTick"].dataframe.sort_values(
-            by=[elm[0] for elm in criteria], ascending=[elm[1] for elm in criteria]).head(size)
+            by=[elm[0] for elm in criteria], ascending=[elm[1] for elm in criteria], kind='mergesort').head(size)
         all_dfs[key].observers.append(sort_observer)
 
 

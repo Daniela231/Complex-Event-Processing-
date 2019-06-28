@@ -105,12 +105,14 @@ def avg_price_length_batch_5():
 # Test 6
 def test_sort():
     """
-    This observer checks the average price of the events in the sort
-    dataframe sort(5, [('price', 0), ('index', 1)]) dataframe
+    This observer checks the average price of the events in the dataframe sort(size=5, criteria=[('price', True),
+    ('index', False)]
     """
-    avg_price = sort(5, [('price', 0), ('index', 1)])['price'].mean()
-    i6.critical(all_dfs['sort', 5, 'price', 0, 'index', 1].dataframe)
-    i6.critical("The average price of all events in sort(5, [('price', 0), ('index', 1)]): " + str(avg_price))
+    df = sort(size=5, criteria=[('price', True), ('index', False)])
+    avg_price = df['price'].mean()
+    i6.critical(df)
+    i6.critical("The average price of all events in sort(size=5, criteria=[('price', True), ('index', False)]: "
+                + str(avg_price))
 
 
 # Test 7
@@ -118,8 +120,9 @@ def avg_price_first_unique_price_symbol():
     """
     This observer checks the average price of the events in first_unique('price', 'symbol') dataframe
     """
-    avg_price = first_unique('price', 'symbol')['price'].mean()
-    i7.critical(all_dfs['first_unique', 'price', 'symbol'].dataframe)
+    df = first_unique('price', 'symbol')
+    avg_price = df['price'].mean()
+    i7.critical(df)
     i7.critical("The average price of all events in first_unique('price', 'symbol'): " + str(avg_price))
 
 
@@ -553,7 +556,7 @@ def test(i):
         test_general_df_time_to_live()
 
 
-tests = []
+tests = [7]
 threads = []
 
 for i in tests:
@@ -564,7 +567,7 @@ for i in tests:
 for proc in threads:
     proc.join()
 
-n = 75000
+n = 20
 
 for t in tests:
     if t>21 and t<34:
