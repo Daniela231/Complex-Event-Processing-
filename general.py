@@ -57,7 +57,7 @@ def df_first_time(df, col, start_point=datetime.now(), seconds=0, milliseconds=0
 
     for index, row in df.iterrows():
         val = row[col]
-        if val < time and val >= start_point:
+        if time > val >= start_point:
             res = res.append(row)
 
     return res
@@ -86,7 +86,7 @@ def df_last_time(df, col, start_point=datetime.now(), seconds=0, milliseconds=0,
 
     for index, row in df.iterrows():
         val = row[col]
-        if val <= start_point and val > time:
+        if start_point >= val > time:
             res = res.append(row)
 
     return res
@@ -197,22 +197,22 @@ def df_time_to_live(df, col, time=datetime.now()):
 
 
 def df_last_n_events(df, n=1):
-    '''
+    """
     Returns a pandas dataframe that contains the last 'n' rows from the dataframe 'df' (n is set to 1 by default).
     :param df: pandas dataframe
     :param n: number of rows
     :return: pandas dataframe
-    '''
+    """
     return df.tail(n)
 
 
 def df_first_n_events(df, n=1):
-    '''
+    """
     Returns a pandas dataframe that contains the first 'n' rows from the dataframe 'df' (n is set to 1 by default).
     :param df: pandas dataframe
     :param n: number of rows
     :return: pandas dataframe
-    '''
+    """
     return df.head(n)
 
 

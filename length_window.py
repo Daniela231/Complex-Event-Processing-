@@ -64,7 +64,6 @@ def last_unique(*param):
     """
     This function returns the last_unique dataframe that includes only the most recent among events having the same
     values for the columns given as parameters.
-    :param *param: names of the columns to be considered
     :return: the last_unique dataframe
     """
     key = ('last_unique',)
