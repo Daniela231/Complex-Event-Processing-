@@ -62,7 +62,7 @@ def expiry_exp(exp):
     last = last_event()
 
     try:
-        all_dfs[key].variables['current_count'] =  all_dfs[key].variables['current_count'] + 1
+        all_dfs[key].variables['current_count'] = all_dfs[key].variables['current_count'] + 1
     except:
         all_dfs[key] = DataframeManager()
         all_dfs[key].dataframe = pd.DataFrame()
@@ -132,13 +132,13 @@ def expiry_exp_batch(exp, include_triggering_event=True):
     last = last_event()
 
     try:
-        all_dfs[key].variables['batch_counter'] =  all_dfs[key].variables['batch_counter'] + 1
+        all_dfs[key].variables['batch_counter'] = all_dfs[key].variables['batch_counter'] + 1
     except:
         columns = all_dfs['StockTick'].dataframe.columns
         all_dfs[key] = DataframeManager(columns_list=columns)
         all_dfs[key].observers.append(expiry_exp_batch_observer)
         all_dfs[key].variables['batch_counter'] = 1
-        all_dfs[key].variables['triggering_event'] = pd.DataFrame({col:[np.nan] for col in columns})
+        all_dfs[key].variables['triggering_event'] = pd.DataFrame({col: [np.nan] for col in columns})
 
     all_dfs[key].variables['newest_event'] = last
     all_dfs[key].variables['newest_timestamp'] = last['INSERTION_TIMESTAMP'].iloc[0]

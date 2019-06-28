@@ -19,7 +19,7 @@ The length_window script contains the functions to get some rows of the datafram
 
 data_window.py
 
-Contains filter functionsafter expressions(exp) to filter the frame and remove events where the expression returns false
+Contains filter functions after expressions(exp) to filter the frame and remove events where the expression returns false
 
 statistics_views.py
 
@@ -28,7 +28,7 @@ Contains functions for statistic calculations on a given dataframe
 
 special_derived_value.py
 
-Contains the size and weighted avarage function 
+Contains the size and weighted average function 
 
 cep.py
 
@@ -42,7 +42,7 @@ Those files contains the last cep test as a logging tool for an easier type to f
 output for errors/malicious behaviour
 
 The ceptest#n.log file contain the output of the n-th test while the cep generator logfile contains
-the output of the eventstream, non sorted tests and additional information of functions, that we
+the output of the event stream, non sorted tests and additional information of functions, that we
 might need for debugging purposes.
 
 LoggerSetter.py

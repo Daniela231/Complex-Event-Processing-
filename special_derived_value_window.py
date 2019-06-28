@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 def size(dfm):
     """
     Returns the number of rows in the dataframe of the DataframeManager dfm
