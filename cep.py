@@ -397,7 +397,7 @@ def test_general_df_order_last_time():
     i28.critical(df_for_general_tests)
     now = datetime.now()
     i28.critical('now: ' + str(now))
-    i28.critical(df_order_last_time(df_for_general_tests, col='time', start_point=now, seconds=5))
+    i28.critical(df_order_last_time(df_for_general_tests, col='time', start_point=now, seconds=n/4))
 
 
 # Test 29
@@ -409,7 +409,7 @@ def test_general_df_order_first_time():
     i29.critical(df_for_general_tests)
     start = datetime.now() - timedelta(seconds=n/2)
     i29.critical('now: ' + str(start))
-    i29.critical(df_order_first_time(df_for_general_tests, col='time', start_point=start, seconds=5))
+    i29.critical(df_order_first_time(df_for_general_tests, col='time', start_point=start, seconds=n/4))
 
 
 # Test 30
