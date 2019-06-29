@@ -310,11 +310,11 @@ def test_for_time_to_live():
 
 
 # Tests for general.py [Tests 22 - 33]
-n = 20
+n = 200
 now = datetime.now()
 time = []
 for i in range(n):
-    time.append(now - timedelta(seconds=20 - i))
+    time.append(now - timedelta(seconds=n - i))
 shuffle(time)
 df_for_general_tests = pd.DataFrame({
     'index': range(n),
@@ -363,7 +363,7 @@ def test_general_df_first_time():
     :return: None
     """
     i25.critical(df_for_general_tests)
-    start = datetime.now() - timedelta(seconds=10)
+    start = datetime.now() - timedelta(seconds=n/2)
     i25.critical('start: ' + str(start))
     i25.critical(df_first_time(df_for_general_tests, col='time', start_point=start, seconds=5))
 
@@ -407,7 +407,7 @@ def test_general_df_order_first_time():
     :return: None
     """
     i29.critical(df_for_general_tests)
-    start = datetime.now() - timedelta(seconds=10)
+    start = datetime.now() - timedelta(seconds=n/2)
     i29.critical('now: ' + str(start))
     i29.critical(df_order_first_time(df_for_general_tests, col='time', start_point=start, seconds=5))
 
@@ -448,7 +448,7 @@ def test_general_df_time_to_live():
     Test for general.df_time_to_live
     :return:
     """
-    start_time = datetime.now() - timedelta(seconds=10)
+    start_time = datetime.now() - timedelta(seconds=n/2)
     i33.critical(df_for_general_tests)
     i33.critical('start time: ' + str(start_time))
     i33.critical(df_time_to_live(df_for_general_tests, col='time', time=start_time))
